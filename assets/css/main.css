@@ -4720,6 +4720,34 @@ input, select, textarea {
 	}
 }
 
+/* AI abilise loetavam vestlusaken */
+#ai-chat{
+	width:360px;
+}
+
+#ai-messages{
+	height:260px;
+}
+
+#ai-messages p{
+	background:#fff;
+	border-radius:8px;
+	box-shadow:0 1px 5px rgba(0,0,0,.08);
+	margin:0 0 8px;
+	padding:9px 10px;
+}
+
+#ai-messages a{
+	border-bottom:0;
+	color:rgb(235,110,0);
+	font-weight:700;
+}
+
+#ai-input{
+	line-height:1.35;
+	min-height:44px;
+}
+
 /* ============================= */
 /* GLOBAL SERVICE PAGE TEMPLATE */
 /* ============================= */

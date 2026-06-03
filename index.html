@@ -332,68 +332,6 @@
 		}
 	});
 	</script>
-
-	<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const bubble = document.getElementById("ai-bubble");
-		const chat = document.getElementById("ai-chat");
-		const close = document.getElementById("ai-close");
-		const input = document.getElementById("ai-input");
-		const sendBtn = document.getElementById("ai-send");
-		const messages = document.getElementById("ai-messages");
-		if (!bubble || !chat || !close || !input || !sendBtn || !messages) return;
-
-		bubble.onclick = () => { chat.style.display = "flex"; bubble.style.display = "none"; };
-		close.onclick = () => { chat.style.display = "none"; bubble.style.display = "flex"; };
-		sendBtn.onclick = sendMessage;
-		input.addEventListener("keypress", e => { if (e.key === "Enter") sendMessage(); });
-
-		let pendingService = null;
-		let pendingAmount = null;
-		const services = [
-			{ keywords: ["kips", "karkass"], price: 50, unit: "m2", name: "kipskarkass / vahesein" },
-			{ keywords: ["plaat"], price: 75, unit: "m2", name: "plaatimine" },
-			{ keywords: ["hüdro", "hydro"], price: 22, unit: "m2", name: "hüdroisolatsioon" },
-			{ keywords: ["värv", "varv", "maalri"], price: 4.5, unit: "m2", name: "värvimine" },
-			{ keywords: ["krunt"], price: 4.5, unit: "m2", name: "kruntvärvimine" },
-			{ keywords: ["pahtel"], price: 14, unit: "m2", name: "pahteldamine" },
-			{ keywords: ["parkett"], price: 14, unit: "m2", name: "parketi paigaldus" },
-			{ keywords: ["liist"], price: 9, unit: "jm", name: "liistude paigaldus" },
-			{ keywords: ["kroh"], price: 9, unit: "m2", name: "krohvimine" },
-			{ keywords: ["nakke"], price: 3, unit: "m2", name: "nakke paigaldus" },
-			{ keywords: ["uks"], price: 80, unit: "tk", name: "korteri siseukse vahetus" },
-			{ keywords: ["tapeedi eemaldus"], price: 3.5, unit: "m2", name: "tapeedi eemaldus" },
-			{ keywords: ["tapeet"], price: 17, unit: "m2", name: "tapeetimine" },
-			{ keywords: ["vuuk", "siliko"], price: 8, unit: "m2", name: "vuukimine / silikoonimine" },
-			{ keywords: ["aken"], price: 20, unit: "jm", name: "akna põskede viimistlus" }
-		];
-
-		function sendMessage() {
-			const text = input.value.trim();
-			if (!text) return;
-			addMessage("Klient", escapeHtml(text));
-			input.value = "";
-			setTimeout(() => addMessage("AI", calculatePrice(text)), 300);
-		}
-		function addMessage(sender, text) { messages.innerHTML += `<p><b>${sender}:</b> ${text}</p>`; messages.scrollTop = messages.scrollHeight; }
-		function escapeHtml(text) { return text.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c])); }
-		function findService(text) { return services.find(s => s.keywords.some(k => text.includes(k))); }
-		function findAmount(text) { const match = text.match(/(\d+(?:[.,]\d+)?)/); return match ? parseFloat(match[1].replace(",", ".")) : null; }
-		function calculatePrice(text) {
-			const t = text.toLowerCase().trim();
-			const foundService = findService(t);
-			const foundAmount = findAmount(t);
-			if (foundService) pendingService = foundService;
-			if (foundAmount) pendingAmount = foundAmount;
-			if (!pendingService) return "Mis tööd soovid? Nt värvimine, tapeetimine, kipsitööd või liistud.";
-			if (!pendingAmount) return `Mitu ${pendingService.unit} ${pendingService.name}?`;
-			const total = pendingAmount * pendingService.price;
-			const result = `<b>Teenuse hinnang</b><br>Töö: ${pendingService.name}<br>Kogus: ${pendingAmount} ${pendingService.unit}<br>Hind: ${pendingService.price} eurot / ${pendingService.unit}<br><b>Kokku: ${total.toFixed(2)} eurot</b>`;
-			pendingService = null;
-			pendingAmount = null;
-			return result;
-		}
-	});
-	</script>
+	<script src="assets/js/renoveeri-ai-chat.js"></script>
 </body>
 </html>
