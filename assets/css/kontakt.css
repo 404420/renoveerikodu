@@ -243,6 +243,56 @@
 	opacity:.8;
 }
 
+/* Kontaktilehe loetav küljevahe */
+.contact-page .team-section,
+.contact-page .contact-seo-copy,
+.contact-page .contact-proof-copy,
+.contact-page .contact-faq,
+.contact-page .contact-apple,
+.contact-page #footer {
+	padding-left: max(22px, calc((100vw - 1120px) / 2));
+	padding-right: max(22px, calc((100vw - 1120px) / 2));
+}
+
+.contact-page .contact-seo-copy,
+.contact-page .contact-proof-copy,
+.contact-page .contact-faq {
+	max-width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-page .contact-seo-copy p,
+.contact-page .contact-proof-copy p,
+.contact-page .contact-faq p,
+.contact-page .contact-faq details {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-page .contact-apple {
+	box-sizing: border-box;
+}
+
+.contact-page .glass-container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media(max-width:768px){
+	.contact-page .team-section,
+	.contact-page .contact-seo-copy,
+	.contact-page .contact-proof-copy,
+	.contact-page .contact-faq,
+	.contact-page .contact-apple,
+	.contact-page #footer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 /* ============================= */
 /* FORCE HIDE DEFAULT FILE INPUT */
 /* ============================= */
