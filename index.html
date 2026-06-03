@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
+<body class="landing is-preload">
 	<div id="page-wrapper">
 		<header id="header" class="alt">
 			<h1><a href="index.html">Renoveeri Kodu</a></h1>
@@ -187,16 +187,12 @@
 
 	<script>
 	document.addEventListener("DOMContentLoaded", function () {
-		document.querySelectorAll(".submenu-header").forEach(header => {
-			header.addEventListener("click", function () {
-				this.parentElement.classList.toggle("open");
-			});
-		});
-
 		const openServices = document.getElementById("open-services");
 		if (openServices) {
-			openServices.addEventListener("click", function () {
-				setTimeout(() => document.querySelector(".submenu")?.classList.add("open"), 200);
+			openServices.addEventListener("click", function (event) {
+				event.preventDefault();
+				document.body.classList.add("is-menu-visible");
+				setTimeout(() => document.querySelector("#menu .submenu")?.classList.add("open"), 200);
 			});
 		}
 
