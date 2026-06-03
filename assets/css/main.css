@@ -5336,6 +5336,16 @@ textarea {
   width: 100%;
   box-sizing: border-box;
 }
+
+.case-study-page .center-image figcaption{
+	color:#666;
+	font-size:.9em;
+	letter-spacing:0;
+	line-height:1.45;
+	margin-top:.75rem;
+	text-align:center;
+}
+
 .form-input {
   width: 100%;
   box-sizing: border-box;

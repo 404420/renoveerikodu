@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.renoveerikodu.ee/</loc>
     <lastmod>2026-06-03</lastmod>
@@ -119,29 +120,49 @@
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/tallinn-vannitoa-plaatimine.jpeg</image:loc>
+      <image:caption>Vannitoa plaatimine Tallinnas märgruumis - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/parketi-paigaldus-tallinn-korter</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg</image:loc>
+      <image:caption>Parketi paigaldus Tallinnas korteri elutoas - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/fassaadi-varvimine-tallinn-eramu</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/puitfassaadi-varvimine-tallinn.png</image:loc>
+      <image:caption>Puitfassaadi värvimine Tallinnas eramul - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/katuse-pesu-ja-hooldus-tallinn</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/katuse-pesu-tallinn-renoveerikodu.jpeg</image:loc>
+      <image:caption>Katuse pesu ja hooldus Tallinnas - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/led-valgustuse-paigaldus-tallinn</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/LED-Lahendused-Tallinn-Renoveeri-kodu.jpg</image:loc>
+      <image:caption>LED valgustuse paigaldus Tallinnas - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
   </url>
 </urlset>
