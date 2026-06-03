@@ -5213,6 +5213,25 @@ background-position:center;
 background-repeat:no-repeat;
 }
 
+#banner .home-hero-logo {
+	position: absolute;
+	top: clamp(92px, 16vh, 150px);
+	left: 50%;
+	width: clamp(110px, 11vw, 170px);
+	height: auto;
+	transform: translateX(-50%);
+	z-index: 2;
+	filter: drop-shadow(0 10px 28px rgba(0,0,0,0.42));
+	pointer-events: none;
+}
+
+@media screen and (max-width: 736px) {
+	#banner .home-hero-logo {
+		top: 86px;
+		width: 118px;
+	}
+}
+
 .footer-columns{
 display:flex;
 justify-content:center;
