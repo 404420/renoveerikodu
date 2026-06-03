@@ -1,0 +1,1693 @@
+@import url(fontawesome-all.min.css);
+
+/*
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+button {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  background: #000;
+  color: white;
+  cursor: pointer;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;}
+body {
+	line-height: 1;
+ol, ul {
+	list-style: none;
+blockquote, q {
+	quotes: none;
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: '';
+		content: none;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+mark {
+	background-color: transparent;
+	color: inherit;
+input::-moz-focus-inner {
+input, select, textarea {
+	appearance: none;
+/* Basic */
+	@-ms-viewport {
+		width: device-width;
+	html {
+		box-sizing: border-box;
+	*, *:before, *:after {
+		box-sizing: inherit;
+		background: #2e3842;
+		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+			animation: none !important;
+			transition: none !important;
+	body, input, select, textarea {
+		color: #fff;
+		font-family: "Open Sans", Helvetica, sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+		@media screen and (max-width: 1680px) {
+				font-size: 13pt;
+		@media screen and (max-width: 1280px) {
+				font-size: 12pt;
+		@media screen and (max-width: 736px) {
+				font-size: 11pt;
+				letter-spacing: 0.0375em;
+	a {
+		transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		border-bottom: dotted 1px;
+		text-decoration: none;
+		a:hover {
+			border-bottom-color: transparent;
+	strong, b {
+		font-weight: 600;
+	em, i {
+		font-style: italic;
+	p {
+		margin: 0 0 2em 0;
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 800;
+		letter-spacing: 0.225em;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	h2 {
+		font-size: 1.35em;
+		line-height: 1.75em;
+				font-size: 1.1em;
+	h3 {
+		font-size: 1.15em;
+				font-size: 1em;
+	h4 {
+		line-height: 1.5em;
+	h5 {
+		font-size: 0.8em;
+	h6 {
+		font-size: 0.7em;
+	sub {
+		position: relative;
+		top: 0.5em;
+	sup {
+		top: -0.5em;
+	hr {
+		border-bottom: solid 2px #fff;
+		margin: 3em 0;
+		hr.major {
+			margin: 4.5em 0;
+	blockquote {
+		border-left: solid 4px #fff;
+		padding: 0.5em 0 0.5em 2em;
+	code {
+		background: rgba(144, 144, 144, 0.25);
+		border-radius: 3px;
+		font-family: "Courier New", monospace;
+		font-size: 0.9em;
+		letter-spacing: 0;
+		margin: 0 0.25em;
+		padding: 0.25em 0.65em;
+	pre {
+		pre code {
+			display: block;
+			padding: 1em 1.5em;
+			overflow-x: auto;
+	.align-left {
+		text-align: left;
+	.align-center {
+		text-align: center;
+	.align-right {
+		text-align: right;
+/* Row */
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		.row > * {
+		.row.gtr-uniform > * > :last-child {
+			margin-bottom: 0;
+		.row.aln-left {
+			justify-content: flex-start;
+		.row.aln-center {
+			justify-content: center;
+		.row.aln-right {
+			justify-content: flex-end;
+		.row.aln-top {
+			align-items: flex-start;
+		.row.aln-middle {
+			align-items: center;
+		.row.aln-bottom {
+			align-items: flex-end;
+		.row > .imp {
+			order: -1;
+		.row > .col-1 {
+			width: 8.33333%;
+		.row > .off-1 {
+			margin-left: 8.33333%;
+		.row > .col-2 {
+			width: 16.66667%;
+		.row > .off-2 {
+			margin-left: 16.66667%;
+		.row > .col-3 {
+			width: 25%;
+		.row > .off-3 {
+			margin-left: 25%;
+		.row > .col-4 {
+			width: 33.33333%;
+		.row > .off-4 {
+			margin-left: 33.33333%;
+		.row > .col-5 {
+			width: 41.66667%;
+		.row > .off-5 {
+			margin-left: 41.66667%;
+		.row > .col-6 {
+			width: 50%;
+		.row > .off-6 {
+			margin-left: 50%;
+		.row > .col-7 {
+			width: 58.33333%;
+		.row > .off-7 {
+			margin-left: 58.33333%;
+		.row > .col-8 {
+			width: 66.66667%;
+		.row > .off-8 {
+			margin-left: 66.66667%;
+		.row > .col-9 {
+			width: 75%;
+		.row > .off-9 {
+			margin-left: 75%;
+		.row > .col-10 {
+			width: 83.33333%;
+		.row > .off-10 {
+			margin-left: 83.33333%;
+		.row > .col-11 {
+			width: 91.66667%;
+		.row > .off-11 {
+			margin-left: 91.66667%;
+		.row > .col-12 {
+		.row > .off-12 {
+			margin-left: 100%;
+		.row.gtr-0 {
+			margin-top: 0;
+			margin-left: 0em;
+			.row.gtr-0 > * {
+				padding: 0 0 0 0em;
+			.row.gtr-0.gtr-uniform {
+				margin-top: 0em;
+				.row.gtr-0.gtr-uniform > * {
+					padding-top: 0em;
+		.row.gtr-25 {
+			margin-left: -0.375em;
+			.row.gtr-25 > * {
+				padding: 0 0 0 0.375em;
+			.row.gtr-25.gtr-uniform {
+				margin-top: -0.375em;
+				.row.gtr-25.gtr-uniform > * {
+					padding-top: 0.375em;
+		.row.gtr-50 {
+			margin-left: -0.75em;
+			.row.gtr-50 > * {
+				padding: 0 0 0 0.75em;
+			.row.gtr-50.gtr-uniform {
+				margin-top: -0.75em;
+				.row.gtr-50.gtr-uniform > * {
+					padding-top: 0.75em;
+			margin-left: -1.5em;
+				padding: 0 0 0 1.5em;
+			.row.gtr-uniform {
+				margin-top: -1.5em;
+				.row.gtr-uniform > * {
+					padding-top: 1.5em;
+		.row.gtr-150 {
+			margin-left: -2.25em;
+			.row.gtr-150 > * {
+				padding: 0 0 0 2.25em;
+			.row.gtr-150.gtr-uniform {
+				margin-top: -2.25em;
+				.row.gtr-150.gtr-uniform > * {
+					padding-top: 2.25em;
+		.row.gtr-200 {
+			margin-left: -3em;
+			.row.gtr-200 > * {
+				padding: 0 0 0 3em;
+			.row.gtr-200.gtr-uniform {
+				margin-top: -3em;
+				.row.gtr-200.gtr-uniform > * {
+					padding-top: 3em;
+				.row > .imp-xlarge {
+				.row > .col-1-xlarge {
+				.row > .off-1-xlarge {
+				.row > .col-2-xlarge {
+				.row > .off-2-xlarge {
+				.row > .col-3-xlarge {
+				.row > .off-3-xlarge {
+				.row > .col-4-xlarge {
+				.row > .off-4-xlarge {
+				.row > .col-5-xlarge {
+				.row > .off-5-xlarge {
+				.row > .col-6-xlarge {
+				.row > .off-6-xlarge {
+				.row > .col-7-xlarge {
+				.row > .off-7-xlarge {
+				.row > .col-8-xlarge {
+				.row > .off-8-xlarge {
+				.row > .col-9-xlarge {
+				.row > .off-9-xlarge {
+				.row > .col-10-xlarge {
+				.row > .off-10-xlarge {
+				.row > .col-11-xlarge {
+				.row > .off-11-xlarge {
+				.row > .col-12-xlarge {
+				.row > .off-12-xlarge {
+				.row > .imp-large {
+				.row > .col-1-large {
+				.row > .off-1-large {
+				.row > .col-2-large {
+				.row > .off-2-large {
+				.row > .col-3-large {
+				.row > .off-3-large {
+				.row > .col-4-large {
+				.row > .off-4-large {
+				.row > .col-5-large {
+				.row > .off-5-large {
+				.row > .col-6-large {
+				.row > .off-6-large {
+				.row > .col-7-large {
+				.row > .off-7-large {
+				.row > .col-8-large {
+				.row > .off-8-large {
+				.row > .col-9-large {
+				.row > .off-9-large {
+				.row > .col-10-large {
+				.row > .off-10-large {
+				.row > .col-11-large {
+				.row > .off-11-large {
+				.row > .col-12-large {
+				.row > .off-12-large {
+		@media screen and (max-width: 980px) {
+				.row > .imp-medium {
+				.row > .col-1-medium {
+				.row > .off-1-medium {
+				.row > .col-2-medium {
+				.row > .off-2-medium {
+				.row > .col-3-medium {
+				.row > .off-3-medium {
+				.row > .col-4-medium {
+				.row > .off-4-medium {
+				.row > .col-5-medium {
+				.row > .off-5-medium {
+				.row > .col-6-medium {
+				.row > .off-6-medium {
+				.row > .col-7-medium {
+				.row > .off-7-medium {
+				.row > .col-8-medium {
+				.row > .off-8-medium {
+				.row > .col-9-medium {
+				.row > .off-9-medium {
+				.row > .col-10-medium {
+				.row > .off-10-medium {
+				.row > .col-11-medium {
+				.row > .off-11-medium {
+				.row > .col-12-medium {
+				.row > .off-12-medium {
+				.row > .imp-small {
+				.row > .col-1-small {
+				.row > .off-1-small {
+				.row > .col-2-small {
+				.row > .off-2-small {
+				.row > .col-3-small {
+				.row > .off-3-small {
+				.row > .col-4-small {
+				.row > .off-4-small {
+				.row > .col-5-small {
+				.row > .off-5-small {
+				.row > .col-6-small {
+				.row > .off-6-small {
+				.row > .col-7-small {
+				.row > .off-7-small {
+				.row > .col-8-small {
+				.row > .off-8-small {
+				.row > .col-9-small {
+				.row > .off-9-small {
+				.row > .col-10-small {
+				.row > .off-10-small {
+				.row > .col-11-small {
+				.row > .off-11-small {
+				.row > .col-12-small {
+				.row > .off-12-small {
+		@media screen and (max-width: 480px) {
+				.row > .imp-xsmall {
+				.row > .col-1-xsmall {
+				.row > .off-1-xsmall {
+				.row > .col-2-xsmall {
+				.row > .off-2-xsmall {
+				.row > .col-3-xsmall {
+				.row > .off-3-xsmall {
+				.row > .col-4-xsmall {
+				.row > .off-4-xsmall {
+				.row > .col-5-xsmall {
+				.row > .off-5-xsmall {
+				.row > .col-6-xsmall {
+				.row > .off-6-xsmall {
+				.row > .col-7-xsmall {
+				.row > .off-7-xsmall {
+				.row > .col-8-xsmall {
+				.row > .off-8-xsmall {
+				.row > .col-9-xsmall {
+				.row > .off-9-xsmall {
+				.row > .col-10-xsmall {
+				.row > .off-10-xsmall {
+				.row > .col-11-xsmall {
+				.row > .off-11-xsmall {
+				.row > .col-12-xsmall {
+				.row > .off-12-xsmall {
+/* Section/Article */
+	section.special, article.special {
+	header p {
+		color: rgba(255, 255, 255, 0.5);
+		top: -0.25em;
+	header h3 + p {
+	header h4 + p,
+	header h5 + p,
+	header h6 + p {
+	header.major {
+		margin: 0 0 3.5em 0;
+		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+			display: inline-block;
+			padding-bottom: 1em;
+			header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
+				height: 1px;
+		header.major p {
+			top: 0;
+		header br {
+			display: none;
+/* Form */
+	form {
+	label {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		background-color: rgba(144, 144, 144, 0.25);
+		outline: 0;
+		padding: 0 1em;
+		input[type="text"]:invalid,
+		input[type="password"]:invalid,
+		input[type="email"]:invalid,
+		input[type="tel"]:invalid,
+		select:invalid,
+		textarea:invalid {
+			box-shadow: none;
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		input[type="tel"]:focus,
+		select:focus,
+		textarea:focus {
+			box-shadow: 0 0 0 2px #21b2a6;
+	select {
+		background-size: 1.25em;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 1em) center;
+		height: 2.75em;
+		padding-right: 2.75em;
+		text-overflow: ellipsis;
+		select:focus::-ms-value {
+		select::-ms-expand {
+		padding: 0.75em 1em;
+	input[type="checkbox"],
+	input[type="radio"] {
+		float: left;
+		margin-right: -2em;
+		opacity: 0;
+		width: 1em;
+		z-index: -1;
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			padding-left: 2.4em;
+			padding-right: 0.75em;
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				text-transform: none !important;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				height: 2.0625em;
+				left: 0;
+				line-height: 2.0625em;
+				position: absolute;
+				width: 2.0625em;
+		input[type="checkbox"]:checked + label:before,
+		input[type="radio"]:checked + label:before {
+			content: '\f00c';
+		input[type="checkbox"]:focus + label:before,
+		input[type="radio"]:focus + label:before {
+	input[type="checkbox"] + label:before {
+		border-radius: 100%;
+	::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, 0.5) !important;
+		opacity: 1.0;
+	:-moz-placeholder {
+	::-moz-placeholder {
+	:-ms-input-placeholder {
+/* Box */
+	.box {
+		border: solid 2px #fff;
+		margin-bottom: 2em;
+		padding: 1.5em;
+		.box > :last-child,
+		.box > :last-child > :last-child,
+		.box > :last-child > :last-child > :last-child {
+		.box.alt {
+			border-radius: 0;
+/* Icon */
+	.icon {
+		border-bottom: none;
+		.icon:before {
+		.icon > .label {
+			line-height: inherit;
+		.icon.solid:before {
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		.icon.major {
+			transform: rotate(-45deg);
+			height: calc(3em + 2px);
+			line-height: 3em;
+			width: calc(3em + 2px);
+			.icon.major:before {
+				transform: rotate(45deg);
+				font-size: 1.5em;
+		.icon.style1 {
+			color: #00ffcc;
+		.icon.style2 {
+			color: #00f0ff;
+		.icon.style3 {
+			color: #76ddff;
+/* Image */
+	.image {
+		.image img {
+		.image.left {
+			margin: 0 2em 2em 0;
+			top: 0.25em;
+		.image.right {
+			float: right;
+			margin: 0 0 2em 2em;
+		.image.left, .image.right {
+			max-width: 40%;
+			.image.left img, .image.right img {
+		.image.fit {
+			.image.fit img {
+				height: 23em;
+/* List */
+	ol {
+		list-style: decimal;
+		padding-left: 1.25em;
+		ol li {
+			padding-left: 0.25em;
+	ul {
+		list-style: disc;
+		padding-left: 1em;
+		ul li {
+			padding-left: 0.5em;
+		ul.alt {
+			padding-left: 0;
+			ul.alt li {
+				border-top: solid 1px #fff;
+				padding: 0.5em 0;
+				ul.alt li:first-child {
+					border-top: 0;
+					padding-top: 0;
+	dl {
+/* Actions */
+	ul.actions {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		cursor: default;
+		margin-left: -1em;
+		ul.actions li {
+			padding: 0 0 0 1em;
+			vertical-align: middle;
+		ul.actions.special {
+			margin-left: 0;
+			ul.actions.special li:first-child {
+		ul.actions.stacked {
+			flex-direction: column;
+			ul.actions.stacked li {
+				padding: 1em 0 0 0;
+				ul.actions.stacked li:first-child {
+		ul.actions.fit {
+			width: calc(100% + 1em);
+			ul.actions.fit li {
+				flex-grow: 1;
+				flex-shrink: 1;
+				ul.actions.fit li > * {
+			ul.actions.fit.stacked {
+			ul.actions:not(.fixed) {
+				width: 100% !important;
+				ul.actions:not(.fixed) li {
+					ul.actions:not(.fixed) li > * {
+					ul.actions:not(.fixed) li:first-child {
+					ul.actions:not(.fixed) li input[type="submit"],
+					ul.actions:not(.fixed) li input[type="reset"],
+					ul.actions:not(.fixed) li input[type="button"],
+					ul.actions:not(.fixed) li button,
+					ul.actions:not(.fixed) li .button {
+						ul.actions:not(.fixed) li input[type="submit"].icon:before,
+						ul.actions:not(.fixed) li input[type="reset"].icon:before,
+						ul.actions:not(.fixed) li input[type="button"].icon:before,
+						ul.actions:not(.fixed) li button.icon:before,
+						ul.actions:not(.fixed) li .button.icon:before {
+							margin-left: -0.5em;
+/* Icons */
+	ul.icons {
+		ul.icons li {
+			padding: 0 1em 0 0;
+			ul.icons li:last-child {
+				padding-right: 0 !important;
+		ul.icons.major {
+			padding: 1em 0;
+			ul.icons.major li {
+				padding-right: 3.5em;
+						padding: 0 1em !important;
+/* Table */
+	.table-wrapper {
+		table tbody tr {
+			border: solid 1px #fff;
+			border-left: 0;
+			border-right: 0;
+			table tbody tr:nth-child(2n + 1) {
+		table td {
+			padding: 0.75em 0.75em;
+		table th {
+			padding: 0 0.75em 0.75em 0.75em;
+		table thead {
+		table tfoot {
+			border-top: solid 2px #fff;
+		table.alt {
+			border-collapse: separate;
+			table.alt tbody tr td {
+				border-left-width: 0;
+				border-top-width: 0;
+				table.alt tbody tr td:first-child {
+					border-left-width: 1px;
+			table.alt tbody tr:first-child td {
+				border-top-width: 1px;
+			table.alt thead {
+				border-bottom: 0;
+			table.alt tfoot {
+/* Button */
+	/* input[type="file"] {
+		visibility: hidden;
+	} */
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	input[type="file"],
+	button,
+	.button {
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		box-shadow: inset 0 0 0 2px #fff;
+		height: 3.125em;
+		line-height: 3.125em;
+		max-width: 30em;
+		padding: 0 2.75em;
+		white-space: nowrap;
+		overflow: hidden;
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		input[type="file"]:hover,
+		button:hover,
+		.button:hover,
+		.file:hover {
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		input[type="file"]:active,
+		button:active,
+		.button:active {
+			background-color: rgba(144, 144, 144, 0.5);
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		input[type="button"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			margin-right: 0.5em;
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		button.fit,
+		.button.fit {
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		button.small,
+		.button.small {
+		input[type="submit"].large,
+		input[type="reset"].large,
+		input[type="button"].large,
+		button.large,
+		.button.large {
+		input[type="submit"].primary,
+		input[type="reset"].primary,
+		input[type="button"].primary,
+		button.primary,
+		.button.primary {
+			background-color: rgb(235, 110, 0);
+			box-shadow: none !important;
+			color: #ffffff !important;
+			input[type="submit"].primary:hover,
+			input[type="reset"].primary:hover,
+			input[type="button"].primary:hover,
+			button.primary:hover,
+			.button.primary:hover {
+				background-color: whitesmoke !important;
+				color: black !important;
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		button.disabled,
+		button:disabled,
+		.button.disabled,
+		.button:disabled {
+			pointer-events: none;
+			opacity: 0.25;
+				height: 3.75em;
+				line-height: 3.75em;
+/* Features */
+	.features {
+		.features li {
+			padding: 4em 4em 2em 6em ;
+			.features li:nth-child(1) {
+				background-color: rgba(0, 0, 0, 0.035);
+			.features li:nth-child(2) {
+				background-color: rgba(0, 0, 0, 0.07);
+			.features li:nth-child(3) {
+				background-color: rgba(0, 0, 0, 0.105);
+			.features li:nth-child(4) {
+				background-color: rgba(0, 0, 0, 0.14);
+			.features li:nth-child(5) {
+				background-color: rgba(0, 0, 0, 0.175);
+			.features li:nth-child(6) {
+				background-color: rgba(0, 0, 0, 0.21);
+			.features li:nth-child(7) {
+				background-color: rgba(0, 0, 0, 0.245);
+			.features li:nth-child(8) {
+				background-color: rgba(0, 0, 0, 0.28);
+			.features li:nth-child(9) {
+				background-color: rgba(0, 0, 0, 0.315);
+			.features li:nth-child(10) {
+				background-color: rgba(0, 0, 0, 0.35);
+			.features li:before {
+				left: 1.75em;
+				top: 2.75em;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+			.features li:nth-last-child(1) {
+				border-bottom-right-radius: 3px;
+			.features li:nth-last-child(2) {
+				border-bottom-left-radius: 3px;
+					padding: 3em 2em 1em 2em ;
+					padding: 3em 0 1em 0 ;
+					background-color: transparent !important;
+					.features li:first-child {
+/* Spotlight */
+	.spotlight {
+		.spotlight .image {
+			order: 1;
+			width: 40%;
+			.spotlight .image img {
+		.spotlight .content {
+			padding: 2em 4em 0.1em 4em ;
+			order: 2;
+			max-width: 48em;
+			width: 60%;
+		.spotlight:nth-child(2n) {
+			flex-direction: row-reverse;
+		.spotlight:nth-child(1) {
+			background-color: rgba(0, 0, 0, 0.075);
+		.spotlight:nth-child(2) {
+			background-color: rgba(0, 0, 0, 0.15);
+		.spotlight:nth-child(3) {
+			background-color: rgba(0, 0, 0, 0.225);
+		.spotlight:nth-child(4) {
+			background-color: rgba(0, 0, 0, 0.3);
+		.spotlight:nth-child(5) {
+			background-color: rgba(0, 0, 0, 0.375);
+		.spotlight:nth-child(6) {
+			background-color: rgba(0, 0, 0, 0.45);
+		.spotlight:nth-child(7) {
+			background-color: rgba(0, 0, 0, 0.525);
+		.spotlight:nth-child(8) {
+			background-color: rgba(0, 0, 0, 0.6);
+		.spotlight:nth-child(9) {
+			background-color: rgba(0, 0, 0, 0.675);
+		.spotlight:nth-child(10) {
+			background-color: rgba(0, 0, 0, 0.75);
+				width: 45%;
+				width: 55%;
+				.spotlight br {
+					padding: 4em 3em 2em 3em ;
+					max-width: none;
+/* Wrapper */
+	.wrapper {
+		padding: 6em 0 4em 0 ;
+		.wrapper > .inner {
+			width: 60em;
+			margin: 0 auto;
+					width: 90%;
+			@media (max-width: 736px) {
+				.col-6.box {
+				  /* other styles you want to apply */
+		.wrapper.alt {
+		.wrapper.style1 {
+			background-color: #21b2a6;
+			color: #c8ece9;
+			.wrapper.style1 strong, .wrapper.style1 b {
+				color: #ffffff;
+			.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
+			.wrapper.style1 hr {
+				border-color: rgba(0, 0, 0, 0.125);
+			.wrapper.style1 blockquote {
+			.wrapper.style1 code {
+				background: rgba(255, 255, 255, 0.075);
+			.wrapper.style1 header p {
+				color: #a6e0db;
+			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
+			.wrapper.style1 header.major p {
+			.wrapper.style1 label {
+			.wrapper.style1 input[type="text"],
+			.wrapper.style1 input[type="password"],
+			.wrapper.style1 input[type="email"],
+			.wrapper.style1 select,
+			.wrapper.style1 textarea {
+				background-color: rgba(255, 255, 255, 0.075);
+			.wrapper.style1 select {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(0, 0, 0, 0.125)' /%3E%3C/svg%3E");
+				.wrapper.style1 select option {
+					background: #21b2a6;
+			.wrapper.style1 input[type="checkbox"] + label,
+			.wrapper.style1 input[type="radio"] + label {
+				.wrapper.style1 input[type="checkbox"] + label:before,
+				.wrapper.style1 input[type="radio"] + label:before {
+			.wrapper.style1 input[type="checkbox"]:checked + label:before,
+			.wrapper.style1 input[type="radio"]:checked + label:before {
+				background: #ffffff;
+				color: #21b2a6;
+			.wrapper.style1 ::-webkit-input-placeholder {
+				color: #a6e0db !important;
+			.wrapper.style1 :-moz-placeholder {
+			.wrapper.style1 ::-moz-placeholder {
+			.wrapper.style1 :-ms-input-placeholder {
+			.wrapper.style1 .formerize-placeholder {
+			.wrapper.style1 .icon.major {
+			.wrapper.style1 ul.alt li {
+			.wrapper.style1 table tbody tr {
+				.wrapper.style1 table tbody tr:nth-child(2n + 1) {
+			.wrapper.style1 table th {
+			.wrapper.style1 table thead {
+			.wrapper.style1 table tfoot {
+			.wrapper.style1 table.alt tbody tr td {
+			.wrapper.style1 input[type="submit"],
+			.wrapper.style1 input[type="reset"],
+			.wrapper.style1 input[type="button"],
+			.wrapper.style1 button,
+			.wrapper.style1 .button {
+				box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.125);
+				.wrapper.style1 input[type="submit"]:hover,
+				.wrapper.style1 input[type="reset"]:hover,
+				.wrapper.style1 input[type="button"]:hover,
+				.wrapper.style1 button:hover,
+				.wrapper.style1 .button:hover {
+				.wrapper.style1 input[type="submit"]:active,
+				.wrapper.style1 input[type="reset"]:active,
+				.wrapper.style1 input[type="button"]:active,
+				.wrapper.style1 button:active,
+				.wrapper.style1 .button:active {
+					background-color: rgba(255, 255, 255, 0.2);
+				.wrapper.style1 .features li {
+					border-top-color: rgba(0, 0, 0, 0.125);
+		.wrapper.style2 {
+			background-color: #2e3842;
+		.wrapper.style3 {
+			color: #d3d4e4;
+			.wrapper.style3 strong, .wrapper.style3 b {
+			.wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
+			.wrapper.style3 hr {
+			.wrapper.style3 blockquote {
+			.wrapper.style3 code {
+			.wrapper.style3 header p {
+				color: #b9bad4;
+			.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
+			.wrapper.style3 header.major p {
+			.wrapper.style3 label {
+			.wrapper.style3 input[type="text"],
+			.wrapper.style3 input[type="password"],
+			.wrapper.style3 input[type="email"],
+			.wrapper.style3 select,
+			.wrapper.style3 textarea {
+			.wrapper.style3 select {
+				.wrapper.style3 select option {
+					background: #505393;
+			.wrapper.style3 input[type="checkbox"] + label,
+			.wrapper.style3 input[type="radio"] + label {
+				.wrapper.style3 input[type="checkbox"] + label:before,
+				.wrapper.style3 input[type="radio"] + label:before {
+			.wrapper.style3 input[type="checkbox"]:checked + label:before,
+			.wrapper.style3 input[type="radio"]:checked + label:before {
+				color: #505393;
+			.wrapper.style3 ::-webkit-input-placeholder {
+				color: #b9bad4 !important;
+			.wrapper.style3 :-moz-placeholder {
+			.wrapper.style3 ::-moz-placeholder {
+			.wrapper.style3 :-ms-input-placeholder {
+			.wrapper.style3 .formerize-placeholder {
+			.wrapper.style3 .icon.major {
+			.wrapper.style3 ul.alt li {
+			.wrapper.style3 table tbody tr {
+				.wrapper.style3 table tbody tr:nth-child(2n + 1) {
+			.wrapper.style3 table th {
+			.wrapper.style3 table thead {
+			.wrapper.style3 table tfoot {
+			.wrapper.style3 table.alt tbody tr td {
+			.wrapper.style3 input[type="submit"],
+			.wrapper.style3 input[type="reset"],
+			.wrapper.style3 input[type="button"],
+			.wrapper.style3 button,
+			.wrapper.style3 .button {
+				.wrapper.style3 input[type="submit"]:hover,
+				.wrapper.style3 input[type="reset"]:hover,
+				.wrapper.style3 input[type="button"]:hover,
+				.wrapper.style3 button:hover,
+				.wrapper.style3 .button:hover {
+				.wrapper.style3 input[type="submit"]:active,
+				.wrapper.style3 input[type="reset"]:active,
+				.wrapper.style3 input[type="button"]:active,
+				.wrapper.style3 button:active,
+				.wrapper.style3 .button:active {
+				.wrapper.style3 .features li {
+		.wrapper.style4 {
+		.wrapper.style5 {
+			background-color: #ffffff;
+			color: #4E4852;
+			.wrapper.style5 strong, .wrapper.style5 b {
+				color: #2E3842;
+			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
+			.wrapper.style5 hr {
+				border-color: #dfdfdf;
+			.wrapper.style5 blockquote {
+			.wrapper.style5 code {
+				background: rgba(0, 0, 0, 0.0375);
+			.wrapper.style5 header p {
+				color: #8E8892;
+			.wrapper.style5 header.major h2, .wrapper.style5 header.major h3, .wrapper.style5 header.major h4, .wrapper.style5 header.major h5, .wrapper.style5 header.major h6 {
+			.wrapper.style5 header.major p {
+			.wrapper.style5 label {
+			.wrapper.style5 input[type="text"],
+			.wrapper.style5 input[type="password"],
+			.wrapper.style5 input[type="email"],
+			.wrapper.style5 select,
+			.wrapper.style5 textarea {
+				background-color: rgba(0, 0, 0, 0.0375);
+			.wrapper.style5 select {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23dfdfdf' /%3E%3C/svg%3E");
+				.wrapper.style5 select option {
+			.wrapper.style5 input[type="checkbox"] + label,
+			.wrapper.style5 input[type="radio"] + label {
+				.wrapper.style5 input[type="checkbox"] + label:before,
+				.wrapper.style5 input[type="radio"] + label:before {
+			.wrapper.style5 input[type="checkbox"]:checked + label:before,
+			.wrapper.style5 input[type="radio"]:checked + label:before {
+				background: #2E3842;
+			.wrapper.style5 ::-webkit-input-placeholder {
+				color: #8E8892 !important;
+			.wrapper.style5 :-moz-placeholder {
+			.wrapper.style5 ::-moz-placeholder {
+			.wrapper.style5 :-ms-input-placeholder {
+			.wrapper.style5 .formerize-placeholder {
+			.wrapper.style5 .icon.major {
+			.wrapper.style5 ul.alt li {
+			.wrapper.style5 table tbody tr {
+				.wrapper.style5 table tbody tr:nth-child(2n + 1) {
+			.wrapper.style5 table th {
+			.wrapper.style5 table thead {
+			.wrapper.style5 table tfoot {
+			.wrapper.style5 table.alt tbody tr td {
+			.wrapper.style5 input[type="submit"],
+			.wrapper.style5 input[type="reset"],
+			.wrapper.style5 input[type="button"],
+			.wrapper.style5 button,
+			.wrapper.style5 .button {
+				box-shadow: inset 0 0 0 2px #dfdfdf;
+				.wrapper.style5 input[type="submit"]:hover,
+				.wrapper.style5 input[type="reset"]:hover,
+				.wrapper.style5 input[type="button"]:hover,
+				.wrapper.style5 button:hover,
+				.wrapper.style5 .button:hover {
+				.wrapper.style5 input[type="submit"]:active,
+				.wrapper.style5 input[type="reset"]:active,
+				.wrapper.style5 input[type="button"]:active,
+				.wrapper.style5 button:active,
+				.wrapper.style5 .button:active {
+					background-color: rgba(0, 0, 0, 0.1);
+				.wrapper.style5 .features li {
+					border-top-color: #dfdfdf;
+/* Page Wrapper + Menu */
+	#page-wrapper {
+		transition: opacity 0.5s ease;
+		opacity: 1;
+		#page-wrapper:before {
+			background: rgba(0, 0, 0, 0);
+			height: 100%;
+			position: fixed;
+			z-index: 10001;
+	#menu {
+		transform: translateX(20em);
+		transition: transform 0.5s ease;
+		background: rgb(235, 110, 0);
+		max-width: 80%;
+		overflow-y: auto;
+		padding: 3em 2em;
+		right: 0;
+		width: 20em;
+		z-index: 10002;
+		#menu ul {
+			#menu ul > li {
+				border-top: solid 1px rgba(0, 0, 0, 0.125);
+				margin: 0.5em 0 0 0;
+				padding: 0.5em 0 0 0;
+				#menu ul > li:first-child {
+					border-top: 0 !important;
+					margin-top: 0 !important;
+					padding-top: 0 !important;
+				#menu ul > li > a {
+		#menu .close {
+			background-image: url("images/close.svg");
+			background-position: 4.85em 1em;
+			height: 3em;
+			width: 7em;
+				padding: 3em 1.5em;
+	body.is-menu-visible #page-wrapper {
+		opacity: 0.35;
+		body.is-menu-visible #page-wrapper:before {
+	body.is-menu-visible #menu {
+		transform: translateX(0);
+/* Header */
+	#header {
+		transition: background-color 0.2s ease;
+		z-index: 10000;
+		#header h1 {
+			transition: opacity 0.2s ease;
+			height: inherit;
+			left: 1.25em;
+			#header h1 a {
+		#header nav {
+			#header nav > ul {
+				#header nav > ul > li {
+					#header nav > ul > li > a {
+						padding: 0 1.5em;
+						#header nav > ul > li > a.menuToggle {
+							#header nav > ul > li > a.menuToggle:after {
+								background-image: url("images/bars.svg");
+								background-position: right center;
+								vertical-align: top;
+								width: 2em;
+									#header nav > ul > li > a.menuToggle span {
+					#header nav > ul > li:first-child {
+		#header.alt {
+			background: transparent;
+			#header.alt h1 {
+/* Banner */
+	#banner {
+		height: 100vh;
+		min-height: 35em;
+		#banner h2 {
+			transform: scale(1);
+			transition: transform 0.5s ease, opacity 0.5s ease;
+			font-size: 1.75em;
+			padding: 0.35em 1em;
+			z-index: 1;
+			#banner h2:before, #banner h2:after {
+				transition: width 0.85s ease;
+				transition-delay: 0.25s;
+				background: #fff;
+				height: 2px;
+			#banner h2:before {
+			#banner h2:after {
+				bottom: 0;
+		#banner p {
+			#banner p a {
+		#banner .more {
+			transition: transform 0.75s ease, opacity 0.75s ease;
+			transition-delay: 3.5s;
+			transform: translateY(0);
+			height: 8.5em;
+			left: 50%;
+			margin-left: -8.5em;
+			padding-left: 0.225em;
+			width: 16em;
+			#banner .more:after {
+				background-image: url("images/arrow.svg");
+				background-position: center;
+				background-size: contain;
+				bottom: 4em;
+				height: 1.5em;
+				margin: 0 0 0 -0.75em;
+				width: 1.5em;
+		#banner:after {
+			transition: opacity 3s ease-in-out;
+			transition-delay: 1.25s;
+				padding: 7em 3em 5em 3em ;
+				min-height: 0;
+					font-size: 1.25em;
+				#banner br {
+	body.is-preload #banner h2 {
+		transform: scale(0.95);
+		body.is-preload #banner h2:before, body.is-preload #banner h2:after {
+			width: 0;
+	body.is-preload #banner .more {
+		transform: translateY(8.5em);
+	body.is-preload #banner:after {
+/* CTA */
+	#cta .inner {
+		max-width: 55em;
+		#cta .inner header {
+			/* padding-right: 3em; */
+			width: 70%;
+			#cta .inner header p {
+		#cta .inner .actions {
+			width: 30%;
+					padding-right: 0;
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 20em;
+/* Main */
+	#main > header {
+	padding: 12em 0 10em 0;
+	background-image:
+	linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+	url("/images/MedicineLake.webp");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	text-align:center;
+		#main > header h2 {
+			margin: 0 0 0.5em 0;
+		#main > header p {
+			#main > header p a {
+				padding: 10em 0 8em 0 ;
+				padding: 8em 3em 6em 3em ;
+				padding: 10em 3em 8em 3em ;
+				padding: 5em 3em 3em 3em ;
+/* Footer */
+	#footer {
+		background-color: #1d242a;
+		#footer .icons {
+			#footer .icons a {
+				#footer .icons a:hover {
+		#footer .copyright {
+			#footer .copyright li {
+				border-left: solid 1px rgba(255, 255, 255, 0.5);
+				margin-left: 1em;
+				#footer .copyright li:first-child {
+				#footer .copyright li a {
+					#footer .copyright li a:hover {
+/* Landing */
+	body.landing #page-wrapper {
+	padding-top:0;
+	body.landing #footer {
+		background-color: rgba(29, 36, 42, 0.9);
+	body.is-mobile.landing #page-wrapper {
+		background: none;
+	body.is-mobile.landing #banner,
+    body.is-mobile.landing .wrapper.style4{
+	body.is-mobile.landing #footer {
+	#contact {
+		margin: auto;
+		background: rgba(46, 56, 66, 0.85);
+		padding: 3em;
+		border-radius: 6px;
+	.col-12 > ul.actions{
+	#testimonials{
+		width: 80%;
+		margin: 5em auto;
+	#testimonials button{
+		.actions li{
+		.row .col-4{
+		.image.fit img{
+			height: 20em;
+	@media screen and (max-width: 500px){
+	.file-upload {
+		border: 1px solid #ccc;
+		padding: 6px 13px;
+	.upload-overlay {
+		z-index: 0;
+		opacity: 0.5;
+	.upload-btn {
+		z-index: 10;
+	.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+	.inputfile + label {
+	.inputfile:focus + label,
+	.inputfile + label:hover {
+		background-color: red;
+	.file {
+/* ============================= */
+/* AI CHAT BUBBLE (Spectral)     */
+#ai-bubble {
+	bottom: 20px;
+	right: 20px;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	font-size: 22px;
+	z-index: 9998; /* alla menu (10002), üle sisu */
+	box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+#ai-bubble:hover {
+	transform: scale(1.05);
+	box-shadow: 0 14px 35px rgba(0,0,0,0.45);
+/* Chat window */
+#ai-chat {
+	bottom: 90px;
+	width: 300px;
+	max-width: calc(100vw - 40px);
+	color: #2e3842;
+	border-radius: 12px;
+	box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+	z-index: 9999;
+	letter-spacing: normal;
+#ai-header {
+	padding: 10px 12px;
+	border-radius: 12px 12px 0 0;
+	justify-content: space-between;
+	letter-spacing: 0.15em;
+#ai-close {
+	font-size: 1.2em;
+/* Messages */
+#ai-messages {
+	padding: 10px;
+	height: 180px;
+	font-size: 0.85em;
+	line-height: 1.4em;
+	background: #f7f7f7;
+#ai-messages b {
+/* Input */
+#ai-input {
+	border-top: 1px solid #ddd;
+#ai-input::placeholder {
+	color: #999;
+/* Send button */
+#ai-chat button {
+#ai-chat button:hover {
+	color: #000;
+/* Mobile tweaks */
+		bottom: 12px;
+		right: 12px;
+		bottom: 80px;
+		width: 260px;
+#menu .submenu-header {
+	padding: 0.25em 0;
+/* ===== Teenused dropdown (slide-down) ===== */
+#menu .submenu-arrow {
+	transition: transform 0.3s ease;
+#menu .submenu.open .submenu-arrow {
+	transform: rotate(90deg);
+#menu .submenu-items li a {
+	opacity: 0.9;
+/* FIX: tühja augu eemaldamine Teenused alt */
+#menu .submenu {
+	padding-bottom: 0;
+#menu .submenu:not(.open) {
+#menu .submenu:not(.open) .submenu-items {
+/* FIX: ära jäta tühja ruumi peale viimast Teenust */
+#menu .submenu-items li:last-child {
+/* FIX: eemalda ul default margin dropdowni alt */
+#menu .submenu-items {
+	padding-left: 1.25em; /* jäta ainult see, kui tahad taanet */
+/* ===== Aktiivne menüüpunkt ===== */
+#menu a.active {
+	background: rgba(255, 255, 255, 0.2);
+	border-left: 3px solid #fff;
+/* Aktiivne submenu link */
+#menu .submenu-items a.active {
+	background: rgba(255, 255, 255, 0.15);
+	padding-left: 0.75em;
+/* Ainult Plaatimine lehe pilt */
+.page-plaatimine .center-image img {
+	max-width: 700px;   /* muuda siit väiksemaks/suuremaks */
+	.page-plaatimine .center-image img,
+	.plaatimine-image img {
+		max-width: 100%;
+/* Plaatimine lehe pilt keskele */
+.page-plaatimine .center-image {
+	max-width: 700px;
+	height: auto;
+/* ===============================
+   PLAATIMINE – custom section
+   =============================== */
+.page-plaatimine .plaatimine-section {
+	background: #cdb08d;
+	padding: 5rem 2rem;
+.page-plaatimine .plaatimine-title {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+.page-plaatimine .plaatimine-image img {
+	max-width: 1100px;
+	margin: 0 auto 4rem;
+	border-radius: 4px;
+.page-plaatimine .plaatimine-steps {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	max-width: 1200px;
+.page-plaatimine .step span.icon {
+	margin-bottom: 1rem;
+.page-plaatimine .step h3 {
+.page-plaatimine .step p {
+	line-height: 1.7;
+/* Mobiil */
+@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+.page-plaatimine .plaatimine-cta {
+/* Plaatimine lehe CTA nupu 100% tsentreerimine */
+.page-plaatimine .actions {
+	padding-left: 0 !important;
+.page-plaatimine .actions.special {
+/* Teenuste alamlingid väiksemaks */
+#menu .submenu-items a {
+	font-size: 0.2em;   /* proovi 0.75–0.85 */
+	padding: 0.15em 0;
+	line-height: 1.15;
+	letter-spacing: 0.06em;
+/* Kitsam vertikaalne spacing alamteenustel */
+#menu .submenu-items li {
+	padding: 0.1em 0;
+#menu ul li a {
+	padding: 0.35em 0;
+	line-height: 1.2;
+	letter-spacing: 0.08em;
+#menu ul li {
+	border-top: none;
+	width: auto;
+/* HERO LOGO – vasakul banneris */
+.hero-logo{
+	position:absolute;
+	top:60px;
+	left:60px;
+	opacity:0;
+	transform:translateY(-20px);
+	transition:all 1.2s ease;
+/* logo suurus */
+.hero-logo img{
+	width:90px; /* ~4x väiksem */
+	height:auto;
+	filter:drop-shadow(0 8px 20px rgba(0,0,0,0.45));
+/* kui leht on laetud */
+body:not(.is-preload) .hero-logo{
+    opacity:1;
+    transform:translateY(0);
+@media screen and (max-width:736px){
+		top:20px;
+		left:20px;
+		width:120px;
+		height:120px;
+/* Banner peab olema reference */
+#banner{
+	position:relative;
+/* HERO LOGO vasakus ülanurgas */
+	top:40px;
+	left:40px;
+	z-index:10;
+	width:200px;
+	height:200px;
+	object-fit:contain; /* ei moonuta logo */
+/* CONTACT FORM spacing fix */
+#contact .actions{
+	margin-top: 10px !important;
+#contact .actions li{
+#contact .row.gtr-uniform > *{
+	margin-bottom: 15px;
+	display:flex;
+	align-items:center;
+	gap:15px;
+	margin-top:15px !important;
+/* ===== CONTACT FORM FIX ===== */
+/* eemalda liiga suur vahe textarea ja nuppude vahel */
+#contact .row.gtr-uniform > * {
+	margin-top: 1rem !important;
+/* actions joondus + spacing */
+/* ära lase spectralil li elemente alla lükata */
+	margin: 0 !important;
+/* parem joondus nuppudele */
+#contact .col-12 > ul.actions{
+	justify-content:center;
+   CONTACT FORM — FINAL FIX
+   pane main.css kõige lõppu
+/* textarea ja nuppude spacing */
+	margin-top: 0.8rem !important;
+/* actions container */
+#contact ul.actions{
+	display:flex !important;
+	align-items:center !important;
+	justify-content:center !important;
+	gap:16px !important;
+/* eemalda spectral li offset */
+#contact ul.actions li{
+	margin:0 !important;
+	padding:0 !important;
+/* file input — sama kõrgus submitiga */
+#contact input[type="file"]{
+	height:3.125em !important;
+	line-height:3.125em !important;
+	padding:0 1em !important;
+/* submit nupp vertikaalselt keskele */
+#contact input[type="submit"]{
+/* reset nupp */
+#contact input[type="reset"]{
+/* mobile fix */
+		flex-direction:column;
+		gap:12px;
+   PREMIUM CONTACT LOOK
+#contact{
+	backdrop-filter: blur(20px);
+	border:1px solid rgba(255,255,255,0.08);
+	box-shadow:0 30px 80px rgba(0,0,0,0.35);
+/* input hover */
+#contact input,
+#contact textarea{
+	transition:all .25s ease;
+#contact input:hover,
+#contact textarea:hover{
+	background:rgba(255,255,255,0.12);
+/* focus glow */
+#contact input:focus,
+#contact textarea:focus{
+	box-shadow:0 0 0 2px rgb(235,110,0);
+	background:rgba(255,255,255,0.14);
+/* submit button premium */
+#contact input.primary{
+	border-radius:8px;
+	box-shadow:0 10px 30px rgba(235,110,0,0.35);
+#contact input.primary:hover{
+	transform:translateY(-2px);
+/* file input ilusam */
+	border:2px dashed rgba(255,255,255,0.3);
+/* GLOBAL MENU FONT (ALL PAGES) */
+/* põhimenüü */
+#nav ul li a,
+#menu ul li a,
+#menu .submenu-header{
+	font-size:16px !important;
+	font-weight:600;
+	letter-spacing:0.08em;
+/* teenuste alamlingid väiksemad */
+#menu .submenu-items li a{
+	font-size:14px !important;
+	font-weight:400;
+/* FORCE SUBMENU WORKING */
+/* peidetud */
+#menu .submenu-items{
+	display:none !important;
+	padding-left:20px;
+/* kui open class peal → näita */
+#menu .submenu.open > .submenu-items{
+	display:block !important;
+/* arrow animatsioon */
+#menu .submenu-arrow{
+	transition:transform .25s ease;
+#menu .submenu.open .submenu-arrow{
+	transform:rotate(90deg);
+/* GLOBAL SERVICE PAGE TEMPLATE */
+/* sama background nagu kontakt */
+.service-page{
+	background:url("images/MedicineLake.webp") center/cover no-repeat fixed;
+.service-hero{
+	height:60vh;
+	color:white;
+/* lehe sisu wrapper */
+.service-section{
+	padding:100px 20px;
+/* glass container */
+.service-container{
+	max-width:1100px;
+	width:100%;
+	padding:60px;
+	border-radius:20px;
+	background:rgba(46,56,66,0.65);
+	backdrop-filter:blur(25px);
+	box-shadow:0 40px 100px rgba(0,0,0,0.6);
+/* 3 etappi grid */
+.service-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:40px;
+/* card */
+.service-card{
+	background:rgba(255,255,255,0.04);
+	padding:25px;
+	border-radius:16px;
+/* pilt */
+.service-card img{
+	border-radius:12px;
+	margin-bottom:20px;
+/* mobile */
+@media(max-width:900px){
+		grid-template-columns:1fr;
+.newsletter-modern{
+	max-width:500px;
+	margin:40px auto;
+.newsletter-modern h3{
+	margin-bottom:10px;
+.newsletter-desc{
+	font-size:14px;
+	opacity:0.7;
+.newsletter-input{
+	padding:14px;
+	margin-bottom:15px;
+	border-radius:6px;
+	border:1px solid #ddd;
+	font-size:16px;
+.newsletter-consent{
+	display:block;
+	margin-top:15px;
+	font-size:13px;
+.newsletter-success{
+	background:#1f7a1f;
+/* ===========================
+   UNREGISTER NEWSLETTER
+=========================== */
+.newsletter-unsubscribe-box{
+margin-top:40px;
+border:1px solid #e6e6e6;
+background:#fafafa;
+max-width:520px;
+margin-left:auto;
+margin-right:auto;
+.newsletter-unsubscribe-box h4{
+margin-bottom:8px;
+color:#444;
+.unsubscribe-desc{
+color:#777;
+margin-bottom:18px;
+.unsubscribe-form-pro input{
+margin-bottom:12px;
+.unsubscribe-form-pro .button{
+background:#666;
+.unsubscribe-form-pro .button:hover{
+background:#444;
+/* message container */
+#unsubscribeMessage{
+margin-top:20px;
+/* success */
+.unsub-success{
+padding:14px 22px;
+max-width:420px;
+/* error */
+.unsub-error{
+background:#d9534f;
+.tehtudtood img {
+    height: 300px; /* vali sobiv kõrgus */
+    object-fit: cover;
+/* ===== APPLE CONTACT FORM FIX ===== */
+#three .glass-container {
+    max-width: 1000px;
+/* 2 column layout */
+.glass-grid{
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+/* textarea full width */
+.glass-grid textarea{
+    grid-column:1 / -1;
+    min-height:160px;
+/* input height fix */
+.glass-grid input{
+    height:56px;
+/* spacing buttons */
+.glass-actions{
+    margin-top:30px;
+@media(max-width:768px){
+/* =============================
+   NEWSLETTER CENTER LAYOUT
+============================= */
+.newsletter-wrapper{
+    max-width:450px;
+    margin:80px auto;
+/* spacing */
+.newsletter-wrapper form{
+    margin-bottom:40px;
+/* pealkirjad */
+.newsletter-wrapper h3{
+    letter-spacing:3px;
+/* kirjeldus */
+.newsletter-wrapper p{
+/* input kitsamaks */
+.newsletter-wrapper input{
+    margin:0 auto 15px auto;
+/* button sama lai kui input */
+.newsletter-wrapper .button{
+/* joon subscribe ja unsubscribe vahel */
+.newsletter-divider{
+    width:80px;
+    height:1px;
+    background:rgba(255,255,255,0.2);
+   APPLE PREMIUM GLASS CARD
+================================ */
+.apple-glass-card{
+    max-width:540px;
+    margin:120px auto;
+    padding:60px 50px;
+    border-radius:28px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+    );
+    backdrop-filter: blur(30px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+        0 40px 80px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: all 0.4s ease;
+/* subtle hover lift */
+.apple-glass-card:hover{
+    transform: translateY(-6px);
+        0 60px 120px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+/* TITLE */
+.apple-glass-card h2{
+    letter-spacing:4px;
+   INPUTS
+.apple-glass-card input,
+.apple-glass-card textarea{
+    background: rgba(255,255,255,0.06);
+    border-radius:14px;
+    padding:14px 18px;
+    transition: all 0.3s ease;
+.apple-glass-card input:focus,
+.apple-glass-card textarea:focus{
+    outline:none;
+    border:1px solid #ff6a00;
+    box-shadow:0 0 0 3px rgba(255,106,0,0.2);
+    background: rgba(255,255,255,0.09);
+/* textarea larger radius */
+    border-radius:18px;
+   BUTTONS
+.apple-glass-card .glass-btn.primary{
+    background:#ff6a00;
+    border:none;
+    padding:14px 30px;
+.apple-glass-card .glass-btn.primary:hover{
+    transform: translateY(-2px);
+    box-shadow:0 10px 30px rgba(255,106,0,0.4);
+/* file button */
+.apple-glass-card .glass-btn.file{
+    border:1px solid rgba(255,255,255,0.4);
+    padding:12px 24px;
+.apple-glass-card .glass-btn.file:hover{
+    background: rgba(255,255,255,0.08);
+    border-color:white;
+   GRID LAYOUT
+    grid-column: span 2;
+/* Mobile */
+        grid-column:span 1;
+/* ===== CONTACT FORM BIGGER ===== */
+/* input kõrgus */
+.apple-glass-card input{
+    padding: 18px 20px;
+    font-size: 16px;
+/* textarea suuremaks */
+    min-height: 180px;
+    padding: 20px;
+/* spacing vormi sees */
+    gap: 22px;
+/* button suuremaks */
+.glass-btn{
+    padding: 18px 32px;
+    font-size: 15px;
+    padding-bottom: 90px; /* enne oli väiksem */
+    flex-wrap:wrap; /* oluline mobile jaoks */
+.form-input {
+    max-width: 1100px !important;
+    width: 95%;
+   CONTACT BUTTON FIX – FINAL
+/* tee actions container normaalseks */
+.glass-actions,
+    gap:20px !important;
+    flex-wrap:wrap !important;
+    margin-top:25px !important;
+/* eemalda Spectral li piirangud */
+.glass-actions li,
+    list-style:none !important;
+    width:auto !important;
+/* submit nupp */
+.apple-glass-card input[type="submit"]{
+    background:#ff6a00 !important;
+    border:none !important;
+    border-radius:16px !important;
+    padding:16px 32px !important;
+    height:56px !important;
+    line-height:56px !important;
+/* file nupp sama kõrgusega */
+.apple-glass-card input[type="file"]{
+    padding:0 20px !important;
+    border:2px dashed rgba(255,255,255,0.4) !important;
+    background:rgba(255,255,255,0.06) !important;
+    color:white !important;
+/* textarea natuke kõrgemaks */
+    min-height:200px !important;
+/* container laiemaks */
+#three .glass-container{
+    max-width:1000px !important;
+min-height:100vh;
+background-image:url("/images/MedicineLake.webp");
