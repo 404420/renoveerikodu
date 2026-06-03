@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.renoveerikodu.ee/sitemap.xml
+
+# Block system files
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+
+# Allow important assets
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/

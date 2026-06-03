@@ -1,0 +1,168 @@
+RewriteEngine On
+
+# allow submit-contact directly
+RewriteRule ^submit-contact\.php$ - [L]
+
+# allow admin
+RewriteRule ^admin\.php$ - [L]
+
+# allow kontakt
+RewriteRule ^kontakt\.php$ - [L]
+
+# =====================================================
+# SPEEDYCACHE HEADERS
+# =====================================================
+FileETag None
+
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+
+<FilesMatch "\.(html)$">
+<IfModule mod_headers.c>
+Header set x-speedycache-source "Server"
+Header set Cache-Tag "renoveerikodu.ee"
+Header set CDN-Cache-Control "max-age=1296000"
+Header set Cache-Control "public"
+Header unset Pragma
+Header unset Last-Modified
+</IfModule>
+</FilesMatch>
+
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot|otf)$">
+<IfModule mod_headers.c>
+Header unset Pragma
+Header set Cache-Control "public"
+</IfModule>
+</FilesMatch>
+
+# =====================================================
+# GZIP COMPRESSION
+# =====================================================
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+</IfModule>
+
+# =====================================================
+# BROWSER CACHE
+# =====================================================
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType font/ttf "access plus 1 year"
+
+</IfModule>
+
+# =====================================================
+# WEBP SUPPORT
+# =====================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png|gif)$
+RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+RewriteRule ^(.+)\.(jpg|jpeg|png|gif)$ $1.webp [T=image/webp,L]
+
+</IfModule>
+
+<IfModule mod_headers.c>
+Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+
+AddType image/webp .webp
+
+# =====================================================
+# URL CLEANUP
+# =====================================================
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /
+
+# /index -> /
+RewriteRule ^index/?$ / [R=301,L]
+
+# remove .php extension
+RewriteCond %{THE_REQUEST} \s/(.*)\.php [NC]
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+# remove .html extension
+RewriteCond %{THE_REQUEST} \s/(.*)\.html [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# allow extensionless php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+# allow extensionless html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/.]+)$ $1.html [L]
+
+</IfModule>
+
+# =====================================================
+# SPEEDYCACHE CACHE FILE SERVING
+# =====================================================
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{HTTP_USER_AGENT} !(Mediatoolkitbot|facebookexternalhit|SpeedyCacheCCSS)
+RewriteCond %{QUERY_STRING} =""
+RewriteCond %{HTTP:Cookie} !(comment_author_|wordpress_logged_in_)
+
+RewriteCond %{REQUEST_URI} !(\/){2}$
+RewriteCond %{REQUEST_URI} !^/(wp-(?:admin|login|register|comments-post|cron|json))/ [NC]
+
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/speedycache/%{HTTP_HOST}/all%{REQUEST_URI}/index.html -f
+RewriteRule ^(.*) /wp-content/cache/speedycache/%{HTTP_HOST}/all%{REQUEST_URI}/index.html [L]
+
+</IfModule>
+# ==========================================
+# ALLOW DIRECT PHP FILES
+# ==========================================
+RewriteCond %{REQUEST_URI} \.php$
+RewriteRule ^ - [L]
+# =====================================================
+# WORDPRESS
+# =====================================================
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^index\.php$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+</IfModule>
+
+# =====================================================
+# LITESPEED
+# =====================================================
+<IfModule Litespeed>
+SetEnv noabort 1
+</IfModule>
