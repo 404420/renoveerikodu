@@ -123,6 +123,29 @@
 	// =============================
 	// SUBMENU (STABLE VERSION)
 	// =============================
+	document.addEventListener('click', function(event) {
+		var header = event.target.closest && event.target.closest('#menu .submenu-header');
+
+		if(!header) return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		if(event.stopImmediatePropagation)
+			event.stopImmediatePropagation();
+
+		var submenu = header.closest('.submenu');
+
+		if(!submenu) return;
+
+		document.querySelectorAll('#menu .submenu.open').forEach(function(item) {
+			if(item !== submenu)
+				item.classList.remove('open');
+		});
+
+		submenu.classList.toggle('open');
+	}, true);
+
 	$('#menu').on('click', '.submenu-header', function(e){
 
 		e.preventDefault();
