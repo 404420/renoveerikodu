@@ -331,6 +331,102 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+	const galleryLinks = Array.from(document.querySelectorAll(".tehtudtood .row.gtr-50 .box > a[href^='images/']"));
+	if (!galleryLinks.length) return;
+
+	const lightbox = document.createElement("div");
+	lightbox.className = "portfolio-lightbox";
+	lightbox.setAttribute("role", "dialog");
+	lightbox.setAttribute("aria-modal", "true");
+	lightbox.innerHTML = `
+		<button class="portfolio-lightbox__close" type="button" aria-label="Sulge pilt">&times;</button>
+		<button class="portfolio-lightbox__prev" type="button" aria-label="Eelmine pilt">&#8249;</button>
+		<img src="" alt="">
+		<button class="portfolio-lightbox__next" type="button" aria-label="Järgmine pilt">&#8250;</button>
+		<div class="portfolio-lightbox__caption"></div>
+	`;
+	document.body.appendChild(lightbox);
+
+	const image = lightbox.querySelector("img");
+	const caption = lightbox.querySelector(".portfolio-lightbox__caption");
+	const closeButton = lightbox.querySelector(".portfolio-lightbox__close");
+	const prevButton = lightbox.querySelector(".portfolio-lightbox__prev");
+	const nextButton = lightbox.querySelector(".portfolio-lightbox__next");
+	let currentIndex = 0;
+	let touchStartX = 0;
+	let touchStartY = 0;
+
+	function showImage(index) {
+		currentIndex = (index + galleryLinks.length) % galleryLinks.length;
+		const link = galleryLinks[currentIndex];
+		const img = link.querySelector("img");
+		image.src = link.getAttribute("href");
+		image.alt = img ? img.alt : "Tehtud töö foto";
+		caption.textContent = `${currentIndex + 1} / ${galleryLinks.length}${img && img.alt ? " - " + img.alt : ""}`;
+	}
+
+	function openLightbox(index) {
+		showImage(index);
+		lightbox.classList.add("open");
+		document.body.classList.add("portfolio-lightbox-open");
+		closeButton.focus();
+	}
+
+	function closeLightbox() {
+		lightbox.classList.remove("open");
+		document.body.classList.remove("portfolio-lightbox-open");
+		image.removeAttribute("src");
+	}
+
+	function nextImage() {
+		showImage(currentIndex + 1);
+	}
+
+	function prevImage() {
+		showImage(currentIndex - 1);
+	}
+
+	galleryLinks.forEach((link, index) => {
+		link.addEventListener("click", function (event) {
+			event.preventDefault();
+			openLightbox(index);
+		});
+	});
+
+	closeButton.addEventListener("click", closeLightbox);
+	nextButton.addEventListener("click", nextImage);
+	prevButton.addEventListener("click", prevImage);
+
+	lightbox.addEventListener("click", function (event) {
+		if (event.target === lightbox) closeLightbox();
+	});
+
+	document.addEventListener("keydown", function (event) {
+		if (!lightbox.classList.contains("open")) return;
+		if (event.key === "Escape") closeLightbox();
+		if (event.key === "ArrowRight") nextImage();
+		if (event.key === "ArrowLeft") prevImage();
+	});
+
+	lightbox.addEventListener("touchstart", function (event) {
+		const touch = event.changedTouches[0];
+		touchStartX = touch.clientX;
+		touchStartY = touch.clientY;
+	}, { passive: true });
+
+	lightbox.addEventListener("touchend", function (event) {
+		const touch = event.changedTouches[0];
+		const diffX = touch.clientX - touchStartX;
+		const diffY = touch.clientY - touchStartY;
+		if (Math.abs(diffX) < 45 || Math.abs(diffX) < Math.abs(diffY)) return;
+		if (diffX < 0) nextImage();
+		else prevImage();
+	}, { passive: true });
+});
+</script>
+
+<script>
 window.addEventListener("load", function () {
 
     if (window.location.href.indexOf("success=1") > -1) {

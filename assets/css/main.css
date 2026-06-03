@@ -4748,6 +4748,133 @@ input, select, textarea {
 	min-height:44px;
 }
 
+/* Tehtud tööde galerii lightbox */
+.portfolio-lightbox{
+	align-items:center;
+	background:rgba(12,16,20,.92);
+	display:none;
+	inset:0;
+	justify-content:center;
+	padding:72px 72px 56px;
+	position:fixed;
+	z-index:10050;
+}
+
+.portfolio-lightbox.open{
+	display:flex;
+}
+
+.portfolio-lightbox img{
+	box-shadow:0 18px 56px rgba(0,0,0,.55);
+	display:block;
+	max-height:calc(100vh - 150px);
+	max-width:calc(100vw - 160px);
+	object-fit:contain;
+}
+
+.portfolio-lightbox__caption{
+	bottom:18px;
+	color:#fff;
+	font-size:.9em;
+	left:24px;
+	letter-spacing:0;
+	line-height:1.45;
+	position:absolute;
+	right:24px;
+	text-align:center;
+}
+
+.portfolio-lightbox__close,
+.portfolio-lightbox__prev,
+.portfolio-lightbox__next{
+	align-items:center;
+	background:rgba(255,255,255,.14);
+	border:1px solid rgba(255,255,255,.28);
+	border-radius:999px;
+	box-shadow:0 10px 28px rgba(0,0,0,.28);
+	color:#fff;
+	cursor:pointer;
+	display:flex;
+	font-size:30px;
+	height:52px;
+	justify-content:center;
+	line-height:1;
+	padding:0;
+	position:absolute;
+	transition:background .2s ease, transform .2s ease;
+	width:52px;
+}
+
+.portfolio-lightbox__close:hover,
+.portfolio-lightbox__prev:hover,
+.portfolio-lightbox__next:hover{
+	background:rgba(235,110,0,.9);
+	transform:scale(1.04);
+}
+
+.portfolio-lightbox__close{
+	font-size:28px;
+	right:20px;
+	top:20px;
+}
+
+.portfolio-lightbox__prev{
+	left:20px;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.portfolio-lightbox__next{
+	right:20px;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.portfolio-lightbox__prev:hover,
+.portfolio-lightbox__next:hover{
+	transform:translateY(-50%) scale(1.04);
+}
+
+body.portfolio-lightbox-open{
+	overflow:hidden;
+}
+
+@media screen and (max-width:736px){
+	.portfolio-lightbox{
+		padding:64px 14px 72px;
+	}
+
+	.portfolio-lightbox img{
+		max-height:calc(100vh - 155px);
+		max-width:calc(100vw - 28px);
+	}
+
+	.portfolio-lightbox__prev,
+	.portfolio-lightbox__next{
+		bottom:16px;
+		top:auto;
+		transform:none;
+	}
+
+	.portfolio-lightbox__prev{
+		left:calc(50% - 66px);
+	}
+
+	.portfolio-lightbox__next{
+		right:calc(50% - 66px);
+	}
+
+	.portfolio-lightbox__prev:hover,
+	.portfolio-lightbox__next:hover{
+		transform:scale(1.04);
+	}
+
+	.portfolio-lightbox__caption{
+		bottom:78px;
+		font-size:.78em;
+	}
+}
+
 /* ============================= */
 /* GLOBAL SERVICE PAGE TEMPLATE */
 /* ============================= */
