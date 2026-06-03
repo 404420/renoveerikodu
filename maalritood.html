@@ -40,14 +40,14 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.php">Renoveeri Kodu</a></h1>
+						<h1><a href="index.html">Renoveeri Kodu</a></h1>
 					<nav id="nav">
 							<ul>
 								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menüü</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.php">Avaleht</a></li>
+											<li><a href="index.html">Avaleht</a></li>
 											<li class="submenu">
 											<div class="submenu-header">
 											<span>Teenused</span>
@@ -71,7 +71,7 @@
 										</ul>
 											</li>
 											<li><a href="tehtudtood.html">Tehtud tööd</a></li>
-											<li><a href="kontakt.php">Kontakt</a></li>
+											<li><a href="index.html#contact">Kontakt</a></li>
 										</ul>
 									</div>
 								</li>
@@ -125,7 +125,7 @@ Meie eesmärk on pakkuda professionaalseid maalritöid, mis parandavad ruumi vä
 
 		<ul class="actions special plaatimine-cta">
 			<li>
-				<a href="kontakt.php" class="button primary">Küsi pakkumist</a>
+				<a href="index.html#contact" class="button primary">Küsi pakkumist</a>
 			</li>
 		</ul>
 
@@ -725,7 +725,7 @@ const formData = new FormData();
 formData.append("unsubscribe_email", email);
 
 try{
-const res = await fetch("unsubscribe-handler.php", {
+const res = await fetch("index.html#contact", {
 method: "POST",
 body: formData
 });
@@ -758,7 +758,7 @@ Serveri viga.
 </script>
 
 <?php endif; ?>
-<a href="kontakt.php" class="floating-contact">
+<a href="index.html#contact" class="floating-contact">
 	Võta ühendust
 </a>
 
@@ -804,7 +804,7 @@ try{
 const formData = new FormData();
 formData.append("unsubscribe_email", email);
 
-const res = await fetch("unsubscribe-handler.php", {
+const res = await fetch("index.html#contact", {
 method: "POST",
 body: formData
 });
