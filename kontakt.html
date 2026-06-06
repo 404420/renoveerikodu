@@ -190,7 +190,7 @@
 
 <h2 class="glass-title">Saada päring</h2>
 
-<form id="contactForm" method="POST" action="" enctype="multipart/form-data">
+<form id="contactForm" method="POST" action="/api/contact.php" enctype="multipart/form-data">
 
 <div class="glass-grid">
 
@@ -445,26 +445,5 @@ msg.innerHTML = `<div class="unsub-error">Serveri viga</div>`;
 
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  const form = document.getElementById("contactForm");
-  if(!form) return;
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    const data = new FormData(form);
-    const body = [
-      `Nimi: ${data.get("name") || ""}`,
-      `Email: ${data.get("email") || ""}`,
-      `Telefon: ${data.get("phone") || "-"}`,
-      `Aadress: ${data.get("address") || "-"}`,
-      "",
-      data.get("message") || ""
-    ].join("
-");
-    window.location.href = `mailto:info@renoveerikodu.ee?subject=${encodeURIComponent("Pakkumise p?ring")}&body=${encodeURIComponent(body)}`;
-  });
-});
-</script>
-
 </body>
 </html>
