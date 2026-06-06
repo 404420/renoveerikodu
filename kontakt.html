@@ -368,6 +368,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const btn = document.getElementById("toggleUnsub");
 const form = document.getElementById("unsubscribeForm");
+if(!form) return;
 
 if(btn){
 btn.addEventListener("click", function(){

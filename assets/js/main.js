@@ -233,10 +233,17 @@ $('#menu a, #nav a').each(function(){
 				}
 			});
 
-			var result = await response.json();
+			var result = {};
+			var responseText = await response.text();
+
+			try {
+				result = responseText ? JSON.parse(responseText) : {};
+			} catch (parseError) {
+				result = {};
+			}
 
 			if (!response.ok || !result.success)
-				throw new Error(result.message || 'Paringu saatmine ebaonnestus.');
+				throw new Error(result.message || 'Paringu saatmine ebaonnestus. Palun proovi hiljem uuesti.');
 
 			messageBox.textContent = result.message || 'Paring saadetud. Votame sinuga uhendust.';
 			form.reset();
