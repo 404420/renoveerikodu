@@ -1,2 +1,5 @@
+config.php
 api/config.php
 api/uploads/
+uploads/
+error_log
