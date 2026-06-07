@@ -61,9 +61,14 @@ table {
 	border-spacing: 0;
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
+	body {
+		-webkit-text-size-adjust: none;
+		overflow-x: hidden;
+	}
+
+	html {
+		overflow-x: hidden;
+	}
 
 mark {
 	background-color: transparent;
