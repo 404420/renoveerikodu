@@ -221,7 +221,7 @@ try {
             ':phone' => $phone,
             ':address' => $address,
             ':message' => $message,
-            ':file_path' => $adminFilePaths ? json_encode($adminFilePaths, JSON_UNESCAPED_UNICODE) : null,
+            ':file_path' => $uploadedFiles ? json_encode($uploadedFiles, JSON_UNESCAPED_UNICODE) : null,
             ':source' => $source,
         ]);
     } catch (Throwable $insertError) {
@@ -235,7 +235,7 @@ try {
             ':phone' => $phone,
             ':address' => $address,
             ':message' => $message,
-            ':file_path' => $adminFilePaths ? json_encode($adminFilePaths, JSON_UNESCAPED_UNICODE) : null,
+            ':file_path' => $uploadedFiles ? json_encode($uploadedFiles, JSON_UNESCAPED_UNICODE) : null,
         ]);
     }
 } catch (Throwable $error) {

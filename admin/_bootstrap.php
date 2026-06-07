@@ -45,7 +45,50 @@ function require_admin(): void
 
 function h($value): string
 {
-    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars(repair_text((string) $value), ENT_QUOTES, 'UTF-8');
+}
+
+function repair_text(string $value): string
+{
+    if ($value === '' || !preg_match('/[ÃÂ�]/u', $value)) {
+        return $value;
+    }
+
+    $bytes = @iconv('UTF-8', 'ISO-8859-1//IGNORE', $value);
+    $isUtf8 = is_string($bytes)
+        && $bytes !== ''
+        && (function_exists('mb_check_encoding') ? mb_check_encoding($bytes, 'UTF-8') : preg_match('//u', $bytes));
+
+    if ($isUtf8) {
+        return $bytes;
+    }
+
+    return $value;
+}
+
+function file_path_from_entry($file): string
+{
+    if (is_array($file)) {
+        return (string) ($file['path'] ?? $file['url'] ?? '');
+    }
+
+    return (string) $file;
+}
+
+function file_label_from_entry($file): string
+{
+    if (is_array($file)) {
+        $path = file_path_from_entry($file);
+        return (string) ($file['original_name'] ?? $file['name'] ?? basename($path));
+    }
+
+    return basename((string) $file);
+}
+
+function is_preview_image(string $path): bool
+{
+    $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+    return in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp'], true);
 }
 
 function upload_url(string $path): string
