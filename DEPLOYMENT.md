@@ -6,6 +6,8 @@ Sobiv lahendus on tavaline PHP + MySQL veebimajutus, näiteks Zone, Veebimajutus
 
 ## Paigaldus
 
+Detailne backendi ja MySQL juhend on failis `BACKEND_SETUP.md`.
+
 1. Laadi failid PHP-hostingu `public_html` kausta.
 2. Loo hostingus MySQL andmebaas ja kasutaja.
 3. Impordi phpMyAdminis fail `database.sql`.
