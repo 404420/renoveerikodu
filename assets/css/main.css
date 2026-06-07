@@ -3528,6 +3528,19 @@ input, select, textarea {
 					width: 2.1em;
 				}
 
+				#header .site-title a.has-site-logo:before {
+					content: none;
+				}
+
+				#header .site-title .site-logo {
+					display: inline-block;
+					flex: 0 0 auto;
+					height: 2.1em;
+					width: 2.1em;
+					object-fit: contain;
+					filter: drop-shadow(0 2px 7px rgba(0,0,0,0.35));
+				}
+
 				@media screen and (max-width: 736px) {
 
 					#header h1 a,
@@ -3535,7 +3548,8 @@ input, select, textarea {
 						font-size: 0.8em;
 					}
 
-					#header .site-title a:before {
+					#header .site-title a:before,
+					#header .site-title .site-logo {
 						height: 2em;
 						width: 2em;
 					}
@@ -5441,7 +5455,7 @@ background-repeat:no-repeat;
 
 #banner .home-hero-logo {
 	position: absolute;
-	top: clamp(92px, 16vh, 150px);
+	top: clamp(64px, 9vh, 104px);
 	left: 50%;
 	width: clamp(110px, 11vw, 170px);
 	height: auto;
@@ -5453,7 +5467,7 @@ background-repeat:no-repeat;
 
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
-		top: 86px;
+		top: 66px;
 		width: 118px;
 	}
 }
