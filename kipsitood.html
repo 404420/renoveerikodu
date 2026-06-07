@@ -483,6 +483,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const btn = document.getElementById("toggleUnsub");
 const form = document.getElementById("unsubscribeForm");
+if(!form) return;
 
 if(btn){
 btn.addEventListener("click", function(){
@@ -509,6 +510,7 @@ window.addEventListener("load", function() {
 document.addEventListener("DOMContentLoaded", function(){
 
 const form = document.getElementById("unsubscribeForm");
+if(!form) return;
 const emailInput = document.getElementById("unsubscribeEmail");
 const msg = document.getElementById("unsubscribeMessage");
 

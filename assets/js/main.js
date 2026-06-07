@@ -184,6 +184,83 @@ $('#menu a, #nav a').each(function(){
 });
 
 	// =============================
+	// CONTACT FORM BACKEND SUBMIT
+	// =============================
+	document.addEventListener('submit', async function(event) {
+		var form = event.target;
+
+		if (!form || form.id !== 'contactForm') {
+			return;
+		}
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		if (event.stopImmediatePropagation)
+			event.stopImmediatePropagation();
+
+		var submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+		var messageBox = document.getElementById('contactMessage');
+
+		if (!messageBox) {
+			messageBox = document.createElement('div');
+			messageBox.id = 'contactMessage';
+			messageBox.className = 'form-message';
+			form.parentNode.insertBefore(messageBox, form);
+		}
+
+		var originalText = submitButton ? (submitButton.value || submitButton.textContent) : '';
+		var formData = new FormData(form);
+		formData.set('source', window.location.href);
+
+		if (submitButton) {
+			submitButton.disabled = true;
+			if (submitButton.tagName === 'INPUT')
+				submitButton.value = 'Saadan...';
+			else
+				submitButton.textContent = 'Saadan...';
+		}
+
+		messageBox.hidden = false;
+		messageBox.textContent = 'Saadan paringut...';
+
+		try {
+			var response = await fetch('/api/contact.php', {
+				method: 'POST',
+				body: formData,
+				headers: {
+					'Accept': 'application/json'
+				}
+			});
+
+			var result = {};
+			var responseText = await response.text();
+
+			try {
+				result = responseText ? JSON.parse(responseText) : {};
+			} catch (parseError) {
+				result = {};
+			}
+
+			if (!response.ok || !result.success)
+				throw new Error(result.message || 'Paringu saatmine ebaonnestus. Palun proovi hiljem uuesti.');
+
+			messageBox.textContent = result.message || 'Paring saadetud. Votame sinuga uhendust.';
+			form.reset();
+		} catch (error) {
+			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
+		} finally {
+			if (submitButton) {
+				submitButton.disabled = false;
+				if (submitButton.tagName === 'INPUT')
+					submitButton.value = originalText;
+				else
+					submitButton.textContent = originalText;
+			}
+		}
+	}, true);
+
+	// =============================
 	// RESIZE DEBOUNCE
 	// =============================
 	function debounce(func, wait){

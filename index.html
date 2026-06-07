@@ -191,14 +191,14 @@
 						<h2>Küsi pakkumist</h2>
 					</header>
 					<div id="contactMessage" class="form-message" hidden></div>
-					<form id="contactForm">
+					<form id="contactForm" method="POST" action="/api/contact.php" enctype="multipart/form-data">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" placeholder="Nimi" required /></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Email" required /></div>
 							<div class="col-6 col-12-xsmall"><input type="tel" name="phone" placeholder="Tel nr (valikuline)" /></div>
 							<div class="col-6 col-12-xsmall"><input type="text" name="address" placeholder="Aadress (valikuline)" /></div>
 							<div class="col-12"><textarea name="message" placeholder="Sisesta sõnum" rows="6" required></textarea></div>
-							<div class="col-12"><input type="file" name="attachments" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.dwg,.dxf,.zip"></div>
+							<div class="col-12"><input type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.dwg,.dxf,.zip"></div>
 							<div class="col-12">
 								<ul class="actions">
 									<li><input type="submit" value="Saada sõnum" class="primary" /></li>
@@ -276,31 +276,6 @@
 				link.closest(".submenu")?.classList.add("open");
 			}
 		});
-
-		const contactForm = document.getElementById("contactForm");
-		const contactMessage = document.getElementById("contactMessage");
-		if (contactForm) {
-			contactForm.addEventListener("submit", function (event) {
-				event.preventDefault();
-				const data = new FormData(contactForm);
-				const files = contactForm.querySelector("input[type='file']")?.files?.length || 0;
-				const body = [
-					`Nimi: ${data.get("name")}`,
-					`Email: ${data.get("email")}`,
-					`Telefon: ${data.get("phone") || "-"}`,
-					`Aadress: ${data.get("address") || "-"}`,
-					"",
-					data.get("message") || "",
-					files ? "" : null,
-					files ? "Märkus: GitHub Pages ei saa faile automaatselt üles laadida. Lisa failid e-kirjale käsitsi." : null
-				].filter(Boolean).join("\n");
-				window.location.href = `mailto:info@renoveerikodu.ee?subject=${encodeURIComponent("Pakkumise päring")}&body=${encodeURIComponent(body)}`;
-				if (contactMessage) {
-					contactMessage.hidden = false;
-					contactMessage.textContent = "Avan e-kirja rakenduse. Kui see ei avane, saada päring aadressile info@renoveerikodu.ee.";
-				}
-			});
-		}
 
 		const subscribeForm = document.getElementById("subscribeForm");
 		if (subscribeForm) {

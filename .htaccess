@@ -1,5 +1,9 @@
 DirectoryIndex index.html
 
+<FilesMatch "^(config|config\.example|database)\.(php|sql)$">
+  Require all denied
+</FilesMatch>
+
 RewriteEngine On
 RewriteBase /
 

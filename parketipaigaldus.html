@@ -344,6 +344,7 @@ img {
 								<section class="service-related">
 									<h2>Seotud teenused</h2>
 									<ul>
+										<li><a href="parketi-paigaldus-tallinn-korter.html">Tehtud töö: parketi paigaldus Tallinnas korteris</a></li>
 										<li><a href="maalritood.html">Maalritööd</a></li>
 										<li><a href="lammutustood.html">Lammutustööd</a></li>
 										<li><a href="plaatimine.html">Plaatimine</a></li>
@@ -484,6 +485,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const btn = document.getElementById("toggleUnsub");
 const form = document.getElementById("unsubscribeForm");
+if(!form) return;
 
 if(btn){
 btn.addEventListener("click", function(){
@@ -510,6 +512,7 @@ window.addEventListener("load", function() {
 document.addEventListener("DOMContentLoaded", function(){
 
 const form = document.getElementById("unsubscribeForm");
+if(!form) return;
 const emailInput = document.getElementById("unsubscribeEmail");
 const msg = document.getElementById("unsubscribeMessage");
 
