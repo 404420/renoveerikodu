@@ -689,6 +689,10 @@ html {
         top: -150px;
     }
 
+    .contact-page #banner .inner {
+        transform: translateY(105px);
+    }
+
 }
 
 @media (min-width: 1024px) {
