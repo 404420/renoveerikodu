@@ -61,9 +61,14 @@ table {
 	border-spacing: 0;
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
+	body {
+		-webkit-text-size-adjust: none;
+		overflow-x: hidden;
+	}
+
+	html {
+		overflow-x: hidden;
+	}
 
 mark {
 	background-color: transparent;
@@ -3528,6 +3533,19 @@ input, select, textarea {
 					width: 2.1em;
 				}
 
+				#header .site-title a.has-site-logo:before {
+					content: none;
+				}
+
+				#header .site-title .site-logo {
+					display: inline-block;
+					flex: 0 0 auto;
+					height: 2.1em;
+					width: 2.1em;
+					object-fit: contain;
+					filter: drop-shadow(0 2px 7px rgba(0,0,0,0.35));
+				}
+
 				@media screen and (max-width: 736px) {
 
 					#header h1 a,
@@ -3535,7 +3553,8 @@ input, select, textarea {
 						font-size: 0.8em;
 					}
 
-					#header .site-title a:before {
+					#header .site-title a:before,
+					#header .site-title .site-logo {
 						height: 2em;
 						width: 2em;
 					}
@@ -4804,32 +4823,73 @@ input, select, textarea {
 .portfolio-lightbox__prev,
 .portfolio-lightbox__next{
 	align-items:center;
-	background:rgba(255,255,255,.14);
-	border:1px solid rgba(255,255,255,.28);
+	-webkit-appearance:none;
+	appearance:none;
+	background:transparent;
+	border:0;
 	border-radius:999px;
-	box-shadow:0 10px 28px rgba(0,0,0,.28);
-	color:#fff;
+	box-sizing:border-box;
+	box-shadow:none;
+	color:transparent;
 	cursor:pointer;
 	display:flex;
-	font-size:30px;
+	font-size:0;
 	height:52px;
 	justify-content:center;
-	line-height:1;
+	line-height:0;
+	margin:0;
+	min-height:52px;
+	min-width:52px;
+	outline-offset:4px;
 	padding:0;
 	position:absolute;
+	text-align:center;
 	transition:background .2s ease, transform .2s ease;
 	width:52px;
+}
+
+.portfolio-lightbox__close:before,
+.portfolio-lightbox__prev:before,
+.portfolio-lightbox__next:before{
+	align-items:center;
+	color:#fff;
+	display:flex;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:30px;
+	font-weight:400;
+	inset:0;
+	justify-content:center;
+	line-height:1;
+	position:absolute;
+}
+
+.portfolio-lightbox__close:before{
+	content:"\00d7";
+	font-size:28px;
+}
+
+.portfolio-lightbox__prev:before{
+	content:"\2039";
+}
+
+.portfolio-lightbox__next:before{
+	content:"\203a";
+}
+
+.portfolio-lightbox__close:focus-visible,
+.portfolio-lightbox__prev:focus-visible,
+.portfolio-lightbox__next:focus-visible{
+	outline:0;
 }
 
 .portfolio-lightbox__close:hover,
 .portfolio-lightbox__prev:hover,
 .portfolio-lightbox__next:hover{
-	background:rgba(235,110,0,.9);
 	transform:scale(1.04);
 }
 
 .portfolio-lightbox__close{
-	font-size:28px;
+	font-size:0;
 	right:20px;
 	top:20px;
 }
@@ -4868,16 +4928,20 @@ body.portfolio-lightbox-open{
 	.portfolio-lightbox__prev,
 	.portfolio-lightbox__next{
 		bottom:16px;
+		height:50px;
+		min-height:50px;
+		min-width:50px;
 		top:auto;
 		transform:none;
+		width:50px;
 	}
 
 	.portfolio-lightbox__prev{
-		left:calc(50% - 66px);
+		left:calc(50% - 65px);
 	}
 
 	.portfolio-lightbox__next{
-		right:calc(50% - 66px);
+		right:calc(50% - 65px);
 	}
 
 	.portfolio-lightbox__prev:hover,
@@ -5441,7 +5505,7 @@ background-repeat:no-repeat;
 
 #banner .home-hero-logo {
 	position: absolute;
-	top: clamp(92px, 16vh, 150px);
+	top: clamp(64px, 9vh, 104px);
 	left: 50%;
 	width: clamp(110px, 11vw, 170px);
 	height: auto;
@@ -5453,7 +5517,7 @@ background-repeat:no-repeat;
 
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
-		top: 86px;
+		top: 66px;
 		width: 118px;
 	}
 }
