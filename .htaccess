@@ -7,14 +7,45 @@ DirectoryIndex index.html index.php
 RewriteEngine On
 RewriteBase /
 
-# Serve existing files and folders directly.
+# Force homepage variants to the clean root URL.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
+RewriteRule ^index\.(html|php)$ / [R=301,L]
+
+# Force folder index files to the clean folder URL, e.g. /admin/index.php -> /admin/.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.(html|php)[\s?] [NC]
+RewriteRule ^(.+/)?index\.(html|php)$ /$1 [R=301,L]
+
+# Force public .html URLs to extensionless URLs, e.g. /kontakt.html -> /kontakt.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Force public .php URLs to extensionless URLs on normal page visits.
+# POST requests are not redirected, so forms and API endpoints keep working.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/api/ [NC]
+RewriteRule ^(.+)\.php$ /$1 [R=301,L,NE]
+
+# Force clean page URLs without a trailing slash, e.g. /kontakt/ -> /kontakt.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Serve existing files and folders directly after canonical redirects.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Keep clean URLs working for static HTML pages, e.g. /kontakt -> /kontakt.html.
+# Internally serve clean URLs from matching .html files.
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/.]+)$ $1.html [L]
+RewriteRule ^(.+?)/?$ $1.html [L]
 
-# Fall back to the static homepage. Do not route to WordPress/PHP.
+# Internally serve clean URLs from matching .php files.
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Fall back to the static homepage. Do not route unknown URLs to WordPress/PHP.
 RewriteRule ^$ index.html [L]
