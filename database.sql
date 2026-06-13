@@ -23,3 +23,19 @@ CREATE TABLE IF NOT EXISTS admin_users (
   PRIMARY KEY (id),
   UNIQUE KEY uniq_admin_users_username (username)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS newsletter_subscribers (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  email VARCHAR(255) NOT NULL,
+  status VARCHAR(40) NOT NULL DEFAULT 'subscribed',
+  subscribed_at DATETIME DEFAULT NULL,
+  unsubscribed_at DATETIME DEFAULT NULL,
+  source VARCHAR(500) DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY uniq_newsletter_subscribers_email (email),
+  KEY idx_newsletter_subscribers_status (status),
+  KEY idx_newsletter_subscribers_subscribed_at (subscribed_at),
+  KEY idx_newsletter_subscribers_unsubscribed_at (unsubscribed_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

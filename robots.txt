@@ -10,6 +10,14 @@ Disallow: /tmp/
 Disallow: /private/
 Disallow: /admin/
 
+# Block old WordPress paths
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+
 # Allow important assets
 Allow: /images/
 Allow: /assets/

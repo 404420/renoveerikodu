@@ -7,6 +7,11 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
+# Force the canonical www host so Search Console signals do not split.
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{HTTP_HOST} ^renoveerikodu\.ee$ [NC]
+RewriteRule ^ https://www.renoveerikodu.ee%{REQUEST_URI} [R=301,L,NE]
+
 # Serve existing files and folders directly.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
