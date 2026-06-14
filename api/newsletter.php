@@ -47,7 +47,7 @@ if ($action === 'subscribe') {
         $stmt = $pdo->prepare("
             UPDATE newsletter_subscribers
             SET status = 'subscribed',
-                subscribed_at = COALESCE(subscribed_at, NOW()),
+                subscribed_at = NOW(),
                 unsubscribed_at = NULL,
                 source = :source
             WHERE id = :id
