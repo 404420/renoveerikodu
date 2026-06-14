@@ -121,6 +121,133 @@
 	});
 
 	// =============================
+	// FILE UPLOAD PREVIEWS
+	// =============================
+	(function initFileUploadPreviews() {
+		var inputs = document.querySelectorAll('input[type="file"][name="attachments[]"]');
+		var imagePattern = /\.(jpe?g|png|gif|webp)$/i;
+
+		if (!inputs.length) {
+			return;
+		}
+
+		if (!document.getElementById('file-upload-preview-styles')) {
+			var style = document.createElement('style');
+			style.id = 'file-upload-preview-styles';
+			style.textContent = '.file-upload-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0 24px;width:100%;letter-spacing:0;text-transform:none}.file-upload-preview[hidden]{display:none}.file-preview-item{display:flex;gap:10px;align-items:center;min-width:0;padding:10px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:rgba(255,255,255,.07);color:#fff}.file-preview-thumb{width:58px;height:58px;flex:0 0 58px;border-radius:6px;object-fit:cover;background:rgba(0,0,0,.18)}.file-preview-icon{width:58px;height:58px;flex:0 0 58px;display:flex;align-items:center;justify-content:center;border-radius:6px;background:rgba(255,255,255,.12);font-size:.72em;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.file-preview-meta{min-width:0}.file-preview-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.82em;line-height:1.35}.file-preview-size{display:block;color:rgba(255,255,255,.68);font-size:.72em;line-height:1.35}@media screen and (max-width:736px){.file-upload-preview{grid-template-columns:1fr}.file-preview-item{padding:9px}.file-preview-thumb,.file-preview-icon{width:52px;height:52px;flex-basis:52px}}';
+			document.head.appendChild(style);
+		}
+
+		function formatSize(bytes) {
+			if (!bytes && bytes !== 0) {
+				return '';
+			}
+
+			if (bytes < 1024) {
+				return bytes + ' B';
+			}
+
+			if (bytes < 1024 * 1024) {
+				return (bytes / 1024).toFixed(1) + ' KB';
+			}
+
+			return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+		}
+
+		function getExtension(fileName) {
+			var parts = fileName.split('.');
+			return parts.length > 1 ? parts.pop().slice(0, 5) : 'fail';
+		}
+
+		function clearPreview(preview) {
+			var urls = preview._objectUrls || [];
+			urls.forEach(function(url) {
+				URL.revokeObjectURL(url);
+			});
+			preview._objectUrls = [];
+			preview.innerHTML = '';
+			preview.hidden = true;
+		}
+
+		function renderPreview(input, preview) {
+			var files = Array.prototype.slice.call(input.files || []);
+			clearPreview(preview);
+
+			if (!files.length) {
+				return;
+			}
+
+			preview.hidden = false;
+
+			files.forEach(function(file) {
+				var item = document.createElement('div');
+				var media;
+				var meta = document.createElement('div');
+				var name = document.createElement('span');
+				var size = document.createElement('span');
+
+				item.className = 'file-preview-item';
+				meta.className = 'file-preview-meta';
+				name.className = 'file-preview-name';
+				size.className = 'file-preview-size';
+				name.textContent = file.name;
+				size.textContent = formatSize(file.size);
+
+				if (imagePattern.test(file.name)) {
+					var objectUrl = URL.createObjectURL(file);
+					preview._objectUrls.push(objectUrl);
+
+					media = document.createElement('img');
+					media.className = 'file-preview-thumb';
+					media.src = objectUrl;
+					media.alt = file.name;
+				} else {
+					media = document.createElement('div');
+					media.className = 'file-preview-icon';
+					media.textContent = getExtension(file.name);
+				}
+
+				meta.appendChild(name);
+				meta.appendChild(size);
+				item.appendChild(media);
+				item.appendChild(meta);
+				preview.appendChild(item);
+			});
+		}
+
+		inputs.forEach(function(input) {
+			var preview = document.createElement('div');
+			var form = input.closest('form');
+			var actions = input.closest('.glass-actions');
+			var fieldWrap = input.closest('.col-12') || input.parentElement;
+
+			preview.className = 'file-upload-preview';
+			preview.hidden = true;
+			preview._objectUrls = [];
+
+			if (actions) {
+				actions.insertAdjacentElement('afterend', preview);
+			} else if (fieldWrap) {
+				fieldWrap.insertAdjacentElement('afterend', preview);
+			} else {
+				input.insertAdjacentElement('afterend', preview);
+			}
+
+			input.addEventListener('change', function() {
+				renderPreview(input, preview);
+			});
+
+			if (form) {
+				form.addEventListener('reset', function() {
+					setTimeout(function() {
+						clearPreview(preview);
+					}, 0);
+				});
+			}
+		});
+	})();
+
+	// =============================
 	// SUBMENU (STABLE VERSION)
 	// =============================
 	document.addEventListener('click', function(event) {
