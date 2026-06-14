@@ -47,17 +47,17 @@ if ($view === 'requests') {
     $requests = $pdo->query('SELECT * FROM contacts ORDER BY created_at DESC')->fetchAll();
 } elseif ($view === 'subscribers') {
     $subscribers = $pdo->query("
-        SELECT id, email, status, subscribed_at, unsubscribed_at, source, created_at
+        SELECT id, email, status, subscribed_at, unsubscribed_at, source, created_at, updated_at
         FROM newsletter_subscribers
         WHERE status = 'subscribed'
-        ORDER BY COALESCE(subscribed_at, created_at) DESC, id DESC
+        ORDER BY COALESCE(updated_at, subscribed_at, created_at) DESC, id DESC
     ")->fetchAll();
 } else {
     $unsubscribers = $pdo->query("
-        SELECT id, email, status, subscribed_at, unsubscribed_at, source, created_at
+        SELECT id, email, status, subscribed_at, unsubscribed_at, source, created_at, updated_at
         FROM newsletter_subscribers
         WHERE status = 'unsubscribed'
-        ORDER BY COALESCE(unsubscribed_at, created_at) DESC, id DESC
+        ORDER BY COALESCE(unsubscribed_at, updated_at, created_at) DESC, id DESC
     ")->fetchAll();
 }
 ?>
