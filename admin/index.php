@@ -92,9 +92,10 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
   td.message::before{display:block;margin-bottom:7px}
   td[data-label="Failid"]{display:block}
   td[data-label="Failid"]::before{display:block;margin-bottom:8px}
+  td[data-label="Failid"]{overflow-x:auto;white-space:nowrap;padding-bottom:6px}
   .preview-img{width:104px;height:82px;margin:0 8px 8px 0}
   .lightbox-item{display:inline-block;vertical-align:top}
-  .file-link{max-width:100%;font-size:14px;margin-bottom:10px}
+  .file-link{display:inline-block;max-width:124px;font-size:13px;margin:0 8px 10px 0;vertical-align:top;white-space:normal}
   .actions{display:block;white-space:normal;padding:12px 14px}
   .actions::before{display:none}
   .actions form{margin:0}
