@@ -210,15 +210,17 @@
 				</div>
 
 				<div class="glass-newsletter">
-					<form class="newsletter-modern" id="subscribeForm">
+					<form class="newsletter-modern" id="subscribeForm" method="POST" action="/api/newsletter.php">
 						<h3>Liitumine uudiskirjadega</h3>
+						<input type="hidden" name="action" value="subscribe">
 						<input type="email" name="email" placeholder="Sisesta oma email" required class="newsletter-input">
 						<button type="submit" class="button primary fit">Liitu uudiskirjaga</button>
-						<label class="newsletter-consent"><input type="checkbox" name="consent" required> Nõustun uudiskirjade saamisega</label>
+						<label class="newsletter-consent"><input type="checkbox" name="consent" value="1" required> <span>Nõustun uudiskirjade saamisega</span></label>
 						<div id="newsletterMessage"></div>
 					</form>
 
-					<form id="unsubscribeForm" class="unsubscribe-form-pro">
+					<form id="unsubscribeForm" class="unsubscribe-form-pro" method="POST" action="/api/newsletter.php">
+						<input type="hidden" name="action" value="unsubscribe">
 						<input type="email" name="unsubscribe_email" id="unsubscribeEmail" placeholder="Sisesta oma email" required>
 						<button type="submit" class="button small fit">Kinnita loobumine</button>
 						<div id="unsubscribeMessage"></div>

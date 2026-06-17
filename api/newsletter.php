@@ -67,7 +67,7 @@ if ($action === 'subscribe') {
         ]);
     }
 
-    newsletter_response(true, 'Liitusid edukalt uudiskirjaga.');
+    newsletter_response(true, 'Liitusite Renoveeri Kodu uudispakkumistega!');
 }
 
 if ($subscriber) {

@@ -5048,10 +5048,27 @@ body.portfolio-lightbox-open{
 }
 
 .newsletter-consent{
-	display:block;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:10px;
 	margin-top:15px;
 	font-size:13px;
-	opacity:0.7;
+	opacity:0.85;
+	cursor:pointer;
+}
+
+.newsletter-consent input[type="checkbox"]{
+	-webkit-appearance:auto;
+	appearance:auto;
+	display:inline-block;
+	float:none;
+	margin:0;
+	opacity:1;
+	width:18px;
+	height:18px;
+	z-index:auto;
+	flex:0 0 auto;
 }
 
 .newsletter-success{
