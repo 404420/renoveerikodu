@@ -71,6 +71,42 @@ if ($view === 'requests') {
 <style>
 body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color:#17202a}.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;background:#fff;padding:18px 20px;border-radius:8px;box-shadow:0 6px 22px rgba(0,0,0,.06);margin-bottom:20px}.topbar h1{font-size:24px;margin:0}.topbar-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.admin-tabs{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.admin-tab{border:1px solid #cfd8e3;border-radius:4px;color:#17202a;padding:9px 12px;text-decoration:none;background:#fff}.admin-tab.active{background:#17202a;border-color:#17202a;color:#fff}.admin-tab-count{color:#697386;font-size:13px;margin-left:4px}.admin-tab.active .admin-tab-count{color:#d7dde5}.logout,.button-delete{background:#d9534f;color:#fff;border:0;border-radius:4px;padding:9px 12px;text-decoration:none;cursor:pointer}.table-wrap{overflow:auto;background:#fff;border-radius:8px;box-shadow:0 6px 22px rgba(0,0,0,.06)}table{border-collapse:collapse;width:100%;min-width:960px}th,td{border-bottom:1px solid #e7ebf0;padding:10px;text-align:left;vertical-align:top}th{background:#f1f4f8}.message{max-width:320px;white-space:pre-wrap}.preview-img{width:120px;height:90px;object-fit:cover;display:block;margin:0 0 6px;border:1px solid #d7dde5;border-radius:6px;background:#eef2f7}.lightbox-item{display:block;width:max-content}.lightbox-item:hover .preview-img{border-color:#17202a;box-shadow:0 4px 14px rgba(0,0,0,.16)}.admin-lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(9,15,23,.88);padding:28px}.admin-lightbox.open{display:flex}.lightbox-panel{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;max-width:1180px;max-height:92vh}.lightbox-image{max-width:100%;max-height:82vh;object-fit:contain;border-radius:6px;background:#111;box-shadow:0 16px 50px rgba(0,0,0,.45)}.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;border:0;border-radius:4px;background:rgba(255,255,255,.92);color:#17202a;cursor:pointer;font-size:24px;line-height:1}.lightbox-close{top:0;right:0;padding:10px 14px}.lightbox-prev,.lightbox-next{top:50%;transform:translateY(-50%);padding:16px 18px}.lightbox-prev{left:0}.lightbox-next{right:0}.lightbox-prev:disabled,.lightbox-next:disabled{opacity:.28;cursor:not-allowed}.lightbox-caption{position:absolute;left:0;right:0;bottom:0;color:#fff;text-align:center;font-size:15px;padding:10px 48px}.muted{color:#697386}.file-link{display:block;margin-bottom:6px;max-width:180px;overflow-wrap:anywhere}.actions{white-space:nowrap}@media(max-width:700px){body{padding:12px}.topbar{align-items:flex-start;flex-direction:column}.topbar-actions{align-items:flex-start;flex-direction:column}.admin-lightbox{padding:16px}.lightbox-prev,.lightbox-next{padding:12px 14px}.lightbox-caption{padding:10px 40px}}
 </style>
+<style>
+@media(max-width:760px){
+  body{background:#eef2f7;padding:10px;color:#101828}
+  .topbar{position:static;align-items:stretch;gap:14px;padding:16px;border-radius:8px;margin-bottom:14px}
+  .topbar h1{font-size:24px;line-height:1.1}
+  .topbar-actions{align-items:stretch;width:100%}
+  .admin-tabs{display:grid;grid-template-columns:1fr;gap:8px;width:100%}
+  .admin-tab{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;font-size:16px}
+  .logout{display:block;text-align:center;width:100%;box-sizing:border-box;padding:12px 14px}
+  .table-wrap{overflow:visible;background:transparent;border-radius:0;box-shadow:none}
+  table{display:block;width:100%;min-width:0;border-collapse:separate}
+  thead{display:none}
+  tbody{display:block}
+  tr{display:block;background:#fff;border:1px solid #d9e2ec;border-radius:8px;box-shadow:0 8px 24px rgba(16,24,40,.07);margin:0 0 14px;overflow:hidden}
+  td{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;align-items:start;border-bottom:1px solid #edf1f5;padding:11px 14px;font-size:15px;line-height:1.35;overflow-wrap:anywhere}
+  td::before{content:attr(data-label);color:#667085;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  td:last-child{border-bottom:0}
+  td.message{display:block;max-width:none;white-space:pre-wrap;font-size:16px;line-height:1.45}
+  td.message::before{display:block;margin-bottom:7px}
+  td[data-label="Failid"]{display:block}
+  td[data-label="Failid"]::before{display:block;margin-bottom:8px}
+  .preview-img{width:104px;height:82px;margin:0 8px 8px 0}
+  .lightbox-item{display:inline-block;vertical-align:top}
+  .file-link{max-width:100%;font-size:14px;margin-bottom:10px}
+  .actions{display:block;white-space:normal;padding:12px 14px}
+  .actions::before{display:none}
+  .actions form{margin:0}
+  .button-delete{width:100%;padding:12px 14px;font-size:16px}
+  .muted{font-size:14px}
+  .admin-lightbox{padding:14px}
+  .lightbox-image{max-height:76vh}
+  .lightbox-close{top:4px;right:4px}
+  .lightbox-prev,.lightbox-next{padding:12px 14px}
+  .lightbox-caption{font-size:13px;padding:10px 40px}
+}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -111,13 +147,13 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
   <?php endif; ?>
   <?php foreach ($requests as $row): ?>
     <tr>
-      <td><?= (int) $row['id'] ?></td>
-      <td><?= h($row['name']) ?></td>
-      <td><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
-      <td><?= h($row['phone'] ?? '') ?></td>
-      <td><?= h($row['address'] ?? '') ?></td>
-      <td class="message"><?= h($row['message']) ?></td>
-      <td>
+      <td data-label="ID"><?= (int) $row['id'] ?></td>
+      <td data-label="Nimi"><?= h($row['name']) ?></td>
+      <td data-label="Email"><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
+      <td data-label="Telefon"><?= h($row['phone'] ?? '') ?></td>
+      <td data-label="Aadress"><?= h($row['address'] ?? '') ?></td>
+      <td data-label="Sõnum" class="message"><?= h($row['message']) ?></td>
+      <td data-label="Failid">
         <?php $files = decode_files($row['file_path'] ?? null); ?>
         <?php if (!$files): ?>
           <span class="muted">-</span>
@@ -136,8 +172,8 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
           <?php endif; ?>
         <?php endforeach; ?>
       </td>
-      <td><?= h($row['source'] ?? '') ?></td>
-      <td><?= h($row['created_at']) ?></td>
+      <td data-label="Allikas"><?= h($row['source'] ?? '') ?></td>
+      <td data-label="Kuupäev"><?= h($row['created_at']) ?></td>
       <td class="actions">
         <form method="post" onsubmit="return confirm('Kustutan selle päringu?');">
           <input type="hidden" name="delete_id" value="<?= (int) $row['id'] ?>">
@@ -165,11 +201,11 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
   <?php endif; ?>
   <?php foreach ($subscribers as $row): ?>
     <tr>
-      <td><?= (int) $row['id'] ?></td>
-      <td><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
-      <td><?= h($row['status']) ?></td>
-      <td><?= h($row['subscribed_at'] ?? $row['created_at'] ?? '') ?></td>
-      <td><?= h($row['source'] ?? '') ?></td>
+      <td data-label="ID"><?= (int) $row['id'] ?></td>
+      <td data-label="Email"><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
+      <td data-label="Staatus"><?= h($row['status']) ?></td>
+      <td data-label="Liitus"><?= h($row['subscribed_at'] ?? $row['created_at'] ?? '') ?></td>
+      <td data-label="Allikas"><?= h($row['source'] ?? '') ?></td>
     </tr>
   <?php endforeach; ?>
   </tbody>
@@ -192,12 +228,12 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
   <?php endif; ?>
   <?php foreach ($unsubscribers as $row): ?>
     <tr>
-      <td><?= (int) $row['id'] ?></td>
-      <td><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
-      <td><?= h($row['status']) ?></td>
-      <td><?= h($row['subscribed_at'] ?? '') ?></td>
-      <td><?= h($row['unsubscribed_at'] ?? $row['created_at'] ?? '') ?></td>
-      <td><?= h($row['source'] ?? '') ?></td>
+      <td data-label="ID"><?= (int) $row['id'] ?></td>
+      <td data-label="Email"><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
+      <td data-label="Staatus"><?= h($row['status']) ?></td>
+      <td data-label="Liitus"><?= h($row['subscribed_at'] ?? '') ?></td>
+      <td data-label="Loobus"><?= h($row['unsubscribed_at'] ?? $row['created_at'] ?? '') ?></td>
+      <td data-label="Allikas"><?= h($row['source'] ?? '') ?></td>
     </tr>
   <?php endforeach; ?>
   </tbody>
