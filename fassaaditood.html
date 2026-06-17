@@ -122,6 +122,33 @@ img {
 	display: block;
 }
 
+.facade-image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+	margin: 0 auto 28px;
+	max-width: 780px;
+}
+
+.facade-image-grid a {
+	display: block;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+	background: #f1f3f5;
+}
+
+.facade-image-grid img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	transition: transform .2s ease;
+}
+
+.facade-image-grid a:hover img {
+	transform: scale(1.03);
+}
+
 /* ===== PARKETI STEP LAYOUT ===== */
 
 .parkett-steps {
@@ -161,6 +188,12 @@ img {
 /* ===== MOBILE ===== */
 
 @media (max-width: 736px) {
+
+	.facade-image-grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+		max-width: 420px;
+	}
 
 	.parkett-steps {
 		grid-template-columns: 1fr;
@@ -257,8 +290,13 @@ img {
 						<section class="wrapper style5 seo-service-page">
 							<div class="inner">
 								<section class="service-intro">
-									<div class="center-image">
-										<img src="images/fassaadi-renoveerimine-tallinn.jpg" alt="Fassaaditööd Tallinnas" loading="lazy">
+									<div class="facade-image-grid">
+										<a href="images/fassaadi-renoveerimine-tallinn.jpg" class="facade-lightbox-link">
+											<img src="images/fassaadi-renoveerimine-tallinn.jpg" alt="Fassaaditööd Tallinnas ja Harjumaal" loading="lazy">
+										</a>
+										<a href="images/fassaaditood-tallinn-puitfassaadi-renoveerimine-renoveeri-kodu.jpeg" class="facade-lightbox-link">
+											<img src="images/fassaaditood-tallinn-puitfassaadi-renoveerimine-renoveeri-kodu.jpeg" alt="Puitfassaadi renoveerimine Tallinnas" loading="lazy">
+										</a>
 									</div>
 									<p>Fassaad kaitseb hoonet ilmastiku eest ja kujundab maja üldmulje. Renoveeri Kodu teeb fassaaditöid Tallinnas ning Harjumaal, sealhulgas fassaadi hooldust, parandusi, pesu, ettevalmistust ja renoveerimist.</p>
 
@@ -375,7 +413,6 @@ img {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
 <script src="assets/js/renoveeri-ai-chat.js"></script>
 
 		<!-- AI Chat Bubble -->
@@ -410,6 +447,76 @@ document.addEventListener("DOMContentLoaded", function () {
 				submenu.classList.add("open");
 			}
 		}
+	});
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const galleryLinks = Array.from(document.querySelectorAll(".facade-lightbox-link"));
+	if (!galleryLinks.length) return;
+
+	const lightbox = document.createElement("div");
+	lightbox.className = "portfolio-lightbox";
+	lightbox.setAttribute("role", "dialog");
+	lightbox.setAttribute("aria-modal", "true");
+	lightbox.innerHTML = `
+		<button class="portfolio-lightbox__close" type="button" aria-label="Sulge pilt">&times;</button>
+		<button class="portfolio-lightbox__prev" type="button" aria-label="Eelmine pilt">&#8249;</button>
+		<img src="" alt="">
+		<button class="portfolio-lightbox__next" type="button" aria-label="Järgmine pilt">&#8250;</button>
+		<div class="portfolio-lightbox__caption"></div>
+	`;
+	document.body.appendChild(lightbox);
+
+	const image = lightbox.querySelector("img");
+	const caption = lightbox.querySelector(".portfolio-lightbox__caption");
+	const closeButton = lightbox.querySelector(".portfolio-lightbox__close");
+	const prevButton = lightbox.querySelector(".portfolio-lightbox__prev");
+	const nextButton = lightbox.querySelector(".portfolio-lightbox__next");
+	let currentIndex = 0;
+
+	function showImage(index) {
+		currentIndex = (index + galleryLinks.length) % galleryLinks.length;
+		const link = galleryLinks[currentIndex];
+		const thumbnail = link.querySelector("img");
+		image.src = link.getAttribute("href");
+		image.alt = thumbnail ? thumbnail.alt : "Fassaaditööde foto";
+		caption.textContent = `${currentIndex + 1} / ${galleryLinks.length}${thumbnail && thumbnail.alt ? " - " + thumbnail.alt : ""}`;
+	}
+
+	function openLightbox(index) {
+		showImage(index);
+		lightbox.classList.add("open");
+		document.body.classList.add("portfolio-lightbox-open");
+		closeButton.focus();
+	}
+
+	function closeLightbox() {
+		lightbox.classList.remove("open");
+		document.body.classList.remove("portfolio-lightbox-open");
+		image.removeAttribute("src");
+	}
+
+	galleryLinks.forEach((link, index) => {
+		link.addEventListener("click", function (event) {
+			event.preventDefault();
+			openLightbox(index);
+		});
+	});
+
+	closeButton.addEventListener("click", closeLightbox);
+	nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+	prevButton.addEventListener("click", () => showImage(currentIndex - 1));
+	lightbox.addEventListener("click", function (event) {
+		if (event.target === lightbox) closeLightbox();
+	});
+
+	document.addEventListener("keydown", function (event) {
+		if (!lightbox.classList.contains("open")) return;
+		if (event.key === "Escape") closeLightbox();
+		if (event.key === "ArrowRight") showImage(currentIndex + 1);
+		if (event.key === "ArrowLeft") showImage(currentIndex - 1);
 	});
 });
 </script>
