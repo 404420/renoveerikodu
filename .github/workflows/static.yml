@@ -30,12 +30,17 @@ jobs:
         run: node scripts/apply-internal-links.mjs
       - name: Apply service knowledge sections
         run: node scripts/apply-service-knowledge.mjs
+      - name: Apply service FAQ expansions
+        run: node scripts/apply-service-faqs.mjs
       - name: Apply structured data
         run: node scripts/apply-structured-data.mjs
       - name: Validate structured data JSON
         run: |
           node <<'NODE'
           const fs = require('node:fs');
+          function stripTags(value) {
+            return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          }
           for (const file of fs.readdirSync('.').filter((name) => name.endsWith('.html'))) {
             const html = fs.readFileSync(file, 'utf8');
             const scripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -44,6 +49,16 @@ jobs:
             const graph = data['@graph'] || [data];
             const ids = graph.map((node) => node['@id']).filter(Boolean);
             if (ids.length !== new Set(ids).size) throw new Error(`${file}: duplicate @id in schema graph`);
+            const visibleQuestions = [...html.matchAll(/<details[^>]*>[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>[\s\S]*?<\/details>/gi)].map((match) => stripTags(match[1]));
+            const faqNodes = graph.filter((node) => node['@type'] === 'FAQPage');
+            if (visibleQuestions.length && faqNodes.length !== 1) throw new Error(`${file}: visible FAQs require exactly one FAQPage schema node`);
+            if (faqNodes.length === 1) {
+              const schemaQuestions = (faqNodes[0].mainEntity || []).map((item) => item.name);
+              if (schemaQuestions.length !== visibleQuestions.length) throw new Error(`${file}: FAQ schema count does not match visible FAQ count`);
+              for (const question of visibleQuestions) {
+                if (!schemaQuestions.includes(question)) throw new Error(`${file}: FAQ schema missing visible question: ${question}`);
+              }
+            }
           }
           NODE
       - name: Persist generated GEO updates
@@ -51,8 +66,8 @@ jobs:
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add *.html scripts/apply-structured-data.mjs scripts/apply-internal-links.mjs scripts/apply-service-knowledge.mjs .github/workflows/static.yml
-            git commit -m "Expand service pages with practical knowledge sections"
+            git add *.html scripts/apply-structured-data.mjs scripts/apply-internal-links.mjs scripts/apply-service-knowledge.mjs scripts/apply-service-faqs.mjs .github/workflows/static.yml
+            git commit -m "Expand service FAQs and sync FAQ schema"
             git push
           else
             echo "Generated GEO updates are already up to date."
