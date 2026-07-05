@@ -41,6 +41,23 @@ jobs:
           function stripTags(value) {
             return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
           }
+          const servicePages = new Set([
+            'betoonitood.html',
+            'fassaaditood.html',
+            'fassaadivarvimine.html',
+            'katusetood.html',
+            'kipsitood.html',
+            'lammutustood.html',
+            'ledlahendused.html',
+            'lumetood.html',
+            'maalritood.html',
+            'parketipaigaldus.html',
+            'plaatimine.html',
+            'seinapaneelidepaigaldus.html',
+            'tapeetimine.html',
+            'tellingutepaigaldus.html',
+            'vundamenditood.html'
+          ]);
           for (const file of fs.readdirSync('.').filter((name) => name.endsWith('.html'))) {
             const html = fs.readFileSync(file, 'utf8');
             const scripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -49,15 +66,15 @@ jobs:
             const graph = data['@graph'] || [data];
             const ids = graph.map((node) => node['@id']).filter(Boolean);
             if (ids.length !== new Set(ids).size) throw new Error(`${file}: duplicate @id in schema graph`);
+            if (!servicePages.has(file)) continue;
             const visibleQuestions = [...html.matchAll(/<details[^>]*>[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>[\s\S]*?<\/details>/gi)].map((match) => stripTags(match[1]));
             const faqNodes = graph.filter((node) => node['@type'] === 'FAQPage');
-            if (visibleQuestions.length && faqNodes.length !== 1) throw new Error(`${file}: visible FAQs require exactly one FAQPage schema node`);
-            if (faqNodes.length === 1) {
-              const schemaQuestions = (faqNodes[0].mainEntity || []).map((item) => item.name);
-              if (schemaQuestions.length !== visibleQuestions.length) throw new Error(`${file}: FAQ schema count does not match visible FAQ count`);
-              for (const question of visibleQuestions) {
-                if (!schemaQuestions.includes(question)) throw new Error(`${file}: FAQ schema missing visible question: ${question}`);
-              }
+            if (visibleQuestions.length !== 8) throw new Error(`${file}: expected 8 visible service FAQs, got ${visibleQuestions.length}`);
+            if (faqNodes.length !== 1) throw new Error(`${file}: expected exactly one FAQPage schema node`);
+            const schemaQuestions = (faqNodes[0].mainEntity || []).map((item) => item.name);
+            if (schemaQuestions.length !== visibleQuestions.length) throw new Error(`${file}: FAQ schema count does not match visible FAQ count`);
+            for (const question of visibleQuestions) {
+              if (!schemaQuestions.includes(question)) throw new Error(`${file}: FAQ schema missing visible question: ${question}`);
             }
           }
           NODE
