@@ -32,6 +32,8 @@ jobs:
         run: node scripts/apply-service-knowledge.mjs
       - name: Apply service FAQ expansions
         run: node scripts/apply-service-faqs.mjs
+      - name: Apply final GEO refinements
+        run: node scripts/apply-final-geo-refinements.mjs
       - name: Apply structured data
         run: node scripts/apply-structured-data.mjs
       - name: Validate structured data JSON
@@ -83,8 +85,8 @@ jobs:
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add *.html scripts/apply-structured-data.mjs scripts/apply-internal-links.mjs scripts/apply-service-knowledge.mjs scripts/apply-service-faqs.mjs .github/workflows/static.yml
-            git commit -m "Expand service FAQs and sync FAQ schema"
+            git add *.html scripts/apply-structured-data.mjs scripts/apply-internal-links.mjs scripts/apply-service-knowledge.mjs scripts/apply-service-faqs.mjs scripts/apply-final-geo-refinements.mjs .github/workflows/static.yml
+            git commit -m "Apply final GEO refinement pass"
             git push
           else
             echo "Generated GEO updates are already up to date."
