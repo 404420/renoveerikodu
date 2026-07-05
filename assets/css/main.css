@@ -7,7 +7,7 @@
 */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, main, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -36,7 +36,7 @@ button {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, main, menu, nav, section {
 	display: block;}
 
 body {
@@ -5628,4 +5628,22 @@ body:not(.is-preload) .hero-logo {
 		transform: translate(-50%, -50%);
 	}
 
+}
+
+
+.skip-link {
+  background: #ffffff;
+  color: #111111;
+  font-weight: 700;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+  z-index: 10001;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
