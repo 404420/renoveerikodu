@@ -33,6 +33,241 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Apply Prompt 7 GEO fixes
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import json
+          import re
+
+          root = Path('.')
+
+          def add_before_head(path, marker, data):
+              file_path = root / path
+              if not file_path.exists():
+                  return
+              html = file_path.read_text(encoding='utf-8')
+              if marker in html:
+                  return
+              script = '<script type="application/ld+json">\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n</script>\n'
+              html = html.replace('</head>', script + '</head>', 1)
+              file_path.write_text(html, encoding='utf-8')
+
+          def page_url(file_path):
+              if file_path.name == 'index.html':
+                  return 'https://www.renoveerikodu.ee/'
+              return 'https://www.renoveerikodu.ee/' + file_path.stem
+
+          for file_path in root.glob('*.html'):
+              html = file_path.read_text(encoding='utf-8')
+
+              if 'class="skip-link"' not in html:
+                  html = re.sub(
+                      r'(<body\b[^>]*>)',
+                      r'\1\n<a class="skip-link" href="#main-content">Liigu põhisisuni</a>',
+                      html,
+                      count=1,
+                      flags=re.I,
+                  )
+
+              if not re.search(r'<main\b[^>]*id="main-content"', html, flags=re.I):
+                  if re.search(r'<article\s+id="main"', html, flags=re.I):
+                      html = re.sub(
+                          r'(<article\s+id="main"[^>]*>)',
+                          r'<main id="main-content">\n\1',
+                          html,
+                          count=1,
+                          flags=re.I,
+                      )
+                      idx = html.rfind('</article>')
+                      if idx != -1:
+                          html = html[:idx] + '</article>\n</main>' + html[idx + len('</article>'):]
+                  elif re.search(r'<section\s+id="banner"', html, flags=re.I):
+                      html = re.sub(
+                          r'(<section\s+id="banner"[^>]*>)',
+                          r'<main id="main-content">\n\1',
+                          html,
+                          count=1,
+                          flags=re.I,
+                      )
+                      html = re.sub(
+                          r'(\s*<footer\s+id="footer"[^>]*>)',
+                          r'\n</main>\1',
+                          html,
+                          count=1,
+                          flags=re.I,
+                      )
+
+              if '"@type": "BreadcrumbList"' not in html:
+                  h1 = re.search(r'<h1[^>]*>(.*?)</h1>', html, flags=re.I | re.S)
+                  title = re.search(r'<title[^>]*>(.*?)</title>', html, flags=re.I | re.S)
+                  name = h1.group(1) if h1 else (title.group(1) if title else file_path.stem)
+                  name = re.sub(r'<[^>]+>', '', name)
+                  name = re.sub(r'\s+', ' ', name).strip()
+                  url = page_url(file_path)
+                  breadcrumb = {
+                      '@context': 'https://schema.org',
+                      '@type': 'BreadcrumbList',
+                      '@id': url + '#breadcrumb',
+                      'itemListElement': [
+                          {
+                              '@type': 'ListItem',
+                              'position': 1,
+                              'name': 'Avaleht',
+                              'item': 'https://www.renoveerikodu.ee/'
+                          },
+                          {
+                              '@type': 'ListItem',
+                              'position': 2,
+                              'name': name,
+                              'item': url
+                          }
+                      ]
+                  }
+                  script = '<script type="application/ld+json">\n' + json.dumps(breadcrumb, ensure_ascii=False, indent=2) + '\n</script>\n'
+                  html = html.replace('</head>', script + '</head>', 1)
+
+              file_path.write_text(html, encoding='utf-8')
+
+          home_graph = {
+              '@context': 'https://schema.org',
+              '@graph': [
+                  {
+                      '@type': 'Organization',
+                      '@id': 'https://www.renoveerikodu.ee/#organization',
+                      'name': 'RK Meistrid OÜ',
+                      'alternateName': 'Renoveeri Kodu',
+                      'url': 'https://www.renoveerikodu.ee/',
+                      'logo': 'https://www.renoveerikodu.ee/images/RKMeistrid_logo.png',
+                      'email': 'info@renoveerikodu.ee',
+                      'telephone': '+37255515783',
+                      'identifier': '16541086'
+                  },
+                  {
+                      '@type': 'LocalBusiness',
+                      '@id': 'https://www.renoveerikodu.ee/#localbusiness',
+                      'name': 'Renoveeri Kodu',
+                      'legalName': 'RK Meistrid OÜ',
+                      'url': 'https://www.renoveerikodu.ee/',
+                      'image': 'https://www.renoveerikodu.ee/images/RKMeistrid_logo.png',
+                      'email': 'info@renoveerikodu.ee',
+                      'telephone': '+37255515783',
+                      'areaServed': ['Tallinn', 'Harjumaa'],
+                      'address': {
+                          '@type': 'PostalAddress',
+                          'addressCountry': 'EE'
+                      },
+                      'parentOrganization': {
+                          '@id': 'https://www.renoveerikodu.ee/#organization'
+                      },
+                      'description': 'RK Meistrid OÜ ehk Renoveeri Kodu pakub renoveerimis-, siseviimistlus-, plaatimis-, fassaadi-, katuse- ja ehitustöid Tallinnas ning Harjumaal.'
+                  },
+                  {
+                      '@type': 'WebSite',
+                      '@id': 'https://www.renoveerikodu.ee/#website',
+                      'url': 'https://www.renoveerikodu.ee/',
+                      'name': 'Renoveeri Kodu',
+                      'publisher': {
+                          '@id': 'https://www.renoveerikodu.ee/#organization'
+                      },
+                      'inLanguage': 'et'
+                  },
+                  {
+                      '@type': 'WebPage',
+                      '@id': 'https://www.renoveerikodu.ee/#webpage',
+                      'url': 'https://www.renoveerikodu.ee/',
+                      'name': 'Renoveerimistööd Tallinnas ja Harjumaal | Renoveeri Kodu',
+                      'isPartOf': {
+                          '@id': 'https://www.renoveerikodu.ee/#website'
+                      },
+                      'about': {
+                          '@id': 'https://www.renoveerikodu.ee/#localbusiness'
+                      },
+                      'inLanguage': 'et'
+                  }
+              ]
+          }
+          add_before_head('index.html', '#organization', home_graph)
+
+          offer_catalog = {
+              '@context': 'https://schema.org',
+              '@type': 'OfferCatalog',
+              '@id': 'https://www.renoveerikodu.ee/hinnakiri#offercatalog',
+              'name': 'Renoveerimistööde hinnakiri Tallinnas ja Harjumaal',
+              'url': 'https://www.renoveerikodu.ee/hinnakiri',
+              'provider': {
+                  '@id': 'https://www.renoveerikodu.ee/#localbusiness',
+                  'name': 'Renoveeri Kodu'
+              },
+              'areaServed': ['Tallinn', 'Harjumaa'],
+              'itemListElement': [
+                  {'@type': 'Offer', 'name': 'Kipsplaadi paigaldus', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '16', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Pahteldus ja lihvimine', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '9', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Värvimine, 2 kihti', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '7.5', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Hüdroisolatsiooni paigaldus', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '14', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Seinte ja põranda plaatimine', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '49', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Laudparketi paigaldus', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '12', 'unitText': 'm2', 'description': 'Hind alates'}},
+                  {'@type': 'Offer', 'name': 'Fassaadi pesu või puhastus', 'priceSpecification': {'@type': 'UnitPriceSpecification', 'priceCurrency': 'EUR', 'price': '6', 'unitText': 'm2', 'description': 'Hind alates'}}
+              ]
+          }
+          add_before_head('hinnakiri.html', '#offercatalog', offer_catalog)
+
+          portfolio_graph = {
+              '@context': 'https://schema.org',
+              '@graph': [
+                  {
+                      '@type': 'CollectionPage',
+                      '@id': 'https://www.renoveerikodu.ee/tehtudtood#collection',
+                      'name': 'Tehtud renoveerimistööd Tallinnas ja Harjumaal',
+                      'url': 'https://www.renoveerikodu.ee/tehtudtood',
+                      'description': 'Renoveeri Kodu portfoolio tehtud siseviimistlus-, plaatimis-, parketi-, fassaadi-, katuse- ja renoveerimistöödest.',
+                      'isPartOf': {
+                          '@id': 'https://www.renoveerikodu.ee/#website'
+                      }
+                  },
+                  {
+                      '@type': 'ItemList',
+                      '@id': 'https://www.renoveerikodu.ee/tehtudtood#projects',
+                      'name': 'Renoveeri Kodu projektinäited',
+                      'itemListElement': [
+                          {'@type': 'ListItem', 'position': 1, 'url': 'https://www.renoveerikodu.ee/vannitoa-plaatimine-tallinn', 'name': 'Vannitoa plaatimine Tallinnas'},
+                          {'@type': 'ListItem', 'position': 2, 'url': 'https://www.renoveerikodu.ee/parketi-paigaldus-tallinn-korter', 'name': 'Parketi paigaldus Tallinnas korteris'},
+                          {'@type': 'ListItem', 'position': 3, 'url': 'https://www.renoveerikodu.ee/fassaadi-varvimine-tallinn-eramu', 'name': 'Fassaadi värvimine Tallinnas eramul'},
+                          {'@type': 'ListItem', 'position': 4, 'url': 'https://www.renoveerikodu.ee/katuse-pesu-ja-hooldus-tallinn', 'name': 'Katuse pesu ja hooldus Tallinnas'},
+                          {'@type': 'ListItem', 'position': 5, 'url': 'https://www.renoveerikodu.ee/led-valgustuse-paigaldus-tallinn', 'name': 'LED valgustuse paigaldus Tallinnas'}
+                      ]
+                  }
+              ]
+          }
+          add_before_head('tehtudtood.html', '#projects', portfolio_graph)
+
+          css_path = root / 'assets/css/main.css'
+          if css_path.exists():
+              css = css_path.read_text(encoding='utf-8')
+              css = css.replace('iframe, h1, h2, h3, h4, h5, h6, p, blockquote,', 'iframe, main, h1, h2, h3, h4, h5, h6, p, blockquote,')
+              css = css.replace('footer, header, hgroup, menu, nav, section {', 'footer, header, hgroup, main, menu, nav, section {')
+              if '.skip-link' not in css:
+                  css += '''
+
+          .skip-link {
+            background: #ffffff;
+            color: #111111;
+            font-weight: 700;
+            left: 1rem;
+            padding: 0.75rem 1rem;
+            position: fixed;
+            top: 1rem;
+            transform: translateY(-150%);
+            transition: transform 0.2s ease;
+            z-index: 10001;
+          }
+
+          .skip-link:focus {
+            transform: translateY(0);
+          }
+          '''
+              css_path.write_text(css, encoding='utf-8')
+          PY
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
