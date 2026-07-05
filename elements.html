@@ -10,20 +10,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.renoveerikodu.ee/elements#breadcrumb",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Avaleht",
-      "item": "https://www.renoveerikodu.ee/"
+      "@type": "WebPage",
+      "@id": "https://www.renoveerikodu.ee/elements#webpage",
+      "url": "https://www.renoveerikodu.ee/elements",
+      "name": "Renoveeri Kodu",
+      "description": "Renoveeri Kodu",
+      "isPartOf": {
+        "@id": "https://www.renoveerikodu.ee/#website"
+      },
+      "about": {
+        "@id": "https://www.renoveerikodu.ee/#localbusiness"
+      },
+      "inLanguage": "et"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Renoveeri Kodu",
-      "item": "https://www.renoveerikodu.ee/elements"
+      "@type": "BreadcrumbList",
+      "@id": "https://www.renoveerikodu.ee/elements#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://www.renoveerikodu.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Renoveeri Kodu",
+          "item": "https://www.renoveerikodu.ee/elements"
+        }
+      ]
     }
   ]
 }
