@@ -273,7 +273,12 @@
 							<div class="col-6 col-12-xsmall"><input type="tel" name="phone" placeholder="Tel nr (valikuline)" /></div>
 							<div class="col-6 col-12-xsmall"><input type="text" name="address" placeholder="Aadress (valikuline)" /></div>
 							<div class="col-12"><textarea name="message" placeholder="Sisesta sõnum" rows="6" required></textarea></div>
-							<div class="col-12"><input type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.dwg,.dxf,.zip"></div>
+							<div class="col-12 home-file-upload-row">
+								<label class="glass-btn file home-file-upload">
+									Vali failid
+									<input type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.webp,.heic,.dwg,.dxf,.zip">
+								</label>
+							</div>
 							<div class="col-12">
 								<ul class="actions">
 									<li><input type="submit" value="Saada sõnum" class="primary" /></li>

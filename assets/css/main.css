@@ -5647,3 +5647,73 @@ body:not(.is-preload) .hero-logo {
 .skip-link:focus {
   transform: translateY(0);
 }
+
+/* Homepage contact file upload */
+#contact .home-file-upload-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0.25rem;
+}
+
+#contact .home-file-upload {
+	min-width: 190px;
+	height: 52px;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0 30px !important;
+	border: 2px solid rgba(255,255,255,0.75) !important;
+	border-radius: 14px !important;
+	background: rgba(255,255,255,0.04) !important;
+	color: #ffffff !important;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#contact .home-file-upload input[type="file"] {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	padding: 0 !important;
+	border: 0 !important;
+	margin: 0 !important;
+}
+
+#contact .home-file-upload input[type="file"]::file-selector-button {
+	display: none !important;
+}
+
+#contact .file-upload-preview {
+	max-width: 520px;
+	margin: 18px auto 24px !important;
+}
+
+#contact .file-preview-remove {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 34px !important;
+	height: 34px !important;
+	padding: 0 !important;
+	line-height: 1 !important;
+	text-align: center !important;
+}
+
+@media screen and (max-width: 736px) {
+	#contact .home-file-upload {
+		width: auto;
+		min-width: 180px;
+		height: 52px;
+	}
+
+	#contact .file-upload-preview {
+		max-width: 100%;
+	}
+}
