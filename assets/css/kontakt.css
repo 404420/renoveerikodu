@@ -301,7 +301,7 @@
 	position: relative;
 }
 
-/* peidame p채ris inputi t채ielikult */
+/* peidame päris inputi täielikult */
 .file-upload-wrapper input[type="file"]{
 	position: absolute !important;
 	left: 0;
@@ -728,5 +728,49 @@ html {
 	.contact-page .contact-apple {
 		padding-top: 56px;
 		padding-bottom: 90px;
+	}
+}
+
+/* Desktop contact hero readability fix */
+@media (min-width: 1024px) {
+	.contact-page #banner {
+		min-height: calc(100vh - 72px);
+		padding: 7.5rem 0 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact-page #banner .inner {
+		transform: none !important;
+		width: min(1120px, calc(100% - 96px));
+		max-width: 1120px;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	.contact-page #banner h1 {
+		max-width: 860px;
+		margin: 0 0 1.25rem;
+		font-size: clamp(2rem, 2.8vw, 3.1rem);
+		line-height: 1.18;
+		letter-spacing: 0.18em;
+	}
+
+	.contact-page #banner p {
+		max-width: 760px;
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		letter-spacing: 0.03em;
+	}
+
+	.contact-page #banner .geo-entity-summary {
+		max-width: 760px;
+	}
+
+	.contact-page .hero-logo {
+		top: -95px;
 	}
 }
