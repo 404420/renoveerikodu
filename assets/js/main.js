@@ -72,6 +72,27 @@
 			if(e.key === "Escape")
 				$body.removeClass('is-menu-visible');
 		});
+
+		document.addEventListener('click', function(event) {
+			var trigger = event.target.closest && event.target.closest('#open-services');
+
+			if(!trigger) return;
+
+			event.preventDefault();
+			event.stopPropagation();
+
+			if(event.stopImmediatePropagation)
+				event.stopImmediatePropagation();
+
+			$body.addClass('is-menu-visible');
+
+			setTimeout(function() {
+				var services = document.querySelector('#menu .submenu');
+
+				if(services)
+					services.classList.add('open');
+			}, 50);
+		}, true);
 	}
 
 	// =============================
