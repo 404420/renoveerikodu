@@ -731,46 +731,142 @@ html {
 	}
 }
 
-/* Desktop contact hero readability fix */
-@media (min-width: 1024px) {
-	.contact-page #banner {
-		min-height: calc(100vh - 72px);
-		padding: 7.5rem 0 5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+/* Contact lower content responsive UI fix */
+.contact-page .contact-seo-copy,
+.contact-page .minimum-content-boost,
+.contact-page .contact-proof-copy,
+.contact-page .contact-faq {
+	box-sizing: border-box;
+	width: min(100% - 44px, 1060px);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3rem clamp(1.25rem, 3vw, 3.25rem);
+	background: rgba(18, 24, 30, 0.68);
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 18px;
+	box-shadow: 0 24px 70px rgba(0,0,0,0.34);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+}
+
+.contact-page .contact-seo-copy {
+	margin-top: 3rem;
+}
+
+.contact-page .minimum-content-boost,
+.contact-page .contact-proof-copy,
+.contact-page .contact-faq {
+	margin-top: 1.75rem;
+}
+
+.contact-page .contact-seo-copy h2,
+.contact-page .minimum-content-boost h2,
+.contact-page .contact-proof-copy h2,
+.contact-page .contact-faq h2 {
+	max-width: 920px;
+	margin: 0 auto 1.25rem;
+	color: #fff;
+	font-size: clamp(1.35rem, 2vw, 2rem);
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+	text-align: left;
+}
+
+.contact-page .contact-seo-copy p,
+.contact-page .minimum-content-boost p,
+.contact-page .contact-proof-copy p,
+.contact-page .contact-faq p,
+.contact-page .contact-faq details,
+.contact-page .contact-seo-copy ul {
+	max-width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	color: rgba(255,255,255,0.92);
+	font-size: 1rem;
+	line-height: 1.75;
+	letter-spacing: 0.01em;
+	text-align: left;
+}
+
+.contact-page .contact-seo-copy p,
+.contact-page .minimum-content-boost p,
+.contact-page .contact-proof-copy p {
+	margin-bottom: 1.15rem;
+}
+
+.contact-page .contact-seo-copy ul {
+	padding-left: 1.35rem;
+	margin-top: 1.25rem;
+}
+
+.contact-page .contact-seo-copy li {
+	margin: 0.35rem 0;
+}
+
+.contact-page .contact-faq details {
+	padding: 1rem 0;
+	border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-page .contact-faq details:last-child {
+	border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-page .contact-faq summary {
+	cursor: pointer;
+	color: #fff;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+.contact-page #main.contact-apple {
+	width: min(100% - 44px, 1060px);
+	min-height: auto;
+	margin: 2rem auto 4rem;
+	padding: 0;
+}
+
+.contact-page .contact-apple .glass-container {
+	max-width: 860px;
+	padding: clamp(2rem, 4vw, 3.75rem);
+}
+
+@media (max-width: 768px) {
+	.contact-page .contact-seo-copy,
+	.contact-page .minimum-content-boost,
+	.contact-page .contact-proof-copy,
+	.contact-page .contact-faq {
+		width: calc(100% - 32px);
+		padding: 2rem 1.15rem;
+		border-radius: 14px;
 	}
 
-	.contact-page #banner .inner {
-		transform: none !important;
-		width: min(1120px, calc(100% - 96px));
-		max-width: 1120px;
-		margin: 0 auto;
-		text-align: left;
+	.contact-page .contact-seo-copy {
+		margin-top: 2rem;
 	}
 
-	.contact-page #banner h1 {
-		max-width: 860px;
-		margin: 0 0 1.25rem;
-		font-size: clamp(2rem, 2.8vw, 3.1rem);
-		line-height: 1.18;
-		letter-spacing: 0.18em;
+	.contact-page .contact-seo-copy h2,
+	.contact-page .minimum-content-boost h2,
+	.contact-page .contact-proof-copy h2,
+	.contact-page .contact-faq h2 {
+		font-size: 1.25rem;
+		line-height: 1.35;
+		letter-spacing: 0.06em;
 	}
 
-	.contact-page #banner p {
-		max-width: 760px;
-		margin-left: 0;
-		margin-right: 0;
-		font-size: 1.05rem;
-		line-height: 1.7;
-		letter-spacing: 0.03em;
+	.contact-page .contact-seo-copy p,
+	.contact-page .minimum-content-boost p,
+	.contact-page .contact-proof-copy p,
+	.contact-page .contact-faq p,
+	.contact-page .contact-faq details,
+	.contact-page .contact-seo-copy ul {
+		font-size: 0.95rem;
+		line-height: 1.68;
 	}
 
-	.contact-page #banner .geo-entity-summary {
-		max-width: 760px;
-	}
-
-	.contact-page .hero-logo {
-		top: -95px;
+	.contact-page #main.contact-apple {
+		width: calc(100% - 32px);
+		margin-top: 1.5rem;
+		margin-bottom: 3rem;
 	}
 }
