@@ -313,6 +313,62 @@
 		});
 	})();
 
+	function refreshContactCaptcha(form) {
+		var captcha = form ? form.querySelector('.contact-captcha') : null;
+
+		if (!captcha)
+			return;
+
+		var question = captcha.querySelector('.contact-captcha-question');
+		var token = captcha.querySelector('input[name="captcha_token"]');
+		var answer = captcha.querySelector('input[name="captcha_answer"]');
+
+		if (!question || !token || !answer)
+			return;
+
+		question.textContent = 'Turvaküsimuse laadimine...';
+		token.value = '';
+		answer.value = '';
+
+		fetch('/api/captcha.php', {
+			method: 'GET',
+			credentials: 'same-origin',
+			headers: {
+				'Accept': 'application/json'
+			}
+		})
+			.then(function(response) {
+				if (!response.ok)
+					throw new Error('Captcha laadimine ebaõnnestus.');
+
+				return response.json();
+			})
+			.then(function(result) {
+				if (!result || !result.success || !result.token || !result.question)
+					throw new Error('Captcha laadimine ebaõnnestus.');
+
+				question.textContent = result.question;
+				token.value = result.token;
+			})
+			.catch(function() {
+				question.textContent = 'Turvaküsimust ei saanud laadida.';
+			});
+	}
+
+	document.querySelectorAll('form#contactForm').forEach(function(form) {
+		refreshContactCaptcha(form);
+	});
+
+	document.addEventListener('click', function(event) {
+		var button = event.target.closest && event.target.closest('.contact-captcha-refresh');
+
+		if (!button)
+			return;
+
+		event.preventDefault();
+		refreshContactCaptcha(button.closest('form'));
+	});
+
 	// =============================
 	// SUBMENU (STABLE VERSION)
 	// =============================
@@ -443,6 +499,8 @@ $('#menu a, #nav a').each(function(){
 		} catch (error) {
 			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
 		} finally {
+			refreshContactCaptcha(form);
+
 			if (submitButton) {
 				submitButton.disabled = false;
 				if (submitButton.tagName === 'INPUT')
