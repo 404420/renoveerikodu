@@ -45,6 +45,70 @@ function finish_response(bool $success, string $message, int $status = 200, arra
     exit;
 }
 
+function encode_mime_header(string $value): string
+{
+    return '=?UTF-8?B?' . base64_encode($value) . '?=';
+}
+
+function send_contact_emails(string $name, string $email, string $phone, string $address, string $message, array $uploadedFiles): void
+{
+    $to = 'info@renoveerikodu.ee';
+    $fromEmail = 'info@renoveerikodu.ee';
+    $fromName = 'RK Meistrid';
+
+    $attachmentLines = [];
+    foreach ($uploadedFiles as $file) {
+        $originalName = $file['original_name'] ?? 'fail';
+        $path = $file['path'] ?? '';
+        $attachmentLines[] = '- ' . $originalName . ($path !== '' ? ' (' . $path . ')' : '');
+    }
+
+    $adminSubject = 'Uus päring kodulehelt';
+    $adminMessage = "Uus päring kodulehelt\n\n";
+    $adminMessage .= "Nimi: {$name}\n";
+    $adminMessage .= "Email: {$email}\n";
+    $adminMessage .= "Telefon: " . ($phone !== '' ? $phone : '-') . "\n";
+    $adminMessage .= "Aadress: " . ($address !== '' ? $address : '-') . "\n\n";
+    $adminMessage .= "Sõnum:\n{$message}\n";
+
+    if ($attachmentLines) {
+        $adminMessage .= "\nLisatud failid:\n" . implode("\n", $attachmentLines) . "\n";
+    }
+
+    $adminHeaders = [];
+    $adminHeaders[] = 'MIME-Version: 1.0';
+    $adminHeaders[] = 'Content-Type: text/plain; charset=UTF-8';
+    $adminHeaders[] = 'From: ' . encode_mime_header($fromName) . " <{$fromEmail}>";
+    $adminHeaders[] = "Reply-To: {$email}";
+
+    mail(
+        $to,
+        encode_mime_header($adminSubject),
+        $adminMessage,
+        implode("\r\n", $adminHeaders)
+    );
+
+    $autoSubject = 'Täname päringu eest';
+    $autoMessage = "Tere!\n\n";
+    $autoMessage .= "Täname päringu eest. Oleme päringu kätte saanud ja vastame esimesel võimalusel.\n\n";
+    $autoMessage .= "Lugupidamisega\n";
+    $autoMessage .= "RK Meistrid OÜ\n";
+    $autoMessage .= "info@renoveerikodu.ee\n";
+
+    $autoHeaders = [];
+    $autoHeaders[] = 'MIME-Version: 1.0';
+    $autoHeaders[] = 'Content-Type: text/plain; charset=UTF-8';
+    $autoHeaders[] = 'From: ' . encode_mime_header($fromName) . " <{$fromEmail}>";
+    $autoHeaders[] = "Reply-To: {$fromEmail}";
+
+    mail(
+        $email,
+        encode_mime_header($autoSubject),
+        $autoMessage,
+        implode("\r\n", $autoHeaders)
+    );
+}
+
 function load_config(): void
 {
     $paths = [
@@ -272,7 +336,9 @@ try {
     ]);
 }
 
-finish_response(true, 'Päring saadetud. Võtame sinuga ühendust.', 200, [
+send_contact_emails($name, $email, $phone, $address, $message, $uploadedFiles);
+
+finish_response(true, 'Aitäh! Päring on saadetud ja kinnituskiri saadeti teie emailile.', 200, [
     'db_saved' => true,
     'attachments' => $uploadedFiles,
 ]);
