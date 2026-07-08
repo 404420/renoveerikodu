@@ -313,16 +313,41 @@
 		});
 	})();
 
-	function loadRecaptchaScript(callback) {
+	function waitForRecaptcha(callback, attempt) {
+		attempt = attempt || 0;
+
 		if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
 			callback();
 			return;
 		}
 
+		if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
+			window.grecaptcha.ready(function() {
+				waitForRecaptcha(callback, attempt + 1);
+			});
+			return;
+		}
+
+		if (attempt < 80)
+			setTimeout(function() {
+				waitForRecaptcha(callback, attempt + 1);
+			}, 100);
+	}
+
+	function loadRecaptchaScript(callback) {
+		waitForRecaptcha(function() {
+			callback();
+		});
+
+		if (window.grecaptcha)
+			return;
+
 		var existing = document.querySelector('script[data-recaptcha-script]');
 
 		if (existing) {
-			existing.addEventListener('load', callback, { once: true });
+			existing.addEventListener('load', function() {
+				waitForRecaptcha(callback);
+			}, { once: true });
 			return;
 		}
 
@@ -331,7 +356,9 @@
 		script.async = true;
 		script.defer = true;
 		script.setAttribute('data-recaptcha-script', 'true');
-		script.addEventListener('load', callback, { once: true });
+		script.addEventListener('load', function() {
+			waitForRecaptcha(callback);
+		}, { once: true });
 		document.head.appendChild(script);
 	}
 
