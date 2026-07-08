@@ -314,14 +314,7 @@
 
 <textarea name="message" placeholder="Kirjelda oma projekti..." rows="6"></textarea>
 
-<div class="contact-captcha">
-<label>
-<span class="contact-captcha-question">Turvaküsimuse laadimine...</span>
-<input type="number" name="captcha_answer" inputmode="numeric" autocomplete="off" placeholder="Vastus" required>
-</label>
-<input type="hidden" name="captcha_token" value="">
-<button type="button" class="contact-captcha-refresh" aria-label="Lae uus turvaküsimus">Uus</button>
-</div>
+<div class="contact-recaptcha" data-recaptcha-widget></div>
 
 </div>
 

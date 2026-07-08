@@ -274,16 +274,7 @@
 							<div class="col-6 col-12-xsmall"><input type="tel" name="phone" placeholder="Tel nr (valikuline)" /></div>
 							<div class="col-6 col-12-xsmall"><input type="text" name="address" placeholder="Aadress (valikuline)" /></div>
 							<div class="col-12"><textarea name="message" placeholder="Sisesta sõnum" rows="6" required></textarea></div>
-							<div class="col-12">
-								<div class="contact-captcha">
-									<label>
-										<span class="contact-captcha-question">Turvaküsimuse laadimine...</span>
-										<input type="number" name="captcha_answer" inputmode="numeric" autocomplete="off" placeholder="Vastus" required>
-									</label>
-									<input type="hidden" name="captcha_token" value="">
-									<button type="button" class="contact-captcha-refresh" aria-label="Lae uus turvaküsimus">Uus</button>
-								</div>
-							</div>
+							<div class="col-12"><div class="contact-recaptcha" data-recaptcha-widget></div></div>
 							<div class="col-12 home-file-upload-row">
 								<label class="glass-btn file home-file-upload">
 									Vali failid

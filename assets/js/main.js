@@ -313,24 +313,35 @@
 		});
 	})();
 
-	function refreshContactCaptcha(form) {
-		var captcha = form ? form.querySelector('.contact-captcha') : null;
+	function loadRecaptchaScript(callback) {
+		if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
+			callback();
+			return;
+		}
 
-		if (!captcha)
+		var existing = document.querySelector('script[data-recaptcha-script]');
+
+		if (existing) {
+			existing.addEventListener('load', callback, { once: true });
+			return;
+		}
+
+		var script = document.createElement('script');
+		script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+		script.async = true;
+		script.defer = true;
+		script.setAttribute('data-recaptcha-script', 'true');
+		script.addEventListener('load', callback, { once: true });
+		document.head.appendChild(script);
+	}
+
+	function initContactRecaptcha() {
+		var widgets = document.querySelectorAll('[data-recaptcha-widget]');
+
+		if (!widgets.length)
 			return;
 
-		var question = captcha.querySelector('.contact-captcha-question');
-		var token = captcha.querySelector('input[name="captcha_token"]');
-		var answer = captcha.querySelector('input[name="captcha_answer"]');
-
-		if (!question || !token || !answer)
-			return;
-
-		question.textContent = 'Turvaküsimuse laadimine...';
-		token.value = '';
-		answer.value = '';
-
-		fetch('/api/captcha.php', {
+		fetch('/api/recaptcha-config.php', {
 			method: 'GET',
 			credentials: 'same-origin',
 			headers: {
@@ -339,35 +350,35 @@
 		})
 			.then(function(response) {
 				if (!response.ok)
-					throw new Error('Captcha laadimine ebaõnnestus.');
+					throw new Error('reCAPTCHA seadistus puudub.');
 
 				return response.json();
 			})
 			.then(function(result) {
-				if (!result || !result.success || !result.token || !result.question)
-					throw new Error('Captcha laadimine ebaõnnestus.');
+				if (!result || !result.success || !result.siteKey)
+					throw new Error('reCAPTCHA seadistus puudub.');
 
-				question.textContent = result.question;
-				token.value = result.token;
+				loadRecaptchaScript(function() {
+					widgets.forEach(function(widget) {
+						if (widget.getAttribute('data-widget-id'))
+							return;
+
+						var id = window.grecaptcha.render(widget, {
+							sitekey: result.siteKey
+						});
+
+						widget.setAttribute('data-widget-id', String(id));
+					});
+				});
 			})
 			.catch(function() {
-				question.textContent = 'Turvaküsimust ei saanud laadida.';
+				widgets.forEach(function(widget) {
+					widget.textContent = 'reCAPTCHA seadistus puudub.';
+				});
 			});
 	}
 
-	document.querySelectorAll('form#contactForm').forEach(function(form) {
-		refreshContactCaptcha(form);
-	});
-
-	document.addEventListener('click', function(event) {
-		var button = event.target.closest && event.target.closest('.contact-captcha-refresh');
-
-		if (!button)
-			return;
-
-		event.preventDefault();
-		refreshContactCaptcha(button.closest('form'));
-	});
+	initContactRecaptcha();
 
 	// =============================
 	// SUBMENU (STABLE VERSION)
@@ -499,7 +510,10 @@ $('#menu a, #nav a').each(function(){
 		} catch (error) {
 			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
 		} finally {
-			refreshContactCaptcha(form);
+			form.querySelectorAll('[data-recaptcha-widget][data-widget-id]').forEach(function(widget) {
+				if (window.grecaptcha && typeof window.grecaptcha.reset === 'function')
+					window.grecaptcha.reset(Number(widget.getAttribute('data-widget-id')));
+			});
 
 			if (submitButton) {
 				submitButton.disabled = false;

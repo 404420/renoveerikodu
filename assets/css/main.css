@@ -5718,72 +5718,25 @@ body:not(.is-preload) .hero-logo {
 	}
 }
 
-/* Contact form captcha */
-.contact-captcha {
+/* Google reCAPTCHA */
+.contact-recaptcha {
 	display: flex;
-	align-items: flex-end;
-	gap: 12px;
+	justify-content: center;
 	width: 100%;
-	max-width: 520px;
+	min-height: 78px;
 	margin: 0 auto;
 	letter-spacing: 0;
 	text-transform: none;
 }
 
-.glass-grid .contact-captcha {
+.glass-grid .contact-recaptcha {
 	grid-column: 1 / -1;
 }
 
-.contact-captcha label {
-	flex: 1 1 auto;
-	margin: 0;
-}
-
-.contact-captcha-question {
-	display: block;
-	margin: 0 0 8px;
-	color: rgba(255,255,255,0.86);
-	font-size: 0.86rem;
-	font-weight: 700;
-	line-height: 1.35;
-}
-
-.contact-captcha input[name="captcha_answer"] {
-	width: 100% !important;
-	height: 52px !important;
-	margin: 0 !important;
-	text-align: center;
-}
-
-.contact-captcha-refresh {
-	flex: 0 0 auto;
-	height: 52px;
-	min-width: 72px;
-	padding: 0 18px;
-	border: 1px solid rgba(255,255,255,0.45);
-	border-radius: 12px;
-	background: rgba(255,255,255,0.06);
-	color: #ffffff;
-	font-size: 0.72rem;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-.contact-captcha-refresh:hover {
-	background: rgba(255,255,255,0.14);
-}
-
-@media screen and (max-width: 736px) {
-	.contact-captcha {
-		align-items: stretch;
-		flex-direction: column;
-		gap: 10px;
-		max-width: 100%;
-	}
-
-	.contact-captcha-refresh {
-		width: 100%;
+@media screen and (max-width: 360px) {
+	.contact-recaptcha {
+		transform: scale(0.9);
+		transform-origin: center top;
+		margin-bottom: -8px;
 	}
 }

@@ -170,8 +170,8 @@ function db_pdo(): PDO
 
 function verify_recaptcha_if_required(): void
 {
-    $required = defined('REQUIRE_RECAPTCHA') ? (bool) REQUIRE_RECAPTCHA : false;
     $secret = defined('RECAPTCHA_SECRET') ? (string) RECAPTCHA_SECRET : ($GLOBALS['recaptchaSecret'] ?? '');
+    $required = defined('REQUIRE_RECAPTCHA') ? (bool) REQUIRE_RECAPTCHA : $secret !== '';
 
     if (!$required) {
         return;
@@ -188,33 +188,6 @@ function verify_recaptcha_if_required(): void
 
     if (!$data || empty($data->success)) {
         finish_response(false, 'Captcha kontroll ebaõnnestus.', 422);
-    }
-}
-
-function verify_contact_captcha(): void
-{
-    if (session_status() !== PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-
-    $token = trim((string) ($_POST['captcha_token'] ?? ''));
-    $answer = preg_replace('/\s+/', '', (string) ($_POST['captcha_answer'] ?? ''));
-    $captchas = $_SESSION['contact_captchas'] ?? [];
-    $captcha = $token !== '' && is_array($captchas) ? ($captchas[$token] ?? null) : null;
-
-    if (!$captcha || !is_array($captcha)) {
-        finish_response(false, 'Palun lae turvaküsimus uuesti ja proovi veel kord.', 422);
-    }
-
-    unset($captchas[$token]);
-    $_SESSION['contact_captchas'] = $captchas;
-
-    if (($captcha['expires'] ?? 0) < time()) {
-        finish_response(false, 'Turvaküsimus aegus. Palun proovi uuesti.', 422);
-    }
-
-    if ($answer === '' || !hash_equals((string) ($captcha['answer'] ?? ''), $answer)) {
-        finish_response(false, 'Turvaküsimuse vastus ei ole õige.', 422);
     }
 }
 
@@ -241,7 +214,6 @@ if ($message === '') {
     finish_response(false, 'Palun sisesta sõnum.', 400);
 }
 
-verify_contact_captcha();
 verify_recaptcha_if_required();
 
 $uploadDir = __DIR__ . '/uploads/contact';
