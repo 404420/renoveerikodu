@@ -170,19 +170,18 @@ function db_pdo(): PDO
 
 function verify_recaptcha_if_required(): void
 {
-    $secret = defined('RECAPTCHA_SECRET') ? (string) RECAPTCHA_SECRET : ($GLOBALS['recaptchaSecret'] ?? '');
-    $required = defined('REQUIRE_RECAPTCHA') ? (bool) REQUIRE_RECAPTCHA : $secret !== '';
+    $secret = defined('RECAPTCHA_SECRET') ? trim((string) RECAPTCHA_SECRET) : trim((string) ($GLOBALS['recaptchaSecret'] ?? ''));
 
-    if (!$required) {
-        return;
+    if ($secret === '') {
+        finish_response(false, 'Captcha seadistus puudub.', 500);
     }
 
-    $response = $_POST['g-recaptcha-response'] ?? '';
-    if ($response === '' || $secret === '') {
-        finish_response(false, 'Captcha kontroll puudub.', 422);
+    $response = trim((string) ($_POST['g-recaptcha-response'] ?? ''));
+    if ($response === '') {
+        finish_response(false, 'Palun kinnita, et sa ei ole robot.', 422);
     }
 
-    $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret) . '&response=' . urlencode((string) $response);
+    $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret) . '&response=' . urlencode($response);
     $verify = @file_get_contents($verifyUrl);
     $data = $verify ? json_decode($verify) : null;
 
