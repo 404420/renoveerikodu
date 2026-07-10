@@ -368,6 +368,16 @@
 		if (!widgets.length)
 			return;
 
+		widgets.forEach(function(widget) {
+			var form = widget.closest('form');
+			var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
+
+			if (submitButton) {
+				submitButton.disabled = true;
+				submitButton.setAttribute('aria-disabled', 'true');
+			}
+		});
+
 		fetch('/api/recaptcha-config.php', {
 			method: 'GET',
 			credentials: 'same-origin',
@@ -390,8 +400,20 @@
 						if (widget.getAttribute('data-widget-id'))
 							return;
 
+						var form = widget.closest('form');
+						var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
+						var setSubmitEnabled = function(enabled) {
+							if (!submitButton)
+								return;
+
+							submitButton.disabled = !enabled;
+							submitButton.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+						};
 						var id = window.grecaptcha.render(widget, {
-							sitekey: result.siteKey
+							sitekey: result.siteKey,
+							callback: function() { setSubmitEnabled(true); },
+							'expired-callback': function() { setSubmitEnabled(false); },
+							'error-callback': function() { setSubmitEnabled(false); }
 						});
 
 						widget.setAttribute('data-widget-id', String(id));
@@ -496,6 +518,19 @@ $('#menu a, #nav a').each(function(){
 			form.parentNode.insertBefore(messageBox, form);
 		}
 
+		var captchaResponse = form.querySelector('[name="g-recaptcha-response"]');
+
+		if (!captchaResponse || !captchaResponse.value.trim()) {
+			messageBox.hidden = false;
+			messageBox.textContent = 'Palun kinnita, et sa ei ole robot.';
+
+			if (submitButton) {
+				submitButton.disabled = true;
+				submitButton.setAttribute('aria-disabled', 'true');
+			}
+			return;
+		}
+
 		var originalText = submitButton ? (submitButton.value || submitButton.textContent) : '';
 		var formData = new FormData(form);
 		formData.set('source', window.location.href);
@@ -543,7 +578,8 @@ $('#menu a, #nav a').each(function(){
 			});
 
 			if (submitButton) {
-				submitButton.disabled = false;
+				submitButton.disabled = true;
+				submitButton.setAttribute('aria-disabled', 'true');
 				if (submitButton.tagName === 'INPUT')
 					submitButton.value = originalText;
 				else
