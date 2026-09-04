@@ -11,6 +11,11 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^renoveerikodu\.ee$ [NC]
 RewriteRule ^ https://www.renoveerikodu.ee%{REQUEST_URI} [R=301,L,NE]
 
+# Retired URLs still reported in Search Console.
+RewriteRule ^contact(?:\.html)?/?$ /kontakt [R=301,L,NE,NC]
+RewriteRule ^wpcpaigaldus/?$ /seinapaneelidepaigaldus [R=301,L,NE,NC]
+RewriteRule ^renoveerikodu/(.+?)(?:\.html)?/?$ /$1 [R=301,L,NE,NC]
+
 # Force homepage variants to the clean root URL.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
