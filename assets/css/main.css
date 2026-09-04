@@ -5522,19 +5522,22 @@ background-repeat:no-repeat;
 
 #banner .home-hero-logo {
 	position: absolute;
-	top: clamp(64px, 9vh, 104px);
+	top: clamp(48px, 7vh, 84px);
 	left: 50%;
-	width: clamp(110px, 11vw, 170px);
+	width: clamp(104px, 10vw, 155px);
 	height: auto;
 	transform: translateX(-50%);
 	z-index: 2;
-	/* Keep the dark lettering readable on every part of the hero photo. */
-	box-sizing: content-box;
-	padding: 12px 16px;
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 8px 30px rgba(0,0,0,0.24);
+	background: transparent;
+	filter: drop-shadow(0 1px 1px rgba(255,255,255,0.8));
+	opacity: 1;
+	/* Match the existing #banner:after preload reveal. */
+	transition: opacity 3s ease-in-out 1.25s;
 	pointer-events: none;
+}
+
+body.is-preload #banner .home-hero-logo {
+	opacity: 0;
 }
 
 #banner .inner h1,
@@ -5544,8 +5547,8 @@ background-repeat:no-repeat;
 
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
-		top: 66px;
-		width: 118px;
+		top: 50px;
+		width: 110px;
 	}
 }
 
