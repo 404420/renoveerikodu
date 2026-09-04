@@ -5522,7 +5522,7 @@ background-repeat:no-repeat;
 
 #banner .home-hero-logo {
 	position: absolute;
-	top: clamp(48px, 7vh, 84px);
+	top: clamp(32px, calc(7vh - 16px), 68px);
 	left: 50%;
 	width: clamp(104px, 10vw, 155px);
 	height: auto;
@@ -5547,7 +5547,7 @@ body.is-preload #banner .home-hero-logo {
 
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
-		top: 50px;
+		top: 34px;
 		width: 110px;
 	}
 }
