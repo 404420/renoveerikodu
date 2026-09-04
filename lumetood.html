@@ -38,7 +38,7 @@
 		<style>
 .snow-service-images {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   width: 100%;
   max-width: 960px;
@@ -53,8 +53,9 @@
   object-position: left center;
   border-radius: 6px;
 }
-.snow-service-images img + img { object-position: right center; }
-@media screen and (max-width: 600px) {
+.snow-service-images img:last-child { object-position: right center; }
+.snow-service-images .snow-atv-image { object-position: center; }
+@media screen and (max-width: 736px) {
   .snow-service-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
 }
 
@@ -345,6 +346,7 @@ img {
 							<div class="inner">
 								<section class="service-intro">
 									<div class="snow-service-images">
+  <img class="snow-atv-image" src="images/lumetood-atv-minivilkurid.png" width="1536" height="1024" alt="Illustratsioon: töövilkurite ja sahaga ATV lükkab lund, juhil Renoveeri Kodu logoga jope" loading="lazy" decoding="async">
   <img src="images/lumekoristus-katus-ja-ohuala.png" width="1086" height="724" alt="Illustratsioon: rakmetega töötaja eemaldab kortermaja katuselt lund" loading="lazy" decoding="async">
   <img src="images/lumekoristus-katus-ja-ohuala.png" width="1086" height="724" alt="Illustratsioon: raadiosaatjaga töötaja valvab koonuste ja vilkuritega piiratud lume langemise ohuala" loading="lazy" decoding="async">
 </div>
