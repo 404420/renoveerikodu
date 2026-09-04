@@ -9,3 +9,10 @@ body{
     border-radius:8px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
+
+.topbar-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.admin-tabs{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.admin-tab{border:1px solid #cfd8e3;border-radius:4px;color:#17202a;padding:9px 12px;text-decoration:none;background:#fff}
+.admin-tab.active{background:#17202a;border-color:#17202a;color:#fff}
+.admin-tab-count{color:#697386;font-size:13px;margin-left:4px}
+.admin-tab.active .admin-tab-count{color:#d7dde5}

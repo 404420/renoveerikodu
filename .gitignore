@@ -3,3 +3,9 @@ api/config.php
 api/uploads/
 uploads/
 error_log
+api/recaptcha-config.php
+admin/private-google/*.json
+admin/object-data.json
+backup/
+*.zip
+_site/

@@ -78,13 +78,74 @@ function ensure_newsletter_subscribers_table(PDO $pdo): void
     try {
         $pdo->exec('ALTER TABLE newsletter_subscribers CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci');
     } catch (Throwable $error) {
-        // Existing production tables may contain legacy data; do not block the admin panel.
     }
 
     try {
         $pdo->exec('ALTER TABLE newsletter_subscribers ADD UNIQUE KEY uniq_newsletter_subscribers_email (email)');
     } catch (Throwable $error) {
-        // The key may already exist or duplicate legacy rows may need manual cleanup.
+    }
+}
+
+function ensure_admin_objects_table(PDO $pdo): void
+{
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS admin_objects (
+            id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+            name VARCHAR(255) NOT NULL,
+            address VARCHAR(500) NOT NULL,
+            phone VARCHAR(100) DEFAULT NULL,
+            start_at DATETIME DEFAULT NULL,
+            expected_end_date DATE DEFAULT NULL,
+            notes TEXT DEFAULT NULL,
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            PRIMARY KEY (id),
+            KEY idx_admin_objects_address (address(191))
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    ");
+
+    // Kui tabel oli juba varem olemas mõne puuduvate väljadega versioonina,
+    // lisame vajalikud väljad automaatselt juurde.
+    $columns = [];
+    foreach ($pdo->query('SHOW COLUMNS FROM admin_objects') as $column) {
+        $columns[$column['Field']] = true;
+    }
+
+    $missingColumns = [
+        'name' => "ALTER TABLE admin_objects ADD COLUMN name VARCHAR(255) NOT NULL DEFAULT '' AFTER id",
+        'address' => "ALTER TABLE admin_objects ADD COLUMN address VARCHAR(500) NOT NULL DEFAULT '' AFTER name",
+        'phone' => 'ALTER TABLE admin_objects ADD COLUMN phone VARCHAR(100) DEFAULT NULL AFTER address',
+        'start_at' => 'ALTER TABLE admin_objects ADD COLUMN start_at DATETIME DEFAULT NULL AFTER phone',
+        'expected_end_date' => 'ALTER TABLE admin_objects ADD COLUMN expected_end_date DATE DEFAULT NULL AFTER start_at',
+        'notes' => 'ALTER TABLE admin_objects ADD COLUMN notes TEXT DEFAULT NULL AFTER expected_end_date',
+        'created_at' => 'ALTER TABLE admin_objects ADD COLUMN created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER notes',
+        'updated_at' => 'ALTER TABLE admin_objects ADD COLUMN updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER created_at',
+    ];
+
+    foreach ($missingColumns as $column => $sql) {
+        if (empty($columns[$column])) {
+            $pdo->exec($sql);
+        }
+    }
+
+    try {
+        $pdo->exec('ALTER TABLE admin_objects CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci');
+    } catch (Throwable $error) {
+    }
+
+    // Lisa esimene objekt ainult siis, kui sama aadressiga objekti veel ei ole.
+    $check = $pdo->prepare('SELECT id FROM admin_objects WHERE address = :address LIMIT 1');
+    $check->execute([':address' => 'Sõudebaasi tee 15, Tallinn']);
+
+    if (!$check->fetchColumn()) {
+        $insert = $pdo->prepare(
+            'INSERT INTO admin_objects (name, address, phone) VALUES (:name, :address, :phone)'
+        );
+        $insert->execute([
+            ':name' => 'Sõudebaasi tee 15',
+            ':address' => 'Sõudebaasi tee 15, Tallinn',
+            ':phone' => '+372 5555 5555',
+        ]);
     }
 }
 

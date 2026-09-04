@@ -2,20 +2,27 @@
 name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -26,75 +33,20 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Apply contextual internal links
-        run: node scripts/apply-internal-links.mjs
-      - name: Apply service knowledge sections
-        run: node scripts/apply-service-knowledge.mjs
-      - name: Apply service FAQ expansions
-        run: node scripts/apply-service-faqs.mjs
-      - name: Apply final GEO refinements
-        run: node scripts/apply-final-geo-refinements.mjs
-      - name: Apply structured data
-        run: node scripts/apply-structured-data.mjs
-      - name: Validate structured data JSON
+      - name: Stage public website files only
         run: |
-          node <<'NODE'
-          const fs = require('node:fs');
-          function stripTags(value) {
-            return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-          }
-          const servicePages = new Set([
-            'betoonitood.html',
-            'fassaaditood.html',
-            'fassaadivarvimine.html',
-            'katusetood.html',
-            'kipsitood.html',
-            'lammutustood.html',
-            'ledlahendused.html',
-            'lumetood.html',
-            'maalritood.html',
-            'parketipaigaldus.html',
-            'plaatimine.html',
-            'seinapaneelidepaigaldus.html',
-            'tapeetimine.html',
-            'tellingutepaigaldus.html',
-            'vundamenditood.html'
-          ]);
-          for (const file of fs.readdirSync('.').filter((name) => name.endsWith('.html'))) {
-            const html = fs.readFileSync(file, 'utf8');
-            const scripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
-            if (scripts.length !== 1) throw new Error(`${file}: expected 1 JSON-LD script, got ${scripts.length}`);
-            const data = JSON.parse(scripts[0][1]);
-            const graph = data['@graph'] || [data];
-            const ids = graph.map((node) => node['@id']).filter(Boolean);
-            if (ids.length !== new Set(ids).size) throw new Error(`${file}: duplicate @id in schema graph`);
-            if (!servicePages.has(file)) continue;
-            const visibleQuestions = [...html.matchAll(/<details[^>]*>[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>[\s\S]*?<\/details>/gi)].map((match) => stripTags(match[1]));
-            const faqNodes = graph.filter((node) => node['@type'] === 'FAQPage');
-            if (visibleQuestions.length !== 8) throw new Error(`${file}: expected 8 visible service FAQs, got ${visibleQuestions.length}`);
-            if (faqNodes.length !== 1) throw new Error(`${file}: expected exactly one FAQPage schema node`);
-            const schemaQuestions = (faqNodes[0].mainEntity || []).map((item) => item.name);
-            if (schemaQuestions.length !== visibleQuestions.length) throw new Error(`${file}: FAQ schema count does not match visible FAQ count`);
-            for (const question of visibleQuestions) {
-              if (!schemaQuestions.includes(question)) throw new Error(`${file}: FAQ schema missing visible question: ${question}`);
-            }
-          }
-          NODE
-      - name: Persist generated GEO updates
-        run: |
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add *.html scripts/apply-structured-data.mjs scripts/apply-internal-links.mjs scripts/apply-service-knowledge.mjs scripts/apply-service-faqs.mjs scripts/apply-final-geo-refinements.mjs .github/workflows/static.yml
-            git commit -m "Apply final GEO refinement pass"
-            git push
-          else
-            echo "Generated GEO updates are already up to date."
+          mkdir -p _site
+          cp -- *.html *.png *.ico robots.txt sitemap.xml site.webmanifest .nojekyll _site/
+          cp -R -- assets images _site/
+          if [ -f CNAME ]; then cp CNAME _site/; fi
+          if find _site -type f \( -name '*.php' -o -name '*.sql' -o -name '*.zip' \) | grep -q .; then
+            echo 'Unexpected server-only file in the Pages artifact.'
+            exit 1
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
