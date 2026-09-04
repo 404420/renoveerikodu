@@ -313,119 +313,79 @@
 		});
 	})();
 
-	function waitForRecaptcha(callback, attempt) {
-		attempt = attempt || 0;
 
-		if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
-			callback();
-			return;
-		}
-
-		if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
-			window.grecaptcha.ready(function() {
-				waitForRecaptcha(callback, attempt + 1);
-			});
-			return;
-		}
-
-		if (attempt < 80)
-			setTimeout(function() {
-				waitForRecaptcha(callback, attempt + 1);
-			}, 100);
-	}
-
-	function loadRecaptchaScript(callback) {
-		waitForRecaptcha(function() {
-			callback();
-		});
-
-		if (window.grecaptcha)
-			return;
-
-		var existing = document.querySelector('script[data-recaptcha-script]');
-
-		if (existing) {
-			existing.addEventListener('load', function() {
-				waitForRecaptcha(callback);
-			}, { once: true });
-			return;
-		}
-
-		var script = document.createElement('script');
-		script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
-		script.async = true;
-		script.defer = true;
-		script.setAttribute('data-recaptcha-script', 'true');
-		script.addEventListener('load', function() {
-			waitForRecaptcha(callback);
-		}, { once: true });
-		document.head.appendChild(script);
-	}
-
-	function initContactRecaptcha() {
-		var widgets = document.querySelectorAll('[data-recaptcha-widget]');
-
-		if (!widgets.length)
-			return;
-
-		widgets.forEach(function(widget) {
-			var form = widget.closest('form');
-			var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
-
-			if (submitButton) {
-				submitButton.disabled = true;
-				submitButton.setAttribute('aria-disabled', 'true');
-			}
-		});
-
-		fetch('/api/recaptcha-config.php', {
-			method: 'GET',
-			credentials: 'same-origin',
-			headers: {
-				'Accept': 'application/json'
-			}
-		})
-			.then(function(response) {
-				if (!response.ok)
-					throw new Error('reCAPTCHA seadistus puudub.');
-
-				return response.json();
-			})
-			.then(function(result) {
-				if (!result || !result.success || !result.siteKey)
-					throw new Error('reCAPTCHA seadistus puudub.');
-
-				loadRecaptchaScript(function() {
-					widgets.forEach(function(widget) {
-						if (widget.getAttribute('data-widget-id'))
-							return;
-
-						var form = widget.closest('form');
-						var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
-						var setSubmitEnabled = function(enabled) {
-							if (!submitButton)
-								return;
-
-							submitButton.disabled = !enabled;
-							submitButton.setAttribute('aria-disabled', enabled ? 'false' : 'true');
-						};
-						var id = window.grecaptcha.render(widget, {
-							sitekey: result.siteKey,
-							callback: function() { setSubmitEnabled(true); },
-							'expired-callback': function() { setSubmitEnabled(false); },
-							'error-callback': function() { setSubmitEnabled(false); }
-						});
-
-						widget.setAttribute('data-widget-id', String(id));
-					});
-				});
-			})
-			.catch(function() {
-				widgets.forEach(function(widget) {
-					widget.textContent = 'reCAPTCHA seadistus puudub.';
-				});
-			});
-	}
+ function loadRecaptchaScript() {
+   return new Promise(function(resolve, reject) {
+     var attempts = 0;
+     var timer = setInterval(function() {
+       if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
+         clearInterval(timer); resolve();
+       } else if (++attempts >= 100) {
+         clearInterval(timer); reject(new Error('captcha_load_failed'));
+       }
+     }, 100);
+     if (document.querySelector('script[data-recaptcha-script]') || window.grecaptcha) return;
+     var script = document.createElement('script');
+     script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+     script.async = true; script.defer = true;
+     script.setAttribute('data-recaptcha-script', 'true');
+     script.addEventListener('error', function() { clearInterval(timer); reject(new Error('captcha_load_failed')); }, { once: true });
+     document.head.appendChild(script);
+   });
+ }
+ function showContactFallback(widget) {
+   var form = widget.closest('form');
+   var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
+   if (button) { button.disabled = true; button.setAttribute('aria-disabled', 'true'); }
+   var notice = form && form.querySelector('.contact-unavailable');
+   if (!notice) {
+     notice = document.createElement('p');
+     notice.className = 'contact-unavailable';
+     notice.setAttribute('role', 'status');
+     notice.setAttribute('data-nosnippet', '');
+     notice.innerHTML = 'Vormi saatmine on ajutiselt takistatud. Palun <a href="tel:+37255515783">helista +372 5551 5783</a> või <a href="mailto:hans@renoveerikodu.ee">kirjuta hans@renoveerikodu.ee</a>.';
+     widget.insertAdjacentElement('afterend', notice);
+   }
+   notice.hidden = false;
+ }
+ function initContactRecaptcha() {
+   var widgets = document.querySelectorAll('[data-recaptcha-widget]');
+   if (!widgets.length) return;
+   widgets.forEach(function(widget) {
+     widget.setAttribute('data-nosnippet', '');
+     var form = widget.closest('form');
+     var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
+     if (button) { button.disabled = true; button.setAttribute('aria-disabled', 'true'); }
+   });
+   var controller = new AbortController();
+   var timeout = setTimeout(function() { controller.abort(); }, 10000);
+   fetch('/api/recaptcha-config.php', { credentials: 'same-origin', signal: controller.signal, headers: { Accept: 'application/json' } })
+     .then(function(response) { if (!response.ok) throw new Error('captcha_config_failed'); return response.json(); })
+     .then(function(result) {
+       if (!result || !result.success || !result.siteKey) throw new Error('captcha_config_failed');
+       return loadRecaptchaScript().then(function() {
+         widgets.forEach(function(widget) {
+           if (widget.hasAttribute('data-widget-id')) return;
+           var form = widget.closest('form');
+           var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
+           function enabled(value) {
+             if (button) { button.disabled = !value; button.setAttribute('aria-disabled', value ? 'false' : 'true'); }
+             var notice = form && form.querySelector('.contact-unavailable');
+             if (value && notice) notice.hidden = true;
+           }
+           var id = window.grecaptcha.render(widget, {
+             sitekey: result.siteKey,
+             callback: function() { enabled(true); },
+             'expired-callback': function() { enabled(false); },
+             'error-callback': function() { enabled(false); showContactFallback(widget); }
+           });
+           widget.setAttribute('data-widget-id', String(id));
+         });
+       });
+     })
+     .catch(function() { widgets.forEach(showContactFallback); })
+     .finally(function() { clearTimeout(timeout); });
+ }
 
 	initContactRecaptcha();
 
@@ -509,6 +469,7 @@ $('#menu a, #nav a').each(function(){
 			event.stopImmediatePropagation();
 
 		var submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+		if (form.dataset.submitting === 'true') return;
 		var messageBox = document.getElementById('contactMessage');
 
 		if (!messageBox) {
@@ -531,6 +492,7 @@ $('#menu a, #nav a').each(function(){
 			return;
 		}
 
+		form.dataset.submitting = 'true';
 		var originalText = submitButton ? (submitButton.value || submitButton.textContent) : '';
 		var formData = new FormData(form);
 		formData.set('source', window.location.href);
@@ -544,7 +506,7 @@ $('#menu a, #nav a').each(function(){
 		}
 
 		messageBox.hidden = false;
-		messageBox.textContent = 'Saadan paringut...';
+		messageBox.textContent = 'Saadan päringut...';
 
 		try {
 			var response = await fetch('/api/contact.php', {
@@ -565,13 +527,15 @@ $('#menu a, #nav a').each(function(){
 			}
 
 			if (!response.ok || !result.success)
-				throw new Error(result.message || 'Paringu saatmine ebaonnestus. Palun proovi hiljem uuesti.');
+				throw new Error(result.message || 'Päringu saatmine ebaõnnestus. Palun proovi hiljem uuesti.');
 
-			messageBox.textContent = result.message || 'Paring saadetud. Votame sinuga uhendust.';
+			messageBox.textContent = result.message || 'Päring saadetud. Võtame sinuga ühendust.';
+			document.dispatchEvent(new CustomEvent('rk:contact-success'));
 			form.reset();
 		} catch (error) {
 			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
 		} finally {
+			delete form.dataset.submitting;
 			form.querySelectorAll('[data-recaptcha-widget][data-widget-id]').forEach(function(widget) {
 				if (window.grecaptcha && typeof window.grecaptcha.reset === 'function')
 					window.grecaptcha.reset(Number(widget.getAttribute('data-widget-id')));

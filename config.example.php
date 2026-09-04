@@ -14,6 +14,8 @@ define('DB_PASS', 'andmebaasi_parool');
 
 define('APP_DEBUG', false);
 define('REQUIRE_RECAPTCHA', false);
+// Public site key and private secret must belong to the same reCAPTCHA v2 checkbox site.
+define('RECAPTCHA_SITE_KEY', '');
 define('RECAPTCHA_SECRET', '');
 define('MAX_UPLOAD_SIZE', 10 * 1024 * 1024);
 

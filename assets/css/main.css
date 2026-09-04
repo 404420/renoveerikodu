@@ -5545,6 +5545,33 @@ body.is-preload #banner .home-hero-logo {
 	text-shadow: 0 2px 6px rgba(0,0,0,0.85), 0 0 24px rgba(0,0,0,0.45);
 }
 
+/* A concrete service headline must also fit narrow mobile screens. */
+#banner .inner h1 {
+	max-width: 30ch;
+	font-size: clamp(1.3rem, 2.5vw, 2.25rem);
+	line-height: 1.35;
+	letter-spacing: 0.075em;
+	padding: 0.45em 0.6em;
+}
+.home-renovation { max-width: 64em; margin: 2em auto; }
+.service-repair { margin: 2em 0; scroll-margin-top: 6em; }
+.service-estimate .button, .service-repair .button, .home-renovation .button,
+.price-context-extra .button, .case-study-extra .button {
+	white-space: normal; height: auto; line-height: 1.5; padding: 0.85em 1.25em;
+}
+.contact-unavailable { line-height: 1.6; overflow-wrap: anywhere; }
+.contact-unavailable a { text-decoration: underline; }
+.analytics-consent { position: fixed; bottom: 1rem; left: 1rem; z-index: 10002;
+	width: min(28rem, calc(100% - 2rem)); padding: 1.2rem; border-radius: 8px;
+	background: #fff; color: #252e35; box-shadow: 0 4px 24px #0004; font-size: 0.9rem; }
+.analytics-consent[hidden] { display: none; }
+.analytics-consent p { margin: 0 0 0.8rem; }
+.analytics-consent a { color: #252e35; text-decoration: underline; }
+.analytics-consent > div { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.analytics-consent button { color: #252e35 !important; border: 1px solid #252e35;
+	box-shadow: none; font-size: 0.8rem; padding: 0.6rem 1rem; line-height: 1.4; height: auto; }
+.analytics-settings { color: inherit; font-size: 0.7rem; margin: 1rem; }
+
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
 		top: 34px;
