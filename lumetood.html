@@ -36,6 +36,28 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /><link rel="stylesheet" href="assets/css/main.css?v=20260904-brand2" />
 		<style>
+.snow-service-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 2rem;
+}
+.snow-service-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: 6px;
+}
+.snow-service-images img + img { object-position: right center; }
+@media screen and (max-width: 600px) {
+  .snow-service-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
+}
+
 
 /* ===== GLOBAL RESPONSIVE FIX ===== */
 
@@ -181,7 +203,7 @@ img {
       ],
       "serviceType": "Lumetööd Tallinnas ja Harjumaal",
       "url": "https://www.renoveerikodu.ee/lumetood",
-      "image": "https://www.renoveerikodu.ee/images/katuse-lumekoristus-lumetood.png"
+      "image": "https://www.renoveerikodu.ee/images/lumekoristus-katus-ja-ohuala.png"
     },
     {
       "@type": "FAQPage",
@@ -256,8 +278,8 @@ img {
     {
       "@type": "ImageObject",
       "@id": "https://www.renoveerikodu.ee/lumetood#image-1",
-      "url": "https://www.renoveerikodu.ee/images/katuse-lumekoristus-lumetood.png",
-      "contentUrl": "https://www.renoveerikodu.ee/images/katuse-lumekoristus-lumetood.png",
+      "url": "https://www.renoveerikodu.ee/images/lumekoristus-katus-ja-ohuala.png",
+      "contentUrl": "https://www.renoveerikodu.ee/images/lumekoristus-katus-ja-ohuala.png",
       "caption": "Katuse lumekoristus Tallinnas"
     }
   ]
@@ -322,9 +344,10 @@ img {
 						<section class="wrapper style5 seo-service-page">
 							<div class="inner">
 								<section class="service-intro">
-									<div class="center-image">
-										<img src="images/katuse-lumekoristus-lumetood.png" alt="Katuse lumekoristus Tallinnas" loading="lazy">
-									</div>
+									<div class="snow-service-images">
+  <img src="images/lumekoristus-katus-ja-ohuala.png" width="1086" height="724" alt="Illustratsioon: rakmetega töötaja eemaldab kortermaja katuselt lund" loading="lazy" decoding="async">
+  <img src="images/lumekoristus-katus-ja-ohuala.png" width="1086" height="724" alt="Illustratsioon: raadiosaatjaga töötaja valvab koonuste ja vilkuritega piiratud lume langemise ohuala" loading="lazy" decoding="async">
+</div>
 					<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> pakub katuste, hoovide ja hoonete ümbruse lumetöid Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>
 									<p>Lumetööd on hooajaline teenus, mille eesmärk on vähendada jääpurikate, liigse lumekoormuse ja libeduse riski. Renoveeri Kodu teeb katuste lumekoristust, hoone ümbruse puhastust ja libeduse vähendamisega seotud töid Tallinnas ning Harjumaal.</p>
 
