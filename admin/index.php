@@ -294,6 +294,8 @@ function email_process_batch(PDO $pdo, int $campaignId = 0, ?int $limit = null):
     return ['sent'=>$sent,'failed'=>$failed,'processed'=>count($rows)];
 }
 
+// Kontrolli tavalise paneelipäringu õigusi enne skeemitoiminguid.
+if (!isset($_GET['email_public'])) { require_admin(); }
 $pdo = admin_db();
 ensure_newsletter_subscribers_table($pdo);
 // Kontaktide lisaväljad emailikampaaniate CRM-vaate jaoks.
@@ -1883,7 +1885,8 @@ if ($view === 'requests') {
     $objects = $pdo->query('SELECT * FROM admin_objects ORDER BY created_at DESC, id DESC')->fetchAll();
 } elseif ($view === 'workdays') {
     $objects = $pdo->query('SELECT * FROM admin_objects ORDER BY name ASC, id DESC')->fetchAll();
-    $workdayWorkers = $pdo->query("SELECT DISTINCT worker_name FROM admin_workdays WHERE worker_name <> '' ORDER BY worker_name ASC")->fetchAll(PDO::FETCH_COLUMN);
+    $workdaySource = "(SELECT w.id, w.work_date, w.object_id, w.object_name, w.address, w.start_time, w.end_time, w.break_minutes, w.work_type, w.notes, w.mileage_km, w.hourly_rate, w.payment_type, w.piece_quantity, w.piece_unit, w.piece_rate, w.piece_pricing_mode, w.piece_fixed_price, w.status, w.created_at, w.updated_at, COALESCE(NULLIF(TRIM(CONCAT(p.first_name, ' ', p.last_name)), ''), u.username, w.worker_name) AS worker_name, u.username AS worker_username FROM admin_workdays w LEFT JOIN admin_worker_workday_owners o ON o.workday_id = w.id LEFT JOIN admin_users u ON u.id = o.user_id LEFT JOIN admin_worker_profiles p ON p.user_id = u.id) workday_display";
+    $workdayWorkers = $pdo->query("SELECT DISTINCT worker_name FROM $workdaySource WHERE worker_name <> '' ORDER BY worker_name ASC")->fetchAll(PDO::FETCH_COLUMN);
 
     $filterWorker = trim((string) ($_GET['worker'] ?? ''));
     $filterObject = trim((string) ($_GET['object'] ?? ''));
@@ -1900,11 +1903,11 @@ if ($view === 'requests') {
     if ($filterFrom !== '') { $where[] = 'work_date >= :from'; $params[':from'] = $filterFrom; }
     if ($filterTo !== '') { $where[] = 'work_date <= :to'; $params[':to'] = $filterTo; }
     if ($filterSearch !== '') {
-        $where[] = '(worker_name LIKE :search OR object_name LIKE :search OR address LIKE :search OR work_type LIKE :search OR notes LIKE :search)';
-        $params[':search'] = '%' . $filterSearch . '%';
+        $where[] = '(worker_name LIKE :search1 OR object_name LIKE :search2 OR address LIKE :search3 OR work_type LIKE :search4 OR notes LIKE :search5)';
+        for ($i = 1; $i <= 5; $i++) { $params[':search' . $i] = '%' . $filterSearch . '%'; }
     }
     $sqlWhere = $where ? ' WHERE ' . implode(' AND ', $where) : '';
-    $stmt = $pdo->prepare('SELECT * FROM admin_workdays' . $sqlWhere . ' ORDER BY work_date DESC, start_time DESC, id DESC');
+    $stmt = $pdo->prepare('SELECT * FROM ' . $workdaySource . $sqlWhere . ' ORDER BY work_date DESC, start_time DESC, id DESC');
     $stmt->execute($params);
     $workdays = $stmt->fetchAll();
 
@@ -2245,7 +2248,7 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
       <td data-label="Kuupäev"><?= h($row['created_at']) ?></td>
       <td class="actions">
         <a class="request-quote-button" href="index.php?view=quote&amp;request_id=<?= (int)$row['id'] ?>"><?= in_array((int)$row['id'], $quoteRequestIds, true) ? 'Ava hinnapakkumine' : 'Genereeri hinnapakkumine' ?></a>
-        <form method="post" onsubmit="return confirm('Kustutan selle päringu?');">
+        <form method="post" onsubmit="return confirm('Kustutan selle päringu?');"><?= rk_csrf_field() ?>
           <input type="hidden" name="delete_id" value="<?= (int) $row['id'] ?>">
           <button type="submit" class="button-delete">Kustuta</button>
         </form>
@@ -2280,7 +2283,7 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
           <div><strong><?= h($quoteRow['client_name'] ?? '') ?></strong><div class="muted" style="margin-top:4px"><?= h($quoteRow['title'] ?? '') ?></div></div>
           <div class="quote-list-title"><span class="muted" style="display:block;font-size:12px;margin-bottom:3px">Aadress</span><strong><?= h(($quoteRow['object_address'] ?? '') !== '' ? $quoteRow['object_address'] : '—') ?></strong></div>
           <div class="quote-contact-block"><span class="muted" style="display:block;font-size:12px;margin-bottom:3px">Kontakt</span><?php if (!empty($quoteRow['client_email'])): ?><a href="mailto:<?= h($quoteRow['client_email']) ?>"><?= h($quoteRow['client_email']) ?></a><?php else: ?><span class="muted">E-post puudub</span><?php endif; ?><?php if (!empty($quoteRow['client_phone'])): ?><div style="margin-top:3px"><a href="tel:<?= h(preg_replace('/[^\d+]/', '', (string)$quoteRow['client_phone'])) ?>"><?= h($quoteRow['client_phone']) ?></a></div><?php endif; ?></div>
-          <form method="post" action="index.php?view=quotes" class="quote-send-form">
+          <form method="post" action="index.php?view=quotes" class="quote-send-form"><?= rk_csrf_field() ?>
             <input type="hidden" name="update_quote_send_status" value="1">
             <input type="hidden" name="quote_id" value="<?= (int)$quoteRow['id'] ?>">
             <div class="quote-send-wrap">
@@ -2291,7 +2294,7 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
             </div>
           </form>
           <a class="object-save" style="text-decoration:none;text-align:center" href="index.php?view=quote&amp;quote_id=<?= (int)$quoteRow['id'] ?>">Ava / muuda</a>
-          <form method="post" action="index.php?view=quotes" class="quote-delete-form" onsubmit="return confirm('Kas kustutan selle hinnapakkumise jäädavalt?');">
+          <form method="post" action="index.php?view=quotes" class="quote-delete-form" onsubmit="return confirm('Kas kustutan selle hinnapakkumise jäädavalt?');"><?= rk_csrf_field() ?>
             <input type="hidden" name="delete_admin_quote" value="1">
             <input type="hidden" name="quote_id" value="<?= (int)$quoteRow['id'] ?>">
             <button type="submit" class="quote-delete-button">Kustuta</button>
@@ -2312,7 +2315,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
 <section class="quote-shell">
   <?php if (isset($_GET['saved'])): ?><div class="quote-saved">Hinnapakkumise mustand on salvestatud.</div><?php endif; ?>
   <?php if ($quoteFormError !== ''): ?><div class="quote-error"><?= h($quoteFormError) ?></div><?php endif; ?>
-  <form method="post" action="index.php?view=quote" id="quoteEditorForm">
+  <form method="post" action="index.php?view=quote" id="quoteEditorForm"><?= rk_csrf_field() ?>
     <input type="hidden" name="save_quote" value="1"><input type="hidden" name="request_id" value="<?= (int)($quote['request_id'] ?? 0) ?>"><input type="hidden" name="quote_id" value="<?= (int)($quote['id'] ?? 0) ?>">
     <div class="quote-toolbar">
       <div class="quote-toolbar-left"><a href="index.php?view=requests">← Päringud</a><strong>Visuaalne hinnapakkumise editor</strong></div>
@@ -2374,7 +2377,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
   <?php endif; ?>
 
   <div class="object-add-panel <?= $objectFormError !== '' ? 'open' : '' ?>" id="objectAddPanel">
-    <form method="post" action="index.php?view=objects">
+    <form method="post" action="index.php?view=objects"><?= rk_csrf_field() ?>
       <input type="hidden" name="save_admin_object" value="1">
       <div class="object-form-grid">
         <div class="object-field">
@@ -2435,7 +2438,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
         </summary>
 
         <div class="object-card-body">
-          <form method="post" action="index.php?view=objects">
+          <form method="post" action="index.php?view=objects"><?= rk_csrf_field() ?>
             <input type="hidden" name="save_admin_object" value="1">
             <input type="hidden" name="object_id" value="<?= (int) $object['id'] ?>">
 
@@ -2487,7 +2490,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
             </div>
           </form>
 
-          <form method="post" action="index.php?view=objects" onsubmit="return confirm('Kustutan selle objekti?');" style="margin-top:10px">
+          <form method="post" action="index.php?view=objects" onsubmit="return confirm('Kustutan selle objekti?');" style="margin-top:10px"><?= rk_csrf_field() ?>
             <input type="hidden" name="delete_admin_object" value="1">
             <input type="hidden" name="object_id" value="<?= (int) $object['id'] ?>">
             <button type="submit" class="object-delete">Kustuta objekt</button>
@@ -2530,7 +2533,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
       <h3>Uus tööpäev</h3>
       <button type="button" class="workday-close" id="workdayClose" aria-label="Sulge">×</button>
     </div>
-    <form method="post" action="index.php?view=workdays" class="workday-form js-workday-form">
+    <form method="post" action="index.php?view=workdays" class="workday-form js-workday-form"><?= rk_csrf_field() ?>
       <input type="hidden" name="save_workday" value="1">
       <div class="workday-grid">
         <div class="workday-field">
@@ -2681,7 +2684,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
         <summary>
           <div class="workday-card-main">
             <div class="workday-date"><strong><?= h(date('d.m.Y', strtotime((string)$wd['work_date']))) ?></strong><span><?= h(date('l', strtotime((string)$wd['work_date']))) ?></span></div>
-            <div class="workday-person"><strong><?= h($wd['worker_name']) ?></strong><span><?= h($wd['work_type'] ?: 'Tööpäev') ?></span></div>
+            <div class="workday-person"><strong><?= h($wd['worker_name']) ?></strong><?php if (!empty($wd['worker_username'])): ?><small><?= h($wd['worker_username']) ?></small><?php endif; ?><span><?= h($wd['work_type'] ?: 'Tööpäev') ?></span></div>
             <div class="workday-object"><strong><?= h($wd['object_name']) ?></strong><span><?= h($wd['address'] ?: 'Aadress puudub') ?></span></div>
             <?php if ($isPiece): ?>
               <div class="workday-payment-summary piece">
@@ -2701,7 +2704,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
             <div class="workday-time">
               <?= h(substr((string)$wd['start_time'],0,5)) ?>–<?= h(substr((string)$wd['end_time'],0,5)) ?>
               <?php if (($wd['status'] ?? '') === 'pending'): ?>
-                <form method="post" action="index.php?view=workdays" class="workday-quick-confirm js-workday-quick-confirm">
+                <form method="post" action="index.php?view=workdays" class="workday-quick-confirm js-workday-quick-confirm"><?= rk_csrf_field() ?>
                   <input type="hidden" name="quick_confirm_workday" value="1">
                   <input type="hidden" name="workday_id" value="<?= (int)$wd['id'] ?>">
                   <button type="submit" class="workday-status pending workday-status-button" title="Vajuta, et kinnitada tööpäev kohe"><?= h($statusLabel) ?></button>
@@ -2732,11 +2735,11 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
           </div>
           <?php if (!empty($wd['notes'])): ?><p style="white-space:pre-wrap;margin:0 0 16px;color:#475467"><?= h($wd['notes']) ?></p><?php endif; ?>
           <p class="workday-edit-heading">Muuda kirjet</p>
-          <form method="post" action="index.php?view=workdays" class="workday-form js-workday-form">
+          <form method="post" action="index.php?view=workdays" class="workday-form js-workday-form"><?= rk_csrf_field() ?>
             <input type="hidden" name="save_workday" value="1"><input type="hidden" name="workday_id" value="<?= (int)$wd['id'] ?>">
             <div class="workday-grid">
               <div class="workday-field"><label>Kuupäev</label><input type="date" name="work_date" value="<?= h($wd['work_date']) ?>" required></div>
-              <div class="workday-field"><label>Töötaja</label><input type="text" name="worker_name" list="workdayWorkers" value="<?= h($wd['worker_name']) ?>" required></div>
+              <div class="workday-field"><label>Töötaja</label><input type="text" name="worker_name" list="workdayWorkers" value="<?= h($wd['worker_name']) ?>" <?= !empty($wd['worker_username']) ? 'readonly' : '' ?> required><?php if (!empty($wd['worker_username'])): ?><small>Nime muudab töötaja oma konto seadetes.</small><?php endif; ?></div>
               <div class="workday-field span2"><label>Olemasolev objekt</label><select name="object_id" class="js-object-select"><option value="0">— Käsitsi —</option><?php foreach ($objects as $object): ?><option value="<?= (int)$object['id'] ?>" data-name="<?= h($object['name']) ?>" data-address="<?= h($object['address']) ?>" <?= (int)$wd['object_id']===(int)$object['id']?'selected':'' ?>><?= h($object['name']) ?></option><?php endforeach; ?></select></div>
               <div class="workday-field span2"><label>Objekti nimetus</label><input type="text" name="object_name" class="js-object-name" value="<?= h($wd['object_name']) ?>" required></div>
               <div class="workday-field span2"><label>Aadress</label><input type="text" name="address" class="js-object-address" value="<?= h($wd['address'] ?? '') ?>"></div>
@@ -2758,7 +2761,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
             </div>
             <div class="workday-form-actions"><button type="submit" class="workday-save">Salvesta muudatused</button></div>
           </form>
-          <form method="post" action="index.php?view=workdays" onsubmit="return confirm('Kustutan selle tööpäeva?');" style="margin-top:10px"><input type="hidden" name="delete_workday" value="1"><input type="hidden" name="workday_id" value="<?= (int)$wd['id'] ?>"><button type="submit" class="workday-delete">Kustuta tööpäev</button></form>
+          <form method="post" action="index.php?view=workdays" onsubmit="return confirm('Kustutan selle tööpäeva?');" style="margin-top:10px"><?= rk_csrf_field() ?><input type="hidden" name="delete_workday" value="1"><input type="hidden" name="workday_id" value="<?= (int)$wd['id'] ?>"><button type="submit" class="workday-delete">Kustuta tööpäev</button></form>
         </div>
       </details>
     <?php endforeach; ?>
@@ -2778,10 +2781,10 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
   <div class="price-search-results" id="priceQuickResults" role="listbox"></div>
   <div class="price-search-tip">Vihje: võid kirjutada ka osa nimetusest, näiteks „värv“, „kips“, „wc“ või „fassaad“.</div>
 </div>
-<div class="price-panel <?= $priceListFormError!==''?'open':'' ?>" id="priceAddPanel"><form method="post" action="index.php?view=price-list"><input type="hidden" name="save_price_item" value="1"><div class="price-form-grid"><div class="price-field"><label>Tüüp</label><select name="item_type"><option value="service">Töö / teenus</option><option value="package">Näidispakett</option></select></div><div class="price-field"><label>Kategooria *</label><input name="category" required></div><div class="price-field" style="grid-column:span 2"><label>Nimetus *</label><input name="name" required></div><div class="price-field"><label>Ühik</label><input name="unit" placeholder="m², jm, tk, komplekt"></div><div class="price-field"><label>Hind alates (€)</label><input type="number" step="0.01" min="0" name="price_from" value="0"></div><div class="price-field"><label>Koos materjaliga alates (€)</label><input type="number" step="0.01" min="0" name="material_price_from"></div><div class="price-field"><label>Järjekord</label><input type="number" name="sort_order" value="600"></div><div class="price-field full"><label>Kirjeldus / märkus</label><textarea name="description"></textarea></div></div><div class="price-form-actions"><button class="price-save" type="submit">Lisa hinnakirja</button></div></form></div>
+<div class="price-panel <?= $priceListFormError!==''?'open':'' ?>" id="priceAddPanel"><form method="post" action="index.php?view=price-list"><?= rk_csrf_field() ?><input type="hidden" name="save_price_item" value="1"><div class="price-form-grid"><div class="price-field"><label>Tüüp</label><select name="item_type"><option value="service">Töö / teenus</option><option value="package">Näidispakett</option></select></div><div class="price-field"><label>Kategooria *</label><input name="category" required></div><div class="price-field" style="grid-column:span 2"><label>Nimetus *</label><input name="name" required></div><div class="price-field"><label>Ühik</label><input name="unit" placeholder="m², jm, tk, komplekt"></div><div class="price-field"><label>Hind alates (€)</label><input type="number" step="0.01" min="0" name="price_from" value="0"></div><div class="price-field"><label>Koos materjaliga alates (€)</label><input type="number" step="0.01" min="0" name="material_price_from"></div><div class="price-field"><label>Järjekord</label><input type="number" name="sort_order" value="600"></div><div class="price-field full"><label>Kirjeldus / märkus</label><textarea name="description"></textarea></div></div><div class="price-form-actions"><button class="price-save" type="submit">Lisa hinnakirja</button></div></form></div>
 <?php $packages=array_values(array_filter($priceListItems??[],static fn($r)=>($r['item_type']??'service')==='package'));?><div class="price-intro"><?php foreach($packages as $pkg):?><div class="price-package"><span>Näidispakett</span><strong><?=h($pkg['name'])?></strong><div class="price-package-price">al <?=number_format((float)$pkg['price_from'],0,',',' ')?> €</div><?php if(!empty($pkg['description'])):?><p><?=h($pkg['description'])?></p><?php endif;?></div><?php endforeach;?></div>
 <?php $services=array_values(array_filter($priceListItems??[],static fn($r)=>($r['item_type']??'service')==='service'));$categories=[];foreach($services as $r)$categories[(string)$r['category']][]=$r;?>
-<?php foreach($categories as $category=>$rows):?><div class="price-category"><h3><?=h($category)?></h3><?php foreach($rows as $row):?><details class="price-edit-card"><summary><div class="price-summary"><strong><?=h($row['name'])?></strong><span><?=h($row['unit']??'—')?></span><span class="price-money">al <?=number_format((float)$row['price_from'],2,',',' ')?> €</span><span><?php if($row['material_price_from']!==null):?><strong>materjaliga al <?=number_format((float)$row['material_price_from'],2,',',' ')?> €</strong><?php elseif(!empty($row['description'])):?><span class="price-note"><?=h($row['description'])?></span><?php else:?><span class="muted">—</span><?php endif;?></span><span class="price-chevron"></span></div></summary><div class="price-edit-body"><form method="post" action="index.php?view=price-list"><input type="hidden" name="save_price_item" value="1"><input type="hidden" name="price_id" value="<?=(int)$row['id']?>"><input type="hidden" name="item_type" value="service"><div class="price-form-grid"><div class="price-field"><label>Kategooria</label><input name="category" value="<?=h($row['category'])?>" required></div><div class="price-field" style="grid-column:span 2"><label>Nimetus</label><input name="name" value="<?=h($row['name'])?>" required></div><div class="price-field"><label>Ühik</label><input name="unit" value="<?=h($row['unit']??'')?>"></div><div class="price-field"><label>Hind alates (€)</label><input type="number" step="0.01" min="0" name="price_from" value="<?=h((string)$row['price_from'])?>"></div><div class="price-field"><label>Koos materjaliga alates (€)</label><input type="number" step="0.01" min="0" name="material_price_from" value="<?=$row['material_price_from']!==null?h((string)$row['material_price_from']):''?>"></div><div class="price-field"><label>Järjekord</label><input type="number" name="sort_order" value="<?=(int)$row['sort_order']?>"></div><div class="price-field full"><label>Märkus</label><textarea name="description"><?=h($row['description']??'')?></textarea></div></div><div class="price-form-actions"><button class="price-save" type="submit">Salvesta</button></div></form><form method="post" action="index.php?view=price-list" onsubmit="return confirm('Kas eemaldan selle hinnakirja rea?');" style="margin-top:8px"><input type="hidden" name="delete_price_item" value="1"><input type="hidden" name="price_id" value="<?=(int)$row['id']?>"><button class="price-delete" type="submit">Eemalda</button></form></div></details><?php endforeach;?></div><?php endforeach;?>
+<?php foreach($categories as $category=>$rows):?><div class="price-category"><h3><?=h($category)?></h3><?php foreach($rows as $row):?><details class="price-edit-card"><summary><div class="price-summary"><strong><?=h($row['name'])?></strong><span><?=h($row['unit']??'—')?></span><span class="price-money">al <?=number_format((float)$row['price_from'],2,',',' ')?> €</span><span><?php if($row['material_price_from']!==null):?><strong>materjaliga al <?=number_format((float)$row['material_price_from'],2,',',' ')?> €</strong><?php elseif(!empty($row['description'])):?><span class="price-note"><?=h($row['description'])?></span><?php else:?><span class="muted">—</span><?php endif;?></span><span class="price-chevron"></span></div></summary><div class="price-edit-body"><form method="post" action="index.php?view=price-list"><?= rk_csrf_field() ?><input type="hidden" name="save_price_item" value="1"><input type="hidden" name="price_id" value="<?=(int)$row['id']?>"><input type="hidden" name="item_type" value="service"><div class="price-form-grid"><div class="price-field"><label>Kategooria</label><input name="category" value="<?=h($row['category'])?>" required></div><div class="price-field" style="grid-column:span 2"><label>Nimetus</label><input name="name" value="<?=h($row['name'])?>" required></div><div class="price-field"><label>Ühik</label><input name="unit" value="<?=h($row['unit']??'')?>"></div><div class="price-field"><label>Hind alates (€)</label><input type="number" step="0.01" min="0" name="price_from" value="<?=h((string)$row['price_from'])?>"></div><div class="price-field"><label>Koos materjaliga alates (€)</label><input type="number" step="0.01" min="0" name="material_price_from" value="<?=$row['material_price_from']!==null?h((string)$row['material_price_from']):''?>"></div><div class="price-field"><label>Järjekord</label><input type="number" name="sort_order" value="<?=(int)$row['sort_order']?>"></div><div class="price-field full"><label>Märkus</label><textarea name="description"><?=h($row['description']??'')?></textarea></div></div><div class="price-form-actions"><button class="price-save" type="submit">Salvesta</button></div></form><form method="post" action="index.php?view=price-list" onsubmit="return confirm('Kas eemaldan selle hinnakirja rea?');" style="margin-top:8px"><?= rk_csrf_field() ?><input type="hidden" name="delete_price_item" value="1"><input type="hidden" name="price_id" value="<?=(int)$row['id']?>"><button class="price-delete" type="submit">Eemalda</button></form></div></details><?php endforeach;?></div><?php endforeach;?>
 </section>
 <?php elseif ($view === 'workers'): ?>
 <section class="worker-wrap" aria-labelledby="workersTitle">
@@ -2806,7 +2809,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
 
   <div class="worker-panel <?= $workerFormError !== '' ? 'open' : '' ?>" id="workerAddPanel">
     <div class="worker-panel-head"><h3>Uus tööline</h3><button type="button" class="worker-close" id="workerAddClose" aria-label="Sulge">×</button></div>
-    <form method="post" action="index.php?view=workers">
+    <form method="post" action="index.php?view=workers"><?= rk_csrf_field() ?>
       <input type="hidden" name="save_worker" value="1">
       <div class="worker-grid">
         <div class="worker-field"><label>Töölise nimi *</label><input type="text" name="name" placeholder="Näiteks Hannes" required></div>
@@ -2844,7 +2847,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
           </div>
         </summary>
         <div class="worker-detail">
-          <form method="post" action="index.php?view=workers">
+          <form method="post" action="index.php?view=workers"><?= rk_csrf_field() ?>
             <input type="hidden" name="save_worker" value="1"><input type="hidden" name="worker_id" value="<?= (int)$worker['id'] ?>">
             <div class="worker-grid">
               <div class="worker-field"><label>Töölise nimi *</label><input type="text" name="name" value="<?= h($worker['name']) ?>" required></div>
@@ -2856,7 +2859,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
             </div>
             <div class="worker-form-actions"><button class="worker-save" type="submit">Salvesta muudatused</button></div>
           </form>
-          <form method="post" action="index.php?view=workers" onsubmit="return confirm('Kas eemaldan selle töölise?');"><input type="hidden" name="delete_worker" value="1"><input type="hidden" name="worker_id" value="<?= (int)$worker['id'] ?>"><button type="submit" class="worker-delete">Eemalda tööline</button></form>
+          <form method="post" action="index.php?view=workers" onsubmit="return confirm('Kas eemaldan selle töölise?');"><?= rk_csrf_field() ?><input type="hidden" name="delete_worker" value="1"><input type="hidden" name="worker_id" value="<?= (int)$worker['id'] ?>"><button type="submit" class="worker-delete">Eemalda tööline</button></form>
         </div>
       </details>
     <?php endforeach; ?>
@@ -3185,7 +3188,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
   </div>
   <?php if($total>0):?><div class="email-progress" title="<?= $pct ?>%"><span style="width:<?= $pct ?>%"></span></div><div class="muted" style="margin:5px 0 18px"><?= $pct ?>% saatmisest tehtud</div><?php endif;?>
   <?php endif;?>
-  <form method="post" id="emailCampaignForm">
+  <form method="post" id="emailCampaignForm"><?= rk_csrf_field() ?>
     <input type="hidden" name="save_email_campaign" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"><textarea name="html_body" id="emailHtmlBody" hidden><?= h($c['html_body']??'') ?></textarea>
     <div class="email-editor-grid">
       <div class="email-panel">
@@ -3226,11 +3229,11 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
     </div>
   </form>
   <?php if(!$isNew):?>
-  <form method="post" id="emailTestForm"><input type="hidden" name="send_test_email" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
-  <form method="post" id="emailQueueForm"><input type="hidden" name="<?= $c['status']==='paused'?'resume_email_campaign':'queue_email_campaign' ?>" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
-  <form method="post" id="emailBatchForm"><input type="hidden" name="send_email_batch" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
-  <form method="post" id="emailPauseForm"><input type="hidden" name="pause_email_campaign" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
-  <form method="post" onsubmit="return confirm('Kustutan kampaania ja kogu selle statistika?')" style="margin-top:16px"><input type="hidden" name="delete_email_campaign" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"><button class="email-btn danger" type="submit">Kustuta kampaania</button></form>
+  <form method="post" id="emailTestForm"><?= rk_csrf_field() ?><input type="hidden" name="send_test_email" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
+  <form method="post" id="emailQueueForm"><?= rk_csrf_field() ?><input type="hidden" name="<?= $c['status']==='paused'?'resume_email_campaign':'queue_email_campaign' ?>" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
+  <form method="post" id="emailBatchForm"><?= rk_csrf_field() ?><input type="hidden" name="send_email_batch" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
+  <form method="post" id="emailPauseForm"><?= rk_csrf_field() ?><input type="hidden" name="pause_email_campaign" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"></form>
+  <form method="post" onsubmit="return confirm('Kustutan kampaania ja kogu selle statistika?')" style="margin-top:16px"><?= rk_csrf_field() ?><input type="hidden" name="delete_email_campaign" value="1"><input type="hidden" name="campaign_id" value="<?= (int)$c['id'] ?>"><button class="email-btn danger" type="submit">Kustuta kampaania</button></form>
   <?php endif;?>
 </section>
 <script>
@@ -3284,11 +3287,11 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
       <div class="clean-upload-card">
         <strong>Impordi NeverBounce / ZeroBounce puhastusfail</strong>
         <p class="email-help">Laadi teenusest eksporditud CSV või XLSX. Vaikimisi lisatakse „Puhastatud kontaktid” listi ainult <em>valid / deliverable</em> aadressid.</p>
-        <form method="post" enctype="multipart/form-data" class="contact-bulkbar" style="margin:0"><input type="hidden" name="import_cleaned_contacts" value="1"><select name="verification_source"><option value="neverbounce">NeverBounce</option><option value="zerobounce">ZeroBounce</option><option value="other">Muu teenus</option></select><input type="file" name="cleaned_file" accept=".csv,.xlsx" required><label style="display:flex;align-items:center;gap:6px"><input type="checkbox" name="include_catchall" value="1"> Kaasa catch-all</label><button class="email-btn green" type="submit">Impordi puhastatud</button></form>
+        <form method="post" enctype="multipart/form-data" class="contact-bulkbar" style="margin:0"><?= rk_csrf_field() ?><input type="hidden" name="import_cleaned_contacts" value="1"><select name="verification_source"><option value="neverbounce">NeverBounce</option><option value="zerobounce">ZeroBounce</option><option value="other">Muu teenus</option></select><input type="file" name="cleaned_file" accept=".csv,.xlsx" required><label style="display:flex;align-items:center;gap:6px"><input type="checkbox" name="include_catchall" value="1"> Kaasa catch-all</label><button class="email-btn green" type="submit">Impordi puhastatud</button></form>
       </div>
       <?php endif;?>
 
-      <form method="post" id="contactBulkForm">
+      <form method="post" id="contactBulkForm"><?= rk_csrf_field() ?>
         <div class="contact-bulkbar">
           <label style="display:flex;align-items:center;gap:7px"><input class="contact-select-all" type="checkbox" id="contactSelectAll"> Vali kõik nähtavad</label>
           <?php if($contactTab!=='segment'):?>
@@ -3314,12 +3317,12 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
         </div>
       </form>
 
-      <?php if($contactTab==='segment'&&$activeEmailSegment):?><form method="post" onsubmit="return confirm('Kustutan selle segmendi? Kontaktid ise jäävad alles.')" style="margin-top:12px"><input type="hidden" name="delete_email_segment" value="1"><input type="hidden" name="segment_id" value="<?= (int)$segmentId ?>"><button class="email-btn danger" type="submit">Kustuta segment</button></form><?php endif;?>
+      <?php if($contactTab==='segment'&&$activeEmailSegment):?><form method="post" onsubmit="return confirm('Kustutan selle segmendi? Kontaktid ise jäävad alles.')" style="margin-top:12px"><?= rk_csrf_field() ?><input type="hidden" name="delete_email_segment" value="1"><input type="hidden" name="segment_id" value="<?= (int)$segmentId ?>"><button class="email-btn danger" type="submit">Kustuta segment</button></form><?php endif;?>
 
       <details class="contact-import-details" id="contactImport" <?= isset($_GET['import_error'])?'open':'' ?>><summary>+ Kontaktide import / copy + paste / CSV / XLSX</summary><div>
         <div class="contact-import-grid">
-          <form method="post" class="contact-import-box"><input type="hidden" name="import_email_contacts" value="1"><input type="hidden" name="import_mode" value="paste"><h3>Copy + paste</h3><p>Kleebi üks email rea kohta või tabel otse Google Sheetsist / Excelist.</p><textarea name="contact_paste" placeholder="email@example.com&#10;teine@example.com"></textarea><label class="contact-import-check"><input type="checkbox" name="reactivate_unsubscribed" value="1"> <span>Aktiveeri loobunud kontaktid uuesti ainult uue nõusoleku korral.</span></label><div class="email-actions"><button class="email-btn green" type="submit">Impordi</button></div></form>
-          <form method="post" enctype="multipart/form-data" class="contact-import-box"><input type="hidden" name="import_email_contacts" value="1"><input type="hidden" name="import_mode" value="file"><h3>CSV / XLSX</h3><p>Toetatud on .csv ja .xlsx. Email võib olla ainus veerg.</p><label class="contact-import-drop"><strong>Vali fail</strong><input type="file" name="contact_file" accept=".csv,.xlsx" required></label><label class="contact-import-check"><input type="checkbox" name="reactivate_unsubscribed" value="1"> <span>Aktiveeri loobunud kontaktid uuesti.</span></label><div class="email-actions"><button class="email-btn green" type="submit">Laadi ja impordi</button></div></form>
+          <form method="post" class="contact-import-box"><?= rk_csrf_field() ?><input type="hidden" name="import_email_contacts" value="1"><input type="hidden" name="import_mode" value="paste"><h3>Copy + paste</h3><p>Kleebi üks email rea kohta või tabel otse Google Sheetsist / Excelist.</p><textarea name="contact_paste" placeholder="email@example.com&#10;teine@example.com"></textarea><label class="contact-import-check"><input type="checkbox" name="reactivate_unsubscribed" value="1"> <span>Aktiveeri loobunud kontaktid uuesti ainult uue nõusoleku korral.</span></label><div class="email-actions"><button class="email-btn green" type="submit">Impordi</button></div></form>
+          <form method="post" enctype="multipart/form-data" class="contact-import-box"><?= rk_csrf_field() ?><input type="hidden" name="import_email_contacts" value="1"><input type="hidden" name="import_mode" value="file"><h3>CSV / XLSX</h3><p>Toetatud on .csv ja .xlsx. Email võib olla ainus veerg.</p><label class="contact-import-drop"><strong>Vali fail</strong><input type="file" name="contact_file" accept=".csv,.xlsx" required></label><label class="contact-import-check"><input type="checkbox" name="reactivate_unsubscribed" value="1"> <span>Aktiveeri loobunud kontaktid uuesti.</span></label><div class="email-actions"><button class="email-btn green" type="submit">Laadi ja impordi</button></div></form>
         </div>
       </div></details>
     </div>
@@ -3333,8 +3336,8 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
 <section class="email-wrap">
  <div class="email-head"><div><h2>Emaili mallid</h2><p>Salvesta korduvkasutatavad kampaania kujundused.</p></div></div>
  <?php if(isset($_GET['saved'])):?><div class="email-flash">Mall salvestatud.</div><?php endif;?>
- <div class="email-template-card"><form method="post"><input type="hidden" name="save_email_template" value="1"><div class="email-form-grid"><div class="email-field"><label>Uue malli nimi</label><input name="name" required></div><div class="email-field"><label>Vaikimisi teema</label><input name="subject"></div><div class="email-field full"><label>HTML sisu</label><textarea name="html_body" style="min-height:180px" placeholder="<div>...</div>"></textarea></div></div><div class="email-actions"><button class="email-btn green">+ Lisa mall</button></div></form></div>
- <?php foreach($emailTemplates as $t):?><div class="email-template-card"><form method="post"><input type="hidden" name="save_email_template" value="1"><input type="hidden" name="template_id" value="<?= (int)$t['id'] ?>"><div class="email-form-grid"><div class="email-field"><label>Nimi</label><input name="name" value="<?= h($t['name']) ?>"></div><div class="email-field"><label>Teema</label><input name="subject" value="<?= h($t['subject']??'') ?>"></div><div class="email-field full"><label>HTML</label><textarea name="html_body" style="min-height:160px"><?= h($t['html_body']??'') ?></textarea></div></div><div class="email-actions"><button class="email-btn green">Salvesta</button><a class="email-btn secondary" href="index.php?view=email-campaign&amp;template_id=<?= (int)$t['id'] ?>">Kasuta kampaanias</a></div></form><form method="post" onsubmit="return confirm('Kustutan malli?')" style="margin-top:8px"><input type="hidden" name="delete_email_template" value="1"><input type="hidden" name="template_id" value="<?= (int)$t['id'] ?>"><button class="email-btn danger">Kustuta</button></form></div><?php endforeach;?>
+ <div class="email-template-card"><form method="post"><?= rk_csrf_field() ?><input type="hidden" name="save_email_template" value="1"><div class="email-form-grid"><div class="email-field"><label>Uue malli nimi</label><input name="name" required></div><div class="email-field"><label>Vaikimisi teema</label><input name="subject"></div><div class="email-field full"><label>HTML sisu</label><textarea name="html_body" style="min-height:180px" placeholder="<div>...</div>"></textarea></div></div><div class="email-actions"><button class="email-btn green">+ Lisa mall</button></div></form></div>
+ <?php foreach($emailTemplates as $t):?><div class="email-template-card"><form method="post"><?= rk_csrf_field() ?><input type="hidden" name="save_email_template" value="1"><input type="hidden" name="template_id" value="<?= (int)$t['id'] ?>"><div class="email-form-grid"><div class="email-field"><label>Nimi</label><input name="name" value="<?= h($t['name']) ?>"></div><div class="email-field"><label>Teema</label><input name="subject" value="<?= h($t['subject']??'') ?>"></div><div class="email-field full"><label>HTML</label><textarea name="html_body" style="min-height:160px"><?= h($t['html_body']??'') ?></textarea></div></div><div class="email-actions"><button class="email-btn green">Salvesta</button><a class="email-btn secondary" href="index.php?view=email-campaign&amp;template_id=<?= (int)$t['id'] ?>">Kasuta kampaanias</a></div></form><form method="post" onsubmit="return confirm('Kustutan malli?')" style="margin-top:8px"><?= rk_csrf_field() ?><input type="hidden" name="delete_email_template" value="1"><input type="hidden" name="template_id" value="<?= (int)$t['id'] ?>"><button class="email-btn danger">Kustuta</button></form></div><?php endforeach;?>
 </section>
 
 <?php elseif ($view === 'email-settings'): ?>
@@ -3342,7 +3345,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
  <div class="email-head"><div><h2>Emaili seaded / SMTP</h2><p>Seadista teenus, mille kaudu kampaaniad päriselt välja saadetakse.</p></div></div>
  <?php if(isset($_GET['saved'])):?><div class="email-flash">Seaded salvestatud.</div><?php endif;?>
  <div class="email-setting-note"><strong>Deliverability:</strong> soovitatav on kasutada Brevo, Amazon SES, Mailgun või muud SMTP teenust ning seadistada domeenile SPF, DKIM ja DMARC. Ära kasuta ostetud kontaktinimekirju.</div>
- <form method="post"><input type="hidden" name="save_email_settings" value="1"><div class="email-form-grid">
+ <form method="post"><?= rk_csrf_field() ?><input type="hidden" name="save_email_settings" value="1"><div class="email-form-grid">
   <div class="email-field"><label>Transport</label><select name="transport"><option value="smtp" <?= ($emailSettings['transport']??'smtp')==='smtp'?'selected':'' ?>>SMTP</option><option value="mail" <?= ($emailSettings['transport']??'')==='mail'?'selected':'' ?>>PHP mail()</option></select></div>
   <div class="email-field"><label>SMTP host</label><input name="smtp_host" value="<?= h($emailSettings['smtp_host']??'') ?>" placeholder="smtp-relay.brevo.com"></div>
   <div class="email-field"><label>SMTP port</label><input type="number" name="smtp_port" value="<?= (int)($emailSettings['smtp_port']??587) ?>"></div>
@@ -3359,7 +3362,7 @@ $quoteMaterialItems = json_decode((string)($quote['material_items_json'] ?? '[]'
 </section>
 
 <?php elseif ($view === 'subscribers'): ?>
-<div class="subscriber-tools"><form method="post"><input type="hidden" name="bulk_add_subscribers" value="1"><strong>Lisa kontaktid korraga</strong><p class="muted">Kleebi e-posti aadressid komade, semikoolonite või reavahetustega. Olemasolev unsubscribe kontakt aktiveeritakse uuesti ainult siis, kui sul on selleks inimese nõusolek.</p><textarea name="emails" placeholder="nimi@example.com&#10;teine@example.com"></textarea><div class="email-actions"><button class="email-btn green" type="submit">Lisa subscriberid</button></div></form><?php if(isset($_GET['imported'])):?><div class="email-flash" style="margin-top:10px;margin-bottom:0">Töödeldud <?= (int)$_GET['imported'] ?> aadressi.</div><?php endif;?></div>
+<div class="subscriber-tools"><form method="post"><?= rk_csrf_field() ?><input type="hidden" name="bulk_add_subscribers" value="1"><strong>Lisa kontaktid korraga</strong><p class="muted">Kleebi e-posti aadressid komade, semikoolonite või reavahetustega. Olemasolev unsubscribe kontakt aktiveeritakse uuesti ainult siis, kui sul on selleks inimese nõusolek.</p><textarea name="emails" placeholder="nimi@example.com&#10;teine@example.com"></textarea><div class="email-actions"><button class="email-btn green" type="submit">Lisa subscriberid</button></div></form><?php if(isset($_GET['imported'])):?><div class="email-flash" style="margin-top:10px;margin-bottom:0">Töödeldud <?= (int)$_GET['imported'] ?> aadressi.</div><?php endif;?></div>
 <table>
   <thead>
     <tr>

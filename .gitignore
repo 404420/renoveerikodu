@@ -8,3 +8,8 @@ admin/object-data.json
 backup/
 *.zip
 _site/
+adminvana/
+**/private-google/
+**/object-data.json
+*.log
+node_modules/

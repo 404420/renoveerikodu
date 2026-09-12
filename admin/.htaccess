@@ -1,5 +1,9 @@
 Options -Indexes
 
+# Sisemised moodulid on PHP include jaoks loetavad, HTTP kaudu keelatud.
 <FilesMatch "^_">
+  Require all denied
+</FilesMatch>
+<FilesMatch "(?i)(^error_log$|^setup-admin\.php$|\.(sql|log|zip|bak|old|env)$)">
   Require all denied
 </FilesMatch>

@@ -199,6 +199,7 @@
 		function openChat(event) {
 			if (event) event.preventDefault();
 			chat.style.display = 'flex';
+			bubble.setAttribute('aria-expanded', 'true');
 			bubble.style.display = 'none';
 			input.focus();
 		}
@@ -206,7 +207,9 @@
 		function closeChat(event) {
 			if (event) event.preventDefault();
 			chat.style.display = 'none';
+			bubble.setAttribute('aria-expanded', 'false');
 			bubble.style.display = 'flex';
+			bubble.focus();
 		}
 
 		function addMessage(sender, html) {
@@ -229,6 +232,9 @@
 
 		bubble.onclick = openChat;
 		close.onclick = closeChat;
+		chat.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape') closeChat(event);
+		});
 		sendBtn.onclick = sendMessage;
 		input.addEventListener('keydown', function(event) {
 			if (event.key === 'Enter') sendMessage(event);

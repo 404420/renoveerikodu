@@ -1,3 +1,34 @@
+Options -Indexes
+
+# Compress text responses and cache versioned/static assets on Apache.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+# Kaitse vanu admini koopiaid, varukoopiaid ja arendusfaile.
+RewriteEngine On
+RewriteRule ^(?:adminvana|backup|private-google|\.git|\.github)(?:/|$) - [F,END,NC]
+RewriteCond %{REQUEST_URI} !^/api/uploads/contact/ [NC]
+RewriteRule \.zip$ - [F,END,NC]
+<FilesMatch "(?i)(^error_log$|^\.env|\.(sql|bak|old|log|md)$)">
+  Require all denied
+</FilesMatch>
+RewriteRule ^paneel(?:\.html|\.php)?/?$ paneel.php [END]
+
 DirectoryIndex index.html index.php
 
 <FilesMatch "^(config|config\.example|database)\.(php|sql)$">
@@ -6,15 +37,6 @@ DirectoryIndex index.html index.php
 
 RewriteEngine On
 RewriteBase /
-
-# Consolidate the apex host with the canonical www host.
-RewriteCond %{HTTP_HOST} ^renoveerikodu\.ee$ [NC]
-RewriteRule ^ https://www.renoveerikodu.ee%{REQUEST_URI} [R=301,L,NE]
-
-# Retired URLs still reported in Search Console.
-RewriteRule ^contact(?:\.html)?/?$ /kontakt [R=301,L,NE,NC]
-RewriteRule ^wpcpaigaldus/?$ /seinapaneelidepaigaldus [R=301,L,NE,NC]
-RewriteRule ^renoveerikodu/(.+?)(?:\.html)?/?$ /$1 [R=301,L,NE,NC]
 
 # Force homepage variants to the clean root URL.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$

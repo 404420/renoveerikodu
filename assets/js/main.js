@@ -54,7 +54,7 @@
 	if ($menu.length) {
 
 		$menu
-			.append('<a href="#menu" class="close"></a>')
+			.append('<a href="#menu" class="close" aria-label="Sulge menüü"></a>')
 			.appendTo($body)
 			.panel({
 				delay: 300,
@@ -66,6 +66,32 @@
 				target: $body,
 				visibleClass: 'is-menu-visible'
 			});
+
+		// Keep keyboard focus and expanded state in sync with the existing panel.
+		var menuElement = $menu[0];
+		var menuTrigger = document.querySelector('.menuToggle');
+		var menuWasOpen = false;
+		function syncMenuState() {
+			var open = $body.hasClass('is-menu-visible');
+			menuElement.inert = !open;
+			if (menuTrigger) menuTrigger.setAttribute('aria-expanded', String(open));
+			if (open && !menuWasOpen) menuElement.querySelector('a, button')?.focus();
+			if (!open && menuWasOpen && menuTrigger) menuTrigger.focus();
+			menuWasOpen = open;
+		}
+		new MutationObserver(syncMenuState).observe(document.body, {attributes: true, attributeFilter: ['class']});
+		syncMenuState();
+		menuElement.querySelectorAll('.submenu-header').forEach(function(header) {
+			header.setAttribute('role', 'button');
+			header.tabIndex = 0;
+			var submenu = header.closest('.submenu');
+			function syncSubmenu() { header.setAttribute('aria-expanded', String(submenu.classList.contains('open'))); }
+			new MutationObserver(syncSubmenu).observe(submenu, {attributes: true, attributeFilter: ['class']});
+			syncSubmenu();
+			header.addEventListener('keydown', function(event) {
+				if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); header.click(); }
+			});
+		});
 
 		// ESC closes menu
 		$(document).on('keydown', e => {
@@ -137,7 +163,7 @@
 	// LAZY IMAGE AUTO
 	// =============================
 	$('img').each(function(){
-		if(!$(this).attr('loading'))
+		if(!$(this).attr('loading') && !$(this).is('.hero-logo, .home-hero-logo, .site-logo'))
 			$(this).attr('loading','lazy');
 	});
 
@@ -313,81 +339,142 @@
 		});
 	})();
 
+	function waitForRecaptcha(callback, attempt) {
+		attempt = attempt || 0;
 
- function loadRecaptchaScript() {
-   return new Promise(function(resolve, reject) {
-     var attempts = 0;
-     var timer = setInterval(function() {
-       if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
-         clearInterval(timer); resolve();
-       } else if (++attempts >= 100) {
-         clearInterval(timer); reject(new Error('captcha_load_failed'));
-       }
-     }, 100);
-     if (document.querySelector('script[data-recaptcha-script]') || window.grecaptcha) return;
-     var script = document.createElement('script');
-     script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
-     script.async = true; script.defer = true;
-     script.setAttribute('data-recaptcha-script', 'true');
-     script.addEventListener('error', function() { clearInterval(timer); reject(new Error('captcha_load_failed')); }, { once: true });
-     document.head.appendChild(script);
-   });
- }
- function showContactFallback(widget) {
-   var form = widget.closest('form');
-   var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
-   if (button) { button.disabled = true; button.setAttribute('aria-disabled', 'true'); }
-   var notice = form && form.querySelector('.contact-unavailable');
-   if (!notice) {
-     notice = document.createElement('p');
-     notice.className = 'contact-unavailable';
-     notice.setAttribute('role', 'status');
-     notice.setAttribute('data-nosnippet', '');
-     notice.innerHTML = 'Vormi saatmine on ajutiselt takistatud. Palun <a href="tel:+37255515783">helista +372 5551 5783</a> või <a href="mailto:hans@renoveerikodu.ee">kirjuta hans@renoveerikodu.ee</a>.';
-     widget.insertAdjacentElement('afterend', notice);
-   }
-   notice.hidden = false;
- }
- function initContactRecaptcha() {
-   var widgets = document.querySelectorAll('[data-recaptcha-widget]');
-   if (!widgets.length) return;
-   widgets.forEach(function(widget) {
-     widget.setAttribute('data-nosnippet', '');
-     var form = widget.closest('form');
-     var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
-     if (button) { button.disabled = true; button.setAttribute('aria-disabled', 'true'); }
-   });
-   var controller = new AbortController();
-   var timeout = setTimeout(function() { controller.abort(); }, 10000);
-   fetch('/api/recaptcha-config.php', { credentials: 'same-origin', signal: controller.signal, headers: { Accept: 'application/json' } })
-     .then(function(response) { if (!response.ok) throw new Error('captcha_config_failed'); return response.json(); })
-     .then(function(result) {
-       if (!result || !result.success || !result.siteKey) throw new Error('captcha_config_failed');
-       return loadRecaptchaScript().then(function() {
-         widgets.forEach(function(widget) {
-           if (widget.hasAttribute('data-widget-id')) return;
-           var form = widget.closest('form');
-           var button = form && form.querySelector('button[type="submit"], input[type="submit"]');
-           function enabled(value) {
-             if (button) { button.disabled = !value; button.setAttribute('aria-disabled', value ? 'false' : 'true'); }
-             var notice = form && form.querySelector('.contact-unavailable');
-             if (value && notice) notice.hidden = true;
-           }
-           var id = window.grecaptcha.render(widget, {
-             sitekey: result.siteKey,
-             callback: function() { enabled(true); },
-             'expired-callback': function() { enabled(false); },
-             'error-callback': function() { enabled(false); showContactFallback(widget); }
-           });
-           widget.setAttribute('data-widget-id', String(id));
-         });
-       });
-     })
-     .catch(function() { widgets.forEach(showContactFallback); })
-     .finally(function() { clearTimeout(timeout); });
- }
+		if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
+			callback();
+			return;
+		}
 
-	initContactRecaptcha();
+		if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
+			window.grecaptcha.ready(function() {
+				waitForRecaptcha(callback, attempt + 1);
+			});
+			return;
+		}
+
+		if (attempt < 80)
+			setTimeout(function() {
+				waitForRecaptcha(callback, attempt + 1);
+			}, 100);
+	}
+
+	function loadRecaptchaScript(callback) {
+		waitForRecaptcha(function() {
+			callback();
+		});
+
+		if (window.grecaptcha)
+			return;
+
+		var existing = document.querySelector('script[data-recaptcha-script]');
+
+		if (existing) {
+			existing.addEventListener('load', function() {
+				waitForRecaptcha(callback);
+			}, { once: true });
+			return;
+		}
+
+		var script = document.createElement('script');
+		script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+		script.async = true;
+		script.defer = true;
+		script.setAttribute('data-recaptcha-script', 'true');
+		script.addEventListener('load', function() {
+			waitForRecaptcha(callback);
+		}, { once: true });
+		document.head.appendChild(script);
+	}
+
+	function initContactRecaptcha() {
+		var widgets = document.querySelectorAll('[data-recaptcha-widget]');
+
+		if (!widgets.length)
+			return;
+
+		widgets.forEach(function(widget) {
+			var form = widget.closest('form');
+			var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
+
+			if (submitButton) {
+				submitButton.disabled = true;
+				submitButton.setAttribute('aria-disabled', 'true');
+			}
+		});
+
+		fetch('/api/recaptcha-config.php', {
+			method: 'GET',
+			credentials: 'same-origin',
+			headers: {
+				'Accept': 'application/json'
+			}
+		})
+			.then(function(response) {
+				if (!response.ok)
+					throw new Error('reCAPTCHA seadistus puudub.');
+
+				return response.json();
+			})
+			.then(function(result) {
+				if (!result || !result.success || !result.siteKey)
+					throw new Error('reCAPTCHA seadistus puudub.');
+
+				loadRecaptchaScript(function() {
+					widgets.forEach(function(widget) {
+						if (widget.getAttribute('data-widget-id'))
+							return;
+
+						var form = widget.closest('form');
+						var submitButton = form && form.querySelector('button[type="submit"], input[type="submit"]');
+						var setSubmitEnabled = function(enabled) {
+							if (!submitButton)
+								return;
+
+							submitButton.disabled = !enabled;
+							submitButton.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+						};
+						var id = window.grecaptcha.render(widget, {
+							sitekey: result.siteKey,
+							callback: function() { setSubmitEnabled(true); },
+							'expired-callback': function() { setSubmitEnabled(false); },
+							'error-callback': function() { setSubmitEnabled(false); }
+						});
+
+						widget.setAttribute('data-widget-id', String(id));
+					});
+				});
+			})
+			.catch(function() {
+				widgets.forEach(function(widget) {
+					widget.textContent = 'reCAPTCHA seadistus puudub.';
+				});
+			});
+	}
+
+	// Prepare spam protection when the visitor approaches or focuses a form.
+	var contactWidgets = document.querySelectorAll('[data-recaptcha-widget]');
+	var recaptchaStarted = false;
+	var observer;
+	function prepareContact() {
+		if (recaptchaStarted) return;
+		recaptchaStarted = true;
+		if (observer) observer.disconnect();
+		initContactRecaptcha();
+	}
+	contactWidgets.forEach(function(widget) {
+		var form = widget.closest('form');
+		var submit = form && form.querySelector('[type="submit"]');
+		if (submit) { submit.disabled = true; submit.setAttribute('aria-disabled', 'true'); }
+		if (form) form.addEventListener('focusin', prepareContact, {once: true});
+	});
+	if ('IntersectionObserver' in window) {
+		observer = new IntersectionObserver(function(entries) {
+			if (entries.some(function(entry) { return entry.isIntersecting; })) prepareContact();
+		}, {rootMargin: '500px'});
+		contactWidgets.forEach(function(widget) { observer.observe(widget); });
+	} else { prepareContact(); }
 
 	// =============================
 	// SUBMENU (STABLE VERSION)
@@ -469,7 +556,6 @@ $('#menu a, #nav a').each(function(){
 			event.stopImmediatePropagation();
 
 		var submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
-		if (form.dataset.submitting === 'true') return;
 		var messageBox = document.getElementById('contactMessage');
 
 		if (!messageBox) {
@@ -492,7 +578,6 @@ $('#menu a, #nav a').each(function(){
 			return;
 		}
 
-		form.dataset.submitting = 'true';
 		var originalText = submitButton ? (submitButton.value || submitButton.textContent) : '';
 		var formData = new FormData(form);
 		formData.set('source', window.location.href);
@@ -506,7 +591,7 @@ $('#menu a, #nav a').each(function(){
 		}
 
 		messageBox.hidden = false;
-		messageBox.textContent = 'Saadan päringut...';
+		messageBox.textContent = 'Saadan paringut...';
 
 		try {
 			var response = await fetch('/api/contact.php', {
@@ -527,15 +612,13 @@ $('#menu a, #nav a').each(function(){
 			}
 
 			if (!response.ok || !result.success)
-				throw new Error(result.message || 'Päringu saatmine ebaõnnestus. Palun proovi hiljem uuesti.');
+				throw new Error(result.message || 'Paringu saatmine ebaonnestus. Palun proovi hiljem uuesti.');
 
-			messageBox.textContent = result.message || 'Päring saadetud. Võtame sinuga ühendust.';
-			document.dispatchEvent(new CustomEvent('rk:contact-success'));
+			messageBox.textContent = result.message || 'Paring saadetud. Votame sinuga uhendust.';
 			form.reset();
 		} catch (error) {
 			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
 		} finally {
-			delete form.dataset.submitting;
 			form.querySelectorAll('[data-recaptcha-widget][data-widget-id]').forEach(function(widget) {
 				if (window.grecaptcha && typeof window.grecaptcha.reset === 'function')
 					window.grecaptcha.reset(Number(widget.getAttribute('data-widget-id')));

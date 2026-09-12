@@ -6,9 +6,19 @@
 -->
 <html lang="et">
 	<head>
-	<link rel="icon" type="image/png" href="favicon-rk-v2.png">
-	<link rel="apple-touch-icon" href="favicon-rk-v2.png">
-	    <meta charset="utf-8" />
+
+	    <!-- Google tag (gtag.js) -->
+<script defer src="assets/js/analytics-loader.js?v=20260913"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FHY5FDJ5DH');
+</script>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico?v=1">
+        <link rel="shortcut icon" href="/favicon.ico?v=1">
+		<meta charset="utf-8" />
 	<title>Tapeetimine Tallinnas ja Harjumaal | Renoveeri Kodu</title>
 	<meta name="description" content="Tapeetimine Tallinnas ja Harjumaal. Pakume tapeedi paigaldust, ettevalmistust ja viimistlust korterites, majades ning äripindadel." />
 	<meta name="robots" content="index, follow" />
@@ -25,7 +35,7 @@
 	<meta name="twitter:description" content="Tapeetimine Tallinnas ja Harjumaal. Pakume tapeedi paigaldust, ettevalmistust ja viimistlust korterites, majades ning äripindadel." />
 	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/tapeetimine-renoveerikodu-tallinn.jpeg" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.css?v=20260904-seo1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
 		<style>
 
 /* ===== GLOBAL RESPONSIVE FIX ===== */
@@ -122,7 +132,8 @@ img {
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -251,11 +262,12 @@ img {
       "caption": "Tapeetimine Tallinnas"
     }
   ]
-}</script>
-<script defer src="assets/js/analytics-config.js?v=seo1"></script>
-<script defer src="assets/js/analytics.js?v=seo1"></script>
+}
+</script>
+<link rel="stylesheet" href="assets/css/performance.min.css?v=20260913">
+
 </head>
-	<body class="is-preload page-plaatimine">
+	<body class="page-ready page-plaatimine">
 <a class="skip-link" href="#main-content">Liigu põhisisuni</a>
 
 		<!-- Page Wrapper -->
@@ -267,7 +279,7 @@ img {
 							<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menüü</span></a>
+									<a href="#menu" class="menuToggle" aria-label="Ava menüü" aria-controls="menu" aria-expanded="false"><span>Menüü</span></a>
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Avaleht</a></li>
@@ -314,7 +326,7 @@ img {
 							<div class="inner">
 								<section class="service-intro">
 									<div class="center-image">
-										<img src="images/tapeetimine-renoveerikodu-tallinn.jpeg" alt="Tapeetimine Tallinnas" loading="lazy" width="1200" height="1600">
+										<img src="images/tapeetimine-renoveerikodu-tallinn.jpeg.optimized.webp" alt="Tapeetimine Tallinnas" width="1200" height="1600" loading="lazy" decoding="async">
 									</div>
 					<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> pakub tapeetimist ja seinte ettevalmistust Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>
 									<p>Tapeetimine nõuab puhast aluspinda, täpset mõõtmist ja mustri sobitamist. Renoveeri Kodu paigaldab tavatapeete, fliistapeete ja dekoratiivseid seinakatteid Tallinnas ning Harjumaal.</p>
@@ -455,13 +467,13 @@ img {
 			</div>
 
 	<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js?v=20260904-seo1"></script>
+			<script fetchpriority="low" src="assets/js/jquery.min.js"></script>
+			<script fetchpriority="low" src="assets/js/jquery.scrollex.min.js"></script>
+			<script fetchpriority="low" src="assets/js/jquery.scrolly.min.js"></script>
+			<script fetchpriority="low" src="assets/js/browser.min.js"></script>
+			<script fetchpriority="low" src="assets/js/breakpoints.min.js"></script>
+			<script fetchpriority="low" src="assets/js/util.js"></script>
+			<script fetchpriority="low" src="assets/js/main.js?v=20260913"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -492,20 +504,20 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
-<script src="assets/js/renoveeri-ai-chat.js"></script>
+<script fetchpriority="low" src="assets/js/renoveeri-ai-chat.js?v=20260913"></script>
 
 		<!-- AI Chat Bubble -->
-<div id="ai-bubble">💬</div>
+<button type="button" id="ai-bubble" aria-controls="ai-chat" aria-expanded="false">💬</button>
 
 <div id="ai-chat">
   <div id="ai-header">
     Küsi hinnangut
-    <span id="ai-close">✕</span>
+    <button type="button" id="ai-close" aria-label="Sulge hinnakalkulaator">✕</button>
   </div>
-  <div id="ai-messages">
+  <div id="ai-messages" role="log" aria-live="polite">
     <div><b>AI:</b> Tere! Küsi julgelt hinnangut töödele 😊</div>
   </div>
-  <input id="ai-input" placeholder="Nt: 10m² maalritööd" />
+  <input id="ai-input" placeholder="Nt: 10m² maalritööd" aria-label="Nt: 10m² maalritööd">
   <button id="ai-send">Saada</button>
 </div>
 

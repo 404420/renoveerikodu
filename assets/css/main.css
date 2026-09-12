@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+
 
 /*
 	Spectral by HTML5 UP
@@ -3525,7 +3525,7 @@ input, select, textarea {
 			}
 
 				#header .site-title a:before {
-					background: url("../../images/RKMeistrid_logo.png") center / contain no-repeat;
+					background: url("../../images/logo-64.webp") center / contain no-repeat;
 					content: '';
 					display: inline-block;
 					flex: 0 0 auto;
@@ -3904,7 +3904,7 @@ input, select, textarea {
 	padding: 12em 0 10em 0;
 	background-image:
 	linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-	url("../../images/MedicineLake.webp");
+	var(--hero-image, url("../../images/hero-desktop.webp"));
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -4052,7 +4052,7 @@ input, select, textarea {
 	body.landing #page-wrapper {
 		background-image:
 	linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-	url("../../images/MedicineLake.webp");
+	var(--hero-image, url("../../images/hero-desktop.webp"));
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -4071,7 +4071,7 @@ input, select, textarea {
     body.is-mobile.landing .wrapper.style4{
 	background-image:
 	linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-	url("../../images/MedicineLake.webp");
+	var(--hero-image, url("../../images/hero-desktop.webp"));
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -4961,7 +4961,7 @@ body.portfolio-lightbox-open{
 
 /* sama background nagu kontakt */
 .service-page{
-	background:url("../../images/MedicineLake.webp") center/cover no-repeat fixed;
+	background:var(--hero-image, url("../../images/hero-desktop.webp")) center/cover no-repeat fixed;
 }
 
 .service-hero{
@@ -5514,7 +5514,7 @@ textarea {
 
 #banner{
 min-height:100vh;
-background-image:url("../../images/MedicineLake.webp");
+background-image:var(--hero-image, url("../../images/hero-desktop.webp"));
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
@@ -5522,60 +5522,20 @@ background-repeat:no-repeat;
 
 #banner .home-hero-logo {
 	position: absolute;
-	top: clamp(32px, calc(7vh - 16px), 68px);
+	top: clamp(64px, 9vh, 104px);
 	left: 50%;
-	width: clamp(104px, 10vw, 155px);
+	width: clamp(110px, 11vw, 170px);
 	height: auto;
 	transform: translateX(-50%);
 	z-index: 2;
-	background: transparent;
-	filter: drop-shadow(0 1px 1px rgba(255,255,255,0.8));
-	opacity: 1;
-	/* Match the existing #banner:after preload reveal. */
-	transition: opacity 3s ease-in-out 1.25s;
+	filter: drop-shadow(0 10px 28px rgba(0,0,0,0.42));
 	pointer-events: none;
 }
 
-body.is-preload #banner .home-hero-logo {
-	opacity: 0;
-}
-
-#banner .inner h1,
-#banner .inner p {
-	text-shadow: 0 2px 6px rgba(0,0,0,0.85), 0 0 24px rgba(0,0,0,0.45);
-}
-
-/* A concrete service headline must also fit narrow mobile screens. */
-#banner .inner h1 {
-	max-width: 30ch;
-	font-size: clamp(1.3rem, 2.5vw, 2.25rem);
-	line-height: 1.35;
-	letter-spacing: 0.075em;
-	padding: 0.45em 0.6em;
-}
-.home-renovation { max-width: 64em; margin: 2em auto; }
-.service-repair { margin: 2em 0; scroll-margin-top: 6em; }
-.service-estimate .button, .service-repair .button, .home-renovation .button,
-.price-context-extra .button, .case-study-extra .button {
-	white-space: normal; height: auto; line-height: 1.5; padding: 0.85em 1.25em;
-}
-.contact-unavailable { line-height: 1.6; overflow-wrap: anywhere; }
-.contact-unavailable a { text-decoration: underline; }
-.analytics-consent { position: fixed; bottom: 1rem; left: 1rem; z-index: 10002;
-	width: min(28rem, calc(100% - 2rem)); padding: 1.2rem; border-radius: 8px;
-	background: #fff; color: #252e35; box-shadow: 0 4px 24px #0004; font-size: 0.9rem; }
-.analytics-consent[hidden] { display: none; }
-.analytics-consent p { margin: 0 0 0.8rem; }
-.analytics-consent a { color: #252e35; text-decoration: underline; }
-.analytics-consent > div { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.analytics-consent button { color: #252e35 !important; border: 1px solid #252e35;
-	box-shadow: none; font-size: 0.8rem; padding: 0.6rem 1rem; line-height: 1.4; height: auto; }
-.analytics-settings { color: inherit; font-size: 0.7rem; margin: 1rem; }
-
 @media screen and (max-width: 736px) {
 	#banner .home-hero-logo {
-		top: 34px;
-		width: 110px;
+		top: 66px;
+		width: 118px;
 	}
 }
 

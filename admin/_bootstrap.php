@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/_auth.php';
+rk_session_start();
+
+// OLEMASOLEVA ANDMEBAASIÜHENDUSE FAIL: ühenduse loogika on muutmata.
 $configPath = __DIR__ . '/../config.php';
 if (!is_file($configPath)) {
     http_response_code(500);
@@ -9,9 +13,6 @@ if (!is_file($configPath)) {
 
 require_once $configPath;
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
 
 function admin_db(): PDO
 {
@@ -151,9 +152,9 @@ function ensure_admin_objects_table(PDO $pdo): void
 
 function require_admin(): void
 {
-    if (empty($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
-        header('Location: login.php');
-        exit;
+    rk_require_permission('panel.full');
+    if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+        rk_require_csrf();
     }
 }
 

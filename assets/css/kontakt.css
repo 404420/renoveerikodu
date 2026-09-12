@@ -326,7 +326,7 @@
 	body,
 	body.landing,
 	#page-wrapper{
-		background:url("/renoveerikodu/images/MedicineLake.jpg") center/cover no-repeat !important;
+		background:var(--hero-image, url("../../images/hero-desktop.webp")) center/cover no-repeat !important;
 	}
 
 	/* dark overlay loetavuse jaoks */
@@ -364,7 +364,7 @@
 
 /* GLOBAL PAGE BACKGROUND (fixed hero) */
 body.landing {
-	background-image: url("/renoveerikodu/images/MedicineLake.jpg");
+	background-image: var(--hero-image, url("../../images/hero-desktop.webp"));
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

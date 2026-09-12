@@ -1,0 +1,20 @@
+/* Immediate hero rendering, readable controls and reduced-motion support. */
+:root { --hero-image: url("../../images/hero-desktop.webp"); }
+#banner { background-image: var(--hero-image); }
+#banner::after { transition: none; opacity: 0; }
+#banner h1, #banner h2, #banner .more, .hero-logo { opacity: 1; transition: none; }
+#banner h1::before, #banner h1::after, #banner h2::before, #banner h2::after { transition: none; }
+.hero-logo { transform: translate(-50%, -50%) scale(1); }
+button.primary, input[type="submit"].primary, .button.primary,
+.floating-contact, #ai-send { background-color: #a84400 !important; color: #fff !important; }
+button.primary:hover, .button.primary:hover, .floating-contact:hover { background-color: #893700 !important; }
+#ai-bubble { padding: 0; border: 0; letter-spacing: normal; line-height: 1; }
+#ai-close { padding: 0; width: 44px; height: 44px; border: 0; background: transparent; color: inherit; line-height: 1; letter-spacing: normal; box-shadow: none; }
+:focus-visible { outline: 3px solid #ffd080 !important; outline-offset: 4px; }
+@media (max-width: 736px) {
+ :root { --hero-image: url("../../images/hero-mobile.webp"); }
+ body, #page-wrapper, #main > header, #three { background-attachment: scroll; }
+}
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
