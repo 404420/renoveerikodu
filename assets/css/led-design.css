@@ -1,0 +1,153 @@
+/* LED service page only. Shared header, navigation and menu styles stay intact. */
+.led-page { background: #171917; }
+.led-page #header { background: #2e3842; }
+.led-design { --led-ink: #20241f; --led-paper: #f3f1e9; --led-muted: #b9bdb3; --led-accent: #efbc75; color: var(--led-paper); background: #171917; font-family: Arial, Helvetica, sans-serif; font-size: 16px; letter-spacing: 0; line-height: 1.7; }
+.led-design *, .led-design *::before, .led-design *::after { box-sizing: border-box; }
+.led-design h1, .led-design h2, .led-design h3 { color: inherit; font-family: Arial, Helvetica, sans-serif; text-transform: none; letter-spacing: -.055em; font-weight: 400; line-height: 1.08; margin: 0; }
+.led-design h1 { font-size: clamp(64px, 6.4vw, 98px); }
+.led-design h2 { font-size: clamp(38px, 4.3vw, 62px); }
+.led-design h3 { font-size: 29px; letter-spacing: -.035em; line-height: 1.2; }
+.led-design em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: inherit; }
+.led-design p { margin: 0; }
+.led-design a { border: 0; color: inherit; text-decoration: none; }
+.led-design a:hover { color: inherit; }
+.led-design img { display: block; max-width: 100%; object-fit: cover; }
+.led-design .led-eyebrow { font-size: 10px; font-weight: 600; line-height: 1.6; letter-spacing: .19em; text-transform: uppercase; }
+.led-design .led-small { font-size: 12px; line-height: 1.6; color: #b9bdb3; }
+.led-design .led-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; background: var(--led-accent); color: #22251e; font-size: 13px; font-weight: 600; padding: 19px 25px; min-height: 58px; line-height: 1.4; border: 1px solid transparent; border-radius: 2px; transition: background .2s, transform .2s; }
+.led-design .led-button:hover { background: #ffd49b; transform: translateY(-2px); }
+.led-button span { font-size: 23px; font-weight: 400; }
+.led-design .led-text-link { display: inline-flex; align-items: center; gap: 22px; font-size: 13px; font-weight: 600; min-height: 46px; border-bottom: 1px solid currentColor; }
+.led-text-link span { font-size: 22px; }
+.led-hero { display: grid; grid-template-columns: 1.02fr 1fr; max-width: 1600px; margin: auto; min-height: min(750px, 88svh); }
+.led-hero-copy { padding: clamp(55px, 7vw, 105px) 50px 45px clamp(30px, 6vw, 100px); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.led-hero-copy > .led-eyebrow { display: flex; align-items: center; gap: 10px; color: #d4d8cb; margin-bottom: 34px; }
+.led-dot { width: 6px; height: 6px; background: var(--led-accent); border-radius: 50%; box-shadow: 0 0 14px #efbc7580; flex-shrink: 0; }
+.led-hero h1 em { color: var(--led-accent); }
+.led-design .led-lead { margin-top: 29px; color: #bfc2b9; font-size: 16px; line-height: 1.9; }
+.led-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-top: 35px; }
+.led-hero-note { display: flex; align-items: center; gap: 17px; margin-top: 58px; font-size: 11px; line-height: 1.9; color: #bfc2b9; }
+.led-hero-note strong { color: #e1e3d9; font-weight: 400; }
+.led-note-line { width: 32px; height: 1px; background: var(--led-accent); box-shadow: 0 0 12px #efbc7580; }
+.led-hero-photo { position: relative; margin: 0; min-width: 0; overflow: hidden; }
+.led-hero-photo > img { width: 100%; height: 100%; position: absolute; inset: 0; object-position: center 30%; }
+.led-photo-shade { position: absolute; inset: 0; background: linear-gradient(0deg, #0d100deb, transparent 38%), linear-gradient(90deg, #17191722, transparent 35%); }
+.led-hero-photo figcaption { position: absolute; left: 35px; right: 35px; bottom: 30px; display: flex; flex-direction: column; gap: 8px; }
+.led-hero-photo figcaption > span:first-child { color: #d0d0c6; font-size: 9px; letter-spacing: .18em; }
+.led-hero-photo figcaption strong { color: #f3f1e9; font-size: 21px; font-weight: 400; letter-spacing: -.02em; }
+.led-photo-index { position: absolute; right: 0; bottom: 1px; color: #c1c3b8; font-size: 10px; letter-spacing: .12em; }
+.led-service-strip { display: grid; grid-template-columns: repeat(3, 1fr) 1.2fr; padding: 0 6vw; border-top: 1px solid #373c32; border-bottom: 1px solid #373c32; }
+.led-service-strip > span, .led-service-strip > a { padding: 24px 18px; font-size: 13px; border-right: 1px solid #373c32; display: flex; gap: 20px; align-items: center; }
+.led-service-strip > span:first-child { padding-left: 0; }
+.led-service-strip i { font-size: 10px; font-style: normal; color: #a6ad9c; }
+.led-service-strip > a { border: 0; justify-content: flex-end; color: var(--led-accent); padding-right: 0; }
+.led-service-strip > a span { font-size: 23px; }
+.led-section { padding: 105px max(30px, calc((100vw - 1230px)/2)); scroll-margin-top: 75px; }
+.led-section-heading { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: end; margin-bottom: 60px; }
+.led-section-heading .led-eyebrow, .led-planning .led-eyebrow, .led-faq .led-eyebrow { margin-bottom: 22px; }
+.led-section-heading > p { max-width: 415px; color: #65695e; font-size: 15px; padding-bottom: 4px; }
+.led-solutions { background: var(--led-paper); color: var(--led-ink); }
+.led-solution-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 34px; }
+.led-solution { min-width: 0; }
+.led-solution > .led-eyebrow { margin-top: 26px; color: #626851; }
+.led-solution h3 { margin: 13px 0 18px; }
+.led-solution > p:not(.led-eyebrow) { color: #62665c; font-size: 14px; line-height: 1.8; min-height: 102px; }
+.led-design .led-card-link { border-top: 1px solid #d1d3c6; min-height: 58px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; font-weight: 600; margin-top: 20px; }
+.led-card-link span { font-size: 22px; }
+.led-line-art { position: relative; height: 220px; overflow: hidden; background: #242821; }
+.led-art-wall { position: absolute; inset: 34px 40px 0; border: 1px solid #555b48; background: linear-gradient(120deg,#363b2e,#21251e); }
+.led-art-beam { position: absolute; height: 3px; top: 53px; left: 41px; right: 40px; background: #ffe3a5; box-shadow: 0 7px 24px 6px #ffca7555,0 1px 5px #fff5c4; }
+.led-art-ceiling .led-art-wall { transform: perspective(450px) rotateY(-18deg); }
+.led-art-ceiling .led-art-beam { transform: perspective(450px) rotateY(-18deg); }
+.led-art-furniture { position: absolute; bottom: 30px; left: 58px; right: 30px; height: 45px; background: #555a49; border-top: 1px solid #858771; box-shadow: 0 16px 28px #0005; }
+.led-art-kitchen { background: #2d3028; }
+.led-art-kitchen .led-art-wall { inset: 28px 33px auto; height: 77px; background: repeating-linear-gradient(90deg,#454939 0,#454939 75px,#292d22 76px,#292d22 78px); border: 0; }
+.led-art-kitchen .led-art-beam { top: 105px; left: 34px; right: 33px; }
+.led-art-kitchen .led-art-furniture { bottom: 26px; left: 33px; right: 33px; height: 21px; background: #9b9980; box-shadow: 0 -10px 35px #d6b97825; }
+.led-art-stairs { background: linear-gradient(125deg,#353629,#1c211b); }
+.led-step-art { position: absolute; width: 72%; height: 26px; background: #6f6750; transform: skewY(-15deg); border-bottom: 3px solid #ffe2a7; box-shadow: 0 13px 24px #ffca7530; left: 24%; bottom: 28px; }
+.led-step-art:nth-child(2) { left: 13%; bottom: 71px; }
+.led-step-art:nth-child(3) { left: 2%; bottom: 114px; }
+.led-step-art:nth-child(4) { left: -9%; bottom: 157px; }
+.led-mood { display: grid; grid-template-columns: 1fr 1fr; min-height: 575px; background: #252a23; }
+.led-mood-copy { padding: 80px clamp(30px,6vw,100px); }
+.led-mood-copy .led-eyebrow { color: #c4c9ba; margin-bottom: 25px; }
+.led-mood h2 em { color: var(--led-accent); }
+.led-mood-copy > p:not(.led-eyebrow) { margin-top: 24px; max-width: 470px; color: #c1c5b9; font-size: 14px; }
+.led-tone-options { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 30px; }
+.led-design .led-tone-options button { height: auto; padding: 15px 7px; line-height: 1.4; background: transparent; box-shadow: none; border: 1px solid #69705d; color: #c9cdbe; border-radius: 2px; font: inherit; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; cursor: pointer; }
+.led-tone-options button span { display: block; font-size: 15px; margin-bottom: 4px; }
+.led-design .led-tone-options button[aria-pressed="true"] { color: #f6d6a2; background: #efbc7512; border-color: #efbc75; }
+.led-design .led-tone-options button:hover { background: #ffffff0c; }
+.led-mood-copy > .led-tone-description { min-height: 48px; }
+.led-mood-copy > .led-small { font-size: 11px !important; color: #b9bdb3 !important; }
+.led-room { --glow: #ffe1a2; --wash: #e0b67b55; position: relative; overflow: hidden; min-height: 550px; background: #38382f; }
+.led-room[data-tone="2700"] { --glow: #ffd095; --wash: #dd985d66; }
+.led-room[data-tone="4000"] { --glow: #f5f4e8; --wash: #dee5d766; }
+.led-room-wall { position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 30%, var(--wash), transparent 65%),linear-gradient(115deg,#42453a,#252b25); transition: background .3s; }
+.led-room-ceiling { position: absolute; inset: 0 0 auto; height: 100px; background: #22291f; transform: skewY(-7deg) translateY(-45px); z-index: 2; }
+.led-room-floor { position: absolute; inset: 74% -20% -20%; background: repeating-linear-gradient(102deg,#484535 0,#484535 67px,#33382c 68px,#33382c 70px); transform: perspective(500px) rotateX(50deg); }
+.led-room-light { position: absolute; top: 42px; left: -10%; width: 120%; height: 4px; background: var(--glow); transform: rotate(-7deg); box-shadow: 0 16px 65px 22px var(--wash), 0 0 8px var(--glow); transition: background .3s, box-shadow .3s; z-index: 3; }
+.led-room-art { position: absolute; top: 26%; left: 43%; width: 29%; height: 32%; background: linear-gradient(130deg,#676c5a 48%,#a4a590 49%,#a4a590 52%,#494e40 53%); border: 9px solid #282f25; box-shadow: 4px 9px 18px #1117; }
+.led-room-bench { position: absolute; left: 11%; right: 9%; height: 13%; bottom: 17%; background: #77715a; border-top: 9px solid #a59b7f; box-shadow: 0 25px 40px #13170f80; transform: skewY(-3deg); }
+.led-room-bench::before, .led-room-bench::after { content: ''; position: absolute; top: 100%; width: 5px; height: 29px; background: #151c14; }
+.led-room-bench::before { left: 10%; }.led-room-bench::after { right: 10%; }
+.led-room-caption { position: absolute; bottom: 25px; right: 30px; display: flex; align-items: center; gap: 22px; background: #1c231ac9; padding: 12px 19px; }
+.led-room-caption span { font-size: 9px; letter-spacing: .15em; color: #c7cbbd; }
+.led-room-caption strong { color: #f4ebd8; font-weight: 400; font-size: 18px; }
+.led-process { background: #e9e9df; color: var(--led-ink); }
+.led-process-list { list-style: none; padding: 0; margin: 0; }
+.led-process-list li { display: grid; grid-template-columns: 65px 1fr 220px; gap: 30px; padding: 30px 0; border-top: 1px solid #c9cdbf; align-items: start; }
+.led-process-list li:last-child { border-bottom: 1px solid #c9cdbf; }
+.led-step-number { color: #687058; font: italic 25px Georgia,serif; }
+.led-process-list h3 { font-size: 23px; margin-bottom: 12px; }
+.led-process-list p { color: #616759; font-size: 14px; max-width: 650px; }
+.led-step-tag { padding-top: 7px; font-size: 9px; letter-spacing: .15em; text-align: right; color: #59644b; }
+.led-project { display: grid; grid-template-columns: 1fr 1fr; background: #1c201b; }
+.led-project-photo { position: relative; min-height: 560px; }
+.led-project-photo img { position: absolute; width: 100%; height: 100%; object-position: 50% 35%; }
+.led-image-label { position: absolute; bottom: 22px; left: 25px; background: #192017e6; font-size: 9px; letter-spacing: .13em; padding: 10px 15px; color: #f3f1e9; }
+.led-project-copy { padding: 80px clamp(30px,6vw,100px); align-self: center; }
+.led-project-copy .led-eyebrow { margin-bottom: 24px; color: #c5cabc; }
+.led-project-copy h2 em { color: var(--led-accent); }
+.led-project-copy > p:not(.led-eyebrow) { font-size: 14px; color: #bdc3b4; margin-top: 22px; }
+.led-project-copy > a { margin-top: 24px; }
+.led-planning { display: grid; grid-template-columns: 1.2fr 1fr; gap: 90px; background: var(--led-paper); color: var(--led-ink); }
+.led-planning h2 { font-size: clamp(34px,3.5vw,50px); }
+.led-planning > div > p:not(.led-eyebrow) { font-size: 14px; color: #646a5b; margin-top: 28px; }
+.led-planning .led-text-link { margin-top: 22px; }
+.led-planning-note { padding: 30px; border: 1px solid #c9cdbf; align-self: center; }
+.led-note-symbol { display: block; font-size: 28px; color: #6a755b; margin-bottom: 22px; }
+.led-planning-note h3 { font-size: 25px; }
+.led-planning .led-planning-note p { margin-top: 16px; }
+.led-related { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 22px; }
+.led-related a { font-size: 11px; text-decoration: underline; text-underline-offset: 4px; padding: 7px 0; }
+.led-faq { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; color: var(--led-ink); background: #e9e9df; }
+.led-faq > div > p:not(.led-eyebrow) { margin-top: 25px; max-width: 290px; font-size: 14px; color: #626859; }
+.led-faq-items details { border-bottom: 1px solid #c1c7b6; padding: 0; }
+.led-faq-items details:first-child { border-top: 1px solid #c1c7b6; }
+.led-faq-items summary { display: flex; justify-content: space-between; gap: 20px; padding: 21px 0; list-style: none; font-size: 14px; font-weight: 500; line-height: 1.6; cursor: pointer; }
+.led-faq-items summary::-webkit-details-marker { display: none; }
+.led-faq-items summary::after { content: '+'; font-size: 22px; flex-shrink: 0; line-height: 1; color: #566348; }
+.led-faq-items details[open] summary::after { content: '−'; }
+.led-faq-items details p { font-size: 13px; line-height: 1.8; color: #5c6551; padding: 0 26px 24px 0; }
+.led-contact { position: relative; text-align: center; padding: 100px 25px 70px; overflow: hidden; background: radial-gradient(ellipse at 50% 0,#efbc7514,transparent 55%),#171c15; }
+.led-contact-line { height: 2px; width: min(480px,70%); position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #ffdb9b; box-shadow: 0 7px 55px 13px #efbc7533; }
+.led-contact > .led-eyebrow { color: #c8ccbf; margin-bottom: 28px; }
+.led-contact h2 { font-size: clamp(38px,5.2vw,76px); }
+.led-contact h2 em { color: var(--led-accent); }
+.led-contact > p:not(.led-eyebrow) { margin-top: 25px; color: #bec5b4; font-size: 14px; }
+.led-contact > .led-button { margin-top: 35px; }
+.led-contact-details { display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 12px; color: #c6cbbb; }
+.led-contact-details a { min-height: 34px; display: inline-flex; align-items: center; }
+.led-contact-details > span { color: #7a826e; align-self: center; }
+.led-page #footer { background: #171c15; border-top: 1px solid #363e2e; padding: 30px 20px; }
+.led-page #footer .copyright { color: #b6bcae; margin: 0; font-size: 10px; }
+@media (min-width: 1600px) { .led-service-strip { padding-left: calc((100vw - 1400px)/2); padding-right: calc((100vw - 1400px)/2); } }
+@media (max-width: 1100px) {
+ .led-hero-copy { padding: 60px 30px; }.led-design h1 { font-size: 67px; }.led-hero { min-height: 640px; }.led-hero-note { margin-top: 38px; }.led-section { padding: 75px 35px; }.led-section-heading { gap: 40px; }.led-solution-grid { gap: 24px; }.led-line-art { height: 190px; }.led-process-list li { grid-template-columns: 50px 1fr 150px; gap: 20px; }.led-planning { gap: 45px; }.led-faq { gap: 45px; }.led-mood-copy,.led-project-copy { padding: 65px 35px; }
+}
+@media (max-width: 736px) {
+ .led-design { font-size: 15px; }.led-hero { grid-template-columns: 1fr; min-height: 0; }.led-hero-copy { padding: 46px 25px 38px; }.led-design h1 { font-size: clamp(58px,12.8vw,84px); }.led-hero-copy > .led-eyebrow { font-size: 8px; letter-spacing: .13em; margin-bottom: 25px; }.led-design .led-lead { font-size: 14px; margin-top: 24px; }.led-actions { gap: 20px; margin-top: 25px; }.led-design .led-button { padding: 16px 21px; min-height: 54px; font-size: 12px; gap: 24px; }.led-hero-note { margin-top: 30px; font-size: 10px; }.led-hero-photo { height: 410px; }.led-hero-photo > img { object-position: center 37%; }.led-hero-photo figcaption { left: 25px; right: 25px; bottom: 23px; }.led-service-strip { padding: 0 25px; grid-template-columns: repeat(3,1fr); }.led-service-strip > span { padding: 19px 10px; gap: 8px; font-size: 10px; }.led-service-strip > span:nth-child(3) { border: 0; padding-right: 0; }.led-service-strip > a { display: none; }.led-service-strip i { font-size: 8px; }.led-section { padding: 65px 25px; }.led-section-heading { display: block; margin-bottom: 35px; }.led-design h2 { font-size: 41px; }.led-section-heading > p { font-size: 14px; margin-top: 25px; }.led-solution-grid { grid-template-columns: 1fr; gap: 40px; }.led-line-art { height: 215px; }.led-solution h3 { font-size: 30px; }.led-solution > p:not(.led-eyebrow) { min-height: 0; }.led-card-link { margin-top: 15px !important; }.led-mood { grid-template-columns: 1fr; }.led-mood-copy { padding: 65px 25px 45px; }.led-room { min-height: 410px; }.led-tone-options { max-width: 400px; }.led-mood-copy > .led-tone-description { min-height: 0; }.led-process-list li { grid-template-columns: 34px 1fr; gap: 15px; padding: 25px 0; }.led-process-list h3 { font-size: 22px; }.led-process-list p { font-size: 13px; }.led-step-tag { display: none; }.led-project { grid-template-columns: 1fr; }.led-project-photo { min-height: 425px; }.led-project-copy { padding: 55px 25px 65px; }.led-planning { grid-template-columns: 1fr; gap: 35px; }.led-planning-note { padding: 25px; }.led-faq { grid-template-columns: 1fr; gap: 35px; }.led-faq-items summary { font-size: 13px; }.led-faq > div > p:not(.led-eyebrow) { max-width: none; }.led-contact { padding: 70px 25px 50px; }.led-contact-details { gap: 12px; font-size: 11px; flex-wrap: wrap; }.led-contact h2 { font-size: 41px; }
+}
+@media (prefers-reduced-motion: reduce) { .led-design *, .led-design *::before, .led-design *::after { transition: none !important; scroll-behavior: auto !important; } }
