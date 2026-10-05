@@ -165,4 +165,10 @@
       <image:caption>LED valgustuse paigaldus Tallinnas - Renoveeri Kodu tehtud töö.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.renoveerikodu.ee/korteri-remont/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
