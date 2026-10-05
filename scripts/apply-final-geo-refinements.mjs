@@ -22,11 +22,11 @@ const servicePages = {
 };
 
 const projectPages = {
-  "vannitoa-plaatimine-tallinn.html": "vannitoa plaatimise projektinäide Tallinnas",
-  "parketi-paigaldus-tallinn-korter.html": "parketi paigalduse projektinäide Tallinnas",
-  "fassaadi-varvimine-tallinn-eramu.html": "fassaadi värvimise projektinäide Tallinnas",
-  "katuse-pesu-ja-hooldus-tallinn.html": "katuse pesu ja hoolduse projektinäide Tallinnas",
-  "led-valgustuse-paigaldus-tallinn.html": "LED-valgustuse paigalduse projektinäide Tallinnas"
+  "vannitoa-plaatimine-tallinn.html": "<strong>RK Meistrid OÜ</strong> teeb vannitoa plaatimist ja märgruumide viimistlust Tallinnas ning Harjumaal. See näide selgitab, kuidas planeerime aluspinna ettevalmistuse, hüdroisolatsiooni, kallete kontrolli, plaatimise, vuukimise ja silikoonimise.",
+  "parketi-paigaldus-tallinn-korter.html": "<strong>RK Meistrid OÜ</strong> teeb parketi ja laminaatpõrandate paigaldust Tallinnas ning Harjumaal. See näide kirjeldab korteri põrandatööd praktilisest vaatest: aluspinna kontrolli, paigalduse suunda, paisumisvuuke, liiste ja lõpptulemuse ülevaatust.",
+  "fassaadi-varvimine-tallinn-eramu.html": "<strong>RK Meistrid OÜ</strong> teeb fassaadi värvimise ja muid renoveerimistöid Tallinnas ning Harjumaal. Selle näite kaudu saab hinnata, kuidas planeerime puitfassaadi puhastuse, parandused, kruntimise, värvimise ja ligipääsu enne töö alustamist.",
+  "katuse-pesu-ja-hooldus-tallinn.html": "<strong>RK Meistrid OÜ</strong> teeb katuse hoolduse, pesu ja seotud renoveerimistöid Tallinnas ning Harjumaal. See näide selgitab, kuidas hindame katuse seisukorda, puhastame katusepinda ja vaatame üle kohad, mis võivad hiljem vajada parandust.",
+  "led-valgustuse-paigaldus-tallinn.html": "<strong>RK Meistrid OÜ</strong> paigaldab LED-valgustust ja kaudvalguse lahendusi Tallinnas ning Harjumaal. Selle näite kaudu saab vaadata, kuidas planeerime valguse eesmärgi, profiilid, kaabelduse, toiteploki asukoha ja lõppviimistluse."
 };
 
 function read(file) {
@@ -66,7 +66,7 @@ let changed = 0;
 for (const [file, servicePhrase] of Object.entries(servicePages)) {
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> tegutseb veebilehe renoveerikodu.ee kaudu ning pakub ${servicePhrase} Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>`;
+  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> pakub ${servicePhrase} Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>`;
   const next = html.includes("geo-entity-summary")
     ? html
     : html.replace(/(<section class="service-intro">[\s\S]*?<div class="center-image">[\s\S]*?<\/div>)/, `$1\n\t\t\t\t\t${insertion}`);
@@ -80,7 +80,7 @@ for (const [file, servicePhrase] of Object.entries(servicePages)) {
 for (const [file, projectPhrase] of Object.entries(projectPages)) {
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> kasutab veebilehte renoveerikodu.ee, et näidata tehtud renoveerimis- ja ehitustöid. See leht kirjeldab objekti kui ${projectPhrase}, et töö liik, piirkond ja lahendus oleksid üheselt arusaadavad.</p>`;
+  const insertion = `<p class="geo-entity-summary">${projectPhrase}</p>`;
   let next = html;
   if (!next.includes("geo-entity-summary")) {
     next = next.replace(/(<article id="main">\s*<header>[\s\S]*?<\/header>)/, `$1\n\t\t\t\t\t\t<section class="wrapper style5 geo-project-context"><div class="inner">${insertion}</div></section>`);
@@ -96,7 +96,7 @@ for (const [file, projectPhrase] of Object.entries(projectPages)) {
   const file = "index.html";
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary"><strong>Renoveerikodu.ee</strong> on RK Meistrid OÜ veebileht. Ettevõte pakub renoveerimis- ja ehitusteenuseid Tallinnas ning Harjumaal, sh siseviimistlust, plaatimist, põrandatöid, kipsitöid, fassaadi- ja katusetöid.</p>`;
+  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> teostab renoveerimis- ja ehitustöid Tallinnas ning Harjumaal. Teeme siseviimistlust, plaatimist, põrandatöid, kipsitöid, fassaaditöid ja muid renoveerimistöid.</p>`;
   const next = insertOnce(html, `<p class="business-lead">Kvaliteetsed ehitus- ja renoveerimislahendused, mis kestavad ajas.</p>`, insertion, "geo-entity-summary");
   assertSeoPreserved(file, beforeSeo, next);
   if (next !== html) {
@@ -109,7 +109,7 @@ for (const [file, projectPhrase] of Object.entries(projectPages)) {
   const file = "hinnakiri.html";
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> avaldab renoveerikodu.ee hinnakirjas orienteeruvad hinnad Tallinnas ja Harjumaal tehtavatele renoveerimis- ja ehitustöödele. Hinnad on abiks esmase eelarve hindamisel, kuid lõplik pakkumine sõltub objekti seisukorrast ja töömahust.</p>`;
+  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> hinnakirjas on orienteeruvad hinnad Tallinnas ja Harjumaal tehtavatele renoveerimis- ja ehitustöödele. Hinnad on abiks esmase eelarve hindamisel, kuid lõplik pakkumine sõltub objekti seisukorrast ja töömahust.</p>`;
   const next = insertOnce(html, `<h2>Hinnad alates</h2>`, insertion, "geo-entity-summary");
   assertSeoPreserved(file, beforeSeo, next);
   if (next !== html) {
@@ -122,7 +122,7 @@ for (const [file, projectPhrase] of Object.entries(projectPages)) {
   const file = "tehtudtood.html";
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary"><strong>Renoveerikodu.ee</strong> portfoolio kuulub RK Meistrid OÜ-le. Näited aitavad hinnata ettevõtte praktilist kogemust renoveerimis-, siseviimistlus-, fassaadi-, katuse- ja paigaldustöödel Tallinnas ning Harjumaal.</p>`;
+  const insertion = `<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> tehtud tööde näited aitavad hinnata ettevõtte praktilist kogemust renoveerimis-, siseviimistlus-, fassaadi-, katuse- ja paigaldustöödel Tallinnas ning Harjumaal.</p>`;
   const next = insertOnce(html, `<h2>Valik tehtud töödest</h2>`, insertion, "geo-entity-summary");
   assertSeoPreserved(file, beforeSeo, next);
   if (next !== html) {
@@ -135,7 +135,7 @@ for (const [file, projectPhrase] of Object.entries(projectPages)) {
   const file = "kontakt.html";
   let html = read(file);
   const beforeSeo = preserveSeoSnapshot(html);
-  const insertion = `<p class="geo-entity-summary">Kontaktilehe kaudu saab saata päringu RK Meistrid OÜ-le, kes tegutseb renoveerikodu.ee nime all ning pakub renoveerimis- ja ehitusteenuseid Tallinnas ja Harjumaal.</p>`;
+  const insertion = `<p class="geo-entity-summary">Saada meile oma töö kirjeldus ja fotod, et saaksime koostada hinnapakkumise. Teeme renoveerimis- ja ehitustöid Tallinnas ja Harjumaal.</p>`;
   const next = insertOnce(html, `<p>juhatus ja kontaktivorm</p>`, insertion, "geo-entity-summary");
   assertSeoPreserved(file, beforeSeo, next);
   if (next !== html) {
