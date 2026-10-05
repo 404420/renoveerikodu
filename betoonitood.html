@@ -31,11 +31,11 @@
 	<meta property="og:description" content="Betoonitööd Tallinnas ja Harjumaal. Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide paigaldus." />
 	<meta property="og:url" content="https://www.renoveerikodu.ee/betoonitood" />
 	<meta property="og:site_name" content="Renoveeri Kodu" />
-	<meta property="og:image" content="https://www.renoveerikodu.ee/images/betoonivalu-ja-betoonkonstruktsioonide-paigaldus-tallinn.png" />
+	<meta property="og:image" content="https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Betoonitööd Tallinnas ja Harjumaal | Renoveeri Kodu" />
 	<meta name="twitter:description" content="Betoonitööd Tallinnas ja Harjumaal. Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide paigaldus." />
-	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/betoonivalu-ja-betoonkonstruktsioonide-paigaldus-tallinn.png" />
+	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
 		<style>
@@ -131,6 +131,86 @@ img {
 	bottom: 15px;
 }
 
+.concrete-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 0 0 2rem;
+}
+
+.concrete-gallery button {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	cursor: zoom-in;
+	padding: 0;
+	width: 100%;
+}
+
+.concrete-gallery img {
+	aspect-ratio: 4 / 3;
+	border-radius: 10px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	width: 100%;
+}
+
+.concrete-gallery button:hover img,
+.concrete-gallery button:focus-visible img {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	transform: translateY(-3px);
+}
+
+.gallery-lightbox[hidden] { display: none; }
+.gallery-lightbox {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.92);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	padding: 4rem 5rem;
+	position: fixed;
+	z-index: 10000;
+}
+
+.gallery-lightbox__image {
+	max-height: calc(100vh - 8rem);
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.gallery-lightbox__close,
+.gallery-lightbox__nav {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.14);
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	border-radius: 50%;
+	color: #fff;
+	display: flex;
+	font-size: 2rem;
+	height: 3rem;
+	justify-content: center;
+	line-height: 1;
+	padding: 0;
+	position: absolute;
+	width: 3rem;
+}
+
+.gallery-lightbox__close { right: 1rem; top: 1rem; }
+.gallery-lightbox__prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.gallery-lightbox__next { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+body.lightbox-open { overflow: hidden; }
+
+@media (max-width: 736px) {
+	.concrete-gallery { grid-template-columns: 1fr; }
+	.gallery-lightbox { padding: 4.5rem 0.75rem; }
+	.gallery-lightbox__image { max-height: calc(100vh - 9rem); }
+	.gallery-lightbox__nav { bottom: 1rem; top: auto; transform: none; }
+}
+
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -184,7 +264,7 @@ img {
       ],
       "serviceType": "Betoonitööd Tallinnas ja Harjumaal",
       "url": "https://www.renoveerikodu.ee/betoonitood",
-      "image": "https://www.renoveerikodu.ee/images/betoonitood-aluspinna-moodistamine-tallinn.png"
+      "image": "https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg"
     },
     {
       "@type": "FAQPage",
@@ -259,9 +339,9 @@ img {
     {
       "@type": "ImageObject",
       "@id": "https://www.renoveerikodu.ee/betoonitood#image-1",
-      "url": "https://www.renoveerikodu.ee/images/betoonitood-aluspinna-moodistamine-tallinn.png",
-      "contentUrl": "https://www.renoveerikodu.ee/images/betoonitood-aluspinna-moodistamine-tallinn.png",
-      "caption": "Betoonitööd Tallinnas"
+	  "url": "https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg",
+	  "contentUrl": "https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg",
+	  "caption": "Valmis betoonplaat Tallinnas ja Harjumaal"
     }
   ]
 }
@@ -327,8 +407,16 @@ img {
 						<section class="wrapper style5 seo-service-page">
 							<div class="inner">
 								<section class="service-intro">
-									<div class="center-image">
-										<img src="images/betoonitood-aluspinna-moodistamine-tallinn.png.optimized.webp" alt="Betoonitööd Tallinnas" width="1280" height="853" loading="lazy" decoding="async">
+									<div class="concrete-gallery" aria-label="Betoonitööde galerii">
+										<button type="button" data-gallery-index="0" aria-label="Ava suurelt: betoonterrassi aluse armeerimine">
+											<img src="images/betoonterrassi_aluse_armeerimine.jpg" alt="Betoonterrassi aluse raketise ja armatuurvõrgu paigaldamine" width="2048" height="1536" loading="eager" decoding="async">
+										</button>
+										<button type="button" data-gallery-index="1" aria-label="Ava suurelt: betoonplaadi valu ja pinna silumine">
+											<img src="images/betoonplaadi_valu_ja_pinna_silumine.jpg" alt="Betoonplaadi valu ja värske betoonpinna silumine" width="2048" height="1536" loading="lazy" decoding="async">
+										</button>
+										<button type="button" data-gallery-index="2" aria-label="Ava suurelt: valmis betoonitööd Tallinnas ja Harjumaal">
+											<img src="images/betoonitood_tallinnas_ja_harjumaal.jpg" alt="Valmis betoonplaat varjualuse all Tallinnas ja Harjumaal" width="2048" height="1536" loading="lazy" decoding="async">
+										</button>
 									</div>
 					<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> pakub betoonitöid ja aluspinna ettevalmistust Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>
 									<p>Betoonitööd vajavad täpset ettevalmistust, õiget armeerimist ja läbimõeldud järelhooldust. Renoveeri Kodu teeb väiksemaid ja keskmisi betoonitöid Tallinnas ning Harjumaal, sealhulgas aluspindu, valusid ja betoonkonstruktsioonide ettevalmistust.</p>
@@ -457,6 +545,13 @@ img {
 						</section>
 					</article>
 </main>
+
+				<div class="gallery-lightbox" id="concrete-lightbox" role="dialog" aria-modal="true" aria-label="Betoonitööde pildigalerii" hidden>
+					<button type="button" class="gallery-lightbox__close" aria-label="Sulge galerii">&times;</button>
+					<button type="button" class="gallery-lightbox__nav gallery-lightbox__prev" aria-label="Eelmine pilt">&#8249;</button>
+					<img class="gallery-lightbox__image" src="" alt="">
+					<button type="button" class="gallery-lightbox__nav gallery-lightbox__next" aria-label="Järgmine pilt">&#8250;</button>
+				</div>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -737,6 +832,68 @@ msg.innerHTML = `<div class="unsub-error">Serveri viga</div>`;
 
 });
 
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const triggers = Array.from(document.querySelectorAll("[data-gallery-index]"));
+	const lightbox = document.getElementById("concrete-lightbox");
+	if (!triggers.length || !lightbox) return;
+
+	const image = lightbox.querySelector(".gallery-lightbox__image");
+	const closeButton = lightbox.querySelector(".gallery-lightbox__close");
+	const previousButton = lightbox.querySelector(".gallery-lightbox__prev");
+	const nextButton = lightbox.querySelector(".gallery-lightbox__next");
+	let currentIndex = 0;
+	let lastTrigger = null;
+	let touchStartX = 0;
+
+	function show(index) {
+		currentIndex = (index + triggers.length) % triggers.length;
+		const thumbnail = triggers[currentIndex].querySelector("img");
+		image.src = thumbnail.src;
+		image.alt = thumbnail.alt;
+	}
+
+	function open(index, trigger) {
+		lastTrigger = trigger;
+		show(index);
+		lightbox.hidden = false;
+		document.body.classList.add("lightbox-open");
+		closeButton.focus();
+	}
+
+	function close() {
+		lightbox.hidden = true;
+		document.body.classList.remove("lightbox-open");
+		image.src = "";
+		if (lastTrigger) lastTrigger.focus();
+	}
+
+	triggers.forEach(function (trigger, index) {
+		trigger.addEventListener("click", function () { open(index, trigger); });
+	});
+	previousButton.addEventListener("click", function () { show(currentIndex - 1); });
+	nextButton.addEventListener("click", function () { show(currentIndex + 1); });
+	closeButton.addEventListener("click", close);
+	lightbox.addEventListener("click", function (event) {
+		if (event.target === lightbox) close();
+	});
+	lightbox.addEventListener("touchstart", function (event) {
+		touchStartX = event.changedTouches[0].clientX;
+	}, { passive: true });
+	lightbox.addEventListener("touchend", function (event) {
+		const distance = event.changedTouches[0].clientX - touchStartX;
+		if (Math.abs(distance) < 50) return;
+		show(currentIndex + (distance < 0 ? 1 : -1));
+	}, { passive: true });
+	document.addEventListener("keydown", function (event) {
+		if (lightbox.hidden) return;
+		if (event.key === "Escape") close();
+		if (event.key === "ArrowLeft") show(currentIndex - 1);
+		if (event.key === "ArrowRight") show(currentIndex + 1);
+	});
 });
 </script>
 	</body>
