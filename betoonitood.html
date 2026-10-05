@@ -139,10 +139,16 @@ img {
 }
 
 .concrete-gallery button {
+	aspect-ratio: 4 / 3;
 	background: none;
 	border: 0;
 	box-shadow: none;
 	cursor: zoom-in;
+	display: block;
+	height: auto !important;
+	line-height: normal;
+	min-height: 0;
+	overflow: hidden;
 	padding: 0;
 	width: 100%;
 }
@@ -205,7 +211,10 @@ img {
 body.lightbox-open { overflow: hidden; }
 
 @media (max-width: 736px) {
-	.concrete-gallery { grid-template-columns: 1fr; }
+	.concrete-gallery {
+		gap: 1.25rem;
+		grid-template-columns: 1fr;
+	}
 	.gallery-lightbox { padding: 4.5rem 0.75rem; }
 	.gallery-lightbox__image { max-height: calc(100vh - 9rem); }
 	.gallery-lightbox__nav { bottom: 1rem; top: auto; transform: none; }
