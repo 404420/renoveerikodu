@@ -3837,6 +3837,52 @@ input, select, textarea {
 	}
 
 /* CTA */
+.service-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  background: #22303b;
+  color: #fff;
+  font-size: .85em;
+  letter-spacing: .035em;
+  text-align: center;
+}
+
+.service-trust-strip strong { color: #fff; }
+
+.service-trust-strip span::before {
+  content: "✓";
+  margin-right: .45rem;
+  color: #eb6e00;
+  font-weight: 800;
+}
+
+.service-trust-strip a {
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 6px;
+  padding: .45rem .75rem;
+  font-weight: 700;
+}
+
+.home-trust-strip {
+  margin: 0 auto 2rem;
+  max-width: 1100px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 736px) {
+  .service-trust-strip {
+    align-items: stretch;
+    flex-direction: column;
+    gap: .65rem;
+    padding: 1rem;
+  }
+
+  .service-trust-strip a { display: block; }
+}
 
 	#cta .inner {
 		display: -moz-flex;

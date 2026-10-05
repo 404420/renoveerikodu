@@ -23,11 +23,11 @@ const SERVICE_PAGES = {
 };
 
 const PROJECT_PAGES = {
-  "vannitoa-plaatimine-tallinn.html": "Vannitoa plaatimine Tallinnas",
-  "parketi-paigaldus-tallinn-korter.html": "Parketi paigaldus Tallinnas korteris",
-  "fassaadi-varvimine-tallinn-eramu.html": "Fassaadi värvimine Tallinnas eramul",
-  "katuse-pesu-ja-hooldus-tallinn.html": "Katuse pesu ja hooldus Tallinnas",
-  "led-valgustuse-paigaldus-tallinn.html": "LED valgustuse paigaldus Tallinnas"
+  "vannitoa-plaatimine-tallinn.html": ["Vannitoa plaatimine Tallinnas", "2026-06-03", "2026-10-05"],
+  "parketi-paigaldus-tallinn-korter.html": ["Parketi paigaldus Tallinnas korteris", "2026-06-03", "2026-10-05"],
+  "fassaadi-varvimine-tallinn-eramu.html": ["Fassaadi värvimine Tallinnas eramul", "2026-06-03", "2026-10-05"],
+  "katuse-pesu-ja-hooldus-tallinn.html": ["Katuse pesu ja hooldus Tallinnas", "2026-06-03", "2026-10-05"],
+  "led-valgustuse-paigaldus-tallinn.html": ["LED valgustuse paigaldus Tallinnas", "2026-06-03", "2026-10-05"]
 };
 
 function stripTags(value = "") {
@@ -186,7 +186,7 @@ function service(url, name, description, images) {
   return node;
 }
 
-function article(url, headline, description, images) {
+function article(url, headline, description, images, datePublished, dateModified) {
   const node = {
     "@type": "Article",
     "@id": `${url}#article`,
@@ -196,6 +196,8 @@ function article(url, headline, description, images) {
     mainEntityOfPage: { "@id": `${url}#webpage` },
     publisher: { "@id": `${BASE}/#organization` },
     author: { "@id": `${BASE}/kontakt#hans-suurvali` },
+    datePublished,
+    dateModified,
     inLanguage: "et"
   };
   if (images[0]) node.image = [absUrl(images[0].src)];
@@ -251,7 +253,7 @@ function portfolioCollection() {
       "@type": "ItemList",
       "@id": `${BASE}/tehtudtood#projects`,
       name: "Renoveeri Kodu projektinäited",
-      itemListElement: Object.entries(PROJECT_PAGES).map(([file, name], index) => ({
+      itemListElement: Object.entries(PROJECT_PAGES).map(([file, [name]], index) => ({
         "@type": "ListItem",
         position: index + 1,
         url: pageUrl(file),
@@ -288,7 +290,8 @@ for (const file of fs.readdirSync(ROOT).filter((name) => name.endsWith(".html"))
     const faqNode = faq(url, parsed.details);
     if (faqNode) graph.push(faqNode);
   } else if (PROJECT_PAGES[file]) {
-    graph.push(article(url, PROJECT_PAGES[file], description, parsed.images));
+    const [headline, datePublished, dateModified] = PROJECT_PAGES[file];
+    graph.push(article(url, headline, description, parsed.images, datePublished, dateModified));
     const faqNode = faq(url, parsed.details);
     if (faqNode) graph.push(faqNode);
   } else if (file === "hinnakiri.html") {
