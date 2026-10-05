@@ -216,12 +216,12 @@ function offerCatalog() {
   const offers = [
     ["Kipsplaadi paigaldus", "16", "m2"],
     ["Pahteldus ja lihvimine", "9", "m2"],
-    ["Kruntimine", "3.5", "m2"],
-    ["Värvimine, 2 kihti", "7.5", "m2"],
+    ["Kruntimine", "4", "m2"],
+    ["Värvimine, 2 kihti", "8", "m2"],
     ["Hüdroisolatsiooni paigaldus", "14", "m2"],
     ["Seinte ja põranda plaatimine", "49", "m2"],
     ["Laudparketi paigaldus", "12", "m2"],
-    ["Laminaatparketi paigaldus", "9", "m2"],
+    ["Laminaatparketi paigaldus", "13", "m2"],
     ["Fassaadi pesu või puhastus", "6", "m2"]
   ];
   return {

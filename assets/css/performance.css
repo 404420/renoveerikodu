@@ -18,3 +18,22 @@ button.primary:hover, .button.primary:hover, .floating-contact:hover { backgroun
 @media (prefers-reduced-motion: reduce) {
  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Compact homepage trust signals; inherit the existing hero typography. */
+#banner .hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5em 1.5em;
+  max-width: 70em;
+  margin: 0 auto 1.5em;
+  padding: 0 1em;
+  list-style: none;
+  font-size: .85em;
+  line-height: 1.5;
+}
+#banner .hero-trust li { padding: 0; }
+@media screen and (max-width: 736px) {
+  #banner .hero-trust { max-width: 30em; gap: .35em 1em; font-size: .8em; }
+  #banner .hero-trust li:first-child { flex-basis: 100%; }
+}

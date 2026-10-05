@@ -21,7 +21,7 @@ const SERVICE_FILES = [
 ];
 
 const trustStrip = `<aside class="service-trust-strip" aria-label="Teenuse eelised">
-  <strong>3-aastane garantii tehtud töödele</strong>
+  <strong>3-aastane garantii tehtud ehitus- ja viimistlustöödele</strong>
   <span>Selge hinnapakkumine</span>
   <span>Tallinn ja Harjumaa</span>
   <a href="kontakt.html#vorm">Saada töö kirjeldus ja fotod</a>
@@ -29,12 +29,26 @@ const trustStrip = `<aside class="service-trust-strip" aria-label="Teenuse eelis
 
 const guaranteeFaq = `<details>
   <summary>Kas tehtud töödele kehtib garantii?</summary>
-  <p>Jah. RK Meistrid OÜ tehtud töödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises.</p>
+  <p>Jah. RK Meistrid OÜ tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises.</p>
 </details>`;
 
 for (const file of SERVICE_FILES) {
   const filePath = path.join(ROOT, file);
   let html = fs.readFileSync(filePath, "utf8");
+  // Temporary and preparatory services must not inherit the construction warranty.
+  const safetyContent = {
+    "lumetood.html": ["Kogenud meeskond ja kokkulepitud töökorraldus", "Kuidas korraldate lumetööde ohutuse?", "Enne lumekoristust hindame ligipääsu ja ohuala, lepime kokku töömahu ning korraldame töö nii, et kaitsta inimesi ja vara."],
+    "tellingutepaigaldus.html": ["Korrektne ja turvaline teostus", "Kuidas tagate tellingute turvalise paigalduse?", "Enne paigaldust hindame aluspinda, ligipääsu ja töö kõrgust. Tellingute lahendus ja kasutustingimused lepitakse kokku vastavalt objektile."],
+    "lammutustood.html": ["Korrektne ja turvaline teostus", "Kuidas tagate lammutustööde ohutuse?", "Enne lammutamist täpsustame eemaldatavad osad, kaitseme säilivad pinnad ning lepime kokku jäätmete käitlemise ja töökorralduse. Kandvate konstruktsioonide muutmine vajab projekti ja kooskõlastusi."]
+  }[file];
+  const serviceTrust = safetyContent
+    ? trustStrip.replace("3-aastane garantii tehtud ehitus- ja viimistlustöödele", safetyContent[0])
+    : trustStrip;
+  const faqQuestion = safetyContent?.[1] ?? "Kas tehtud töödele kehtib garantii?";
+  const serviceFaq = safetyContent
+    ? `<details><summary>${faqQuestion}</summary><p>${safetyContent[2]}</p></details>`
+    : guaranteeFaq;
+
 
   if (!html.includes('class="service-trust-strip"')) {
     const articleStart = html.search(/<article\b/i);
@@ -46,18 +60,18 @@ for (const file of SERVICE_FILES) {
         ? h1End + "</h1>".length
         : -1;
     if (insertAt < 0) throw new Error(`${file}: service heading not found`);
-    html = `${html.slice(0, insertAt)}\n${trustStrip}${html.slice(insertAt)}`;
+    html = `${html.slice(0, insertAt)}\n${serviceTrust}${html.slice(insertAt)}`;
   }
 
-  if (!html.includes("Kas tehtud töödele kehtib garantii?")) {
+  if (!html.includes(faqQuestion)) {
     const faqMatch = html.match(/<section class="service-faq">[\s\S]*?<\/section>/i);
     if (faqMatch) {
-      const enhancedFaq = faqMatch[0].replace(/<\/section>\s*$/i, `${guaranteeFaq}\n</section>`);
+      const enhancedFaq = faqMatch[0].replace(/<\/section>\s*$/i, `${serviceFaq}\n</section>`);
       html = html.replace(faqMatch[0], enhancedFaq);
     } else if (file === "ledlahendused.html") {
       const ledFaq = html.match(/<section class="led-section led-faq"[\s\S]*?<\/section>/i);
       if (!ledFaq) throw new Error(`${file}: LED FAQ section not found`);
-      const enhancedLedFaq = ledFaq[0].replace(/<\/div><\/section>\s*$/i, `${guaranteeFaq}</div></section>`);
+      const enhancedLedFaq = ledFaq[0].replace(/<\/div><\/section>\s*$/i, `${serviceFaq}</div></section>`);
       html = html.replace(ledFaq[0], enhancedLedFaq);
     } else {
       throw new Error(`${file}: service FAQ not found`);
