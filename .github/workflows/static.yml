@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -- *.html *.png *.ico robots.txt sitemap.xml site.webmanifest .nojekyll _site/
-          cp -R -- assets images _site/
+          cp -R -- assets images korteri-remont _site/
           if [ -f CNAME ]; then cp CNAME _site/; fi
           if find _site -type f \( -name '*.php' -o -name '*.sql' -o -name '*.zip' \) | grep -q .; then
             echo 'Unexpected server-only file in the Pages artifact.'
