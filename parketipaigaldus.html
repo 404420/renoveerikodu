@@ -228,6 +228,22 @@ img {
 .parquet-process-note { font-size: 0.9em; }
 @media (max-width: 736px) { .parquet-process-grid { grid-template-columns: 1fr; gap: 24px; } }
 
+
+/* Keep parquet photos within the content area on phones. */
+#main .inner img { max-width: 100%; }
+#main .center-image { width: 100%; max-width: 100%; margin: 0 0 2rem; overflow: hidden; border-radius: 12px; }
+#main .center-image img { display: block; width: 100%; height: 420px; object-fit: cover; object-position: center bottom; }
+@media (max-width: 736px) {
+  #main > header { padding: 5em 1.25em 2.5em; }
+  #main > header h1 { font-size: 1.1em; line-height: 1.45; overflow-wrap: anywhere; }
+  #main > header p { font-size: 0.84em; letter-spacing: 0.12em; line-height: 1.55; }
+  #main .wrapper { padding: 2em 0; }
+  #main .wrapper > .inner { box-sizing: border-box; width: 100%; max-width: 100%; padding-left: 1.25em; padding-right: 1.25em; }
+  #main .center-image img { height: 220px; }
+  #main .parquet-process-card img { width: 100%; height: auto; max-height: 220px; object-fit: contain; }
+  #main .parkett-service-card > img, #main .parkett-choice-card img { height: 200px; object-fit: cover; }
+}
+
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
