@@ -383,5 +383,16 @@
 <script fetchpriority="low" src="assets/js/breakpoints.min.js"></script>
 <script fetchpriority="low" src="assets/js/util.js"></script>
 <script fetchpriority="low" src="assets/js/main.js?v=20260913"></script>
+<script>
+(function () {
+  function showFlooringPrices() {
+    if (window.location.hash !== '#porandatood') return;
+    var target = document.getElementById('porandatood');
+    if (target) target.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('load', showFlooringPrices);
+  window.addEventListener('hashchange', showFlooringPrices);
+})();
+</script>
 </body>
 </html>
