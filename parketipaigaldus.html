@@ -219,6 +219,15 @@ img {
 	background-size: cover;
 }
 
+
+.parquet-process-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 24px 0; }
+.parquet-process-card { min-width: 0; }
+.parquet-process-card figure { margin: 0 0 18px; }
+.parquet-process-card img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.parquet-process-card h3 { margin: 0 0 12px; }
+.parquet-process-note { font-size: 0.9em; }
+@media (max-width: 736px) { .parquet-process-grid { grid-template-columns: 1fr; gap: 24px; } }
+
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -424,15 +433,15 @@ img {
 									<h2 id="parketitoode-valik">Millise põrandatööga saame aidata?</h2>
 									<div class="parkett-service-grid">
 										<article class="parkett-service-card">
-											<img src="images/parkett-aluspind.jpg" alt="Parketi paigalduseks ette valmistatud aluspõrand" width="600" height="450" loading="lazy" decoding="async">
+											<img src="images/parketi-protsess-aluspinna-kontroll.svg" alt="Aluspõranda tasasuse kontroll pika kontroll-lati ja mõõtekiiluga" width="763" height="506" loading="lazy" decoding="async">
 											<div><h3>Aluspinna kontroll ja ettevalmistus</h3><p>Kontrollime tasasust ja stabiilsust ning hindame, kas vana kate tuleb eemaldada. Vajadusel lepime kokku puhastuse, paranduse või tasanduse enne uue põranda paigaldamist.</p></div>
 										</article>
 										<article class="parkett-service-card">
-											<img src="images/parkett-paigaldus_tallinn.jpg.optimized.webp" alt="Paigaldatud puitparkett valgusküllases ruumis" width="600" height="450" loading="lazy" decoding="async">
+											<img src="images/parketi-protsess-parketi-paigaldamine.svg" alt="Parketilaua ühendamine paigaldatud ridadega aluskatte peal, seina ääres paisumisvuugi vahekiilud" width="763" height="506" loading="lazy" decoding="async">
 											<div><h3>Parketi ja laminaadi paigaldus</h3><p>Paigaldame põrandakatte tootja juhiste järgi, jätame vajalikud paisumisvuugid ning lahendame ukseavad, torude ümbrused ja üleminekud teiste põrandakatetega.</p></div>
 										</article>
 										<article class="parkett-service-card">
-											<img src="images/parkett-viimistlus.jpg" alt="Parketi paigaldus ja detailide viimistlemine korteris" width="600" height="450" loading="lazy" decoding="async">
+											<img src="images/parketi-protsess-servad-ja-uleminekud.svg" alt="Valge põrandaliist ja viimistletud üleminek tammepuidust parketilt hallile plaadile ukseavas" width="763" height="506" loading="lazy" decoding="async">
 											<div><h3>Liistud ja detailide viimistlus</h3><p>Paigaldame põrandaliistud ja üleminekuprofiilid, kontrollime uste liikumist ning lõpetame servad nii, et tulemus oleks puhas ja kasutusvalmis.</p></div>
 										</article>
 										<article class="parkett-service-card">
@@ -502,11 +511,15 @@ img {
 								</section>
 
 								<section aria-labelledby="tehtud-parketitoo">
-									<h2 id="tehtud-parketitoo">Vaata tehtud parketitööd</h2>
-									<div class="parkett-project-image"><img src="images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg.optimized.webp" alt="Valmis parkett Tallinna korteri elutoas" width="1280" height="960" loading="lazy" decoding="async"></div>
-									<p>Tehtud töö näites on näha aluspinna kontroll, paigaldussuuna valik, põranda paigaldus ning servade ja üleminekute lõpetamine.</p>
-									<p><a href="parketi-paigaldus-tallinn-korter.html">Vaata Tallinna korteri parketipaigalduse tööprotsessi</a></p>
-								</section>
+  <h2 id="tehtud-parketitoo">Parketipaigalduse tööprotsess</h2>
+  <p>Aluspinna kontrollist valmis põrandani: allolevad pildid illustreerivad paigalduse nelja etappi.</p>
+  <div class="parquet-process-grid"><article class="parquet-process-card"><figure><img src="images/parketi-protsess-aluspinna-kontroll.svg" alt="Aluspõranda tasasuse kontroll pika kontroll-lati ja mõõtekiiluga" width="763" height="506" loading="lazy" decoding="async"></figure><h3>1. Aluspinna kontroll</h3></article>
+<article class="parquet-process-card"><figure><img src="images/parketi-protsess-paigaldussuuna-valik.svg" alt="Kaks proovipaigutust: parketilauad aknast tuleva valgusega samas suunas ja risti" width="763" height="506" loading="lazy" decoding="async"></figure><h3>2. Paigaldussuuna valik</h3></article>
+<article class="parquet-process-card"><figure><img src="images/parketi-protsess-parketi-paigaldamine.svg" alt="Parketilaua ühendamine paigaldatud ridadega aluskatte peal, seina ääres paisumisvuugi vahekiilud" width="763" height="506" loading="lazy" decoding="async"></figure><h3>3. Parketi paigaldamine</h3></article>
+<article class="parquet-process-card"><figure><img src="images/parketi-protsess-servad-ja-uleminekud.svg" alt="Valge põrandaliist ja viimistletud üleminek tammepuidust parketilt hallile plaadile ukseavas" width="763" height="506" loading="lazy" decoding="async"></figure><h3>4. Servade ja üleminekute viimistlus</h3></article></div>
+  <p class="parquet-process-note">Genereeritud tööprotsessi illustratsioonid.</p>
+  <p><a href="parketi-paigaldus-tallinn-korter.html">Vaata korteri parketipaigalduse etappe lähemalt</a></p>
+</section>
 
 <section class="service-faq" aria-labelledby="parketi-kkk">
 									<h2 id="parketi-kkk">Korduma kippuvad küsimused</h2>
@@ -550,7 +563,7 @@ img {
 <section class="service-related">
 									<h2>Seotud lehed</h2>
 									<ul>
-										<li><a href="parketi-paigaldus-tallinn-korter.html">Tehtud töö: parketi paigaldus Tallinnas korteris</a></li>
+										<li><a href="parketi-paigaldus-tallinn-korter.html">Parketipaigalduse tööprotsess korteris</a></li>
 										<li><a href="parketi-takete-parandus-kuumvahaga.html">Parketi täkete parandus kuumvahaga</a></li>
 										<li><a href="hinnakiri.html">Põrandatööde hinnad</a></li>
 										<li><a href="kontakt.html#vorm">Põrandatööde päring</a></li>
@@ -847,3 +860,4 @@ msg.innerHTML = `<div class="unsub-error">Serveri viga</div>`;
 </script>
 	</body>
 </html>
+
