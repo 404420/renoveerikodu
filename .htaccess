@@ -38,6 +38,9 @@ DirectoryIndex index.html index.php
 RewriteEngine On
 RewriteBase /
 
+# Retired parquet case study now points to the service page.
+RewriteRule ^parketi-paigaldus-tallinn-korter(?:\.html)?/?$ /parketipaigaldus [R=301,L,NE]
+
 # Force homepage variants to the clean root URL.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
