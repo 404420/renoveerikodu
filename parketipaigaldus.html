@@ -244,6 +244,18 @@ img {
   #main .parkett-service-card > img, #main .parkett-choice-card img { height: 200px; object-fit: cover; }
 }
 
+
+/* Compact image sizes and readable content width on larger screens. */
+@media (min-width: 737px) {
+  #main .wrapper > .inner { width: calc(100% - 4em); max-width: 1100px; margin-left: auto; margin-right: auto; }
+  #main .center-image { max-width: 760px; margin-left: auto; margin-right: auto; }
+  #main .center-image img { height: 320px; }
+  #main .parquet-process-grid { max-width: 900px; }
+  #main .parquet-process-card img { max-width: 420px; height: auto; }
+  #main .parkett-service-card > img { height: 250px; aspect-ratio: auto; object-fit: cover; }
+  #main .parkett-choice-card img { height: 250px; aspect-ratio: auto; object-fit: contain; }
+}
+
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
