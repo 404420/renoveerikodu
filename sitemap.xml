@@ -127,12 +127,34 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/parketi-paigaldus-tallinn-korter</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.renoveerikodu.ee/images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg</image:loc>
       <image:caption>Parketi paigaldus Tallinnas korteri elutoas - Renoveeri Kodu tehtud töö.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.renoveerikodu.ee/parketi-takete-parandus-kuumvahaga</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-hero-jootekolviga.png</image:loc>
+      <image:caption>Parketi täkke täitmine sulatatud kuumvahaga.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-paranduse-naidispilt.png</image:loc>
+      <image:caption>Parketi täkke parandamine kuumvahaga neljas etapis.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-lihvimine-lintmasinaga.png</image:loc>
+      <image:caption>Parketi lihvimine lintlihvmasina ja tolmueemaldusega.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-servade-lihvimine.png</image:loc>
+      <image:caption>Kalasabaparketi servade lihvimine seina ääres.</image:caption>
     </image:image>
   </url>
   <url>

@@ -19,20 +19,20 @@
 				<link rel="icon" type="image/x-icon" href="/favicon.ico?v=1">
         <link rel="shortcut icon" href="/favicon.ico?v=1">
 		<meta charset="utf-8" />
-	<title>Parketi paigaldus Tallinnas ja Harjumaal | Renoveeri Kodu</title>
-	<meta name="description" content="Parketi ja laminaadi paigaldus Tallinnas ja Harjumaal. Korralik aluspinna ettevalmistus, paigaldus ja viimistlus kodudes ning äripindadel." />
+	<title>Parketitööd Tallinnas: paigaldus ja parandus | Renoveeri Kodu</title>
+	<meta name="description" content="Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning parketi täkete kohtparandus Tallinnas ja Harjumaal. Küsi hinnangut fotode põhjal." />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://www.renoveerikodu.ee/parketipaigaldus" />
 	<meta property="og:locale" content="et_EE" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Parketi paigaldus Tallinnas ja Harjumaal | Renoveeri Kodu" />
-	<meta property="og:description" content="Parketi ja laminaadi paigaldus Tallinnas ja Harjumaal. Korralik aluspinna ettevalmistus, paigaldus ja viimistlus kodudes ning äripindadel." />
+	<meta property="og:title" content="Parketitööd Tallinnas: paigaldus ja parandus | Renoveeri Kodu" />
+	<meta property="og:description" content="Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus Tallinnas ja Harjumaal." />
 	<meta property="og:url" content="https://www.renoveerikodu.ee/parketipaigaldus" />
 	<meta property="og:site_name" content="Renoveeri Kodu" />
 	<meta property="og:image" content="https://www.renoveerikodu.ee/images/parketi-paigaldus-tallinn-renoveeri-kodu.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Parketi paigaldus Tallinnas ja Harjumaal | Renoveeri Kodu" />
-	<meta name="twitter:description" content="Parketi ja laminaadi paigaldus Tallinnas ja Harjumaal. Korralik aluspinna ettevalmistus, paigaldus ja viimistlus kodudes ning äripindadel." />
+	<meta name="twitter:title" content="Parketitööd Tallinnas: paigaldus ja parandus | Renoveeri Kodu" />
+	<meta name="twitter:description" content="Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus Tallinnas ja Harjumaal." />
 	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/parketi-paigaldus-tallinn-renoveeri-kodu.jpg" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
@@ -40,7 +40,7 @@
 
 /* ===== GLOBAL RESPONSIVE FIX ===== */
 
- {
+* {
 	box-sizing: border-box;
 }
 
@@ -81,6 +81,53 @@ img {
 	margin-bottom: 10px;
 }
 
+.parkett-service-grid,
+.parkett-choice-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px;
+	margin: 32px 0 48px;
+}
+
+.parkett-service-card,
+.parkett-choice-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+	overflow: hidden;
+}
+
+.parkett-service-card img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.parkett-choice-card img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
+	margin-top: 18px;
+}
+
+.parkett-service-card div,
+.parkett-choice-card {
+	padding: 24px;
+}
+
+.parkett-service-card h3,
+.parkett-choice-card h3 {
+	margin-top: 0;
+}
+
+.parkett-project-image {
+	margin: 24px 0;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
 /* ===== TABLET ===== */
 
 @media (max-width: 980px) {
@@ -107,6 +154,42 @@ img {
 		font-size: 16px;
 	}
 
+	.parkett-service-grid,
+	.parkett-choice-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.page-parkett #main > header {
+		padding: 5em 1.25em 3em;
+	}
+
+	.page-parkett #main > header h1 {
+		font-size: 1.1em;
+		line-height: 1.45;
+		overflow-wrap: anywhere;
+	}
+
+	.page-parkett #main > header p {
+		font-size: 0.84em;
+		letter-spacing: 0.12em;
+		line-height: 1.55;
+		overflow-wrap: anywhere;
+	}
+
+	.page-parkett .wrapper > .inner {
+		max-width: 100%;
+		padding-left: 1.25em;
+		padding-right: 1.25em;
+		width: 100%;
+	}
+
+	.page-parkett .button {
+		height: auto;
+		line-height: 1.4;
+		padding: 0.9em 1.2em;
+		white-space: normal;
+	}
+
 }
 
 /* ===== CTA spacing ===== */
@@ -129,6 +212,13 @@ img {
 	bottom: 15px;
 }
 
+.page-parkett #main > header {
+	background-image: linear-gradient(rgba(20, 27, 34, 0.58), rgba(20, 27, 34, 0.58)), url("images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg.optimized.webp") !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 </style>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -141,8 +231,8 @@ img {
       "@type": "WebPage",
       "@id": "https://www.renoveerikodu.ee/parketipaigaldus#webpage",
       "url": "https://www.renoveerikodu.ee/parketipaigaldus",
-      "name": "Parketi paigaldus Tallinnas ja Harjumaal | Renoveeri Kodu",
-      "description": "Parketi ja laminaadi paigaldus Tallinnas ja Harjumaal. Korralik aluspinna ettevalmistus, paigaldus ja viimistlus kodudes ning äripindadel.",
+      "name": "Parketitööd Tallinnas: paigaldus ja parandus | Renoveeri Kodu",
+      "description": "Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus Tallinnas ja Harjumaal.",
       "isPartOf": {
         "@id": "https://www.renoveerikodu.ee/#website"
       },
@@ -164,7 +254,7 @@ img {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Parketi paigaldus Tallinnas ja Harjumaal",
+          "name": "Parketitööd Tallinnas ja Harjumaal",
           "item": "https://www.renoveerikodu.ee/parketipaigaldus"
         }
       ]
@@ -172,8 +262,8 @@ img {
     {
       "@type": "Service",
       "@id": "https://www.renoveerikodu.ee/parketipaigaldus#service",
-      "name": "Parketi paigaldus Tallinnas ja Harjumaal",
-      "description": "Parketi ja laminaatpõranda paigaldus koos aluspinna ettevalmistusega Tallinnas ja Harjumaal.",
+      "name": "Parketitööd Tallinnas ja Harjumaal",
+      "description": "Parketi ja laminaatpõranda paigaldus, aluspinna ettevalmistus, liistud ning parketi täkete kohtparandus Tallinnas ja Harjumaal.",
       "provider": {
         "@id": "https://www.renoveerikodu.ee/#localbusiness"
       },
@@ -181,7 +271,7 @@ img {
         "Tallinn",
         "Harjumaa"
       ],
-      "serviceType": "Parketi paigaldus Tallinnas ja Harjumaal",
+      "serviceType": ["Parketi paigaldus", "Laminaatpõranda paigaldus", "Põrandaliistude paigaldus", "Parketi täkete kohtparandus"],
       "url": "https://www.renoveerikodu.ee/parketipaigaldus",
       "image": "https://www.renoveerikodu.ee/images/parketi-paigaldus-tallinn-renoveeri-kodu.jpg.optimized.webp"
     },
@@ -194,15 +284,15 @@ img {
           "name": "Kas vana põrand tuleb enne eemaldada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "See sõltub vana katte seisukorrast, kõrgusest ja aluspinna tasasest. Hindame olukorra enne töö algust."
+            "text": "Mitte alati. Otsus sõltub vana katte stabiilsusest, kõrgusest ja aluspinna seisukorrast. Liikuv, niiske või tugevalt ebatasane põrand tuleb enne uue katte paigaldamist korda teha."
           }
         },
         {
           "@type": "Question",
-          "name": "Kas parketti saab paigaldada kööki?",
+          "name": "Milline põrandakate sobib kööki või esikusse?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jah, kuid materjali valik ja niiskuskoormus tuleb hoolikalt läbi mõelda."
+            "text": "Hea valik võib olla niiskust hästi taluv LVT või tootja poolt niiskuskindlaks märgitud laminaat. Naturaalse parketi puhul tuleb seisvat vett vältida ja valida ruumi kasutusega sobiv pinnaviimistlus."
           }
         },
         {
@@ -210,7 +300,7 @@ img {
           "name": "Kui sirge peab aluspind olema?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tootja nõuded erinevad, kuid ebatasane aluspind võib põhjustada naginat ja ühenduste purunemist."
+            "text": "Aluspind peab vastama valitud põrandakatte tootja nõuetele. Liigne ebatasasus võib põhjustada õõnsat heli, naginat, põranda liikumist ja ühenduste purunemist."
           }
         },
         {
@@ -223,34 +313,18 @@ img {
         },
         {
           "@type": "Question",
-          "name": "Kas vana põrand tuleb enne parketti eemaldada?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "See sõltub vana katte tüübist, kõrgusest ja stabiilsusest. Kui vana põrand liigub, kriuksub või on niiske, tuleb probleem enne uut katet lahendada."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kas parketti saab paigaldada ebatasasele põrandale?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ei ole soovitatav. Ebatasane aluspind võib põhjustada lukusüsteemi purunemist, õõnsat heli ja põranda liikumist. Vajadusel tuleb aluspind tasandada."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Kui suur materjalivaru tuleks arvestada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tavaliselt arvestatakse lõigete ja praagi jaoks varu. Lihtsa ruumi puhul võib varu olla väiksem, keerulise mustri või paljude nurkadega ruumis suurem."
+            "text": "Vajalik varu sõltub ruumi kujust ja paigaldusmustrist. Sirges lihtsa kujuga ruumis on kadu väiksem, diagonaali, kalasaba või paljude nurkade puhul suurem."
           }
         },
         {
           "@type": "Question",
-          "name": "Kas liistud paigaldatakse kohe pärast parketti?",
+          "name": "Kas üksikut täket saab parandada ilma põrandat vahetamata?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tavaliselt jah, kui seinad on valmis ja värv kuivanud. Kui seinaviimistlus jätkub, võib liistud paigaldada hiljem, et neid mitte kahjustada."
+            "text": "Sageli küll. Kui põrand on stabiilne ja kahjustus kohalik, saab täkke või sügavama kriimustuse täita toonitud kuumvahaga. Sobivust hindame foto järgi."
           }
         },
         {
@@ -258,7 +332,7 @@ img {
           "name": "Kas tehtud töödele kehtib garantii?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jah. RK Meistrid OÜ tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises."
+            "text": "Jah. Tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja tingimused fikseeritakse hinnapakkumises."
           }
         }
       ]
@@ -274,7 +348,7 @@ img {
 }
 </script>
 </head>
-	<body class="page-ready page-plaatimine">
+	<body class="page-ready page-plaatimine page-parkett">
 <a class="skip-link" href="#main-content">Liigu põhisisuni</a>
 
 		<!-- Page Wrapper -->
@@ -301,6 +375,7 @@ img {
 											<li><a href="ledlahendused.html">LED lahendused</a></li>
 											<li><a href="seinapaneelidepaigaldus.html">Seinapaneelide paigaldus</a></li>
 											<li><a href="parketipaigaldus.html">Parketi paigaldus</a></li>
+<li><a href="parketi-takete-parandus-kuumvahaga.html">Parketi parandus ja taastamine</a></li>
 											<li><a href="tapeetimine.html">Tapeetimine</a></li>
 											<li><a href="kipsitood.html">Kipsitööd</a></li>
 											<li><a href="lammutustood.html">Lammutustööd</a></li>
@@ -326,8 +401,8 @@ img {
 										<main id="main-content">
 <article id="main">
 						<header>
-							<h1>Parketi paigaldus Tallinnas ja Harjumaal</h1>
-							<p>Laminaadi, laudparketi ja põrandaliistude korrektne paigaldus.</p>
+							<h1>Parketitööd Tallinnas ja Harjumaal</h1>
+							<p>Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus.</p>
 						</header>
 <aside class="service-trust-strip" aria-label="Teenuse eelised">
   <strong>3-aastane garantii tehtud ehitus- ja viimistlustöödele</strong>
@@ -335,135 +410,150 @@ img {
   <span>Tallinn ja Harjumaa</span>
   <a href="kontakt.html#vorm">Saada töö kirjeldus ja fotod</a>
 </aside>
-						<section class="wrapper style5 seo-service-page">
+						<section class="wrapper style5">
 							<div class="inner">
 								<section class="service-intro">
 									<div class="center-image">
-										<img src="images/parketi-paigaldus-tallinn-renoveeri-kodu.jpg.optimized.webp" alt="Parketi paigaldus Tallinnas" width="1280" height="1707" loading="lazy" decoding="async">
+										<img src="images/parketi-paigaldus-tallinn-renoveeri-kodu.jpg.optimized.webp" alt="Valmis puitparkett Tallinna korteri elutoas" width="1280" height="1707" loading="eager" fetchpriority="high" decoding="async">
 									</div>
-					<p class="geo-entity-summary"><strong>RK Meistrid OÜ</strong> pakub parketi ja laminaatpõrandate paigaldust Tallinnas ja Harjumaal. Päringu hindamisel lähtume objekti seisukorrast, tööjärjekorrast, materjalidest ja realistlikust ajakavast.</p>
-									<p>Parketi paigaldus peab arvestama aluspinna tasasust, niiskust, paisumisvuuke ja ruumi kasutuskoormust. Renoveeri Kodu paigaldab laminaati, laudparketti ja põrandaliiste korterites, eramutes ning äripindadel.</p>
-
-									<p>Korralikult paigaldatud põrand ei nagise, ei laineta ja säilitab välimuse ka igapäevase kasutuse juures. Vajadusel aitame hinnata, kas vana põrand tuleb eemaldada, kas aluspind vajab tasandust ja milline alusmaterjal sobib konkreetsele ruumile.</p>
+									<p>Hea põrand algab tasasest ja stabiilsest aluspinnast. Enne töö alustamist kontrollime olemasoleva põranda seisukorda, ruumi kõrgusi, ukseavasid ja üleminekuid. Nii saab varakult selgeks, kas vana kate tuleb eemaldada ja kas aluspind vajab parandamist või tasandamist.</p>
+									<p>Paigaldame laudparketti ja laminaati korterites, eramutes ning äriruumides. Töö juurde saab tellida põrandaliistud, üleminekuprofiilid ja vajalikud lõiked. Kui põrand on muidu heas seisukorras, kuid sellel on üksikud täkked või sügavad kriimustused, võib kogu põranda vahetamise asemel piisata kohalikust kuumvahaparandusest.</p>
 								</section>
 
-								<section class="seo-content-grid">
-									<div>
-										<h2>Mida teenus sisaldab?</h2>
-										<ul class="check-list">
-										<li>laminaadi ja laudparketi paigaldus</li>
-										<li>vana põrandakatte eemaldus ja aluspinna ettevalmistus</li>
-										<li>alusmaterjali, paisumisvuukide ja lävekohtade lahendused</li>
-										<li>põrandaliistude, üleminekuliistude ja detailide viimistlus</li>
-										</ul>
-									</div>
-									<div>
-										<h2>Millal seda tellida?</h2>
-										<p>Parketi paigaldust tellitakse sageli koos maalritööde, kipsitööde või korteri tervikremondiga. Õige tööjärjekord aitab vältida värske põranda kahjustamist ja annab puhta lõpptulemuse.</p>
+								<section aria-labelledby="parketitoode-valik">
+									<h2 id="parketitoode-valik">Millise põrandatööga saame aidata?</h2>
+									<div class="parkett-service-grid">
+										<article class="parkett-service-card">
+											<img src="images/parkett-aluspind.jpg" alt="Parketi paigalduseks ette valmistatud aluspõrand" width="600" height="450" loading="lazy" decoding="async">
+											<div><h3>Aluspinna kontroll ja ettevalmistus</h3><p>Kontrollime tasasust ja stabiilsust ning hindame, kas vana kate tuleb eemaldada. Vajadusel lepime kokku puhastuse, paranduse või tasanduse enne uue põranda paigaldamist.</p></div>
+										</article>
+										<article class="parkett-service-card">
+											<img src="images/parkett-paigaldus_tallinn.jpg.optimized.webp" alt="Paigaldatud puitparkett valgusküllases ruumis" width="600" height="450" loading="lazy" decoding="async">
+											<div><h3>Parketi ja laminaadi paigaldus</h3><p>Paigaldame põrandakatte tootja juhiste järgi, jätame vajalikud paisumisvuugid ning lahendame ukseavad, torude ümbrused ja üleminekud teiste põrandakatetega.</p></div>
+										</article>
+										<article class="parkett-service-card">
+											<img src="images/parkett-viimistlus.jpg" alt="Parketi paigaldus ja detailide viimistlemine korteris" width="600" height="450" loading="lazy" decoding="async">
+											<div><h3>Liistud ja detailide viimistlus</h3><p>Paigaldame põrandaliistud ja üleminekuprofiilid, kontrollime uste liikumist ning lõpetame servad nii, et tulemus oleks puhas ja kasutusvalmis.</p></div>
+										</article>
+										<article class="parkett-service-card">
+											<img src="images/parketi-kuumvaha-paranduse-naidispilt.png" alt="Parketi täkke parandamine kuumvahaga neljas etapis" width="1672" height="941" loading="lazy" decoding="async">
+											<div><h3>Täkete parandus kuumvahaga</h3><p>Üksiku täkke, lohu või sügavama kriimustuse saab sageli täita parketi tooniga sobiva kõvavahaga, ilma et kogu põrandat peaks üles võtma.</p><p><a href="parketi-takete-parandus-kuumvahaga.html">Vaata, kuidas kohtparandus käib</a></p></div>
+										</article>
 									</div>
 								</section>
 
-								<section class="service-process">
-									<h2>Tööprotsess</h2>
+								<section aria-labelledby="porandakatte-valik">
+									<h2 id="porandakatte-valik">Milline põrandakate valida?</h2>
+									<p>Valik sõltub ruumi niiskuskoormusest, kasutussagedusest, aluspõrandast, põrandaküttest ja sellest, kas eelistad naturaalset puitu või võimalikult lihtsat hooldust.</p>
+									<div class="parkett-choice-grid">
+										<div class="parkett-choice-card"><h3>Laudparkett</h3><p>Naturaalse puidu soe välimus sobib hästi elutuppa ja magamistuppa. Kvaliteetset laudparketti saab sõltuvalt kulumiskihi paksusest hiljem hooldada või lihvida. Seisvat vett ja suuri niiskuse kõikumisi tuleb vältida.</p><img src="images/porandakate-laudparkett-naidis.png" alt="Laudparketi näidis, mille serval on näha kihiline puitkonstruktsioon" width="1456" height="1088" loading="lazy" decoding="async"></div>
+										<div class="parkett-choice-card"><h3>Laminaat</h3><p>Kulumiskindel ja lihtsasti hooldatav valik eluruumidesse. Kööki või esikusse vali tootja poolt niiskuskindlaks märgitud laminaat ning järgi vuukide ja servade tihendamise juhiseid.</p><img src="images/porandakate-laminaat-naidis.png" alt="Laminaatpõranda näidis, mille serval on näha HDF-põhikiht" width="1456" height="1088" loading="lazy" decoding="async"></div>
+										<div class="parkett-choice-card"><h3>LVT- või vinüülpõrand</h3><p>Talub niiskust hästi ning sobib seetõttu sageli kööki, esikusse ja suurema koormusega ruumi. Kogu põrandalahenduse veekindlus sõltub konkreetsest tootest, ühendustest ja paigaldusest. Aluspind peab olema eriti sile.</p><img src="images/porandakate-lvt-naidis.png" alt="Niiskuskindla LVT-vinüülpõranda näidis köögi ja esiku jaoks" width="1456" height="1088" loading="lazy" decoding="async"></div>
+										<div class="parkett-choice-card"><h3>Täispuit</h3><p>Pika elueaga ja korduvalt taastatav materjal kuiva ning stabiilse sisekliimaga ruumi. Täispuit reageerib õhuniiskuse muutustele rohkem kui kihiline laudparkett, mistõttu tuleb paigaldusviis ja põrandakütte sobivus alati üle kontrollida.</p><img src="images/porandakate-taispuit-naidis.png" alt="Täispuitpõranda näidis, mille läbilõikes on näha täispuidu struktuur" width="1456" height="1088" loading="lazy" decoding="async"></div>
+									</div>
+									<p><strong>Põrandakütte puhul</strong> vaata alati tootja lubatud soojustakistust, maksimaalset pinnatemperatuuri ja paigaldusjuhendit. Kõik parketid, laminaadid ega LVT-tooted ei sobi automaatselt igale küttesüsteemile.</p>
+								</section>
+
+
+								<section aria-labelledby="laminaadi-ettevalmistus">
+									<h2 id="laminaadi-ettevalmistus">Mida kontrollida enne laminaadi paigaldamist?</h2>
+									<p>Laminaadi vastupidavus sõltub sama palju ettevalmistusest kui materjalist. Enne paigaldust kontrollime tootja juhendit, ruumi tingimusi ja kogu põrandakonstruktsiooni.</p>
+									<div class="parkett-choice-grid">
+										<div class="parkett-choice-card"><h3>Materjali aklimatiseerimine</h3><p>Pakendid hoitakse enne paigaldust samas ruumis tootja määratud aja ja tingimuste järgi. Paljude laminaatide puhul on tavapärane vähemalt 48 tundi, kuid määrav on alati konkreetse toote juhend.</p></div>
+										<div class="parkett-choice-card"><h3>Aluspõranda seisukord</h3><p>Aluspind peab olema tasane, tugev, puhas ja kuiv. Mineraalse aluspinna niiskust tuleb vajadusel mõõta; tolm, lahtised osad ja liigne ebatasasus võivad põhjustada naginat, liikumist või ühenduste kahjustumist.</p></div>
+										<div class="parkett-choice-card"><h3>Alusmaterjal ja niiskustõke</h3><p>Alusmaterjal valitakse põrandakatte, aluspinna, heliisolatsiooni ja põrandakütte järgi. Betooni või muu mineraalse aluspinna puhul võib olla vajalik eraldi aurutõke või integreeritud niiskustõkkega aluskate.</p></div>
+										<div class="parkett-choice-card"><h3>Paisumisruum ja rasked esemed</h3><p>Ujuv põrand peab saama temperatuuri ja õhuniiskuse muutudes liikuda. Tootja nõutud vahe jäetakse seinte, torude, lävepakkude ja muude fikseeritud osade ümber; köögisaar või muu väga raske püsikonstruktsioon ei tohi põrandat kinni suruda.</p></div>
+									</div>
+									<h3>Paigaldussuund, materjalivaru ja viimistlus</h3>
+									<p>Paigaldussuund valitakse ruumi kuju, valguse, läbikäikude ja põrandamustri järgi. Materjalivaru sõltub ruumi nurkadest ning paigaldusmustrist, mistõttu ei ole üks protsent õige igale objektile. Enne alustamist kontrollime ka ukselehtede liikumist, viimistlusprofiile ja üleminekuid.</p>
+									<p>Valmis laminaati ei lihvita, õlitata ega lakita. Töö lõpetatakse sobivate liistude ja profiilidega nii, et vajalikud paisumisvuugid jäävad toimima.</p>
+								</section>
+
+<section aria-labelledby="parandus-voi-uus-porand">
+									<h2 id="parandus-voi-uus-porand">Kas parandada või paigaldada uus põrand?</h2>
+									<div class="parkett-choice-grid">
+										<div class="parkett-choice-card"><h3>Kohalik parandus sobib, kui</h3><ul><li>kahjustatud on üksikud väikesed kohad;</li><li>põrand on stabiilne ja üldiselt heas seisukorras;</li><li>probleem on täke, lohk, servakahjustus või sügav kriimustus.</li></ul></div>
+										<div class="parkett-choice-card"><h3>Uus põrand või suurem taastamine on mõistlikum, kui</h3><ul><li>kahjustusi või kulunud viimistlust on kogu ruumis;</li><li>lauad liiguvad, nagisevad või ühendused on katki;</li><li>põrand on niiskuse tõttu paisunud või deformeerunud.</li></ul></div>
+									</div>
+								</section>
+
+								<section class="service-process" aria-labelledby="tooprotsess">
+									<h2 id="tooprotsess">Kuidas töö käib?</h2>
 									<div class="plaatimine-steps">
-									<div class="step">
-										<h3>Aluspinna kontroll</h3>
-										<p>Mõõdame tasasust, hindame niiskusriski ja kontrollime, kas põrand vajab lihvimist, tasandust või puhastamist.</p>
-									</div>
-									<div class="step">
-										<h3>Paigaldusplaan</h3>
-										<p>Planeerime paigaldussuuna, lõiked, paisumisvuugid ja üleminekud uste ning teiste põrandakatetega.</p>
-									</div>
-									<div class="step">
-										<h3>Liistud ja üleandmine</h3>
-										<p>Paigaldame liistud, kontrollime liikumisruumi ja koristame tööala enne üleandmist.</p>
-									</div>
+									<div class="step"><h3>1. Fotod ja lähteinfo</h3><p>Saada ruumi üldvaated, lähivõtted aluspinnast või kahjustusest, põranda pindala, materjali tüüp, objekti asukoht ja soovitud aeg.</p></div>
+									<div class="step"><h3>2. Ülevaatus ja pakkumine</h3><p>Kui fotodest ei piisa, vaatame objekti kohapeal üle. Pakkumises paneme kirja töö mahu, ettevalmistuse, hinna ja eeldatava ajakulu.</p></div>
+									<div class="step"><h3>3. Ettevalmistus ja paigaldus</h3><p>Kaitseme kõrvalpinnad, valmistame aluspinna ette ning paigaldame põranda kokkulepitud suuna, vuukide ja detailidega.</p></div>
+									<div class="step"><h3>4. Viimistlus ja üleandmine</h3><p>Paigaldame liistud, kontrollime üleminekuid ja uksi, koristame tööala ning anname ülevaate uue põranda kasutamisest.</p></div>
 									</div>
 								</section>
 
-
-								<section class="service-estimate">
-									<h2>Põrandatööde hind ja ettevalmistus</h2>
-									<p>Parketi paigalduse hind sõltub aluspinna seisukorrast, ruumi kujust, ukseavade arvust, üleminekuliistudest ja valitud materjalist. Ebatasane aluspind võib vajada tasandamist, sest muidu võivad ühendused hakata liikuma või põrand nagisema. Pakkumiseks on kasulik teada ruutmeetreid, vana põrandakatet ja soovitud parketi tüüpi.</p>
-									<p>Pärast paigaldust kontrollime paisumisvuuke, uste liikumist, liistude kinnitust ja üleminekuid teiste põrandakatetega. Kui põrand vahetatakse koos seinte värvimisega, soovitame teha tolmused ja niisked tööd enne lõplikku põrandapaigaldust.</p>
+								<section class="price-guide" aria-labelledby="parketitoode-hinnad">
+									<h2 id="parketitoode-hinnad">Parketitööde hinnad</h2>
+									<ul class="check-list"><li>laudparketi paigaldus alates 12 &euro;/m²;</li><li>laminaatparketi paigaldus alates 9 &euro;/m²;</li><li>põrandaliistu paigaldus alates 5 &euro;/jm.</li></ul>
+									<p>Lõplik hind sõltub aluspinna seisukorrast, ruumi kujust, lõigete ja ukseavade arvust, liistudest, üleminekutest ning sellest, kas vana kate tuleb eemaldada. Kohtparanduse hind sõltub kahjustuste arvust, suurusest ja toonide sobitamise keerukusest.</p>
+									<p><a href="hinnakiri.html">Vaata kogu hinnakirja</a> või saada fotod, mõõdud ja töö kirjeldus, et saaksime teha täpsema pakkumise.</p>
 								</section>
 
 
-								<section class="service-local-proof">
-									<h2>Kohalik kogemus ja tööde täpsustamine</h2>
-									<p>Parketi paigaldusel tuleb Tallinna korterites sageli arvestada vana põranda kõrgust, ukselehti ja üleminekuid koridori või köögi põrandaga. Päringu hindamisel vaatame alati, milline on objekti ligipääs, kas töö toimub elatud ruumis, millised pinnad vajavad kaitsmist ja milline on mõistlik tööjärjekord. See aitab vältida olukorda, kus üks etapp tuleb hiljem uuesti avada või parandada.</p>
-									<p>Renoveeri Kodu eesmärk on anda selge ja realistlik hinnang enne töö alustamist. Kui fotodest ei piisa, lepime kokku objekti ülevaatuse. Nii saab täpsustada materjalid, ajakulu, seotud teenused ja võimalikud riskikohad enne, kui töö päriselt käima läheb.</p>
+								<section aria-labelledby="enne-tood">
+									<h2 id="enne-tood">Mida enne töö algust arvestada?</h2>
+									<p>Põrandamaterjal peab enne paigaldust ruumi tingimustega kohanema. Märjad ja tolmused remonditööd peaksid olema lõpetatud ning ruumi temperatuur ja niiskus stabiilsed. Materjali tellimisel tuleb arvestada lõigete ja praagivaruga, mille suurus sõltub ruumi kujust ja paigaldusmustrist.</p>
+									<p>Anna päringus teada, kas mööbel jääb ruumi, kas vana põrand tuleb eemaldada ja ära vedada ning millal peab ruum uuesti kasutatav olema. Need detailid mõjutavad tööjärjekorda ja ajakulu.</p>
 								</section>
 
-								<p class="minimum-content-boost">Parketi puhul tasub enne töö algust läbi mõelda ka mööbli liigutamine, vana põranda utiliseerimine ja ruumi kasutusse võtmise aeg. Nii saab paigalduse planeerida ilma, et värske põrand saaks kohe pärast üleandmist liigset koormust või niiskust.</p>
+								<section aria-labelledby="tehtud-parketitoo">
+									<h2 id="tehtud-parketitoo">Vaata tehtud parketitööd</h2>
+									<div class="parkett-project-image"><img src="images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg.optimized.webp" alt="Valmis parkett Tallinna korteri elutoas" width="1280" height="960" loading="lazy" decoding="async"></div>
+									<p>Tehtud töö näites on näha aluspinna kontroll, paigaldussuuna valik, põranda paigaldus ning servade ja üleminekute lõpetamine.</p>
+									<p><a href="parketi-paigaldus-tallinn-korter.html">Vaata Tallinna korteri parketipaigalduse tööprotsessi</a></p>
+								</section>
 
-								<section class="price-guide">
-<h2>Parketi paigalduse hinnad</h2>
-<p>Parketi paigalduse hind sõltub aluspinna tasasest, vana põranda eemaldusest, liistudest, üleminekutest ja ruumi kujust. Ebatasane põrand võib vajada enne paigaldust parandust, sest muidu võivad ühendused liikuma hakata.</p>
-<p>Hinnapäringu kiirendamiseks lisa võimalusel fotod, mõõdud, objekti asukoht ja soovitud tähtaeg. Nii saame paremini aru, kas töö vajab objektikülastust või saab esmase hinnangu anda kirjelduse põhjal.</p>
-</section>
-
-<section class="service-knowledge">
-  <h2>Praktiline tööinfo parketi paigalduse kohta</h2>
-  <h3>Materjalid</h3>
-  <p>Parketi puhul on tähtis põrandakatte tüüp, alusmaterjal, niiskustõke ja liistude lahendus. Laminaat, laudparkett ja kalasabamustriga põrand käituvad erinevalt ning vajavad erinevat aluspinna täpsust.</p>
-  <h3>Ajakulu</h3>
-  <p>Ajakulu sõltub ruumi kujust, vana katte eemaldusest, aluspinna tasandamisest ja liistude arvust. Uus põrand tuleks paigaldada siis, kui märjad ja tolmused tööd on lõppenud.</p>
-  <h3>Hinnategurid</h3>
-  <p>Hinda mõjutavad ruutmeetrid, aluspinna kõrguste erinevus, ukseavade lõiked, torude ümbrused, liistude tüüp ja see, kas vana põrand tuleb eemaldada ning ära vedada.</p>
-  <h3>Levinud vead</h3>
-  <p>Levinud vead on paisumisvuugi puudumine, liiga niiske aluspind, vale alusmaterjal ja põranda paigaldus enne seda, kui ruumi niiskus on stabiliseerunud.</p>
-  <h3>Soovitused kliendile</h3>
-  <p>Too materjal objektile piisava varuga ja lase sellel ruumi tingimustega kohaneda. Kui võimalik, vali liistud ja üleminekuprofiilid enne paigalduspäeva.</p>
-</section>
-
-<section class="service-faq">
-									<h2>Korduma kippuvad küsimused</h2>
+<section class="service-faq" aria-labelledby="parketi-kkk">
+									<h2 id="parketi-kkk">Korduma kippuvad küsimused</h2>
 									<details>
 										<summary>Kas vana põrand tuleb enne eemaldada?</summary>
-										<p>See sõltub vana katte seisukorrast, kõrgusest ja aluspinna tasasest. Hindame olukorra enne töö algust.</p>
+										<p>Mitte alati. Otsus sõltub vana katte stabiilsusest, kõrgusest ja aluspinna seisukorrast. Liikuv, niiske või tugevalt ebatasane põrand tuleb enne uue katte paigaldamist korda teha.</p>
 									</details>
 									<details>
-										<summary>Kas parketti saab paigaldada kööki?</summary>
-										<p>Jah, kuid materjali valik ja niiskuskoormus tuleb hoolikalt läbi mõelda.</p>
+										<summary>Milline põrandakate sobib kööki või esikusse?</summary>
+										<p>Hea valik võib olla niiskust hästi taluv LVT või tootja poolt niiskuskindlaks märgitud laminaat. Naturaalse parketi puhul tuleb seisvat vett vältida ja valida ruumi kasutusega sobiv pinnaviimistlus.</p>
 									</details>
 									<details>
 										<summary>Kui sirge peab aluspind olema?</summary>
-										<p>Tootja nõuded erinevad, kuid ebatasane aluspind võib põhjustada naginat ja ühenduste purunemist.</p>
+										<p>Aluspind peab vastama valitud põrandakatte tootja nõuetele. Liigne ebatasasus võib põhjustada õõnsat heli, naginat, põranda liikumist ja ühenduste purunemist.</p>
 									</details>
 									<details>
 										<summary>Kas paigaldate ka liistud?</summary>
 										<p>Jah, teeme ka põrandaliistude ja üleminekuliistude paigalduse.</p>
 									</details>
-
-<details><summary>Kas vana põrand tuleb enne parketti eemaldada?</summary><p>See sõltub vana katte tüübist, kõrgusest ja stabiilsusest. Kui vana põrand liigub, kriuksub või on niiske, tuleb probleem enne uut katet lahendada.</p></details>
-
-<details><summary>Kas parketti saab paigaldada ebatasasele põrandale?</summary><p>Ei ole soovitatav. Ebatasane aluspind võib põhjustada lukusüsteemi purunemist, õõnsat heli ja põranda liikumist. Vajadusel tuleb aluspind tasandada.</p></details>
-
-<details><summary>Kui suur materjalivaru tuleks arvestada?</summary><p>Tavaliselt arvestatakse lõigete ja praagi jaoks varu. Lihtsa ruumi puhul võib varu olla väiksem, keerulise mustri või paljude nurkadega ruumis suurem.</p></details>
-
 <details><summary>Kas liistud paigaldatakse kohe pärast parketti?</summary><p>Tavaliselt jah, kui seinad on valmis ja värv kuivanud. Kui seinaviimistlus jätkub, võib liistud paigaldada hiljem, et neid mitte kahjustada.</p></details>
-<details>
-  <summary>Kas tehtud töödele kehtib garantii?</summary>
-  <p>Jah. RK Meistrid OÜ tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises.</p>
-</details>
+									<details>
+										<summary>Kui suur materjalivaru tuleks arvestada?</summary>
+										<p>Vajalik varu sõltub ruumi kujust ja paigaldusmustrist. Sirges lihtsa kujuga ruumis on kadu väiksem, diagonaali, kalasaba või paljude nurkade puhul suurem.</p>
+									</details>
+									<details>
+										<summary>Kas üksikut täket saab parandada ilma põrandat vahetamata?</summary>
+										<p>Sageli küll. Kui põrand on stabiilne ja kahjustus kohalik, saab täkke või sügavama kriimustuse täita toonitud kuumvahaga. Sobivust hindame foto järgi.</p>
+									</details>
+									<details>
+										<summary>Kas tehtud töödele kehtib garantii?</summary>
+										<p>Jah. Tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja tingimused fikseeritakse hinnapakkumises.</p>
+									</details>
 </section>
 
 
 <section class="topical-links">
-  <h2>Milliste töödega parketi paigaldus tavaliselt seostub?</h2>
-  <p>Parketi paigaldus tuleb ajastada pärast tolmuseid ja märgi töid. Enne uut põrandat võib olla vaja <a href="lammutustood.html">vana põrandakatte eemaldamist</a> või aluspinna korrigeerimist; pärast paigaldust lõpetavad ruumi sageli <a href="maalritood.html">seinte ja liistude viimistlustööd</a>. Hindade ja töömahu võrdlemiseks sobib <a href="hinnakiri.html">põrandatööde hinnakirja osa</a>, ning tehtud töö näitena aitab <a href="parketi-paigaldus-tallinn-korter.html">parketi paigaldus korteris Tallinnas</a>.</p>
+  <h2>Kui põrandatöö on osa suuremast remondist</h2>
+  <p>Uus põrand paigaldatakse pärast tolmuseid ja märgi töid. Enne seda võib olla vaja <a href="lammutustood.html">vana põrandakatte eemaldamist</a>; seinte lõppviimistlus ja liistude paigaldus tuleb tööjärjekorras omavahel kokku sobitada. Suurema töö puhul aitab <a href="/korteri-remont/">korteri remondi ühine tööplaan</a> vältida värskelt valminud pindade kahjustamist.</p>
 </section>
 
 <section class="service-related">
-									<h2>Seotud teenused</h2>
-<p>Kui põranda vahetus on osa suuremast tööst, aitab <a href="/korteri-remont/">korteri remondi ühine tööplaan</a> ajastada põrandapaigalduse pärast tolmuseid ja niiskeid töid.</p>
+									<h2>Seotud lehed</h2>
 									<ul>
 										<li><a href="parketi-paigaldus-tallinn-korter.html">Tehtud töö: parketi paigaldus Tallinnas korteris</a></li>
-										<li><a href="maalritood.html">Maalritööd</a></li>
-										<li><a href="lammutustood.html">Lammutustööd</a></li>
-										<li><a href="plaatimine.html">Plaatimine</a></li>
-										<li><a href="kontakt.html">Põrandatööde päring</a></li>
+										<li><a href="parketi-takete-parandus-kuumvahaga.html">Parketi täkete parandus kuumvahaga</a></li>
+										<li><a href="hinnakiri.html">Põrandatööde hinnad</a></li>
+										<li><a href="kontakt.html#vorm">Põrandatööde päring</a></li>
 									</ul>
 								</section>
 

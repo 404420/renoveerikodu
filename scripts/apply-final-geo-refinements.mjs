@@ -23,7 +23,6 @@ const servicePages = {
 
 const projectPages = {
   "vannitoa-plaatimine-tallinn.html": "<strong>RK Meistrid OÜ</strong> teeb vannitoa plaatimist ja märgruumide viimistlust Tallinnas ning Harjumaal. See näide selgitab, kuidas planeerime aluspinna ettevalmistuse, hüdroisolatsiooni, kallete kontrolli, plaatimise, vuukimise ja silikoonimise.",
-  "parketi-paigaldus-tallinn-korter.html": "<strong>RK Meistrid OÜ</strong> teeb parketi ja laminaatpõrandate paigaldust Tallinnas ning Harjumaal. See näide kirjeldab korteri põrandatööd praktilisest vaatest: aluspinna kontrolli, paigalduse suunda, paisumisvuuke, liiste ja lõpptulemuse ülevaatust.",
   "fassaadi-varvimine-tallinn-eramu.html": "<strong>RK Meistrid OÜ</strong> teeb fassaadi värvimise ja muid renoveerimistöid Tallinnas ning Harjumaal. Selle näite kaudu saab hinnata, kuidas planeerime puitfassaadi puhastuse, parandused, kruntimise, värvimise ja ligipääsu enne töö alustamist.",
   "katuse-pesu-ja-hooldus-tallinn.html": "<strong>RK Meistrid OÜ</strong> teeb katuse hoolduse, pesu ja seotud renoveerimistöid Tallinnas ning Harjumaal. See näide selgitab, kuidas hindame katuse seisukorda, puhastame katusepinda ja vaatame üle kohad, mis võivad hiljem vajada parandust.",
   "led-valgustuse-paigaldus-tallinn.html": "<strong>RK Meistrid OÜ</strong> paigaldab LED-valgustust ja kaudvalguse lahendusi Tallinnas ning Harjumaal. Selle näite kaudu saab vaadata, kuidas planeerime valguse eesmärgi, profiilid, kaabelduse, toiteploki asukoha ja lõppviimistluse."
