@@ -31,18 +31,18 @@
 	<meta property="og:description" content="Betoonitööd Tallinnas ja Harjumaal. Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide paigaldus." />
 	<meta property="og:url" content="https://www.renoveerikodu.ee/betoonitood" />
 	<meta property="og:site_name" content="Renoveeri Kodu" />
-	<meta property="og:image" content="https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg" />
+	<meta property="og:image" content="https://www.renoveerikodu.ee/images/betoonipump-betooniauto-valu-ehitusplatsil.webp" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Betoonitööd Tallinnas ja Harjumaal | Renoveeri Kodu" />
 	<meta name="twitter:description" content="Betoonitööd Tallinnas ja Harjumaal. Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide paigaldus." />
-	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg" />
+	<meta name="twitter:image" content="https://www.renoveerikodu.ee/images/betoonipump-betooniauto-valu-ehitusplatsil.webp" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
 		<style>
 
 /* ===== GLOBAL RESPONSIVE FIX ===== */
 
- {
+* {
 	box-sizing: border-box;
 }
 
@@ -131,105 +131,281 @@ img {
 	bottom: 15px;
 }
 
-.concrete-gallery {
+/* ===== BETOONITÖÖDE LEHT ===== */
+
+.page-betoon #main > header {
+	background-image:
+		linear-gradient(90deg, rgba(20, 31, 42, 0.82) 0%, rgba(20, 31, 42, 0.54) 48%, rgba(20, 31, 42, 0.2) 100%),
+		url("images/betoonipump-betooniauto-valu-ehitusplatsil.webp");
+	background-position: center;
+	background-size: cover;
+	min-height: 33rem;
+	padding: 10rem 2rem 7rem;
+	text-align: left;
+}
+
+.page-betoon #main > header h1,
+.page-betoon #main > header p {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 72rem;
+	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
+}
+
+.page-betoon #main > header p {
+	font-size: 1.08rem;
+	letter-spacing: 0.04em;
+	max-width: 72rem;
+	text-transform: none;
+}
+
+.concrete-page .inner {
+	max-width: 76rem;
+}
+
+.concrete-lead {
+	font-size: 1.15rem;
+	line-height: 1.8;
+	margin: 0 auto 2.5rem;
+	max-width: 62rem;
+	text-align: center;
+}
+
+.concrete-scope {
 	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin: 2rem 0 4rem;
+}
+
+.concrete-scope article {
+	background: #f4f2ed;
+	border-left: 4px solid #ed4933;
+	padding: 1.35rem;
+}
+
+.concrete-scope h3 {
+	font-size: 1rem;
+	margin: 0 0 0.55rem;
+}
+
+.concrete-scope p {
+	font-size: 0.92rem;
+	margin: 0;
+}
+
+.concrete-types {
+	background: #eef1f3;
+	margin: 4rem calc(50% - 50vw);
+	padding: 4rem max(1.5rem, calc((100vw - 76rem) / 2));
+}
+
+.concrete-section-heading {
+	margin: 0 auto 2.5rem;
+	max-width: 58rem;
+	text-align: center;
+}
+
+.concrete-section-heading p {
+	margin-bottom: 0;
+}
+
+.concrete-type-grid {
+	display: grid;
+	gap: 1.25rem;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1rem;
-	margin: 0 0 2rem;
 }
 
-.concrete-gallery button {
-	aspect-ratio: 4 / 3;
-	background: none;
-	border: 0;
-	box-shadow: none;
-	cursor: zoom-in;
+.concrete-type-card {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 8px 24px rgba(27, 40, 52, 0.08);
+	min-width: 0;
+	padding: 1.6rem;
+}
+
+.concrete-type-card .type-label {
+	color: #ba3929;
 	display: block;
-	height: auto !important;
-	line-height: normal;
-	min-height: 0;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	margin-bottom: 0.6rem;
+	overflow-wrap: anywhere;
+	text-transform: uppercase;
+	white-space: normal;
+}
+
+.concrete-type-card h3 {
+	font-size: 1.05rem;
+	margin: 0 0 0.7rem;
+	overflow-wrap: anywhere;
+}
+
+.concrete-type-card p {
+	font-size: 0.93rem;
+	margin: 0;
+}
+
+.concrete-note {
+	background: #fff8e8;
+	border: 1px solid #e6d2a0;
+	margin: 1.5rem 0 0;
+	padding: 1.25rem 1.4rem;
+}
+
+.concrete-note strong {
+	color: #2b3d4f;
+}
+
+.concrete-specialties {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin-top: 1.5rem;
+}
+
+.concrete-specialties div {
+	border-top: 3px solid #ed4933;
+	padding-top: 1rem;
+}
+
+.concrete-specialties h3 {
+	font-size: 0.98rem;
+	margin: 0 0 0.45rem;
+}
+
+.concrete-specialties p {
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.concrete-process {
+	margin: 4rem 0;
+}
+
+.concrete-process-grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.concrete-process-card {
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(27, 40, 52, 0.1);
+	margin: 0;
 	overflow: hidden;
-	padding: 0;
-	width: 100%;
 }
 
-.concrete-gallery img {
+.concrete-process-card img {
 	aspect-ratio: 4 / 3;
-	border-radius: 10px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-	height: 100%;
+	height: auto;
 	object-fit: cover;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	width: 100%;
 }
 
-.concrete-gallery button:hover img,
-.concrete-gallery button:focus-visible img {
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-	transform: translateY(-3px);
+.concrete-process-card figcaption {
+	padding: 1.35rem;
 }
 
-.gallery-lightbox[hidden] { display: none; }
-.gallery-lightbox {
-	align-items: center;
-	background: rgba(0, 0, 0, 0.92);
-	display: flex;
-	inset: 0;
-	justify-content: center;
-	padding: 4rem 5rem;
-	position: fixed;
-	z-index: 10000;
+.concrete-process-card h3 {
+	font-size: 1rem;
+	margin: 0 0 0.55rem;
 }
 
-.gallery-lightbox__image {
-	max-height: calc(100vh - 8rem);
-	max-width: 100%;
-	object-fit: contain;
+.concrete-process-card p {
+	font-size: 0.92rem;
+	margin: 0;
 }
 
-.gallery-lightbox__close,
-.gallery-lightbox__nav {
-	-webkit-appearance: none;
-	align-items: center;
-	appearance: none;
-	background: transparent !important;
-	border: 0 !important;
-	border-radius: 0;
-	box-shadow: none !important;
+.concrete-selection {
+	background: #263746;
 	color: #fff;
-	display: flex;
-	font-size: 2rem;
-	height: 3rem;
-	justify-content: center;
-	line-height: 1;
-	padding: 0;
-	position: absolute;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-	width: 3rem;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+	margin: 4rem 0;
+	padding: 2.5rem;
 }
 
-.gallery-lightbox__close:hover,
-.gallery-lightbox__nav:hover,
-.gallery-lightbox__close:focus,
-.gallery-lightbox__nav:focus {
-	background: transparent !important;
-	box-shadow: none !important;
+.concrete-selection h2,
+.concrete-selection h3 {
+	color: #fff;
 }
 
-.gallery-lightbox__close { right: 1rem; top: 1rem; }
-.gallery-lightbox__prev { left: 1rem; top: 50%; transform: translateY(-50%); }
-.gallery-lightbox__next { right: 1rem; top: 50%; transform: translateY(-50%); }
+.concrete-selection ol {
+	margin-bottom: 0;
+}
 
-body.lightbox-open { overflow: hidden; }
+.concrete-selection li {
+	margin-bottom: 0.65rem;
+	padding-left: 0.35rem;
+}
+
+.concrete-sources {
+	border-top: 1px solid #d7dce0;
+	font-size: 0.82rem;
+	margin-top: 2rem;
+	padding-top: 1rem;
+}
+
+.concrete-sources a {
+	white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+	.concrete-scope,
+	.concrete-specialties {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.concrete-type-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
 
 @media (max-width: 736px) {
-	.concrete-gallery {
-		gap: 1.25rem;
-		grid-template-columns: 1fr;
+	.page-betoon #main > header {
+		background-image:
+			linear-gradient(rgba(20, 31, 42, 0.56), rgba(20, 31, 42, 0.78)),
+			url("images/betoonipump-betooniauto-valu-ehitusplatsil.800.webp");
+		background-position: 61% center;
+		min-height: 29rem;
+		padding: 8.5rem 1.5rem 4.5rem;
 	}
-	.gallery-lightbox { padding: 4.5rem 0.75rem; }
-	.gallery-lightbox__image { max-height: calc(100vh - 9rem); }
-	.gallery-lightbox__nav { bottom: 1rem; top: auto; transform: none; }
+
+	.page-betoon #main > header h1 {
+		font-size: 1.75rem;
+	}
+
+	.page-betoon #main > header p {
+		font-size: 0.94rem;
+	}
+
+	.concrete-lead {
+		font-size: 1.02rem;
+		text-align: left;
+	}
+
+	.concrete-scope,
+	.concrete-type-grid,
+	.concrete-specialties,
+	.concrete-process-grid,
+	.concrete-selection {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.concrete-types {
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+		padding: 3rem 1.5rem;
+	}
+
+	.concrete-selection {
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+		padding: 2rem 1.5rem;
+	}
 }
 
 </style>
@@ -276,7 +452,7 @@ body.lightbox-open { overflow: hidden; }
       "@type": "Service",
       "@id": "https://www.renoveerikodu.ee/betoonitood#service",
       "name": "Betoonitööd Tallinnas ja Harjumaal",
-      "description": "Betoonitööd, aluspinna ettevalmistus ja väiksemad betoonkonstruktsioonid Tallinnas ja Harjumaal.",
+      "description": "Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide ettevalmistus Tallinnas ning Harjumaal.",
       "provider": {
         "@id": "https://www.renoveerikodu.ee/#localbusiness"
       },
@@ -286,7 +462,7 @@ body.lightbox-open { overflow: hidden; }
       ],
       "serviceType": "Betoonitööd Tallinnas ja Harjumaal",
       "url": "https://www.renoveerikodu.ee/betoonitood",
-      "image": "https://www.renoveerikodu.ee/images/betoonterrassi_aluse_armeerimine.jpg"
+      "image": "https://www.renoveerikodu.ee/images/betoonipump-betooniauto-valu-ehitusplatsil.webp"
     },
     {
       "@type": "FAQPage",
@@ -294,10 +470,26 @@ body.lightbox-open { overflow: hidden; }
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Kas teete suuremahulisi betoonitöid?",
+          "name": "Kuidas hindate suurema betoonitöö mahtu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Keskendume peamiselt väiksematele ja keskmistele töödele. Suurema objekti puhul hindame mahu eraldi."
+            "text": "Töömahu hindame projekti, betoonikoguse, pumba ulatuse, ligipääsu, raketise, armeerimise ja valupäeva logistika järgi. Suurema valu tarne- ja tööjärjekord planeeritakse enne pakkumist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas teraskiudbetoon asendab armatuurvõrku?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mõnes põrandas või plaadis võib asendada, kuid ainult arvutatud ja projekteeritud lahenduses. Teraskiu tüüp, annus, plaadi paksus, aluse jäikus, koormus ning vuugijaotus peavad moodustama ühe terviku."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mis vahe on mikrokiul ja makrokiul?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mikrokiud vähendab eelkõige värske betooni plastilise kahanemise pragusid ega ole kandev armatuur. Makrokiud annab betoonile pärast pragunemist jääktugevust ja võib projekteeritud lahenduses täita konstruktsioonilist ülesannet."
           }
         },
         {
@@ -321,15 +513,15 @@ body.lightbox-open { overflow: hidden; }
           "name": "Kas teete ka vormitööd?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jah, väiksemate tööde puhul teeme ka vormid ja ettevalmistuse."
+            "text": "Jah. Raketise, toestuse ja muu ettevalmistuse maht lepitakse kokku konstruktsiooni ning projekti järgi."
           }
         },
         {
           "@type": "Question",
-          "name": "Kas väikest betooniparandust saab teha ilma suurema ettevalmistuseta?",
+          "name": "Kas lokaalset betooniparandust saab teha ilma aluspinda ette valmistamata?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mõnikord saab, kuid vana pinna nakkuvus, niiskus ja pragude põhjus tuleb enne üle vaadata. Kehv ettevalmistus lühendab paranduse eluiga."
+            "text": "Mõnikord on töömaht piiratud, kuid vana pinna nakkuvus, niiskus ja pragude põhjus tuleb alati enne üle vaadata. Kehv ettevalmistus lühendab paranduse eluiga."
           }
         },
         {
@@ -369,20 +561,27 @@ body.lightbox-open { overflow: hidden; }
     {
       "@type": "ImageObject",
       "@id": "https://www.renoveerikodu.ee/betoonitood#image-1",
+      "url": "https://www.renoveerikodu.ee/images/betoonipump-betooniauto-valu-ehitusplatsil.webp",
+      "contentUrl": "https://www.renoveerikodu.ee/images/betoonipump-betooniauto-valu-ehitusplatsil.webp",
+      "caption": "Betooniauto ja betoonipumbaga tehtav suuremahuline betoonivalu"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.renoveerikodu.ee/betoonitood#image-2",
       "url": "https://www.renoveerikodu.ee/images/betoonterrassi_aluse_armeerimine.jpg",
       "contentUrl": "https://www.renoveerikodu.ee/images/betoonterrassi_aluse_armeerimine.jpg",
       "caption": "Betoonterrassi aluse raketise ja armatuurvõrgu paigaldamine"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://www.renoveerikodu.ee/betoonitood#image-2",
+      "@id": "https://www.renoveerikodu.ee/betoonitood#image-3",
       "url": "https://www.renoveerikodu.ee/images/betoonplaadi_valu_ja_pinna_silumine.jpg",
       "contentUrl": "https://www.renoveerikodu.ee/images/betoonplaadi_valu_ja_pinna_silumine.jpg",
       "caption": "Betoonplaadi valu ja värske betoonpinna silumine"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://www.renoveerikodu.ee/betoonitood#image-3",
+      "@id": "https://www.renoveerikodu.ee/betoonitood#image-4",
       "url": "https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg",
       "contentUrl": "https://www.renoveerikodu.ee/images/betoonitood_tallinnas_ja_harjumaal.jpg",
       "caption": "Valmis betoonplaat varjualuse all Tallinnas ja Harjumaal"
@@ -391,7 +590,7 @@ body.lightbox-open { overflow: hidden; }
 }
 </script>
 </head>
-	<body class="page-ready page-plaatimine">
+	<body class="page-ready page-betoon">
 <a class="skip-link" href="#main-content">Liigu põhisisuni</a>
 
 		<!-- Page Wrapper -->
@@ -445,7 +644,7 @@ body.lightbox-open { overflow: hidden; }
 <article id="main">
 						<header>
 							<h1>Betoonitööd Tallinnas ja Harjumaal</h1>
-							<p>Betoonivalu, aluspinnad ja väiksemad betoonkonstruktsioonid.</p>
+							<p>Betoonivalu, põrandad, vundamendid ja konstruktsioonid — ettevalmistusest järelhoolduseni.</p>
 						</header>
 <aside class="service-trust-strip" aria-label="Teenuse eelised">
   <strong>3-aastane garantii tehtud ehitus- ja viimistlustöödele</strong>
@@ -453,65 +652,143 @@ body.lightbox-open { overflow: hidden; }
   <span>Tallinn ja Harjumaa</span>
   <a href="kontakt.html#vorm">Saada töö kirjeldus ja fotod</a>
 </aside>
-						<section class="wrapper style5 seo-service-page">
+						<section class="wrapper style5 seo-service-page concrete-page">
 							<div class="inner">
 								<section class="service-intro">
-									<div class="concrete-gallery" aria-label="Betoonitööde galerii">
-										<button type="button" data-gallery-index="0" aria-label="Ava suurelt: betoonterrassi aluse armeerimine">
-											<img src="images/betoonterrassi_aluse_armeerimine.jpg" alt="Betoonterrassi aluse raketise ja armatuurvõrgu paigaldamine" width="2048" height="1536" loading="eager" decoding="async">
-										</button>
-										<button type="button" data-gallery-index="1" aria-label="Ava suurelt: betoonplaadi valu ja pinna silumine">
-											<img src="images/betoonplaadi_valu_ja_pinna_silumine.jpg" alt="Betoonplaadi valu ja värske betoonpinna silumine" width="2048" height="1536" loading="lazy" decoding="async">
-										</button>
-										<button type="button" data-gallery-index="2" aria-label="Ava suurelt: valmis betoonitööd Tallinnas ja Harjumaal">
-											<img src="images/betoonitood_tallinnas_ja_harjumaal.optimized.webp" srcset="images/betoonitood_tallinnas_ja_harjumaal.800.webp 800w, images/betoonitood_tallinnas_ja_harjumaal.optimized.webp 1280w" sizes="(max-width: 736px) calc(100vw - 3rem), 50vw" alt="Valmis betoonplaat varjualuse all Tallinnas ja Harjumaal" width="1280" height="960" loading="lazy" decoding="async">
-										</button>
-									</div>
-<p class="geo-entity-summary">Betoonitööde planeerimisel vaatame üle aluspinna, ligipääsu, vajaliku armeerimise, betooni mahu ja tööde järjekorra. Nii saab enne alustamist realistliku hinna ja ajakava.</p>
-									<p>Betoonitööd vajavad täpset ettevalmistust, õiget armeerimist ja läbimõeldud järelhooldust. Teeme Tallinnas ja Harjumaal väiksemaid ning keskmisi betoonitöid: valmistame ette aluspindu, teeme valusid ja betoonkonstruktsioonide eeltöid.</p>
-
-									<p>Tööde planeerimisel arvestame koormust, kõrguseid, niiskust, külmakerke riski ja seda, mis viimistlus või konstruktsioon betoonile hiljem tuleb.</p>
+									<p class="concrete-lead">Betoonitöö ei alga valupäevast. Enne segu tellimist peavad olema paigas aluspind, kõrgused, raketis, armeerimine, ligipääs ja tööjärjekord. Teeme betoonivalusid ning betoonkonstruktsioonide ettevalmistust Tallinnas ja Harjumaal, lähtudes objekti kasutusest, projektist ja tegelikust koormusest.</p>
+									<p class="geo-entity-summary">Töömahu hindamisel vaatame üle betoonikoguse, pumba ulatuse, autode ligipääsu, paigalduskiiruse ja järelhoolduse. Nii saab enne valupäeva realistliku hinna, ajakava ja tehnilise lahenduse.</p>
 								</section>
 
-								<section class="seo-content-grid">
+								<section aria-labelledby="betoonitoode-ulatus">
+									<h2 id="betoonitoode-ulatus">Milliseid betoonitöid planeerime?</h2>
+									<div class="concrete-scope">
+										<article>
+											<h3>Betoonpõrandad ja -plaadid</h3>
+											<p>Alates kandvast alusest ja armeerimisest kuni valamise, loodimise, silumise ning järelhoolduseni.</p>
+										</article>
+										<article>
+											<h3>Vundamendid ja taldmikud</h3>
+											<p>Raketis, armatuur ja betoonivalu tehakse konstruktsiooni mõõtude ning koormuste järgi.</p>
+										</article>
+										<article>
+											<h3>Terrassid, trepid ja välispinnad</h3>
+											<p>Välitingimustes arvestame kallete, vee ärajuhtimise, külmumise ja sobiva keskkonnaklassiga.</p>
+										</article>
+										<article>
+											<h3>Betooni parandamine</h3>
+											<p>Enne parandust selgitame pragunemise või kahjustuse põhjuse ning valmistame vana pinna nakkeks ette.</p>
+										</article>
+									</div>
+								</section>
+
+								<section class="concrete-types" aria-labelledby="betooniliigid">
+									<div class="concrete-section-heading">
+										<h2 id="betooniliigid">Betooniliigid ja nende omadused</h2>
+										<p>Betooni ei valita ainult tugevusklassi või kuupmeetri hinna järgi. Arvesse tuleb võtta konstruktsiooni, keskkonda, paigaldusviisi, soovitud pinda ja seda, kuidas pragunemist kontrollitakse.</p>
+									</div>
+									<div class="concrete-type-grid">
+										<article class="concrete-type-card">
+											<span class="type-label">Põhilahendus</span>
+											<h3>Konstruktsioonibetoon ehk tavabetoon</h3>
+											<p>Tehases valmistatud betoon, mille tugevusklass — näiteks C25/30 või C30/37 — valitakse projekti järgi. Betoon talub hästi survet, kuid tõmbepingete ja pragude kontrollimiseks vajab konstruktsioon sageli armatuuri, vuuke või kiude.</p>
+										</article>
+										<article class="concrete-type-card">
+											<span class="type-label">Betoon + terasarmatuur</span>
+											<h3>Raudbetoon</h3>
+											<p>Raudbetoon ei ole eraldi segu, vaid betooni ja projekteeritud varras- või võrkarmeeringu koostöö. Betoon kannab peamiselt survet ning teras tõmmet. Armatuuri asukoht, ankurdamine ja kaitsekiht mõjutavad otseselt konstruktsiooni kandevõimet ja kestvust.</p>
+										</article>
+										<article class="concrete-type-card">
+											<span class="type-label">Kandev kiudlahendus</span>
+											<h3>Teraskiudbetoon ehk metallkiudbetoon</h3>
+											<p>Segusse jaotatud teraskiud parandavad löögikindlust, pragude kontrolli ja betooni jääktõmbetugevust pärast prao tekkimist. Seda kasutatakse näiteks põrandates ja plaatides. Armatuurvõrgu võib teraskiud asendada ainult arvutatud ning projekteeritud lahenduses.</p>
+										</article>
+										<article class="concrete-type-card">
+											<span class="type-label">Varajase prao kontroll</span>
+											<h3>Mikrokiudbetoon</h3>
+											<p>Peened sünteetilised mikrokiud vähendavad värske betooni plastilisest kahanemisest tekkivate pindmiste pragude riski ja parandavad segu sidusust. Mikrokiud ei ole kandev armatuur ega asenda armatuurvardaid või -võrku.</p>
+										</article>
+										<article class="concrete-type-card">
+											<span class="type-label">Sünteetiline konstruktsioonikiud</span>
+											<h3>Makrokiudbetoon</h3>
+											<p>Pikemad ja jäigemad polümeerkiud annavad betoonile pärast pragunemist jääktugevust ning aitavad põrandates ja plaatides pragusid kontrollida. Neid kasutatakse ka kohtades, kus metallkiud ei sobi, kuid vajalik kiutüüp ja annus määratakse arvutusega.</p>
+										</article>
+										<article class="concrete-type-card">
+											<span class="type-label">Keerukas raketis</span>
+											<h3>Isetihenev betoon</h3>
+											<p>Väga voolav, kuid stabiilne segu täidab raketise ja liigub tiheda armatuuri ümber oma raskuse mõjul. Tavalist vibrotihendamist pole vaja, kuid raketis peab olema tihe ja arvestama suurema survega.</p>
+										</article>
+									</div>
+									<p class="concrete-note"><strong>Oluline:</strong> „kiudbetoon” on üldnimetus. Teraskiud, sünteetiline makrokiud ja mikrokiud täidavad erinevat ülesannet. Sobiv lahendus, kiudude annus ja võimalik tavapärase armatuuri asendamine peavad tulema projektist ning betoonitootja retseptist.</p>
+									<div class="concrete-specialties" aria-label="Betooni eriliigid">
+										<div>
+											<h3>Põrandabetoon</h3>
+											<p>Segu valitakse põranda paksuse, kulumiskoormuse, viimistlusviisi, tasasuse ja pragude kontrolli järgi.</p>
+										</div>
+										<div>
+											<h3>Ilmastiku- ja külmakindel betoon</h3>
+											<p>Väliskonstruktsioonis määrab sobiva lahenduse kokkupuude vee, külmumise, sulamise ja vajadusel jäätõrjesooladega.</p>
+										</div>
+										<div>
+											<h3>Veetihe betoon</h3>
+											<p>Väikese vee läbilaskvusega segu on vaid üks osa lahendusest; vuugid, läbiviigud, pragude kontroll ja järelhooldus peavad samuti vett pidama.</p>
+										</div>
+										<div>
+											<h3>Puhasvalu- ja arhitektuurne betoon</h3>
+											<p>Nähtava pinna tulemuse määravad raketise materjal, vuugijaotus, paigaldus, tihendamine ja kogu valu ühtlane teostus.</p>
+										</div>
+									</div>
+								</section>
+
+								<section class="concrete-process" aria-labelledby="betooni-tooprotsess">
+									<div class="concrete-section-heading">
+										<h2 id="betooni-tooprotsess">Valu tulemus sõltub ettevalmistusest</h2>
+										<p>Senised objektifotod on paigutatud nende tööetappide juurde, mida need tegelikult näitavad.</p>
+									</div>
+									<div class="concrete-process-grid">
+										<figure class="concrete-process-card">
+											<img src="images/betoonterrassi_aluse_armeerimine.jpg" alt="Betoonterrassi raketis ja armatuurvõrk enne valu" width="2048" height="1536" loading="lazy" decoding="async">
+											<figcaption>
+												<h3>1. Aluspind, raketis ja armeerimine</h3>
+												<p>Alus tihendatakse, kõrgused ja kalded märgitakse ning raketis toestatakse. Armatuur paigaldatakse õigesse kõrgusesse distantsklotsidele, mitte otse alusele.</p>
+											</figcaption>
+										</figure>
+										<figure class="concrete-process-card">
+											<img src="images/betoonplaadi_valu_ja_pinna_silumine.jpg" alt="Värske betoonplaadi tasandamine ja pinna silumine" width="2048" height="1536" loading="lazy" decoding="async">
+											<figcaption>
+												<h3>2. Valamine ja pinna viimistlus</h3>
+												<p>Betoon paigaldatakse kavandatud järjekorras, tihendatakse valitud segu järgi ja tasandatakse soovitud kõrgusele. Viimistlus sõltub sellest, kas pind jääb nähtavaks või kaetakse.</p>
+											</figcaption>
+										</figure>
+										<figure class="concrete-process-card">
+											<img src="images/betoonitood_tallinnas_ja_harjumaal.optimized.webp" srcset="images/betoonitood_tallinnas_ja_harjumaal.800.webp 800w, images/betoonitood_tallinnas_ja_harjumaal.optimized.webp 1280w" sizes="(max-width: 736px) calc(100vw - 3rem), 33vw" alt="Valmis betoonplaat pärast valu ja järelhooldust" width="1280" height="960" loading="lazy" decoding="async">
+											<figcaption>
+												<h3>3. Järelhooldus ja koormamine</h3>
+												<p>Värsket pinda kaitstakse liiga kiire kuivamise, vihma, külma ja enneaegse koormuse eest. Järgmise töö etapp määratakse betooni tugevuse ja jääkniiskuse järgi.</p>
+											</figcaption>
+										</figure>
+									</div>
+								</section>
+
+								<section class="concrete-selection" aria-labelledby="betooni-valimine">
 									<div>
-										<h2>Mida teenus sisaldab?</h2>
-										<ul class="check-list">
-										<li>väiksemad betoonivalud ja aluspinnad</li>
-										<li>armeerimise ja vormitööde ettevalmistus</li>
-										<li>terrasside, abihoonete ja tehniliste pindade alused</li>
-										<li>betoonpinna viimistlus ja järelhoolduse soovitused</li>
-										</ul>
+										<h2 id="betooni-valimine">Kuidas valida õige betoon?</h2>
+										<p>Segu nimetus üksi ei otsusta tulemust. Lõplik valik tehakse projekti, kasutuskeskkonna ja paigaldusolude järgi.</p>
 									</div>
 									<div>
-										<h2>Millal seda tellida?</h2>
-										<p>Betoonitöid tellitakse sageli enne terrassi, kuuri, trepi, tehnoruumi või vundamendiga seotud tööde alustamist. Betooni valamisel ja aluspindade rajamisel arvestame koormuse, aluse ettevalmistuse ja konstruktsiooni kasutusotstarbega.</p>
+										<ol>
+											<li><strong>Tugevusklass</strong> tuleb konstruktsiooni arvutusest, mitte valaja eelistusest.</li>
+											<li><strong>Keskkonnaklass</strong> arvestab niiskust, külmumist, soolasid ja muid kahjustavaid mõjusid.</li>
+											<li><strong>Konsistents ja täitematerjal</strong> valitakse pumba, armatuuri tiheduse, ristlõike ja viimistluse järgi.</li>
+											<li><strong>Armeerimine või kiud</strong> kavandatakse koormuse ja pragunemisriski järgi.</li>
+											<li><strong>Järelhooldus</strong> algab kohe pärast pinna viimistlemist ning sõltub ilmast ja kasutatud segust.</li>
+										</ol>
 									</div>
 								</section>
-
-								<section class="service-process">
-									<h2>Tööprotsess</h2>
-									<div class="plaatimine-steps">
-									<div class="step">
-										<h3>Aluspind</h3>
-										<p>Valmistame ette pinnase või olemasoleva aluse, tihendame ja määrame vajalikud kõrgused.</p>
-									</div>
-									<div class="step">
-										<h3>Vorm ja armeering</h3>
-										<p>Paigaldame vormid, kontrollime mõõdud ning kasutame töö iseloomule vastavat armeeringut.</p>
-									</div>
-									<div class="step">
-										<h3>Valu ja järelhooldus</h3>
-										<p>Teeme valu, tasandame pinna ja anname juhised kuivamise ning koormamise kohta.</p>
-									</div>
-									</div>
-								</section>
-
 
 								<section class="service-estimate">
 									<h2>Betoonitööde pakkumine</h2>
-									<p>Betoonitöö hind sõltub ettevalmistusest: kas vaja on kaevet, killustikalust, tihendamist, vorme, armeeringut või kõrguste täpset sidumist olemasolevate pindadega. Väiksemal tööl võib suure osa ajast võtta just ettevalmistus, sest vale kõrgus või nõrk alus mõjutab kogu tulemust.</p>
-									<p>Pärast valu jälgime pinna viimistlust, servasid ja järelhoolduse vajadust. Kui betoonitöö on seotud vundamendi, terrassi, tehnoruumi või plaatimisega, lepime tööjärjekorra kokku nii, et betoon saaks enne järgmist etappi piisavalt kuivada ja tugevneda.</p>
+									<p>Hind sõltub kaevetest, killustikalusest, tihendamisest, raketisest, armeerimisest, betoonikogusest, pumba vajadusest ja pinna viimistlusest. Suurema valumahu korral arvestame ka autode saabumise rütmi, pumba tööaega ning meeskonda, kes jõuab betooni enne tardumist paigaldada ja viimistleda.</p>
+									<p>Pakkumise jaoks saada võimalusel projekt või mõõdud, konstruktsiooni kasutusotstarve, objekti aadress, ligipääsu fotod ja soovitud tähtaeg. Kui lähteandmetest ei piisa, vaatame objekti üle enne segu ning tehnika tellimist.</p>
 								</section>
 
 
@@ -532,7 +809,7 @@ body.lightbox-open { overflow: hidden; }
 <section class="service-knowledge">
   <h2>Praktiline tööinfo betoonitööde kohta</h2>
   <h3>Materjalid</h3>
-  <p>Betoonitöödel on oluline betooni klass, armeerimine, aluspinna tihendus, niiskuskaitse ja järelhooldus. Väiksem parandus ja uus valupind vajavad erinevat lahendust.</p>
+  <p>Betooni tugevusklass, keskkonnaklass, konsistents, täitematerjal ja kiudlahendus valitakse konstruktsiooni järgi. Lokaalne parandus ning uus kandev valupind vajavad erinevat materjali ja ettevalmistust.</p>
   <h3>Ajakulu</h3>
   <p>Ajakulu ei piirdu valamisega. Arvestada tuleb ettevalmistuse, vormide, armeerimise, valamise, tasandamise ja kivinemisega enne järgmisi töid.</p>
   <h3>Hinnategurid</h3>
@@ -541,13 +818,22 @@ body.lightbox-open { overflow: hidden; }
   <p>Levinud vead on nõrk või vajuv aluspind, valesti planeeritud kalle, puudulik armeerimine ja liiga kiire järgmise tööetapi alustamine enne piisavat kivinemist.</p>
   <h3>Soovitused kliendile</h3>
   <p>Enne töö tellimist tasub täpsustada, millist koormust pind kandma hakkab ja kas sellele tuleb plaat, parkett, hüdroisolatsioon või välitingimustes viimistlus.</p>
+  <p class="concrete-sources"><strong>Tehnilise ülevaate lähteallikad:</strong> <a href="https://rudus.ee/betoon/betooniliigid/" rel="noopener noreferrer" target="_blank">Ruduse betooniliigid</a>, <a href="https://www.kunda.heidelbergmaterials.ee/et/betooni-pohiomadused" rel="noopener noreferrer" target="_blank">Heidelberg Materials Eesti betooni põhiomadused</a> ja <a href="https://betoon.org/trukised/betooniuhingu-juhendid/" rel="noopener noreferrer" target="_blank">Eesti Betooniühingu juhendid</a>. Konkreetse konstruktsiooni retsept ja armeerimine määratakse alati projekti ning tootja tehniliste andmete järgi.</p>
 </section>
 
 <section class="service-faq">
 									<h2>Korduma kippuvad küsimused</h2>
 									<details>
-										<summary>Kas teete suuremahulisi betoonitöid?</summary>
-										<p>Keskendume peamiselt väiksematele ja keskmistele töödele. Suurema objekti puhul hindame mahu eraldi.</p>
+										<summary>Kuidas hindate suurema betoonitöö mahtu?</summary>
+										<p>Töömahu hindame projekti, betoonikoguse, pumba ulatuse, ligipääsu, raketise, armeerimise ja valupäeva logistika järgi. Suurema valu tarne- ja tööjärjekord planeeritakse enne pakkumist.</p>
+									</details>
+									<details>
+										<summary>Kas teraskiudbetoon asendab armatuurvõrku?</summary>
+										<p>Mõnes põrandas või plaadis võib asendada, kuid ainult arvutatud ja projekteeritud lahenduses. Teraskiu tüüp, annus, plaadi paksus, aluse jäikus, koormus ning vuugijaotus peavad moodustama ühe terviku.</p>
+									</details>
+									<details>
+										<summary>Mis vahe on mikrokiul ja makrokiul?</summary>
+										<p>Mikrokiud vähendab eelkõige värske betooni plastilise kahanemise pragusid ega ole kandev armatuur. Makrokiud annab betoonile pärast pragunemist jääktugevust ja võib projekteeritud lahenduses täita konstruktsioonilist ülesannet.</p>
 									</details>
 									<details>
 										<summary>Kas betooni saab valada talvel?</summary>
@@ -559,10 +845,10 @@ body.lightbox-open { overflow: hidden; }
 									</details>
 									<details>
 										<summary>Kas teete ka vormitööd?</summary>
-										<p>Jah, väiksemate tööde puhul teeme ka vormid ja ettevalmistuse.</p>
+										<p>Jah. Raketise, toestuse ja muu ettevalmistuse maht lepitakse kokku konstruktsiooni ning projekti järgi.</p>
 									</details>
 
-<details><summary>Kas väikest betooniparandust saab teha ilma suurema ettevalmistuseta?</summary><p>Mõnikord saab, kuid vana pinna nakkuvus, niiskus ja pragude põhjus tuleb enne üle vaadata. Kehv ettevalmistus lühendab paranduse eluiga.</p></details>
+<details><summary>Kas lokaalset betooniparandust saab teha ilma aluspinda ette valmistamata?</summary><p>Mõnikord on töömaht piiratud, kuid vana pinna nakkuvus, niiskus ja pragude põhjus tuleb alati enne üle vaadata. Kehv ettevalmistus lühendab paranduse eluiga.</p></details>
 
 <details><summary>Millal võib betoonpinnale järgmise töö teha?</summary><p>See sõltub betooni paksusest, niiskusest, temperatuurist ja järgmisest viimistlusest. Plaatimine, hüdroisolatsioon või põrandakate vajavad erinevat kuivustaset.</p></details>
 
@@ -598,13 +884,6 @@ body.lightbox-open { overflow: hidden; }
 						</section>
 					</article>
 </main>
-
-				<div class="gallery-lightbox" id="concrete-lightbox" role="dialog" aria-modal="true" aria-label="Betoonitööde pildigalerii" hidden>
-					<button type="button" class="gallery-lightbox__close" aria-label="Sulge galerii">&times;</button>
-					<button type="button" class="gallery-lightbox__nav gallery-lightbox__prev" aria-label="Eelmine pilt">&#8249;</button>
-					<img class="gallery-lightbox__image" src="" alt="Betoonitööde galerii suur pilt" width="1280" height="960">
-					<button type="button" class="gallery-lightbox__nav gallery-lightbox__next" aria-label="Järgmine pilt">&#8250;</button>
-				</div>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -888,66 +1167,5 @@ msg.innerHTML = `<div class="unsub-error">Serveri viga</div>`;
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-	const triggers = Array.from(document.querySelectorAll("[data-gallery-index]"));
-	const lightbox = document.getElementById("concrete-lightbox");
-	if (!triggers.length || !lightbox) return;
-
-	const image = lightbox.querySelector(".gallery-lightbox__image");
-	const closeButton = lightbox.querySelector(".gallery-lightbox__close");
-	const previousButton = lightbox.querySelector(".gallery-lightbox__prev");
-	const nextButton = lightbox.querySelector(".gallery-lightbox__next");
-	let currentIndex = 0;
-	let lastTrigger = null;
-	let touchStartX = 0;
-
-	function show(index) {
-		currentIndex = (index + triggers.length) % triggers.length;
-		const thumbnail = triggers[currentIndex].querySelector("img");
-		image.src = thumbnail.src;
-		image.alt = thumbnail.alt;
-	}
-
-	function open(index, trigger) {
-		lastTrigger = trigger;
-		show(index);
-		lightbox.hidden = false;
-		document.body.classList.add("lightbox-open");
-		closeButton.focus();
-	}
-
-	function close() {
-		lightbox.hidden = true;
-		document.body.classList.remove("lightbox-open");
-		image.src = "";
-		if (lastTrigger) lastTrigger.focus();
-	}
-
-	triggers.forEach(function (trigger, index) {
-		trigger.addEventListener("click", function () { open(index, trigger); });
-	});
-	previousButton.addEventListener("click", function () { show(currentIndex - 1); });
-	nextButton.addEventListener("click", function () { show(currentIndex + 1); });
-	closeButton.addEventListener("click", close);
-	lightbox.addEventListener("click", function (event) {
-		if (event.target === lightbox) close();
-	});
-	lightbox.addEventListener("touchstart", function (event) {
-		touchStartX = event.changedTouches[0].clientX;
-	}, { passive: true });
-	lightbox.addEventListener("touchend", function (event) {
-		const distance = event.changedTouches[0].clientX - touchStartX;
-		if (Math.abs(distance) < 50) return;
-		show(currentIndex + (distance < 0 ? 1 : -1));
-	}, { passive: true });
-	document.addEventListener("keydown", function (event) {
-		if (lightbox.hidden) return;
-		if (event.key === "Escape") close();
-		if (event.key === "ArrowLeft") show(currentIndex - 1);
-		if (event.key === "ArrowRight") show(currentIndex + 1);
-	});
-});
-</script>
 	</body>
 </html>
