@@ -38,6 +38,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <link rel="stylesheet" href="assets/css/performance.min.css?v=20260913">
+<style>
+.page-plaatimine .tiling-illustration { margin: 2em 0; }
+.page-plaatimine .tiling-illustration img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.page-plaatimine .tiling-illustration figcaption { margin-top: .75em; font-size: .9em; line-height: 1.6; }
+.page-plaatimine .tiling-illustration a { display: block; }
+.page-plaatimine .tiling-detail-list { padding-left: 1.2em; }
+.page-plaatimine .tiling-detail-list li { margin-bottom: .75em; }
+.page-plaatimine .tiling-summary { margin: 1.5em 0; }
+.page-plaatimine .tiling-drain-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25em; }
+.page-plaatimine .tiling-drain-photo { position: relative; overflow: hidden; aspect-ratio: 1 / 2; border-radius: 4px; }
+.page-plaatimine .tiling-drain-photo img { width: 300%; max-width: none; height: auto; }
+@media (max-width: 736px) { .page-plaatimine .tiling-drain-grid { grid-template-columns: 1fr; } .page-plaatimine .tiling-drain-photo { aspect-ratio: 2 / 3; } }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -165,6 +178,46 @@
             "@type": "Answer",
             "text": "Jah. RK Meistrid OÜ tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas renntrapp sobib igasse vannituppa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mitte alati. Kontrollida tuleb põranda ehituskõrgust, kanalisatsiooni asukohta, äravooluvõimet ning hüdroisolatsiooniga ühendamise võimalust. Trapi mudel ja asukoht valitakse enne kallete tegemist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas krunt või niiskustõke asendab hüdroisolatsiooni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krunt ei asenda hüdroisolatsiooni. Märgruumis on vaja plaatide alla sobivat veetõkkesüsteemi koos nurkade, toruläbiviikude ja trapi tihendustega. Üldnimetusega niiskustõkke sobivus kontrollitakse tootejuhendist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Millal tuleb valida seinasisene dušisegisti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seinasisene segisti tuleb valida enne seina sulgemist ja plaatimist, sest paigalduskorpus vajab kindlat sügavust, sobivaid toruühendusi ning tihenduslahendust. Nähtav viimistluskomplekt peab sobima valitud korpusega."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas suure plaadiga saab teha dušipõranda kalded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, kui plaadijaotus ja kaldepinnad seda võimaldavad. Punkttrapi ümber võivad suured plaadid vajada kaldepindade piiril lõikeid. Seinaäärse renntrapi korral võib sobida ühe suunaga kalle. Lahendus otsustatakse enne plaatide ostmist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mida hinnapäringule lisada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lisa fotod, seina- ja põrandapindade mõõdud, plaadi mõõt ja materjal, objekti asukoht ning soovitud tähtaeg. Märgi, kas vaja on vana viimistluse eemaldamist, torutöid, trapi vahetust, kallete valamist, hüdroisolatsiooni või seinasisest segistit."
+          }
         }
       ]
     },
@@ -271,6 +324,7 @@
 
 								<section class="service-process">
 									<h2>Tööprotsess</h2>
+
 									<div class="plaatimine-steps">
 									<div class="step">
 										<h3>Aluspinna kontroll</h3>
@@ -303,7 +357,7 @@
 
 								<section class="price-guide">
 <h2>Plaatimistööde hinnad</h2>
-<p>Plaatimise hinnad algavad lihtsamatel pindadel tavaliselt väiksemast töömahust, kuid vannitoa, dušinurga ja suureformaadilise plaadi puhul mõjutavad hinda hüdroisolatsioon, kalded, lõiked ja vuugilahendus. Täpse pakkumise jaoks on kõige parem saata fotod, ruutmeetrid ja plaadi mõõt.</p>
+<p>Seinte ja põranda plaatimise töö hind algab hinnakirja järgi 49 €/m²; koos materjaliga algab hind 59 €/m². Materjalide täpne koosseis ja plaatide maksumuse arvestus lepitakse pakkumises eraldi kokku. Aluspinna tasandus, kallete valamine, hüdroisolatsioon, lammutus ja sanitaartehnika täpsustatakse eraldi tööetappidena. Lõplik hind sõltub aluspinna seisukorrast, töömahust ja objekti eripärast. Vaata <a href="hinnakiri.html">kehtivat hinnakirja</a>.</p>
 <p>Hinnapäringu kiirendamiseks lisa võimalusel fotod, mõõdud, objekti asukoht ja soovitud tähtaeg. Nii saame paremini aru, kas töö vajab objektikülastust või saab esmase hinnangu anda kirjelduse põhjal.</p>
 </section>
 
@@ -311,6 +365,58 @@
   <h2>Praktiline tööinfo plaatimise kohta</h2>
   <h3>Materjalid</h3>
   <p>Plaatimise kvaliteet sõltub aluspinnast, niiskuskaitsest, plaadi tüübist, segust ja vuugimaterjalist. Märgruumis kasutame lahendust, kus hüdroisolatsioon, nurgalindid, läbiviikude tihendused ja sobiv plaatimissegu töötavad koos. Suureformaadilise plaadi puhul peab aluspind olema eriti tasane, sest väike kõverus jääb lõpptulemuses kiiresti näha.</p>
+
+  <h3>Enne plaatimist: torutööd ja dušilahenduse planeerimine</h3>
+  <p>Enne pindade sulgemist lepime kokku duši, valamu, WC ja pesumasina asukohad ning vee- ja kanalisatsiooniühendused. Torustiku ühendused kontrollitakse ja vajalikud katsed tehakse enne nende katmist. Trapi kõrgus peab arvestama kogu põrandakihti: aluspinda, tasandust, hüdroisolatsiooni, plaatimissegu ja plaati. Elektrilise põrandakütte ning muu elektritöö korraldus täpsustatakse koos vastava spetsialistiga.</p>
+  <p><strong>Pinnapealne dušisegisti</strong> jääb seina ette ning selle ühendused on lihtsamini ligipääsetavad. <strong>Seinasisene ehk süvistatav dušisegisti</strong> annab puhta ja kaasaegse ilme, kuid paigalduskorpus, torustik ja tihendussõlm tuleb valida enne seina ehitamist. Planeerime tootja nõutud paigaldussügavuse ja hooldusvõimaluse. Termostaatsegisti, käsiduši ja vihmaduši valik mõjutab veevajadust ning äravool peab suutma selle koguse vastu võtta.</p>
+
+  <h3>Punkttrapp, renntrapp või seinaäravool?</h3>
+  <p>Trappi ei tasu valida ainult välimuse järgi. Olulised on põranda ehituskõrgus, kanalisatsioonitoru asukoht, äravooluvõime, puhastatavus ning sobivus hüdroisolatsioonisüsteemiga. Trapi korpus kinnitatakse stabiilselt ja ühendus veetõkkega tehakse tootja ettenähtud ääriku, manseti või muu tihenduslahendusega.</p>
+<div class="tiling-drain-grid">
+<figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava punkttrapp illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Ruudukujuline punkttrapp dušipõranda keskel, kaldepindade piiril diagonaalsed plaadilõiked" width="1536" height="1024" style="transform:translateX(-0.0%);" loading="lazy" decoding="async"></a><figcaption><strong>Punkttrapp</strong>. Loodud illustratsioon.</figcaption></figure>
+<figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava renntrapp illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Plaaditava kattega renntrapp dušipõrandas seina ääres" width="1536" height="1024" style="transform:translateX(-33.333333333333336%);" loading="lazy" decoding="async"></a><figcaption><strong>Renntrapp</strong>. Loodud illustratsioon.</figcaption></figure>
+<figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava seinaäravool illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Seina alumisse serva paigaldatud kitsas duši äravooluava" width="1536" height="1024" style="transform:translateX(-66.66666666666667%);" loading="lazy" decoding="async"></a><figcaption><strong>Seinaäravool</strong>. Loodud illustratsioon.</figcaption></figure>
+</div><p class="tiling-summary">Trappide pildid näitavad põhimõttelist lahendust. Tegelikud kalded, lõiked ja tihendused sõltuvad ruumist ning valitud tootest.</p>
+  <ul class="tiling-detail-list">
+    <li><strong>Punkttrapp:</strong> vesi liigub ühte äravoolupunkti. Keskel asuv trapp vajab tavaliselt mitut kaldepinda; väike põrandaplaat või mosaiik järgib neid lihtsamini. Suure plaadi korral planeerime kaldepindade piiril lõiked.</li>
+    <li><strong>Renntrapp ehk duširenn:</strong> pikk äravool võib paikneda seina ääres või muus projektiga määratud kohas. Seinaäärne renn võimaldab sageli ühe suunaga kaldepinda ja suuremat põrandaplaati. Rest võib olla nähtav metallpind või plaaditava kattega.</li>
+    <li><strong>Seinaäravool:</strong> äravooluava paikneb seina alumises osas. See nõuab sobivat seinakonstruktsiooni ja planeeritud paigaldussõlme; põrandakalle juhib vee ava poole.</li>
+  </ul>
+  <p>Näiteks hansgrohe <strong>RainDrain</strong> on äravoolutoodete sari, mitte kõigi renntrappide üldnimetus. Sarjas on erinevaid lahendusi ning konkreetse mudeli sobivust kontrollime põranda kõrguse, ühenduste ja tootja paigaldusjuhendi järgi.</p>
+
+  <h3>Aluspinna ettevalmistus ja põranda kallete valamine</h3>
+<figure class="tiling-illustration"><a href="images/plaatimine-kallete-valamine.webp" target="_blank" rel="noopener" aria-label="Ava illustratsioon suuremalt"><img src="images/plaatimine-kallete-valamine.webp" srcset="images/plaatimine-kallete-valamine.800.webp 800w, images/plaatimine-kallete-valamine.webp 1536w" sizes="(max-width: 736px) calc(100vw - 48px), 1000px" alt="Renoveerikodu.ee tööriietuses meister kujundab dušipõranda tasandussegust kallet trapi suunas" width="1536" height="1024" loading="lazy" decoding="async"></a><figcaption>Põranda kalded rajatakse enne hüdroisolatsiooni, arvestades trapi kõrgust ja tulevast plaadikihti. Loodud illustratsioon.</figcaption></figure>
+  <p>Vana viimistluse eemaldamise järel hindame seina ja põranda tugevust, niiskust, pragusid ning tasasust. Lahtised kihid ja nakkumist takistav tolm eemaldatakse. Seinad tasandame märgruumi sobiva materjaliga; plaatseina puhul kontrollime konstruktsiooni jäikust, kinnitusi ja liiteid. Plaatimissegu ei asenda vajalikku aluspinna tasandamist.</p>
+  <p>Dušiala kalded kujundame sobiva kaldevalu- või tasandusseguga enne hüdroisolatsiooni. Isetasanduv segu üksi ei tekita vajalikku kallet. Lahendus võib olla eraldi kaldus dušiala, mitme kaldepinnaga põrand või seinaäärse renni poole langev pind. Läbimõeldud ukseava, dušiklaas ja põrandatasemed aitavad hoida vett märjas tsoonis. Kalde suurus ja ulatus määratakse projekti ning trapi juhendi järgi; kontrollime, et ei jääks vastukaldeid ega vett koguvate lohkudega kohti.</p>
+
+  <h3>Krunt, niiskustõke, hüdromastiks ja tihenduslint</h3>
+<figure class="tiling-illustration"><a href="images/plaatimine-hudroisolatsioon.webp" target="_blank" rel="noopener" aria-label="Ava illustratsioon suuremalt"><img src="images/plaatimine-hudroisolatsioon.webp" srcset="images/plaatimine-hudroisolatsioon.800.webp 800w, images/plaatimine-hudroisolatsioon.webp 1536w" sizes="(max-width: 736px) calc(100vw - 48px), 1000px" alt="Renoveerikodu.ee tööriietuses meister kannab dušipõrandale sinist hüdroisolatsioonimastiksit" width="1536" height="1024" loading="lazy" decoding="async"></a><figcaption>Veetõke hõlmab ka nurki, toruläbiviike ja trapi ühendust; nähtav sinine kiht ei asenda sõlmede kontrolli. Loodud illustratsioon.</figcaption></figure>
+  <p><strong>Krunt</strong> aitab ette valmistada nakkuvat aluspinda, kuid ei tee seda iseenesest veetihedaks. Ka üldnimetus „niiskustõke” ei tähenda automaatselt plaatide alla sobivat hüdroisolatsiooni. Märgruumis valime tervikliku süsteemi, mille komponendid sobivad omavahel ja aluspinnaga.</p>
+  <p><strong>Hüdroisolatsioonimastiks ehk hüdromastiks</strong> moodustab plaatide alla veetõkkekihi. Nurkades ja liidetes kasutame süsteemi nõutud tihenduslinte või nurgatükke, torude ümber mansette ning trapi juures sellele sobivat ühendusdetaili. Ka nišid, lävepiirkond ja segisti läbiviigud vajavad läbimõeldud sõlmi. Kihi paksus, kulu, kihtide arv ja kuivamisaeg lähtuvad tootja juhendist; pelgalt ühtlane värvus ei tõenda piisavat veetõket. Alternatiivina võib sobida süsteemne hüdroisolatsioonikangas.</p>
+
+  <h3>Milline plaatimissegu valida?</h3>
+  <p>Valik sõltub plaadi materjalist ja mõõdust, aluspinnast, põrandaküttest ning kasutuskohast. Keraamiline seinaplaat, tihe portselanplaat, klaasmosaiik ja niiskustundlik looduskivi võivad vajada erinevat toodet. Kontrollime ka segu sobivust valitud hüdroisolatsiooniga.</p>
+  <ul class="tiling-detail-list">
+    <li><strong>Tsemendipõhine segu:</strong> levinud valik seintele ja põrandatele. C2 tähistab parandatud nakkega segu; S1 ja S2 kirjeldavad deformatsioonivõimet. Põrandakütte ning suure plaadi puhul on deformatsioonivõime oluline, kuid täpse toote määrab kogu lahendus.</li>
+    <li><strong>T ja E tähised:</strong> T tähendab vähendatud libisemist seinal, E pikemat avatud aega. F tähistab kiiret kivistumist, millega kaasneb vajadus töötempot hoolikalt planeerida.</li>
+    <li><strong>Valmis pastaliim:</strong> ei ole universaalne märgruumi- või põrandalahendus. Kasutusala kontrollitakse tootelehelt.</li>
+    <li><strong>Valge või erisegu:</strong> läbikumava mosaiigi ja looduskivi korral arvestame värvuse ning niiskustundlikkusega. Reaktiivliime kasutatakse erilahendustes tootejuhendi alusel.</li>
+  </ul>
+
+  <h3>Plaatide jaotus, lõiked ja paigaldus</h3>
+<figure class="tiling-illustration"><a href="images/plaatimine-plaatide-paigaldus.webp" target="_blank" rel="noopener" aria-label="Ava illustratsioon suuremalt"><img src="images/plaatimine-plaatide-paigaldus.webp" srcset="images/plaatimine-plaatide-paigaldus.800.webp 800w, images/plaatimine-plaatide-paigaldus.webp 1536w" sizes="(max-width: 736px) calc(100vw - 48px), 1000px" alt="Renoveerikodu.ee tööriietuses plaatija paigaldab hüdroisoleeritud seinale suuri plaate" width="1536" height="1024" loading="lazy" decoding="async"></a><figcaption>Plaadijaotus ja vuukide joonduvus planeeritakse enne liimimist; paigalduse ajal kontrollitakse kontaktpinda ja tasapinda. Loodud illustratsioon.</figcaption></figure>
+  <p>Enne liimimist koostame plaadijaotuse: kust algavad read, kuhu jäävad lõiked ja kuidas joonduvad vuugid ukseava, niši, segisti ning trapiga. Vaatame tervikuna nähtavaid seinu ja põrandat, et kitsad ribad ei jääks juhuslikult kõige silmatorkavamasse kohta. Täisplaadiga alustamine ühest nurgast ei anna alati parimat tulemust.</p>
+  <p>Sirge ladumine, nihkega read, kalasaba ja mosaiik mõjutavad lõigete hulka ning materjalivaru. Suure plaadi ja nihkega mustri juures arvestame ka plaadi enda kõverust ja tootja soovitatud nihket. Vuugi laius valitakse plaadi mõõdutäpsuse ja kasutuskoha järgi; ka rektifitseeritud plaati ei paigaldata täiesti vuugita.</p>
+  <p>Segu kantakse sobiva hammastusega kammiga ja vajadusel ka plaadi tagaküljele. Paigalduse ajal kontrollime nakkuvat kontaktpinda, tasapinda ning servade erinevust. Tasandussüsteem aitab joondada plaate, kuid ei paranda kõverat aluspinda. Konstruktsiooni liikumisvuuke ei kaeta jäigalt üle.</p>
+
+  <h3>Vuukimine ja silikoonimine</h3>
+<figure class="tiling-illustration"><a href="images/plaatimine-silikoonimine.webp" target="_blank" rel="noopener" aria-label="Ava illustratsioon suuremalt"><img src="images/plaatimine-silikoonimine.webp" srcset="images/plaatimine-silikoonimine.800.webp 800w, images/plaatimine-silikoonimine.webp 1536w" sizes="(max-width: 736px) calc(100vw - 48px), 1000px" alt="Renoveerikodu.ee tööriietuses meister tihendab plaaditud dušiseina sisenurka silikooniga" width="1536" height="1024" loading="lazy" decoding="async"></a><figcaption>Plaatide vuugid täidetakse sobiva vuugiseguga, liikumist vajavad ühendused saavad elastse tihenduse. Loodud illustratsioon.</figcaption></figure>
+  <p>Vuukimine algab pärast plaatimissegu nõutud kivistumist ja vuukide puhastamist. Tsemendipõhine vuugisegu on tavapärane valik; epoksiidvuuk sobib olukordadesse, kus vajatakse suuremat plekikindlust või keemilist vastupidavust. Epoksiid nõuab täpset tööaega ja puhastust ning selle sobivust hinnatakse ka plaadi pinnaga.</p>
+  <p>Nurgad, eri tasapindade ühendused ning projektis ette nähtud liikumisvuugid saavad sobiva elastse tihenduse. Sanitaarsilikoon valitakse pinna ja kasutuskoha järgi; looduskivile on oluline mittemääriv sobiv toode. Silikoon ega plaadivuuk ei asenda plaatide all olevat hüdroisolatsiooni. Kasutamisel hoitakse elastsed vuugid puhtad ja vajadusel uuendatakse neid.</p>
+
+  <h3>Segistid, dušiklaas ja lõppkontroll</h3>
+  <p>Pärast viimistlusmaterjalide vajalikku kivistumist paigaldatakse kokkulepitud sanitaartehnika ja nähtavad segistiosad. Dušiklaasi kinnitused planeeritakse nii, et veetõket kahjustavaid läbiviike oleks võimalikult vähe; vajalikud kinnitussõlmed tihendatakse juhendi järgi. Kontrollime äravoolu, vuuke, ühendusi ja üldist viimistlust ning anname juhise, millal võib põrandale astuda ja dušši kasutada. Põrandaküte taastatakse valitud süsteemi juhendi järgi järk-järgult.</p>
+
   <h3>Ajakulu</h3>
   <p>Väike köögi tagasein võib valmida lühikese ajaga, kuid vannituba vajab tavaliselt mitut etappi: vana pinna eemaldus, tasandus, hüdroisolatsiooni kuivamine, plaatimine, vuukimine ja silikoonimine. Kuivamisajad on osa kvaliteedist, mitte paus töökorralduses.</p>
   <h3>Hinnategurid</h3>
@@ -351,6 +457,12 @@
   <summary>Kas tehtud töödele kehtib garantii?</summary>
   <p>Jah. RK Meistrid OÜ tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja kokkulepitud tingimused fikseeritakse hinnapakkumises.</p>
 </details>
+
+<details><summary>Kas renntrapp sobib igasse vannituppa?</summary><p>Mitte alati. Kontrollida tuleb põranda ehituskõrgust, kanalisatsiooni asukohta, äravooluvõimet ning hüdroisolatsiooniga ühendamise võimalust. Trapi mudel ja asukoht valitakse enne kallete tegemist.</p></details>
+<details><summary>Kas krunt või niiskustõke asendab hüdroisolatsiooni?</summary><p>Krunt ei asenda hüdroisolatsiooni. Märgruumis on vaja plaatide alla sobivat veetõkkesüsteemi koos nurkade, toruläbiviikude ja trapi tihendustega. Üldnimetusega niiskustõkke sobivus kontrollitakse tootejuhendist.</p></details>
+<details><summary>Millal tuleb valida seinasisene dušisegisti?</summary><p>Seinasisene segisti tuleb valida enne seina sulgemist ja plaatimist, sest paigalduskorpus vajab kindlat sügavust, sobivaid toruühendusi ning tihenduslahendust. Nähtav viimistluskomplekt peab sobima valitud korpusega.</p></details>
+<details><summary>Kas suure plaadiga saab teha dušipõranda kalded?</summary><p>Jah, kui plaadijaotus ja kaldepinnad seda võimaldavad. Punkttrapi ümber võivad suured plaadid vajada kaldepindade piiril lõikeid. Seinaäärse renntrapi korral võib sobida ühe suunaga kalle. Lahendus otsustatakse enne plaatide ostmist.</p></details>
+<details><summary>Mida hinnapäringule lisada?</summary><p>Lisa fotod, seina- ja põrandapindade mõõdud, plaadi mõõt ja materjal, objekti asukoht ning soovitud tähtaeg. Märgi, kas vaja on vana viimistluse eemaldamist, torutöid, trapi vahetust, kallete valamist, hüdroisolatsiooni või seinasisest segistit.</p></details>
 </section>
 
 
