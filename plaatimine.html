@@ -46,10 +46,14 @@
 .page-plaatimine .tiling-detail-list { padding-left: 1.2em; }
 .page-plaatimine .tiling-detail-list li { margin-bottom: .75em; }
 .page-plaatimine .tiling-summary { margin: 1.5em 0; }
-.page-plaatimine .tiling-drain-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25em; }
-.page-plaatimine .tiling-drain-photo { position: relative; overflow: hidden; aspect-ratio: 1 / 2; border-radius: 4px; }
+.page-plaatimine .tiling-drain-grid { display: grid; gap: 3.5em; margin: 2.5em 0; }
+.page-plaatimine .tiling-drain-type { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 2.5em; align-items: center; }
+.page-plaatimine .tiling-drain-type .tiling-illustration { margin: 0; }
+.page-plaatimine .tiling-drain-copy h4 { margin-top: 0; }
+.page-plaatimine .tiling-drain-copy p:last-child { margin-bottom: 0; }
+.page-plaatimine .tiling-drain-photo { position: relative; overflow: hidden; aspect-ratio: 2 / 3; border-radius: 4px; }
 .page-plaatimine .tiling-drain-photo img { width: 300%; max-width: none; height: auto; }
-@media (max-width: 736px) { .page-plaatimine .tiling-drain-grid { grid-template-columns: 1fr; } .page-plaatimine .tiling-drain-photo { aspect-ratio: 2 / 3; } }
+@media (max-width: 736px) { .page-plaatimine .tiling-drain-type { grid-template-columns: 1fr; gap: 1.25em; } .page-plaatimine .tiling-drain-grid { gap: 3em; } }
 </style>
 <script type="application/ld+json">
 {
@@ -373,15 +377,20 @@
   <h3>Punkttrapp, renntrapp või seinaäravool?</h3>
   <p>Trappi ei tasu valida ainult välimuse järgi. Olulised on põranda ehituskõrgus, kanalisatsioonitoru asukoht, äravooluvõime, puhastatavus ning sobivus hüdroisolatsioonisüsteemiga. Trapi korpus kinnitatakse stabiilselt ja ühendus veetõkkega tehakse tootja ettenähtud ääriku, manseti või muu tihenduslahendusega.</p>
 <div class="tiling-drain-grid">
+<section class="tiling-drain-type">
 <figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava punkttrapp illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Ruudukujuline punkttrapp dušipõranda keskel, kaldepindade piiril diagonaalsed plaadilõiked" width="1536" height="1024" style="transform:translateX(-0.0%);" loading="lazy" decoding="async"></a><figcaption><strong>Punkttrapp</strong>. Loodud illustratsioon.</figcaption></figure>
+<div class="tiling-drain-copy"><h4>Punkttrapp – üks äravoolukoht põrandas</h4><p>Punkttrapp on väike ruudukujuline või ümmargune põrandaäravool. Selle kaudu liigub dušivesi põranda all olevasse kanalisatsioonitorusse. Pildil on dušiala keskel paiknev ruudukujuline trapp.</p><p>Kui trapp asub keskel, juhitakse vesi sellesse mitmelt kaldepinnalt. Väike põrandaplaat või mosaiik järgib neid lihtsamini; suure plaadi korral planeerime kaldepindade piiril lõiked. Trapi asukoht lepitakse kokku enne põranda valamist.</p></div>
+</section>
+<section class="tiling-drain-type">
 <figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava renntrapp illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Plaaditava kattega renntrapp dušipõrandas seina ääres" width="1536" height="1024" style="transform:translateX(-33.333333333333336%);" loading="lazy" decoding="async"></a><figcaption><strong>Renntrapp</strong>. Loodud illustratsioon.</figcaption></figure>
+<div class="tiling-drain-copy"><h4>Renntrapp – pikk äravool põrandas</h4><p>Renntrapp ehk duširenn kogub vee pikliku ava kaudu. See paikneb põrandas, sageli dušiseina ääres. Pildil on plaaditava kattega renn: pealmine kate viimistletakse põrandaga sarnase plaadiga ja vesi pääseb sisse katte servadest.</p><p>Seinaäärne renn võimaldab sageli ühe suunaga kaldepinda ja suuremat põrandaplaati. Renn võib paikneda ka mujal, kuid siis muutub kallete lahendus. Valikul kontrollime paigalduskõrgust, äravooluvõimet ning seda, kuidas rest ja sifoon puhastamiseks eemaldada.</p></div>
+</section>
+<section class="tiling-drain-type">
 <figure class="tiling-illustration"><a href="images/plaatimine-trappide-vordlus.webp" target="_blank" rel="noopener" class="tiling-drain-photo" aria-label="Ava seinaäravool illustratsioon suuremalt"><img src="images/plaatimine-trappide-vordlus.webp" alt="Seina alumisse serva paigaldatud kitsas duši äravooluava" width="1536" height="1024" style="transform:translateX(-66.66666666666667%);" loading="lazy" decoding="async"></a><figcaption><strong>Seinaäravool</strong>. Loodud illustratsioon.</figcaption></figure>
-</div><p class="tiling-summary">Trappide pildid näitavad põhimõttelist lahendust. Tegelikud kalded, lõiked ja tihendused sõltuvad ruumist ning valitud tootest.</p>
-  <ul class="tiling-detail-list">
-    <li><strong>Punkttrapp:</strong> vesi liigub ühte äravoolupunkti. Keskel asuv trapp vajab tavaliselt mitut kaldepinda; väike põrandaplaat või mosaiik järgib neid lihtsamini. Suure plaadi korral planeerime kaldepindade piiril lõiked.</li>
-    <li><strong>Renntrapp ehk duširenn:</strong> pikk äravool võib paikneda seina ääres või muus projektiga määratud kohas. Seinaäärne renn võimaldab sageli ühe suunaga kaldepinda ja suuremat põrandaplaati. Rest võib olla nähtav metallpind või plaaditava kattega.</li>
-    <li><strong>Seinaäravool:</strong> äravooluava paikneb seina alumises osas. See nõuab sobivat seinakonstruktsiooni ja planeeritud paigaldussõlme; põrandakalle juhib vee ava poole.</li>
-  </ul>
+<div class="tiling-drain-copy"><h4>Seinaäravool – ava seina alumises servas</h4><p>Seinaäravoolu puhul jääb vee sissevooluava seina alumisse serva, mitte eraldi restina põranda keskele. Põrand on kaldu selle ava poole ning äravoolu korpus ja ühendus paiknevad vastava paigalduslahenduse sees. See ei ole renntrapi paigaldamine seinale.</p><p>Lahendus sobib juhul, kui seinakonstruktsioonis ja põranda kõrguses on vajalik paigaldusruum. Seina ja põranda liite hüdroisolatsioon ning hooldusvõimalus planeeritakse enne viimistlust. Olemasolevasse vannituppa sobivust tuleb hinnata objektil.</p></div>
+</section>
+</div>
+<p class="tiling-summary">Trappide pildid näitavad põhimõttelist lahendust. Tegelikud kalded, lõiked ja tihendused sõltuvad ruumist ning valitud tootest.</p>
   <p>Näiteks hansgrohe <strong>RainDrain</strong> on äravoolutoodete sari, mitte kõigi renntrappide üldnimetus. Sarjas on erinevaid lahendusi ning konkreetse mudeli sobivust kontrollime põranda kõrguse, ühenduste ja tootja paigaldusjuhendi järgi.</p>
 
   <h3>Aluspinna ettevalmistus ja põranda kallete valamine</h3>
