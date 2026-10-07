@@ -3,7 +3,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.renoveerikodu.ee/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,13 +15,13 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/plaatimine</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/maalritood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,19 +33,19 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/seinapaneelidepaigaldus</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/parketipaigaldus</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/tapeetimine</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -57,67 +57,67 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/lammutustood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/tellingutepaigaldus</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/betoonitood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/vundamenditood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/fassaaditood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/fassaadivarvimine</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/katusetood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/lumetood</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/hinnakiri</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/tehtudtood</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/vannitoa-plaatimine-tallinn</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -127,29 +127,29 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/parketi-takete-parandus-kuumvahaga</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-hero-jootekolviga.png</image:loc>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-hero-jootekolviga.optimized.webp</image:loc>
       <image:caption>Parketi täkke täitmine sulatatud kuumvahaga.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-paranduse-naidispilt.png</image:loc>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-kuumvaha-paranduse-naidispilt.optimized.webp</image:loc>
       <image:caption>Parketi täkke parandamine kuumvahaga neljas etapis.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.renoveerikodu.ee/images/parketi-lihvimine-lintmasinaga.png</image:loc>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-lihvimine-lintmasinaga.optimized.webp</image:loc>
       <image:caption>Parketi lihvimine lintlihvmasina ja tolmueemaldusega.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.renoveerikodu.ee/images/parketi-servade-lihvimine.png</image:loc>
+      <image:loc>https://www.renoveerikodu.ee/images/parketi-servade-lihvimine.optimized.webp</image:loc>
       <image:caption>Kalasabaparketi servade lihvimine seina ääres.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/fassaadi-varvimine-tallinn-eramu</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -159,7 +159,7 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/katuse-pesu-ja-hooldus-tallinn</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -169,7 +169,7 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/led-valgustuse-paigaldus-tallinn</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -179,7 +179,7 @@
   </url>
   <url>
     <loc>https://www.renoveerikodu.ee/korteri-remont/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -1,6 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="et">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script defer src="assets/js/analytics-loader.js?v=20260913"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FHY5FDJ5DH');
+  </script>
   <meta charset="utf-8" />
   <title>Parketi parandused: kuumvaha ja lihvimine | Tallinn</title>
   <meta name="description" content="Parketi täkete kohtparandus kuumvahaga, parketi lihvimine ja viimistluse taastamine Tallinnas ning Harjumaal. Vaata, millist põrandat saab parandada või lihvida." />
@@ -21,12 +29,19 @@
   <link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <link rel="stylesheet" href="assets/css/performance.min.css?v=20260913">
+  <link rel="preload" as="image" href="images/parketi-kuumvaha-hero-jootekolviga.optimized.webp" imagesrcset="images/parketi-kuumvaha-hero-jootekolviga.800.webp 800w, images/parketi-kuumvaha-hero-jootekolviga.optimized.webp 1400w" imagesizes="100vw" fetchpriority="high">
   <style>
     .page-parkett-repair #main > header {
-      background-image: linear-gradient(rgba(20, 27, 34, 0.58), rgba(20, 27, 34, 0.58)), url("images/parketi-kuumvaha-hero-jootekolviga.png") !important;
+      background-image: linear-gradient(rgba(20, 27, 34, 0.58), rgba(20, 27, 34, 0.58)), url("images/parketi-kuumvaha-hero-jootekolviga.optimized.webp") !important;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    @media screen and (max-width: 736px) {
+      .page-parkett-repair #main > header {
+        background-image: linear-gradient(rgba(20, 27, 34, 0.58), rgba(20, 27, 34, 0.58)), url("images/parketi-kuumvaha-hero-jootekolviga.800.webp") !important;
+      }
     }
 
     .page-parkett-repair .center-image {
@@ -247,7 +262,7 @@
         <h2 id="kuumvahaparandus">Parketi täkete parandus kuumvahaga</h2>
         <p>Kuumvahaparandus sobib eelkõige üksikutele täketele, väikestele lohkudele, sügavamatele kriimustustele ning servakahjustustele, kui põrand on muus osas stabiilne ja heas seisukorras.</p>
         <figure class="center-image">
-          <img src="images/parketi-kuumvaha-paranduse-naidispilt.png" alt="Parketi täkke parandamine kuumvahaga neljas etapis" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async">
+              <img src="images/parketi-kuumvaha-paranduse-naidispilt.optimized.webp" srcset="images/parketi-kuumvaha-paranduse-naidispilt.800.webp 800w, images/parketi-kuumvaha-paranduse-naidispilt.optimized.webp 1400w" sizes="(max-width: 736px) calc(100vw - 3rem), 60em" alt="Parketi täkke parandamine kuumvahaga neljas etapis" width="1400" height="788" loading="lazy" decoding="async">
         </figure>
 
         <p>Sobivates toonides kõva vaha sulatatakse kahjustusse, tasandatakse ning viimistletakse ümbritseva pinna järgi. Vajadusel kasutatakse mitut tooni, et vähendada erinevust parketi põhivärvi ja puidumustriga.</p>
@@ -282,7 +297,7 @@
           <h2 id="parketi-lihvimine">Parketi lihvimine ja uus viimistlus</h2>
           <p>Lihvimine on mõistlik siis, kui kriimustused, kulumisrajad, tuhmunud lakk või värvierinevused ulatuvad üle suurema pinna. Töö käigus eemaldatakse vana viimistlus ja õhuke puidukiht, tasandatakse servad ning kantakse peale uus lakk, õli või muu kokkulepitud viimistlus.</p>
           <figure class="repair-section-image">
-            <img src="images/parketi-lihvimine-lintmasinaga.png" alt="Parketi lihvimine lintlihvmasinaga ja tolmueemaldusega" width="1672" height="941" loading="lazy" decoding="async">
+                <img src="images/parketi-lihvimine-lintmasinaga.optimized.webp" srcset="images/parketi-lihvimine-lintmasinaga.800.webp 800w, images/parketi-lihvimine-lintmasinaga.optimized.webp 1400w" sizes="(max-width: 736px) calc(100vw - 3rem), 60em" alt="Parketi lihvimine lintlihvmasinaga ja tolmueemaldusega" width="1400" height="788" loading="lazy" decoding="async">
             <figcaption>Suure pinna lihvimisel kasutatakse ühtlase tulemuse saamiseks põrandalihvmasinat ja tolmueemaldust.</figcaption>
           </figure>
 
@@ -303,7 +318,7 @@
             <li>millist tooni, läiget ja hooldusviisi soovitakse pärast viimistlust.</li>
           </ul>
           <figure class="repair-section-image">
-            <img src="images/parketi-servade-lihvimine.png" alt="Kalasabaparketi servade lihvimine seina ääres" width="1456" height="1088" loading="lazy" decoding="async">
+                <img src="images/parketi-servade-lihvimine.optimized.webp" srcset="images/parketi-servade-lihvimine.800.webp 800w, images/parketi-servade-lihvimine.optimized.webp 1280w" sizes="(max-width: 736px) calc(100vw - 3rem), 60em" alt="Kalasabaparketi servade lihvimine seina ääres" width="1280" height="960" loading="lazy" decoding="async">
             <figcaption>Seinaääred ja kohad, kuhu suur masin ei ulatu, lihvitakse eraldi servalihvmasinaga.</figcaption>
           </figure>
         </section>
