@@ -319,27 +319,74 @@ img {
 }
 
 .concrete-selection {
-	background: #263746;
-	color: #fff;
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+	background: #f1f3f4;
+	border-top: 4px solid #ed4933;
+	color: #33424f;
 	margin: 4rem 0;
 	padding: 2.5rem;
 }
 
-.concrete-selection h2,
-.concrete-selection h3 {
-	color: #fff;
+.concrete-selection-intro {
+	margin: 0 auto 2rem;
+	max-width: 54rem;
+	text-align: center;
+}
+
+.concrete-selection h2 {
+	color: #263746 !important;
+	margin-bottom: 0.65rem;
+}
+
+.concrete-selection-intro p {
+	margin: 0;
 }
 
 .concrete-selection ol {
-	margin-bottom: 0;
+	counter-reset: concrete-choice;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .concrete-selection li {
-	margin-bottom: 0.65rem;
-	padding-left: 0.35rem;
+	background: #fff;
+	border: 1px solid #d8dee2;
+	grid-column: span 2;
+	margin: 0;
+	min-width: 0;
+	padding: 1.25rem 1.25rem 1.25rem 4rem;
+	position: relative;
+}
+
+.concrete-selection li:nth-last-child(-n + 2) {
+	grid-column: span 3;
+}
+
+.concrete-selection li::before {
+	align-items: center;
+	background: #ed4933;
+	border-radius: 50%;
+	color: #fff;
+	content: counter(concrete-choice);
+	counter-increment: concrete-choice;
+	display: flex;
+	font-size: 0.85rem;
+	font-weight: 700;
+	height: 2rem;
+	justify-content: center;
+	left: 1.25rem;
+	position: absolute;
+	top: 1.25rem;
+	width: 2rem;
+}
+
+.concrete-selection li strong {
+	color: #263746 !important;
+	display: block;
+	margin-bottom: 0.3rem;
 }
 
 .concrete-sources {
@@ -361,6 +408,15 @@ img {
 
 	.concrete-type-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.concrete-selection ol {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.concrete-selection li,
+	.concrete-selection li:nth-last-child(-n + 2) {
+		grid-column: auto;
 	}
 }
 
@@ -390,8 +446,7 @@ img {
 	.concrete-scope,
 	.concrete-type-grid,
 	.concrete-specialties,
-	.concrete-process-grid,
-	.concrete-selection {
+	.concrete-process-grid {
 		grid-template-columns: minmax(0, 1fr);
 	}
 
@@ -405,6 +460,18 @@ img {
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
 		padding: 2rem 1.5rem;
+	}
+
+	.concrete-selection ol {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.concrete-selection-intro {
+		text-align: left;
+	}
+
+	.page-betoon .floating-contact {
+		display: none;
 	}
 }
 
@@ -770,19 +837,17 @@ img {
 								</section>
 
 								<section class="concrete-selection" aria-labelledby="betooni-valimine">
-									<div>
-										<h2 id="betooni-valimine">Kuidas valida õige betoon?</h2>
-										<p>Segu nimetus üksi ei otsusta tulemust. Lõplik valik tehakse projekti, kasutuskeskkonna ja paigaldusolude järgi.</p>
+									<div class="concrete-selection-intro">
+										<h2 id="betooni-valimine">Mida betooni valikul arvestada?</h2>
+										<p>Õige segu selgub konstruktsiooni kasutusest ja valutingimustest. Enne betooni tellimist paneme paika viis põhilist lähteandmet.</p>
 									</div>
-									<div>
-										<ol>
-											<li><strong>Tugevusklass</strong> tuleb konstruktsiooni arvutusest, mitte valaja eelistusest.</li>
-											<li><strong>Keskkonnaklass</strong> arvestab niiskust, külmumist, soolasid ja muid kahjustavaid mõjusid.</li>
-											<li><strong>Konsistents ja täitematerjal</strong> valitakse pumba, armatuuri tiheduse, ristlõike ja viimistluse järgi.</li>
-											<li><strong>Armeerimine või kiud</strong> kavandatakse koormuse ja pragunemisriski järgi.</li>
-											<li><strong>Järelhooldus</strong> algab kohe pärast pinna viimistlemist ning sõltub ilmast ja kasutatud segust.</li>
-										</ol>
-									</div>
+									<ol>
+										<li><strong>Koormus ja tugevus</strong>Tugevusklass määratakse projekti ning konstruktsioonile mõjuva koormuse järgi.</li>
+										<li><strong>Kasutuskeskkond</strong>Niiskus, külmumine, sulatussoolad ja muud mõjud määravad vajaliku keskkonnaklassi.</li>
+										<li><strong>Paigaldusviis</strong>Pumba kasutus, armatuuri tihedus ja ristlõike paksus mõjutavad segu konsistentsi ning täitematerjali suurust.</li>
+										<li><strong>Armeerimine</strong>Varras-, võrk- või kiudarmatuur valitakse koormuse ja pragunemisriski järgi.</li>
+										<li><strong>Pind ja järelhooldus</strong>Pinnaviimistlus ning kaitse kuivamise, vihma ja külma eest planeeritakse enne valamist.</li>
+									</ol>
 								</section>
 
 								<section class="service-estimate">
