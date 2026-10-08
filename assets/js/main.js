@@ -53,6 +53,19 @@
 	// =============================
 	if ($menu.length) {
 
+		// Share the apartment service link across the existing desktop/mobile menu.
+		var serviceMenu = $menu[0].querySelector('.submenu-items');
+		if (serviceMenu && !Array.from(serviceMenu.querySelectorAll('a')).some(function(link) {
+			return new URL(link.href).pathname.replace(/index\.html$/, '') === '/korteri-remont/';
+		})) {
+			var apartmentItem = document.createElement('li');
+			var apartmentLink = document.createElement('a');
+			apartmentLink.href = '/korteri-remont/';
+			apartmentLink.textContent = 'Korteri remont';
+			apartmentItem.appendChild(apartmentLink);
+			serviceMenu.prepend(apartmentItem);
+		}
+
 		$menu
 			.append('<a href="#menu" class="close" aria-label="Sulge menüü"></a>')
 			.appendTo($body)
