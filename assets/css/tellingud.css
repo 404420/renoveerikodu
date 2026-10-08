@@ -1,0 +1,12 @@
+/* Scaffolding information stays compact within the existing service layout. */
+.page-tellingud { --hero-image: url("../../images/tellingud-pais.webp"); }
+.page-tellingud .scaffold-access .service-detail-visual { grid-template-columns: minmax(0, 240px) minmax(0, 1fr); }
+.page-tellingud .scaffold-access img { max-width: 240px; }
+.page-tellingud .service-detail-visual h3 { margin: 0 0 .65rem; }
+.page-tellingud .service-detail-visual p { margin: 0 0 1rem; }
+.page-tellingud .service-detail-visual p:last-child { margin-bottom: 0; }
+.page-tellingud .scaffold-public-safety > h3 { margin-top: 1.8rem; }
+.page-tellingud .scaffold-weather > p:last-child { margin-top: 1.5rem; }
+@media (max-width: 736px) {
+ .page-tellingud .scaffold-access .service-detail-visual { grid-template-columns: minmax(0, 1fr); }
+}
