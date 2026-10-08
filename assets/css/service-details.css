@@ -1,0 +1,25 @@
+/* Scoped practical service information, preserving the existing page layout. */
+.service-detail { margin: 3rem 0; }
+.service-detail-list { display: grid; gap: 1.8rem; }
+.service-detail-item { min-width: 0; }
+.service-detail-item h3 { margin: 0 0 .65rem; }
+.service-detail-item p { margin: 0; }
+.service-detail-note { margin-bottom: 3rem; }
+.service-detail-visual { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 1.8rem; align-items: center; }
+.service-detail-visual img { display: block; width: 100%; max-width: 280px; height: auto; border-radius: 4px; }
+.service-product { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 1.5rem; align-items: start; margin-bottom: 1.8rem; }
+.service-product img { display: block; width: 120px; height: 145px; object-fit: contain; }
+.service-product a { border: 0; }
+.service-photo-example { margin: 2rem 0; }
+.service-photo-example img { display: block; width: 100%; max-width: 300px; height: auto; border-radius: 4px; }
+@media (max-width: 736px) { .service-detail-visual, .service-product { grid-template-columns: 1fr; gap: 1rem; } .service-detail { margin: 2.5rem 0; } }
+
+.service-intro img.service-compact-photo { width: 100%; max-width: 600px !important; height: auto; }
+
+.led-design .service-detail { margin: 0; background: var(--led-paper); color: var(--led-ink); }
+.led-design .service-detail h2 { font-size: clamp(28px, 3vw, 40px); margin-bottom: 2rem; }
+.led-design .service-detail h3 { font-size: 24px; }
+.led-design .service-detail-item p { max-width: 75ch; }
+.led-design .service-detail-note { margin: 2rem 0 0; max-width: 75ch; }
+
+.led-design .service-detail strong { color: inherit; }
