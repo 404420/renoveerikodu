@@ -1,1 +1,8 @@
-/* Page-specific stylesheet kept for service pages that reference it. */
+/* Maalritööde lehe pildid. */
+.painting-header img { max-width: 600px !important; width: 100%; height: auto; border-radius: 4px; }
+.painting-stage-list { display: grid; gap: 2.5rem; margin-top: 3rem; }
+.painting-stage { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-items: center; gap: 2rem; }
+.painting-stage img { display: block; width: 100%; max-width: 300px; height: auto; border-radius: 4px; }
+.painting-stage h3 { margin-top: 0; }
+.painting-stage p { margin-bottom: 0; }
+@media (max-width: 736px) { .painting-stage { grid-template-columns: 1fr; gap: 1rem; } }
