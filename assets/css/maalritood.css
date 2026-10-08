@@ -6,3 +6,10 @@
 .painting-stage h3 { margin-top: 0; }
 .painting-stage p { margin-bottom: 0; }
 @media (max-width: 736px) { .painting-stage { grid-template-columns: 1fr; gap: 1rem; } }
+
+.painting-materials ul { padding-left: 0; list-style: none; }
+.painting-materials li { margin-bottom: 1.5rem; }
+.painting-product { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.painting-product-photo { display: flex; justify-content: center; border: 0; }
+.painting-product-photo img { display: block; width: 140px; height: 160px; object-fit: contain; }
+@media (max-width: 736px) { .painting-product { grid-template-columns: 1fr; gap: 1rem; } .painting-product-photo { justify-content: flex-start; } }
