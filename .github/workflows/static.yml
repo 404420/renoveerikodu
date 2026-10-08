@@ -43,6 +43,20 @@ jobs:
             echo 'Unexpected server-only file in the Pages artifact.'
             exit 1
           fi
+      - name: Prepare isolated Pages preview
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          preview = '/renoveerikodu/korteri-remont/'
+          for page in Path('_site').rglob('*.html'):
+              text = page.read_text()
+              text = text.replace('href="/korteri-remont/"', 'href="' + preview + '"')
+              text = text.replace('content="index, follow"', 'content="noindex, nofollow"')
+              page.write_text(text)
+          script = Path('_site/assets/js/main.js')
+          script.write_text(script.read_text().replace("'/korteri-remont/'", "'" + preview + "'"))
+          Path('_site/robots.txt').write_text('User-agent: *\nDisallow: /\n')
+          PY
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
