@@ -24,9 +24,9 @@
 <noscript><link rel="stylesheet" href="../assets/css/noscript.css"></noscript>
 <style>
 /* Scoped layout for this service page; reuse the site's typography, hero and buttons. */
-.apartment-page #main > header { padding: 7em 1.5em 3em; }
+.apartment-page #main > header { padding: 7em 1.5em 3em; background-image: linear-gradient(rgba(20,28,35,.62), rgba(20,28,35,.62)), url("../images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg.optimized.webp"); background-position: center; background-size: cover; }
 .apartment-page #main > header h1 { max-width: 24em; margin: 0 auto 1em; line-height: 1.4; }
-.apartment-page #main > header p { max-width: 48em; margin: 0 auto 1.25em; }
+.apartment-page #main > header p { max-width: 35em; margin: 0 auto 1.25em; text-transform: none; letter-spacing: normal; font-size: 1.05em; line-height: 1.7; }
 .apartment-page #main > header .button { margin-top: 1em; }
 .apartment-page .wrapper > .inner { width: min(60em, calc(100% - 3em)); }
 .apartment-page .inner > section { margin-top: 2.5em; }
@@ -42,8 +42,11 @@
 .apartment-page .service-process li { margin-bottom: .85em; }
 .apartment-page .service-cta { text-align: center; }
 .apartment-page .button { white-space: normal; height: auto; min-height: 3.125em; line-height: 1.5; padding: .9em 1.25em; }
-.apartment-page .apartment-trust { list-style: none; padding: 0; max-width: 48em; margin: 1.5em auto 0; font-size: .9em; }
+.apartment-page .apartment-trust { list-style: none; padding: 0; margin: 0 0 2em; font-size: .9em; display: flex; flex-wrap: wrap; gap: .75em 2em; }
 .apartment-page .apartment-trust li { padding: .4em 0; }
+.apartment-page .stage-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em; margin: 1.5em 0 2.5em; }
+.apartment-page .stage-gallery figure { max-width: none; }
+.apartment-page .stage-gallery img { aspect-ratio: 16 / 10; object-fit: cover; }
 .apartment-page .apartment-stages, .apartment-page .apartment-process { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em 2.5em; padding-left: 1.5em; }
 .apartment-page .apartment-stages li, .apartment-page .apartment-process li { min-width: 0; padding-left: .4em; }
 .apartment-page .apartment-stages h3, .apartment-page .apartment-process h3 { margin-bottom: .6em; }
@@ -53,7 +56,8 @@
  .apartment-page .service-grid { grid-template-columns: 1fr; }
  .apartment-page #main > header { padding: 5.5em 1.25em 2.5em; }
  .apartment-page #main > header h1 { font-size: 1.35em; letter-spacing: .12em; overflow-wrap: anywhere; }
- .apartment-page #main > header p { font-size: .9em; letter-spacing: .08em; }
+ .apartment-page #main > header p { font-size: 1em; letter-spacing: normal; }
+ .apartment-page .stage-gallery { grid-template-columns: 1fr; }
  .apartment-page .wrapper { padding: 2.5em 0; }
  .apartment-page .button { max-width: 100%; }
 }
@@ -252,20 +256,26 @@
 <article id="main">
 <header>
 <h1>Korteri remont ja täisremont võtmed kätte</h1>
-<p>RK Meistrid OÜ korraldab korteri remondi Tallinnas ja Harjumaal alates ettevalmistusest ja lammutamisest kuni lõppviimistluse ning tööde üleandmiseni. Sina ei pea ise eri tööde tegijaid otsima ega nende tööjärjekorda korraldama.</p>
+<p>Korteri remont Tallinnas ja Harjumaal ettevalmistusest lõppviimistluseni. Meie korraldame tööd, sina saad keskenduda oma uuele kodule.</p>
+<a href="../kontakt.html#vorm" class="button primary">Küsi hinnapakkumist</a>
+</header>
+<section class="wrapper style5">
+<div class="inner">
 <ul class="apartment-trust" aria-label="Teenuse eelised">
 <li>3-aastane garantii ettevõtte tehtud töödele vastavalt kokkulepitud tingimustele</li>
 <li>Tallinn ja Harjumaa</li>
 <li>Selge hinnapakkumine ja läbimõeldud töökorraldus</li>
 </ul>
-<a href="../kontakt.html#vorm" class="button primary">Küsi hinnapakkumist</a>
-</header>
-<section class="wrapper style5">
-<div class="inner">
 <nav class="case-study-breadcrumb" aria-label="Leivapuru"><a href="../index.html">Avaleht</a> / <span aria-current="page">Korteri remont</span></nav>
 <section aria-labelledby="sisaldab">
 <h2 id="sisaldab">Mida korteri täisremont sisaldab?</h2>
-<p>Korteri täisremont seob ehitus- ja viimistlustööd üheks läbimõeldud tervikuks. Teenuse ulatus sõltub korteri seisukorrast, sinu soovidest ja kokkulepitud töömahust. Järgmised etapid on võimalikud tööd, mitte iga hinnapakkumise automaatsed osad.</p>
+<p>RK Meistrid OÜ korraldab tööetapid alates ettevalmistusest ja lammutamisest kuni lõppviimistluse ning üleandmiseni. Sina ei pea ise eri tööde tegijaid otsima ega nende tööjärjekorda korraldama. Korteri täisremont seob ehitus- ja viimistlustööd üheks läbimõeldud tervikuks. Teenuse ulatus sõltub korteri seisukorrast, sinu soovidest ja kokkulepitud töömahust. Järgmised etapid on võimalikud tööd, mitte iga hinnapakkumise automaatsed osad.</p>
+<div class="stage-gallery" aria-label="Remondi tööetappide näited">
+<figure><a href="../lammutustood.html"><img src="../images/lammutustood-tallinn-harjumaa-renoveeri-kodu.jpg.optimized.webp" alt="Vana viimistluse eemaldamine vannitoas" width="1280" height="1024" loading="lazy" decoding="async"></a><figcaption><a href="../lammutustood.html">Lammutamine ja ettevalmistus</a></figcaption></figure>
+<figure><a href="../kipsitood.html"><img src="../images/kipsplaadi-paigaldus-tallinn-renoveerikodu.png.optimized.webp" alt="Kipsvaheseina karkassi ja plaatide paigaldamise illustratsioon" width="1280" height="853" loading="lazy" decoding="async"></a><figcaption><a href="../kipsitood.html">Vaheseinad ja kipsitööd · illustratsioon</a></figcaption></figure>
+<figure><a href="../maalritood.html"><img src="../images/maalritood-tallinn-seinte-varvimine-renoveeri-kodu.jpeg.optimized.webp" alt="Värvitud seinad ja lagi siseviimistluse käigus" width="1280" height="960" loading="lazy" decoding="async"></a><figcaption><a href="../maalritood.html">Seinte ja lagede viimistlus</a></figcaption></figure>
+<figure><a href="../parketipaigaldus.html"><img src="../images/parketi-paigaldus-tallinn-renoveerikodu-elutuba.jpeg.optimized.webp" alt="Põrandakatte paigaldus valgusküllases eluruumis" width="1280" height="960" loading="lazy" decoding="async"></a><figcaption><a href="../parketipaigaldus.html">Põrandatööd ja lõppviimistlus</a></figcaption></figure>
+</div>
 <ol class="apartment-stages"><li><h3>Objekti ülevaatus ja töömahu määramine</h3><p>Vaatame üle korteri seisukorra, mõõdud, sinu soovid ja säilitatavad pinnad. Lepime kokku soovitud valmidusastme ning tööde piirid.</p></li>
 <li><h3>Vajalik lammutamine</h3><p>Eemaldame kokkulepitud vana viimistluse ja vajalikud konstruktsioonid. Enne seinte muutmist selgitame välja nende otstarbe, kommunikatsioonide asukohad ning projekti või kooskõlastuste vajaduse.</p></li>
 <li><h3>Jäätmete eemaldamine ja utiliseerimine</h3><p>Lepime kokku jäätmete sortimise, äraveo ja nõuetekohase üleandmise, samuti tööala ning ühiskasutatavate pindade kaitsmise.</p></li>
