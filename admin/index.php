@@ -1827,8 +1827,33 @@ if ($view === 'email-contacts') {
 $subscriberCount = (int) $pdo->query("SELECT COUNT(*) FROM newsletter_subscribers WHERE status = 'subscribed'")->fetchColumn();
 $unsubscriberCount = (int) $pdo->query("SELECT COUNT(*) FROM newsletter_subscribers WHERE status = 'unsubscribed'")->fetchColumn();
 
+// Ühine kliendihaldus: märgista päringu päritolu ka vanemates andmebaasides,
+// kus allikaveerg võib puududa, aga saatja on kirjas päringu tekstis.
+$requestSourceSite = static function (array $row): string {
+    $source = strtolower(trim((string)($row['source'] ?? '')));
+    $message = strtolower((string)($row['message'] ?? ''));
+    if (str_contains($source, 'parketipaigaldaja.ee') || str_contains($message, 'allikas: parketipaigaldaja.ee')) {
+        return 'parketipaigaldaja';
+    }
+    if ($source === '' || str_contains($source, 'renoveerikodu.ee')) {
+        return 'renoveerikodu';
+    }
+    return 'other';
+};
+$requestSourceFilter = (string)($_GET['site'] ?? 'all');
+if (!in_array($requestSourceFilter, ['all', 'renoveerikodu', 'parketipaigaldaja', 'other'], true)) {
+    $requestSourceFilter = 'all';
+}
+$requestSourceCounts = ['all' => 0, 'renoveerikodu' => 0, 'parketipaigaldaja' => 0, 'other' => 0];
 if ($view === 'requests') {
-    $requests = $pdo->query('SELECT * FROM contacts ORDER BY created_at DESC')->fetchAll();
+    $allRequests = $pdo->query('SELECT * FROM contacts ORDER BY created_at DESC')->fetchAll();
+    $requestSourceCounts['all'] = count($allRequests);
+    foreach ($allRequests as $requestRow) {
+        $requestSourceCounts[$requestSourceSite($requestRow)]++;
+    }
+    $requests = $requestSourceFilter === 'all'
+        ? $allRequests
+        : array_values(array_filter($allRequests, static fn(array $requestRow): bool => $requestSourceSite($requestRow) === $requestSourceFilter));
     $quoteRequestIds = array_map('intval', $pdo->query('SELECT request_id FROM admin_quotes')->fetchAll(PDO::FETCH_COLUMN));
  } elseif ($view === 'quotes') {
     $quotes = $pdo->query("SELECT q.*, c.created_at AS request_created_at FROM admin_quotes q LEFT JOIN contacts c ON c.id = q.request_id ORDER BY q.updated_at DESC, q.id DESC")->fetchAll();
@@ -2198,6 +2223,21 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
 
 <main class="<?= $view === 'statistics' ? 'analytics-main' : 'table-wrap' ?>">
 <?php if ($view === 'requests'): ?>
+<style>
+.request-site-filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 18px}
+.request-site-filters a{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;background:#fff;border:1px solid #d8e0e6;border-radius:8px;color:#263640;text-decoration:none;font-weight:600}
+.request-site-filters a[aria-current="page"]{border-color:#296d99;background:#e7f2f9;color:#174c71}
+.request-site-filters .count{font-size:12px;color:#637b8b}
+.request-site-badge{display:inline-flex;align-items:center;border-radius:6px;padding:5px 9px;font-size:12px;font-weight:700;white-space:nowrap}
+.request-site-badge--parketipaigaldaja{color:#15577d;background:#e5f2fb}
+.request-site-badge--renoveerikodu{color:#22653e;background:#e7f4e9}
+.request-site-badge--other{color:#635c49;background:#f2efe4}
+</style>
+<nav class="request-site-filters" aria-label="Filtreeri päringuid veebilehe järgi">
+  <?php foreach (['all' => 'Kõik päringud', 'renoveerikodu' => 'Renoveerikodu.ee', 'parketipaigaldaja' => 'Parketipaigaldaja.ee', 'other' => 'Muud'] as $siteKey => $siteLabel): ?>
+  <a href="index.php?view=requests&amp;site=<?= h($siteKey) ?>" <?= $requestSourceFilter === $siteKey ? 'aria-current="page"' : '' ?>><?= h($siteLabel) ?> <span class="count"><?= (int)$requestSourceCounts[$siteKey] ?></span></a>
+  <?php endforeach; ?>
+</nav>
 <table>
   <thead>
     <tr>
@@ -2217,7 +2257,7 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
   <?php if (!$requests): ?>
     <tr><td colspan="10" class="muted">Päringuid ei ole veel.</td></tr>
   <?php endif; ?>
-  <?php foreach ($requests as $row): ?>
+  <?php foreach ($requests as $row): $requestSite = $requestSourceSite($row); ?>
     <tr>
       <td data-label="ID"><?= (int) $row['id'] ?></td>
       <td data-label="Nimi"><?= h($row['name']) ?></td>
@@ -2244,7 +2284,10 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
           <?php endif; ?>
         <?php endforeach; ?>
       </td>
-      <td data-label="Allikas"><?= h($row['source'] ?? '') ?></td>
+      <td data-label="Allikas">
+        <span class="request-site-badge request-site-badge--<?= h($requestSite) ?>"><?= $requestSite === 'parketipaigaldaja' ? 'Parketipaigaldaja.ee' : ($requestSite === 'renoveerikodu' ? 'Renoveerikodu.ee' : 'Muu allikas') ?></span>
+        <?php if ($requestSite === 'other' && !empty($row['source'])): ?><small><?= h($row['source']) ?></small><?php endif; ?>
+      </td>
       <td data-label="Kuupäev"><?= h($row['created_at']) ?></td>
       <td class="actions">
         <a class="request-quote-button" href="index.php?view=quote&amp;request_id=<?= (int)$row['id'] ?>"><?= in_array((int)$row['id'], $quoteRequestIds, true) ? 'Ava hinnapakkumine' : 'Genereeri hinnapakkumine' ?></a>
