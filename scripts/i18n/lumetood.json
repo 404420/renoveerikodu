@@ -1,0 +1,310 @@
+{
+  "Lumetööd Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "Snow removal in Tallinn and Harju County | Renoveeri Kodu",
+    "Уборка снега в Таллине и Харьюмаа | Renoveeri Kodu"
+  ],
+  "Lumetööd Tallinnas ja Harjumaal. Lumekoristus, lume lükkamine ja katustelt lume eemaldamine kiirelt ning turvaliselt.": [
+    "Snow removal in Tallinn and Harju County. Fast, safe snow clearing, snow ploughing and roof snow removal.",
+    "Уборка снега в Таллине и Харьюмаа. Быстрая и безопасная расчистка снега, уборка территории и удаление снега с крыш."
+  ],
+  "Lumetööd ja katuste lumekoristus": [
+    "Snow removal and roof snow clearing",
+    "Уборка снега и очистка крыш"
+  ],
+  "Lumetööd Tallinnas ja Harjumaal": [
+    "Snow removal in Tallinn and Harju County",
+    "Уборка снега в Таллине и Харьюмаа"
+  ],
+  "Katuste, hoovide ja hoonete ümbruse lumekoristus Tallinnas ja Harjumaal.": [
+    "Snow clearing from roofs, yards and areas around buildings in Tallinn and Harju County.",
+    "Уборка снега с крыш, дворов и территорий вокруг зданий в Таллине и Харьюмаа."
+  ],
+  "Kas eemaldate jääpurikaid?": [
+    "Do you remove icicles?",
+    "Вы удаляете сосульки?"
+  ],
+  "Jah, kui ligipääs ja ohutus seda võimaldavad. Vajadusel piirame tööala.": [
+    "Yes, where access and safety allow. We cordon off the work area where needed.",
+    "Да, если позволяют доступ и безопасность. При необходимости ограждаем рабочую зону."
+  ],
+  "Kas teete töid korteriühistutele?": [
+    "Do you work for apartment associations?",
+    "Вы работаете с квартирными товариществами?"
+  ],
+  "Jah, aitame korteriühistuid katuste ja hoone ümbruse lumetöödega.": [
+    "Yes, we help apartment associations with snow clearing on roofs and around buildings.",
+    "Да, помогаем квартирным товариществам с уборкой снега на крышах и вокруг зданий."
+  ],
+  "Kas lumetööd sisaldavad katuse remonti?": [
+    "Does snow removal include roof repairs?",
+    "Включает ли уборка снега ремонт крыши?"
+  ],
+  "Ei, lumetööd on hooajaline puhastus. Katuse parandused kuuluvad katusetööde teenuse alla.": [
+    "No, snow removal is seasonal cleaning. Roof repairs are covered by our roofing service.",
+    "Нет, уборка снега — сезонная очистка. Ремонт крыши относится к услуге кровельных работ."
+  ],
+  "Kui kiiresti saab tööle tulla?": [
+    "How soon can you come?",
+    "Как быстро вы можете приехать?"
+  ],
+  "See sõltub ilmast ja tööde järjekorrast. Kiire ohu korral tasub päringus lisada fotod ja aadress.": [
+    "This depends on weather and the work schedule. For an immediate hazard, include photos and the address in your enquiry.",
+    "Это зависит от погоды и очередности работ. При непосредственной опасности стоит приложить к заявке фотографии и адрес."
+  ],
+  "Millal tuleks lumi katuselt eemaldada?": [
+    "When should snow be removed from a roof?",
+    "Когда нужно убирать снег с крыши?"
+  ],
+  "Lumi tuleks eemaldada siis, kui koormus muutub suureks, tekivad jääpurikad või lumi ohustab inimesi, autosid ja sissepääse. Ohtlikke olukordi ei tasu edasi lükata.": [
+    "Snow should be removed when loads become excessive, icicles form or snow threatens people, cars and entrances. Dangerous situations should be dealt with promptly.",
+    "Снег нужно убирать, когда нагрузка становится большой, появляются сосульки или снег угрожает людям, автомобилям и входам. Устранение опасной ситуации не стоит откладывать."
+  ],
+  "Kas lumetöödega võib katusekatet kahjustada?": [
+    "Can snow removal damage the roof covering?",
+    "Может ли уборка снега повредить кровлю?"
+  ],
+  "Vale tööriistaga jah. Kasutame töövõtteid, mis vähendavad katusekatte, rennide ja fassaadi kahjustamise riski.": [
+    "Yes, with the wrong tools. We use methods that reduce the risk of damaging roof coverings, gutters and facades.",
+    "Да, если использовать неподходящий инструмент. Мы применяем методы, снижающие риск повреждения кровли, водостоков и фасада."
+  ],
+  "Kas puhastate ka jääpurikaid?": [
+    "Do you also clear icicles?",
+    "Вы также убираете сосульки?"
+  ],
+  "Jah, kui ligipääs ja ohutus seda võimaldavad. Enne töö algust tuleb piirata ala, kuhu lumi või jää võib kukkuda.": [
+    "Yes, where access and safety allow. Before starting, the area where snow or ice may fall must be cordoned off.",
+    "Да, если позволяют доступ и безопасность. До начала работ необходимо оградить участок, куда может падать снег или лёд."
+  ],
+  "Kas lumetöid saab tellida ühekordselt?": [
+    "Can I book a one-off snow removal service?",
+    "Можно ли заказать разовую уборку снега?"
+  ],
+  "Jah. Võimalik on tellida ühekordne ohuolukorra lahendamine või korduv hooldus suurema lumesaju perioodil.": [
+    "Yes. You can book a one-off response to a hazardous situation or recurring maintenance during periods of heavy snowfall.",
+    "Да. Можно заказать разовое устранение опасной ситуации или регулярное обслуживание в период сильных снегопадов."
+  ],
+  "Kuidas korraldate lumetööde ohutuse?": [
+    "How do you ensure snow removal safety?",
+    "Как вы обеспечиваете безопасность при уборке снега?"
+  ],
+  "Enne lumekoristust hindame ligipääsu ja ohuala, lepime kokku töömahu ning korraldame töö nii, et kaitsta inimesi ja vara.": [
+    "Before clearing snow, we assess access and the hazard area, agree on the scope and organise the work to protect people and property.",
+    "Перед уборкой снега оцениваем доступ и опасную зону, согласуем объём работ и организуем их так, чтобы защитить людей и имущество."
+  ],
+  "Katuse lumekoristus Tallinnas": [
+    "Roof snow removal in Tallinn",
+    "Уборка снега с крыш в Таллине"
+  ],
+  "Katuste, sissepääsude ja hoone ümbruse lumekoristus Tallinnas ning Harjumaal.": [
+    "Snow clearing from roofs, entrances and areas around buildings in Tallinn and Harju County.",
+    "Уборка снега с крыш, у входов и вокруг зданий в Таллине и Харьюмаа."
+  ],
+  "Kogenud meeskond ja kokkulepitud töökorraldus": [
+    "Experienced team and agreed working arrangements",
+    "Опытная команда и согласованный порядок работ"
+  ],
+  "Katuse, hoovi või hoone ümbruse lumetööde puhul hindame ohuala, lume kogust, ligipääsu ja sobivat tehnikat. Katustel töötades määratakse enne alustamist turvaline töövõte ja lume langetamise ala.": [
+    "For snow clearing on a roof, in a yard or around a building, we assess the hazard area, snow volume, access and suitable equipment. Before roof work starts, a safe working method and snow drop zone are established.",
+    "При уборке снега на крыше, во дворе или вокруг здания оцениваем опасную зону, количество снега, доступ и подходящее оборудование. До начала работ на крыше определяем безопасный метод работы и зону сброса снега."
+  ],
+  "Lumetööd aitavad vähendada jääpurikate, liigse lumekoormuse ja libeduse riski. Koristame lund katustelt ja hoone ümbrusest ning teeme libeduse vähendamisega seotud töid Tallinnas ja Harjumaal.": [
+    "Snow removal helps reduce the risks of icicles, excessive snow loads and slippery surfaces. We clear snow from roofs and around buildings and carry out work to reduce slipperiness in Tallinn and Harju County.",
+    "Уборка снега помогает снизить риски, связанные с сосульками, чрезмерной снеговой нагрузкой и скользкими поверхностями. Мы убираем снег с крыш и вокруг зданий, а также выполняем работы по борьбе с гололёдом в Таллине и Харьюмаа."
+  ],
+  "Erinevalt katusetööde lehest keskendub see leht talvisele kiirele hooldusele. Vajadusel vaatame töö käigus üle ka katuse või rennide nähtavad probleemid, kuid remont ja hooldus kuuluvad katusetööde alla.": [
+    "Unlike the roofing page, this page focuses on prompt winter maintenance. Where needed, we also note visible problems with the roof or gutters during the work, but repairs and maintenance belong to our roofing service.",
+    "В отличие от страницы кровельных работ, эта страница посвящена оперативному зимнему обслуживанию. При необходимости во время работ также обращаем внимание на видимые проблемы крыши или водостоков, но ремонт и обслуживание относятся к кровельным работам."
+  ],
+  "katuste lumekoristus ja jääpurikate eemaldamine": [
+    "roof snow clearing and icicle removal",
+    "очистка крыш от снега и удаление сосулек"
+  ],
+  "sissepääsude, kõnniteede ja hoone ümbruse puhastus": [
+    "clearing entrances, pavements and areas around buildings",
+    "расчистка входов, тротуаров и территории вокруг здания"
+  ],
+  "libedusetõrje ja ohtlike kohtade märgistamine": [
+    "ice control and marking hazardous areas",
+    "борьба с гололёдом и обозначение опасных участков"
+  ],
+  "hooajaline hooldus korteriühistutele ja eraomanikele": [
+    "seasonal maintenance for apartment associations and private owners",
+    "сезонное обслуживание для квартирных товариществ и частных владельцев"
+  ],
+  "Lumetöid otsitakse tavaliselt kiiresti pärast suuremat lumesadu, sula või jääpurikate tekkimist. Õigeaegne sekkumine vähendab kahju hoonele ja ohtu möödujatele.": [
+    "Snow removal is usually needed urgently after heavy snowfall, a thaw or icicle formation. Timely action reduces damage to the building and danger to passers-by.",
+    "Уборка снега обычно требуется срочно после сильного снегопада, оттепели или появления сосулек. Своевременные меры снижают ущерб зданию и опасность для прохожих."
+  ],
+  "Ohutuse hindamine": [
+    "Safety assessment",
+    "Оценка безопасности"
+  ],
+  "Hindame ligipääsu, katuse kuju, lume hulka, jääpurikaid ja inimeste liikumist tööala ümbruses.": [
+    "We assess access, roof shape, snow volume, icicles and people's movements around the work area.",
+    "Оцениваем доступ, форму крыши, количество снега, сосульки и движение людей рядом с рабочей зоной."
+  ],
+  "Lumekoristus": [
+    "Snow clearing",
+    "Уборка снега"
+  ],
+  "Eemaldame lume ja jää kontrollitult, et mitte kahjustada katusekatet, renne ega fassaadi.": [
+    "We remove snow and ice in a controlled way to avoid damaging roof coverings, gutters or facades.",
+    "Контролируемо удаляем снег и лёд, чтобы не повредить кровлю, водостоки и фасад."
+  ],
+  "Tööala korrastus": [
+    "Tidying the work area",
+    "Приведение рабочей зоны в порядок"
+  ],
+  "Puhastame või märgistame kukkunud lume alad ning anname teada nähtavatest probleemidest.": [
+    "We clear or mark areas of fallen snow and report visible problems.",
+    "Очищаем или обозначаем участки упавшего снега и сообщаем о видимых проблемах."
+  ],
+  "Lumetööde tellimine": [
+    "Booking snow removal",
+    "Заказ уборки снега"
+  ],
+  "Lumetööde hind sõltub lume kogusest, katuse kõrgusest, ligipääsust, jääpurikate olemasolust ja sellest, kas töö nõuab tööala piiramist. Kiire päringu puhul on eriti kasulik lisada fotod ohtlikust kohast ja aadress, et hinnata ligipääsu ning töö mahtu.": [
+    "Snow removal costs depend on snow volume, roof height, access, icicles and whether the work area needs to be cordoned off. For an urgent enquiry, photos of the hazardous area and the address are particularly useful for assessing access and the scope of work.",
+    "Стоимость уборки снега зависит от его количества, высоты крыши, доступа, наличия сосулек и необходимости ограждать рабочую зону. При срочной заявке особенно полезно приложить фотографии опасного участка и адрес, чтобы оценить доступ и объём работ."
+  ],
+  "Pärast lumekoristust vaatame üle, kas nähtaval on rennide, katusekatte või fassaadi kahjustusi. Remonditööd ei kuulu lumetööde sisse, kuid anname vajadusel märku, kui hoone vajab hiljem katusetööde või fassaaditööde ülevaatust.": [
+    "After snow clearing, we check for visible damage to gutters, roof coverings or facades. Repairs are not included in snow removal, but where needed we advise if the building subsequently requires a roofing or facade inspection.",
+    "После уборки снега проверяем, видны ли повреждения водостоков, кровли или фасада. Ремонт не входит в уборку снега, но при необходимости сообщаем, если позднее зданию понадобится осмотр крыши или фасада."
+  ],
+  "Lumetööde puhul on kiirus tähtis, kuid ohutus veel tähtsam: tööala tuleb hinnata nii katusel töötaja kui ka all liikuvate inimeste järgi. Päringu hindamisel vaatame alati, milline on objekti ligipääs, kas töö toimub elatud ruumis, millised pinnad vajavad kaitsmist ja milline on mõistlik tööjärjekord. See aitab vältida olukorda, kus üks etapp tuleb hiljem uuesti avada või parandada.": [
+    "Speed matters in snow removal, but safety matters even more: the work area must be assessed for both the person on the roof and people below. When assessing an enquiry, we always check site access, whether the space is occupied, which surfaces need protection and the most practical sequence of work. This helps avoid having to reopen or repair a completed stage later.",
+    "При уборке снега важна скорость, но ещё важнее безопасность: рабочую зону нужно оценивать и с точки зрения работника на крыше, и с точки зрения людей внизу. При оценке заявки мы всегда учитываем доступ к объекту, проживают ли люди в помещении, какие поверхности нужно защитить и какая последовательность работ будет разумной. Это помогает избежать необходимости впоследствии вскрывать или переделывать уже выполненный этап."
+  ],
+  "Lumetööde tellimisel on oluline teada, kuhu lumi ohutult paigutada. Katuse või sissepääsu puhastamisel jälgime, et eemaldatud lumi ei blokeeriks liikumisteid, ei kahjustaks haljastust ega tekitaks uut libedat kohta.": [
+    "When booking snow removal, it is important to know where snow can be placed safely. When clearing roofs or entrances, we ensure removed snow does not block routes, damage landscaping or create a new slippery area.",
+    "При заказе уборки снега важно знать, куда его можно безопасно переместить. При очистке крыши или входа следим, чтобы убранный снег не блокировал проходы, не повреждал озеленение и не создавал новый скользкий участок."
+  ],
+  "Lumetööde hinnad": [
+    "Snow removal prices",
+    "Цены на уборку снега"
+  ],
+  "Lumetööde hind sõltub lume kogusest, katuse kõrgusest, jääpurikatest, ligipääsust ja sellest, kas tööala tuleb piirata. Kiire päringu korral lisa fotod ja aadress või piirkond.": [
+    "Snow removal costs depend on snow volume, roof height, icicles, access and whether the work area must be cordoned off. For an urgent enquiry, provide photos and the address or area.",
+    "Стоимость уборки снега зависит от количества снега, высоты крыши, сосулек, доступа и необходимости ограждать рабочую зону. При срочной заявке приложите фотографии и укажите адрес или район."
+  ],
+  "Praktiline tööinfo lumetööde kohta": [
+    "Practical information about snow removal",
+    "Практическая информация об уборке снега"
+  ],
+  "Vahendid ja ohutus": [
+    "Tools and safety",
+    "Инструменты и безопасность"
+  ],
+  "Lumetöödel kasutatakse vahendeid, mis ei kahjusta katusekatet, fassaadi ega vihmaveesüsteemi. Kõrgematel objektidel on oluline turvavarustus ja tööala piiramine.": [
+    "Snow removal uses tools that do not damage roof coverings, facades or rainwater systems. Safety equipment and cordoning off the work area are important on taller buildings.",
+    "При уборке снега используют инструменты, которые не повреждают кровлю, фасад и водосточную систему. На высоких объектах важны страховочное снаряжение и ограждение рабочей зоны."
+  ],
+  "Ajakulu sõltub lume kogusest, jää olemasolust, katuse kaldest, ligipääsust ja sellest, kas puhastada tuleb ainult ohtlikud servad või kogu pind.": [
+    "The time required depends on snow volume, ice, roof pitch, access and whether only hazardous edges or the entire surface need clearing.",
+    "Затраты времени зависят от количества снега, наличия льда, уклона крыши, доступа и того, нужно ли очищать только опасные края или всю поверхность."
+  ],
+  "Hinda mõjutavad objekti kõrgus, lume maht, jää eemaldamine, ligipääs, töö kiireloomulisus ja ohutusmeetmed jalakäijate või autode kaitseks.": [
+    "Costs are affected by building height, snow volume, ice removal, access, urgency and safety measures to protect pedestrians or cars.",
+    "На стоимость влияют высота объекта, объём снега, удаление льда, доступ, срочность и меры безопасности для защиты пешеходов или автомобилей."
+  ],
+  "Levinud vead on katusekatte lõhkumine metallist tööriistaga, lume lükkamine ohtlikku kohta ja jääpurikate eemaldamine ilma all oleva ala piiramiseta.": [
+    "Common mistakes include damaging roof coverings with metal tools, pushing snow into dangerous areas and removing icicles without cordoning off the area below.",
+    "Распространённые ошибки — повреждение кровли металлическим инструментом, сброс снега в опасное место и удаление сосулек без ограждения участка внизу."
+  ],
+  "Kui lumi või jää ohustab sissepääsu, kõnniteed või parkimist, anna päringus teada täpne asukoht ja lisa fotod. Kiireloomulistel töödel on ligipääsuinfo eriti oluline.": [
+    "If snow or ice threatens an entrance, pavement or parking area, give the precise location and include photos in your enquiry. Access information is especially important for urgent work.",
+    "Если снег или лёд угрожает входу, тротуару или парковке, укажите в заявке точное место и приложите фотографии. При срочных работах информация о доступе особенно важна."
+  ],
+  "Katuse lumekoristus lähtub ohutusest ja kattematerjalist": [
+    "Roof snow removal follows safety and roof material requirements",
+    "Уборка снега с крыши учитывает безопасность и кровельный материал"
+  ],
+  "Koormus ja olukorra hindamine": [
+    "Load and situation assessment",
+    "Оценка нагрузки и ситуации"
+  ],
+  "Lume sügavus üksi ei näita koormust: märg lumi ja jää võivad olla palju raskemad kui värske kuiv lumi. Ebatavalise läbipainde, pragude või muu konstruktsioonimärgi korral on vajalik kiire spetsialisti hinnang. Üht universaalset ohutut sentimeetrite piiri kõigile katustele ei ole.": [
+    "Snow depth alone does not indicate the load: wet snow and ice can be much heavier than fresh dry snow. Unusual deflection, cracks or other structural signs require prompt specialist assessment. There is no universal safe depth in centimetres for all roofs.",
+    "Одна глубина снега не показывает нагрузку: мокрый снег и лёд могут быть намного тяжелее свежего сухого снега. Необычный прогиб, трещины или другие признаки проблем с конструкцией требуют срочной оценки специалиста. Единой безопасной границы в сантиметрах для всех крыш не существует."
+  ],
+  "Kate ja varustus": [
+    "Roof covering and equipment",
+    "Кровля и снаряжение"
+  ],
+  "Katusekate, kalle ja ligipääs määravad tööviisi. Kasutame pinnale sobivaid töövahendeid ning planeerime kukkumiskaitse ja kinnitused. Jääd ei peksta valimatult katte vastu: see võib rikkuda pinnakatte, liite või veepidavuse.": [
+    "The roof covering, pitch and access determine the working method. We use tools suitable for the surface and plan fall protection and anchor points. Ice is not indiscriminately struck against the roof covering: this can damage its finish, joints or watertightness.",
+    "Кровельный материал, уклон и доступ определяют способ работы. Используем подходящие для поверхности инструменты и планируем защиту от падения и точки крепления. Нельзя бесконтрольно сбивать лёд ударами по кровле: это может повредить покрытие, стыки или герметичность."
+  ],
+  "Inimesed ja lume langemise ala": [
+    "People and the snow drop zone",
+    "Люди и зона падения снега"
+  ],
+  "Enne töö algust piiratakse ohtlik ala ning arvestatakse sissepääsude, autode ja jalakäijatega. Lume kukkumine, jääpurikad ning libedus võivad ohustada inimesi ka hoone kõrval. Katuse koristus ja maapinnale langenud lume äravedu lepitakse eraldi kokku.": [
+    "Before work begins, the hazardous area is cordoned off and entrances, cars and pedestrians are taken into account. Falling snow, icicles and slippery surfaces can also endanger people beside the building. Roof clearing and removal of snow fallen to the ground are agreed separately.",
+    "До начала работ опасную зону ограждают и учитывают входы, автомобили и пешеходов. Падающий снег, сосульки и скользкая поверхность могут угрожать людям и рядом со зданием. Очистка крыши и вывоз упавшего на землю снега согласуются отдельно."
+  ],
+  "Kokkulepitud tööjärjekord": [
+    "Agreed sequence of work",
+    "Согласованная последовательность работ"
+  ],
+  "Fotod ja ligipääs": [
+    "Photos and access",
+    "Фотографии и доступ"
+  ],
+  "Hindame katust, turvalise ülespääsu võimalust ja lume paigutamise ala. Täpsustame, kas töö hõlmab jääpurikaid, renne või lume äravedu.": [
+    "We assess the roof, safe access to it and the area for placing snow. We clarify whether the work includes icicles, gutters or snow removal from the site.",
+    "Оцениваем крышу, возможность безопасного подъёма и место размещения снега. Уточняем, включает ли работа сосульки, водостоки или вывоз снега."
+  ],
+  "Tasakaalustatud eemaldamine": [
+    "Balanced removal",
+    "Равномерное удаление"
+  ],
+  "Töö planeeritakse katuse konstruktsiooni ja katte järgi, vältides põhjendamatut ebaühtlast koormust. Vajadusel jäetakse katte kaitseks sobiv lumekiht; konkreetne meetod otsustatakse kohapealse hinnangu järgi.": [
+    "Work is planned according to the roof structure and covering, avoiding unjustified uneven loading. Where needed, a suitable layer of snow is left to protect the covering; the specific method is decided based on the on-site assessment.",
+    "Работы планируют с учётом конструкции крыши и покрытия, избегая необоснованно неравномерной нагрузки. При необходимости для защиты кровли оставляют подходящий слой снега; конкретный метод определяют по оценке на месте."
+  ],
+  "Järelkontroll ja koristus": [
+    "Final checks and cleaning",
+    "Проверка и уборка после работ"
+  ],
+  "Kontrollime tööala, sissepääse ning kokkulepitud vee äravoolukohti. Uus sadu võib kiiresti uue koormuse tekitada, mistõttu korduva hoolduse vajadus lepitakse eraldi kokku.": [
+    "We check the work area, entrances and agreed drainage points. New snowfall can quickly create a new load, so recurring maintenance requirements are agreed separately.",
+    "Проверяем рабочую зону, входы и согласованные места отвода воды. Новый снегопад может быстро создать новую нагрузку, поэтому необходимость повторного обслуживания согласуется отдельно."
+  ],
+  "Saada hoone asukoht, kõrgus, katuse fotod ja info ligipääsu kohta. Kirjelda, kas probleem on lumekoormus, jääpurikad või blokeeritud äravool ning kas soovid lume äravedu.": [
+    "Send the building location, height, roof photos and access information. Describe whether the problem is snow load, icicles or blocked drainage, and whether you want snow removed from the site.",
+    "Укажите расположение и высоту здания, пришлите фотографии крыши и информацию о доступе. Опишите проблему: снеговая нагрузка, сосульки или заблокированный водоотвод, а также нужен ли вывоз снега."
+  ],
+  "Milliste töödega lumetööd tavaliselt seostuvad?": [
+    "Which other jobs is snow removal usually linked to?",
+    "С какими работами обычно связана уборка снега?"
+  ],
+  "Lumetööd on hooajaline hooldus, mis aitab kaitsta katust, fassaadi ja hoone ümbrust. Kui lumi või jää koguneb katusele, on seotud tööks sageli": [
+    "Snow removal is seasonal maintenance that helps protect the roof, facade and surroundings. When snow or ice accumulates on a roof, related work often includes",
+    "Уборка снега — сезонное обслуживание, которое помогает защитить крышу, фасад и территорию вокруг здания. Если на крыше скапливается снег или лёд, сопутствующей работой часто становится"
+  ],
+  "katuse seisukorra kontroll ja hooldus": [
+    "roof condition checks and maintenance",
+    "проверка состояния и обслуживание крыши"
+  ],
+  "; kõrgematel objektidel tuleb hinnata": [
+    "; for taller buildings, it is necessary to assess",
+    "; на высоких объектах нужно оценить"
+  ],
+  "ohutu ligipääsu vajadust": [
+    "safe access requirements",
+    "необходимость безопасного доступа"
+  ],
+  ". Sulamisvee või jääkahjustuste korral võib hiljem vajalik olla ka": [
+    ". After meltwater or ice damage, it may also be necessary to carry out",
+    ". При повреждениях талой водой или льдом впоследствии может также понадобиться"
+  ],
+  "fassaadi ja sokli seisukorra ülevaatus": [
+    "a facade and plinth condition inspection",
+    "осмотр состояния фасада и цоколя"
+  ],
+  "Lumetööde päring": [
+    "Snow removal enquiry",
+    "Заявка на уборку снега"
+  ]
+}

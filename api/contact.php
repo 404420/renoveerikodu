@@ -1,10 +1,13 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/contact-i18n.php';
+require_once __DIR__ . '/_contact-schema.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     header('Content-Type: application/json; charset=utf-8');
-    echo json_encode(['success' => false, 'message' => 'Lubatud on ainult POST-päring.'], JSON_UNESCAPED_UNICODE);
+    echo json_encode(['success' => false, 'message' => rk_contact_text('post_only')], JSON_UNESCAPED_UNICODE);
     exit;
 }
 
@@ -35,14 +38,18 @@ function finish_response(bool $success, string $message, int $status = 200, arra
         exit;
     }
 
-    $fallback = '../kontakt.html';
+    $fallback = ['et' => '/kontakt', 'en' => '/en/contact', 'ru' => '/ru/kontakty'][rk_contact_language($_POST['language'] ?? 'et')];
     $referer = $_SERVER['HTTP_REFERER'] ?? '';
-    if ($referer !== '' && preg_match('#^https?://[^/]+/#', $referer) === 1) {
-        $fallback = $referer;
+    $parts = is_string($referer) ? parse_url($referer) : false;
+    $requestHost = parse_url('https://' . ($_SERVER['HTTP_HOST'] ?? ''), PHP_URL_HOST);
+    if (is_array($parts) && is_string($requestHost)
+        && strtolower((string)($parts['host'] ?? '')) === strtolower($requestHost)
+        && preg_match('#^/(?!/)[^\r\n]*$#', (string)($parts['path'] ?? '')) === 1) {
+        $fallback = $parts['path'];
     }
 
     $separator = str_contains($fallback, '?') ? '&' : '?';
-    header('Location: ' . $fallback . $separator . ($success ? 'success=1' : 'error=1'));
+    header('Location: ' . $fallback . $separator . ($success ? 'success=1' : 'error=1'), true, 303);
     exit;
 }
 
@@ -57,7 +64,8 @@ function send_contact_emails(
     string $phone,
     string $address,
     string $message,
-    array $uploadedFiles
+    array $uploadedFiles,
+    string $language = 'et'
 ): void {
     $to = 'info@renoveerikodu.ee';
     $fromEmail = 'info@renoveerikodu.ee';
@@ -72,6 +80,7 @@ function send_contact_emails(
 
     $adminSubject = 'Uus päring kodulehelt';
     $adminMessage = "Uus päring kodulehelt\n\n";
+    $adminMessage .= "Vormi keel: {$language}\n";
     $adminMessage .= "Nimi: {$name}\n";
     $adminMessage .= "Email: {$email}\n";
     $adminMessage .= 'Telefon: ' . ($phone !== '' ? $phone : '-') . "\n";
@@ -96,12 +105,8 @@ function send_contact_emails(
         implode("\r\n", $adminHeaders)
     );
 
-    $autoSubject = 'Täname päringu eest';
-    $autoMessage = "Tere!\n\n";
-    $autoMessage .= "Täname päringu eest. Oleme päringu kätte saanud ja vastame esimesel võimalusel.\n\n";
-    $autoMessage .= "Lugupidamisega\n";
-    $autoMessage .= "RK Meistrid OÜ\n";
-    $autoMessage .= "info@renoveerikodu.ee\n";
+    $autoSubject = rk_contact_text('auto_subject', $language);
+    $autoMessage = rk_contact_text('auto_body', $language);
 
     $autoHeaders = [
         'MIME-Version: 1.0',
@@ -132,7 +137,7 @@ function load_config(): void
         }
     }
 
-    finish_response(false, 'Serveri andmebaasi seadistus puudub.', 500);
+    finish_response(false, rk_contact_text('config_missing'), 500);
 }
 
 function db_pdo(): PDO
@@ -174,7 +179,7 @@ function db_pdo(): PDO
         }
     }
 
-    finish_response(false, 'Serveri andmebaasi ühendus puudub.', 500);
+    finish_response(false, rk_contact_text('connection_missing'), 500);
 }
 
 function verify_recaptcha_if_configured(): void
@@ -191,7 +196,7 @@ function verify_recaptcha_if_configured(): void
 
     $response = trim((string) ($_POST['g-recaptcha-response'] ?? ''));
     if ($response === '') {
-        finish_response(false, 'Palun kinnita, et sa ei ole robot.', 422);
+        finish_response(false, rk_contact_text('captcha_required'), 422);
     }
 
     $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
@@ -215,12 +220,12 @@ function verify_recaptcha_if_configured(): void
     $data = is_string($verify) ? json_decode($verify) : null;
 
     if (!$data || empty($data->success)) {
-        finish_response(false, 'Captcha kontroll ebaõnnestus. Palun proovi uuesti.', 422);
+        finish_response(false, rk_contact_text('captcha_failed'), 422);
     }
 }
 
 if (!empty($_POST['website'])) {
-    finish_response(false, 'Päringut ei saadetud.', 422);
+    finish_response(false, rk_contact_text('not_sent'), 422);
 }
 
 $name = clean_value($_POST['name'] ?? '');
@@ -229,17 +234,18 @@ $phone = clean_value($_POST['phone'] ?? '');
 $address = clean_value($_POST['address'] ?? '');
 $message = trim((string) ($_POST['message'] ?? ''));
 $source = clean_value($_POST['source'] ?? ($_SERVER['HTTP_REFERER'] ?? ''));
+$language = rk_contact_language($_POST['language'] ?? 'et');
 
 if ($name === '') {
-    finish_response(false, 'Palun sisesta nimi.', 400);
+    finish_response(false, rk_contact_text('name_required'), 400);
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    finish_response(false, 'Palun sisesta korrektne e-posti aadress.', 400);
+    finish_response(false, rk_contact_text('email_invalid'), 400);
 }
 
 if ($message === '') {
-    finish_response(false, 'Palun sisesta sõnum.', 400);
+    finish_response(false, rk_contact_text('message_required'), 400);
 }
 
 // Laadime config.php enne CAPTCHA kontrolli, sest võti võib asuda selles failis.
@@ -254,7 +260,7 @@ $maxFileSize = defined('MAX_UPLOAD_SIZE') ? (int) MAX_UPLOAD_SIZE : 10 * 1024 * 
 
 if (!empty($_FILES)) {
     if (!is_dir($uploadDir) && !mkdir($uploadDir, 0755, true)) {
-        finish_response(false, 'Failide kausta loomine ebaõnnestus.', 500);
+        finish_response(false, rk_contact_text('upload_directory'), 500);
     }
 
     foreach ($_FILES as $field) {
@@ -269,23 +275,23 @@ if (!empty($_FILES)) {
             }
 
             if (($errors[$index] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK) {
-                finish_response(false, 'Faili üleslaadimine ebaõnnestus.', 400);
+                finish_response(false, rk_contact_text('upload_failed'), 400);
             }
 
             if ((int) $sizes[$index] > $maxFileSize) {
-                finish_response(false, 'Üks fail on liiga suur. Maksimaalne suurus on 10 MB.', 400);
+                finish_response(false, rk_contact_text('file_large'), 400);
             }
 
             $extension = strtolower(pathinfo((string) $originalName, PATHINFO_EXTENSION));
             if (!in_array($extension, $allowedExtensions, true)) {
-                finish_response(false, 'Failitüüp ei ole lubatud.', 400);
+                finish_response(false, rk_contact_text('file_type'), 400);
             }
 
             $safeName = bin2hex(random_bytes(12)) . '.' . $extension;
             $target = $uploadDir . '/' . $safeName;
 
             if (!move_uploaded_file($tmpNames[$index], $target)) {
-                finish_response(false, 'Faili salvestamine ebaõnnestus.', 500);
+                finish_response(false, rk_contact_text('file_save'), 500);
             }
 
             $path = $publicUploadPath . $safeName;
@@ -301,11 +307,12 @@ if (!empty($_FILES)) {
 
 try {
     $pdo = db_pdo();
+    rk_ensure_contact_language_schema($pdo);
 
     try {
         $stmt = $pdo->prepare('
-            INSERT INTO contacts (name, email, phone, address, message, file_path, source, created_at)
-            VALUES (:name, :email, :phone, :address, :message, :file_path, :source, NOW())
+            INSERT INTO contacts (name, email, phone, address, message, language, file_path, source, created_at)
+            VALUES (:name, :email, :phone, :address, :message, :language, :file_path, :source, NOW())
         ');
         $stmt->execute([
             ':name' => $name,
@@ -313,13 +320,14 @@ try {
             ':phone' => $phone,
             ':address' => $address,
             ':message' => $message,
+            ':language' => $language,
             ':file_path' => $uploadedFiles ? json_encode($uploadedFiles, JSON_UNESCAPED_UNICODE) : null,
             ':source' => $source,
         ]);
     } catch (Throwable $insertError) {
         $stmt = $pdo->prepare('
-            INSERT INTO contacts (name, email, phone, address, message, file_path)
-            VALUES (:name, :email, :phone, :address, :message, :file_path)
+            INSERT INTO contacts (name, email, phone, address, message, language, file_path)
+            VALUES (:name, :email, :phone, :address, :message, :language, :file_path)
         ');
         $stmt->execute([
             ':name' => $name,
@@ -327,18 +335,19 @@ try {
             ':phone' => $phone,
             ':address' => $address,
             ':message' => $message,
+            ':language' => $language,
             ':file_path' => $uploadedFiles ? json_encode($uploadedFiles, JSON_UNESCAPED_UNICODE) : null,
         ]);
     }
 } catch (Throwable $error) {
-    finish_response(false, 'Päring jõudis serverisse, aga andmebaasi salvestamine ebaõnnestus.', 500, [
+    finish_response(false, rk_contact_text('database_failed'), 500, [
         'debug' => defined('APP_DEBUG') && APP_DEBUG ? $error->getMessage() : null,
     ]);
 }
 
-send_contact_emails($name, $email, $phone, $address, $message, $uploadedFiles);
+send_contact_emails($name, $email, $phone, $address, $message, $uploadedFiles, $language);
 
-finish_response(true, 'Aitäh! Päring on saadetud ja kinnituskiri saadeti teie e-postile.', 200, [
+finish_response(true, rk_contact_text('success'), 200, [
     'db_saved' => true,
     'attachments' => $uploadedFiles,
 ]);

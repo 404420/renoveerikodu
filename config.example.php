@@ -19,6 +19,11 @@ define('RECAPTCHA_SITE_KEY', '');
 define('RECAPTCHA_SECRET', '');
 define('MAX_UPLOAD_SIZE', 10 * 1024 * 1024);
 
+// Admini automaatne tõlge: ainult serveris; ära pane võtit HTML-i/JavaScripti.
+// DeepL API Free või API Pro konto (tavaline DeepL Pro tellimus ei anna API võtit).
+define('DEEPL_API_KEY', getenv('DEEPL_API_KEY') ?: '');
+define('DEEPL_API_PLAN', getenv('DEEPL_API_PLAN') ?: 'free'); // lubatud: free või pro
+
 $pdo = new PDO(
     'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
     DB_USER,

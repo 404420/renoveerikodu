@@ -1,0 +1,85 @@
+/* Keep the native language links in view at every screen size. */
+#header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 0 .75rem;
+}
+#header .site-title {
+  position: static;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+#header > .language-switcher {
+  display: inline-flex;
+  position: static;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 2px;
+  height: auto;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 9px;
+  background: rgba(29,36,42,.92);
+  line-height: 1;
+}
+#header .language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 5px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1;
+  text-transform: none;
+}
+#header .language-switcher a[aria-current="page"] {
+  background: #b74700;
+  color: #fff;
+}
+#header .language-switcher a:hover {
+  background: rgba(255,255,255,.16);
+}
+#header .language-switcher a:focus-visible,
+#header #nav .menuToggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+#header > #nav {
+  position: static;
+  flex: 0 0 auto;
+  height: auto;
+  line-height: 1;
+}
+#header #nav .menuToggle {
+  height: 44px;
+  margin: 0;
+  line-height: 44px;
+}
+#header #nav .menuToggle:after {
+  height: 44px;
+}
+@media screen and (max-width: 736px) {
+  #header { gap: .35rem; padding: 0 .5rem; }
+  #header #nav .menuToggle { width: 44px; }
+  #header .language-switcher a { min-width: 40px; min-height: 40px; }
+}
+@media screen and (max-width: 480px) {
+  #header .site-title a { font-size: .66rem; letter-spacing: .025em; gap: .3rem; }
+  #header .site-title a:before,
+  #header .site-title .site-logo { width: 26px; height: 26px; }
+}
+@media screen and (max-width: 360px) {
+  #header { gap: .2rem; padding: 0 .35rem; }
+  #header .site-title a { font-size: .59rem; letter-spacing: 0; }
+  #header .site-title a:before,
+  #header .site-title .site-logo { width: 24px; height: 24px; }
+}

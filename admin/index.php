@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/_bootstrap.php';
+require_once __DIR__ . '/_translation.php';
 
 /* ================================================================
    EMAIL CAMPAIGN SYSTEM
@@ -374,6 +375,16 @@ if (isset($_GET['email_public'])) {
 
 require_admin();
 ensure_admin_objects_table($pdo);
+$translationSchemaReady = true;
+try {
+    rk_ensure_contact_translation_schema($pdo);
+} catch (Throwable $error) {
+    // Muu paneel jääb tööle ka siis, kui majutus nõuab käsitsi migratsiooni.
+    $translationSchemaReady = false;
+}
+$translationNotice = $_SESSION['rk_translation_notice'] ?? null;
+unset($_SESSION['rk_translation_notice']);
+$translationConfigured = rk_translation_configured();
 
 // Tööpäevade mooduli tabel. CREATE TABLE IF NOT EXISTS teeb paigalduse automaatselt.
 $pdo->exec("
@@ -2232,7 +2243,23 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
 .request-site-badge--parketipaigaldaja{color:#15577d;background:#e5f2fb}
 .request-site-badge--renoveerikodu{color:#22653e;background:#e7f4e9}
 .request-site-badge--other{color:#635c49;background:#f2efe4}
+.request-language{display:block;font-size:12px;font-weight:700;color:#637b8b;margin-bottom:8px}
+td.message{white-space:normal}.request-message-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.request-translation{margin-top:13px;border-top:1px solid #d8e0e6;padding-top:10px}
+.request-translation summary{cursor:pointer;font-weight:700;color:#22653e;margin-bottom:8px}
+.request-translation small{display:block;color:#637b8b;margin-top:8px;font-size:12px}
+.request-translate-form{margin:12px 0 0}.request-translate-button{border:1px solid #087b65;background:#fff;color:#087b65;border-radius:5px;padding:9px 12px;cursor:pointer;font:inherit;font-weight:700}
+.request-translate-button:disabled{opacity:.6;cursor:wait}
+.request-translation-notice{margin:0 0 14px;padding:11px 13px;border:1px solid #d8e0e6;border-radius:6px;background:#f8fafc;white-space:normal}
 </style>
+<?php if (is_array($translationNotice) && is_string($translationNotice['reason'] ?? null)): ?>
+<p class="request-translation-notice" role="status"><?= rk_escape(rk_translation_notice($translationNotice['reason'])) ?><?php if (!empty($translationNotice['contact_id'])): ?> (Päring #<?= (int)$translationNotice['contact_id'] ?>)<?php endif; ?></p>
+<?php endif; ?>
+<?php if (!$translationSchemaReady): ?>
+<p class="request-translation-notice"><?= rk_escape(rk_translation_notice('schema')) ?></p>
+<?php elseif (!$translationConfigured): ?>
+<p class="request-translation-notice"><?= rk_escape(rk_translation_notice('unavailable')) ?></p>
+<?php endif; ?>
 <nav class="request-site-filters" aria-label="Filtreeri päringuid veebilehe järgi">
   <?php foreach (['all' => 'Kõik päringud', 'renoveerikodu' => 'Renoveerikodu.ee', 'parketipaigaldaja' => 'Parketipaigaldaja.ee', 'other' => 'Muud'] as $siteKey => $siteLabel): ?>
   <a href="index.php?view=requests&amp;site=<?= h($siteKey) ?>" <?= $requestSourceFilter === $siteKey ? 'aria-current="page"' : '' ?>><?= h($siteLabel) ?> <span class="count"><?= (int)$requestSourceCounts[$siteKey] ?></span></a>
@@ -2258,13 +2285,30 @@ body{background:#f5f7fb;font-family:Arial,sans-serif;margin:0;padding:24px;color
     <tr><td colspan="10" class="muted">Päringuid ei ole veel.</td></tr>
   <?php endif; ?>
   <?php foreach ($requests as $row): $requestSite = $requestSourceSite($row); ?>
-    <tr>
+    <tr id="request-<?= (int)$row['id'] ?>">
       <td data-label="ID"><?= (int) $row['id'] ?></td>
       <td data-label="Nimi"><?= h($row['name']) ?></td>
       <td data-label="Email"><a href="mailto:<?= h($row['email']) ?>"><?= h($row['email']) ?></a></td>
       <td data-label="Telefon"><?= h($row['phone'] ?? '') ?></td>
       <td data-label="Aadress"><?= h($row['address'] ?? '') ?></td>
-      <td data-label="Sõnum" class="message"><?= h($row['message']) ?></td>
+      <td data-label="Sõnum" class="message">
+        <span class="request-language">Vormi keel: <?= rk_escape(['et' => 'Eesti', 'en' => 'Inglise', 'ru' => 'Vene'][$row['language'] ?? 'et'] ?? 'Eesti') ?></span>
+        <div class="request-message-text"><?= h($row['message']) ?></div>
+        <?php if (rk_contact_translation_cached($row)): ?>
+        <details class="request-translation" open>
+          <summary>Automaatne tõlge eesti keelde</summary>
+          <div class="request-message-text" lang="et"><?= rk_escape((string)$row['message_et']) ?></div>
+          <small>DeepL · <?= rk_escape((string)($row['translated_at'] ?? '')) ?> UTC</small>
+        </details>
+        <?php elseif ($translationSchemaReady && $translationConfigured && rk_contact_needs_translation($row)): ?>
+        <form method="post" action="translate-contact.php" class="request-translate-form" onsubmit="this.querySelector('button').disabled=true;">
+          <?= rk_csrf_field() ?>
+          <input type="hidden" name="contact_id" value="<?= (int)$row['id'] ?>">
+          <input type="hidden" name="site" value="<?= rk_escape($requestSourceFilter) ?>">
+          <button type="submit" class="request-translate-button">Tõlgi eesti keelde</button>
+        </form>
+        <?php endif; ?>
+      </td>
       <td data-label="Failid">
         <?php $files = decode_files($row['file_path'] ?? null); ?>
         <?php if (!$files): ?>

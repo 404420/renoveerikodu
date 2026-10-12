@@ -1,0 +1,510 @@
+{
+  "Parketitööd Tallinnas: paigaldus ja parandus | Renoveeri Kodu": [
+    "Parquet flooring in Tallinn: installation and repair | Renoveeri Kodu",
+    "Паркетные работы в Таллинне: укладка и ремонт | Renoveeri Kodu"
+  ],
+  "Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning parketi täkete kohtparandus Tallinnas ja Harjumaal. Küsi hinnangut fotode põhjal.": [
+    "Parquet and laminate installation, substrate preparation, skirting boards and local parquet dent repairs in Tallinn and Harju County. Request an assessment from photos.",
+    "Укладка паркета и ламината, подготовка основания, монтаж плинтусов и локальный ремонт сколов паркета в Таллинне и Харьюмаа. Запросите оценку по фотографиям."
+  ],
+  "Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus Tallinnas ja Harjumaal.": [
+    "Parquet and laminate installation, substrate preparation, skirting boards and local repairs of individual dents in Tallinn and Harju County.",
+    "Укладка паркета и ламината, подготовка основания, монтаж плинтусов и локальный ремонт отдельных сколов в Таллинне и Харьюмаа."
+  ],
+  "Parketitööd Tallinnas ja Harjumaal": [
+    "Parquet flooring services in Tallinn and Harju County",
+    "Паркетные работы в Таллинне и Харьюмаа"
+  ],
+  "Parketi ja laminaatpõranda paigaldus, aluspinna ettevalmistus, liistud ning parketi täkete kohtparandus Tallinnas ja Harjumaal.": [
+    "Parquet and laminate flooring installation, substrate preparation, skirting boards and local parquet dent repairs in Tallinn and Harju County.",
+    "Укладка паркета и ламинированного пола, подготовка основания, монтаж плинтусов и локальный ремонт сколов паркета в Таллинне и Харьюмаа."
+  ],
+  "Laminaatpõranda paigaldus": [
+    "Laminate flooring installation",
+    "Укладка ламината"
+  ],
+  "Põrandaliistude paigaldus": [
+    "Skirting board installation",
+    "Монтаж напольных плинтусов"
+  ],
+  "Parketi täkete kohtparandus": [
+    "Local parquet dent repairs",
+    "Локальный ремонт сколов паркета"
+  ],
+  "Kas vana põrand tuleb enne eemaldada?": [
+    "Does the old floor need to be removed first?",
+    "Нужно ли сначала снять старый пол?"
+  ],
+  "Mitte alati. Otsus sõltub vana katte stabiilsusest, kõrgusest ja aluspinna seisukorrast. Liikuv, niiske või tugevalt ebatasane põrand tuleb enne uue katte paigaldamist korda teha.": [
+    "Not always. The decision depends on the stability and height of the old covering and the condition of the substrate. A floor that moves, is damp or is very uneven must be put right before the new covering is installed.",
+    "Не всегда. Решение зависит от устойчивости и высоты старого покрытия и состояния основания. Подвижный, влажный или сильно неровный пол нужно привести в порядок до укладки нового покрытия."
+  ],
+  "Milline põrandakate sobib kööki või esikusse?": [
+    "Which flooring is suitable for a kitchen or hallway?",
+    "Какое напольное покрытие подходит для кухни или прихожей?"
+  ],
+  "Hea valik võib olla niiskust hästi taluv LVT või tootja poolt niiskuskindlaks märgitud laminaat. Naturaalse parketi puhul tuleb seisvat vett vältida ja valida ruumi kasutusega sobiv pinnaviimistlus.": [
+    "Moisture-resistant LVT or laminate marked as moisture-resistant by the manufacturer may be a good choice. For natural wood parquet, avoid standing water and choose a surface finish suited to how the room is used.",
+    "Хорошим выбором может стать устойчивое к влаге LVT-покрытие или ламинат, отмеченный производителем как влагостойкий. Для натурального паркета нужно избегать стоячей воды и выбирать отделку поверхности с учётом использования помещения."
+  ],
+  "Kui sirge peab aluspind olema?": [
+    "How flat does the substrate need to be?",
+    "Насколько ровным должно быть основание?"
+  ],
+  "Aluspind peab vastama valitud põrandakatte tootja nõuetele. Liigne ebatasasus võib põhjustada õõnsat heli, naginat, põranda liikumist ja ühenduste purunemist.": [
+    "The substrate must meet the requirements of the chosen flooring manufacturer. Excessive unevenness can cause a hollow sound, squeaking, floor movement and broken joints.",
+    "Основание должно соответствовать требованиям производителя выбранного покрытия. Излишние неровности могут вызвать пустотный звук, скрип, подвижность пола и поломку соединений."
+  ],
+  "Kas paigaldate ka liistud?": [
+    "Do you also install skirting boards?",
+    "Вы также устанавливаете плинтусы?"
+  ],
+  "Jah, teeme ka põrandaliistude ja üleminekuliistude paigalduse.": [
+    "Yes, we also install skirting boards and transition strips.",
+    "Да, мы также устанавливаем напольные плинтусы и переходные планки."
+  ],
+  "Kui suur materjalivaru tuleks arvestada?": [
+    "How much extra material should I allow for?",
+    "Какой запас материала нужно предусмотреть?"
+  ],
+  "Vajalik varu sõltub ruumi kujust ja paigaldusmustrist. Sirges lihtsa kujuga ruumis on kadu väiksem, diagonaali, kalasaba või paljude nurkade puhul suurem.": [
+    "The allowance depends on the room shape and installation pattern. Waste is lower in a simple rectangular room, and higher with diagonal layouts, herringbone or many corners.",
+    "Необходимый запас зависит от формы помещения и рисунка укладки. В простом прямоугольном помещении отходов меньше, а при диагональной укладке, ёлочке или большом количестве углов — больше."
+  ],
+  "Kas üksikut täket saab parandada ilma põrandat vahetamata?": [
+    "Can an individual dent be repaired without replacing the floor?",
+    "Можно ли исправить отдельный скол без замены пола?"
+  ],
+  "Sageli küll. Kui põrand on stabiilne ja kahjustus kohalik, saab täkke või sügavama kriimustuse täita toonitud kuumvahaga. Sobivust hindame foto järgi.": [
+    "Often, yes. If the floor is stable and the damage is local, a dent or deeper scratch can be filled with colour-matched hot wax. We assess suitability from a photo.",
+    "Часто да. Если пол устойчивый, а повреждение локальное, скол или глубокую царапину можно заполнить тонированным горячим воском. Пригодность такого ремонта оцениваем по фотографии."
+  ],
+  "Jah. Tehtud ehitus- ja viimistlustöödele kehtib 3-aastane garantii. Konkreetse töö sisu ja tingimused fikseeritakse hinnapakkumises.": [
+    "Yes. Completed construction and finishing work comes with a 3-year warranty. The scope and terms of the specific work are set out in the quote.",
+    "Да. На выполненные строительные и отделочные работы действует 3-летняя гарантия. Содержание и условия конкретной работы фиксируются в ценовом предложении."
+  ],
+  "Parketi paigaldus Tallinnas": [
+    "Parquet installation in Tallinn",
+    "Укладка паркета в Таллинне"
+  ],
+  "Parketi ja laminaadi paigaldus, aluspinna ettevalmistus, liistud ning üksikute täkete kohtparandus.": [
+    "Parquet and laminate installation, substrate preparation, skirting boards and local repairs of individual dents.",
+    "Укладка паркета и ламината, подготовка основания, монтаж плинтусов и локальный ремонт отдельных сколов."
+  ],
+  "Valmis puitparkett Tallinna korteri elutoas": [
+    "Finished wooden parquet flooring in the living room of a Tallinn apartment",
+    "Готовый деревянный паркет в гостиной квартиры в Таллинне"
+  ],
+  "Hea põrand algab tasasest ja stabiilsest aluspinnast. Enne töö alustamist kontrollime olemasoleva põranda seisukorda, ruumi kõrgusi, ukseavasid ja üleminekuid. Nii saab varakult selgeks, kas vana kate tuleb eemaldada ja kas aluspind vajab parandamist või tasandamist.": [
+    "A good floor starts with a flat, stable substrate. Before starting work, we check the existing floor, room levels, doorways and transitions. This makes it clear early on whether the old covering needs removal and whether the substrate needs repair or levelling.",
+    "Хороший пол начинается с ровного и устойчивого основания. До начала работ проверяем состояние существующего пола, высотные отметки помещения, дверные проёмы и переходы. Так заранее становится понятно, нужно ли снимать старое покрытие и требуется ли ремонт или выравнивание основания."
+  ],
+  "Paigaldame laudparketti ja laminaati korterites, eramutes ning äriruumides. Töö juurde saab tellida põrandaliistud, üleminekuprofiilid ja vajalikud lõiked. Kui põrand on muidu heas seisukorras, kuid sellel on üksikud täkked või sügavad kriimustused, võib kogu põranda vahetamise asemel piisata kohalikust kuumvahaparandusest.": [
+    "We install engineered wood flooring and laminate in apartments, private houses and commercial premises. Skirting boards, transition profiles and the necessary cuts can be included. If the floor is otherwise in good condition but has a few dents or deep scratches, a local hot-wax repair may be enough instead of replacing the entire floor.",
+    "Укладываем паркетную доску и ламинат в квартирах, частных домах и коммерческих помещениях. Можно дополнительно заказать монтаж плинтусов, переходных профилей и необходимые вырезы. Если пол в целом в хорошем состоянии, но имеет отдельные сколы или глубокие царапины, вместо полной замены может быть достаточно локального ремонта горячим воском."
+  ],
+  "Millise põrandatööga saame aidata?": [
+    "Which flooring work can we help with?",
+    "С какими работами по полу мы можем помочь?"
+  ],
+  "Aluspõranda tasasuse kontroll pika kontroll-lati ja mõõtekiiluga": [
+    "Checking subfloor flatness with a long straightedge and measuring wedge",
+    "Проверка ровности основания пола длинной контрольной рейкой и измерительным клином"
+  ],
+  "Aluspinna kontroll ja ettevalmistus": [
+    "Substrate inspection and preparation",
+    "Проверка и подготовка основания"
+  ],
+  "Kontrollime tasasust ja stabiilsust ning hindame, kas vana kate tuleb eemaldada. Vajadusel lepime kokku puhastuse, paranduse või tasanduse enne uue põranda paigaldamist.": [
+    "We check flatness and stability and assess whether the old covering needs removal. If needed, we agree on cleaning, repair or levelling before the new floor is installed.",
+    "Проверяем ровность и устойчивость, оцениваем необходимость снятия старого покрытия. При необходимости согласовываем очистку, ремонт или выравнивание до укладки нового пола."
+  ],
+  "Parketilaua ühendamine paigaldatud ridadega aluskatte peal, seina ääres paisumisvuugi vahekiilud": [
+    "Joining an engineered wood board to installed rows over underlay, with expansion-gap spacers along the wall",
+    "Соединение паркетной доски с уложенными рядами на подложке, распорные клинья для компенсационного зазора у стены"
+  ],
+  "Parketi ja laminaadi paigaldus": [
+    "Parquet and laminate installation",
+    "Укладка паркета и ламината"
+  ],
+  "Paigaldame põrandakatte tootja juhiste järgi, jätame vajalikud paisumisvuugid ning lahendame ukseavad, torude ümbrused ja üleminekud teiste põrandakatetega.": [
+    "We install the flooring according to the manufacturer's instructions, leave the required expansion gaps and finish doorways, pipe surrounds and transitions to other floor coverings.",
+    "Укладываем покрытие по инструкции производителя, оставляем необходимые компенсационные зазоры и оформляем дверные проёмы, участки вокруг труб и переходы к другим покрытиям."
+  ],
+  "Valge põrandaliist ja viimistletud üleminek tammepuidust parketilt hallile plaadile ukseavas": [
+    "White skirting board and a finished transition from oak parquet to grey tiles in a doorway",
+    "Белый плинтус и аккуратный переход от дубового паркета к серой плитке в дверном проёме"
+  ],
+  "Liistud ja detailide viimistlus": [
+    "Skirting boards and finishing details",
+    "Плинтусы и отделка деталей"
+  ],
+  "Paigaldame põrandaliistud ja üleminekuprofiilid, kontrollime uste liikumist ning lõpetame servad nii, et tulemus oleks puhas ja kasutusvalmis.": [
+    "We install skirting boards and transition profiles, check door movement and finish the edges so the result is neat and ready to use.",
+    "Устанавливаем плинтусы и переходные профили, проверяем движение дверей и оформляем края, чтобы результат был аккуратным и готовым к использованию."
+  ],
+  "Parketi täkke parandamine kuumvahaga neljas etapis": [
+    "Repairing a parquet dent with hot wax in four stages",
+    "Ремонт скола паркета горячим воском в четыре этапа"
+  ],
+  "Täkete parandus kuumvahaga": [
+    "Hot-wax dent repairs",
+    "Ремонт сколов горячим воском"
+  ],
+  "Üksiku täkke, lohu või sügavama kriimustuse saab sageli täita parketi tooniga sobiva kõvavahaga, ilma et kogu põrandat peaks üles võtma.": [
+    "An individual dent, indentation or deeper scratch can often be filled with hard wax matched to the parquet colour, without lifting the entire floor.",
+    "Отдельный скол, вмятину или глубокую царапину часто можно заполнить твёрдым воском в тон паркета, не разбирая весь пол."
+  ],
+  "Vaata, kuidas kohtparandus käib": [
+    "See how local repair works",
+    "Посмотреть, как выполняется локальный ремонт"
+  ],
+  "Milline põrandakate valida?": [
+    "Which flooring should I choose?",
+    "Какое напольное покрытие выбрать?"
+  ],
+  "Valik sõltub ruumi niiskuskoormusest, kasutussagedusest, aluspõrandast, põrandaküttest ja sellest, kas eelistad naturaalset puitu või võimalikult lihtsat hooldust.": [
+    "The choice depends on moisture exposure, frequency of use, the subfloor, underfloor heating and whether you prefer natural wood or the easiest possible maintenance.",
+    "Выбор зависит от воздействия влаги, интенсивности использования, основания пола, наличия тёплого пола и того, предпочитаете ли вы натуральное дерево или максимально простой уход."
+  ],
+  "Laudparkett": [
+    "Engineered wood flooring",
+    "Паркетная доска"
+  ],
+  "Naturaalse puidu soe välimus sobib hästi elutuppa ja magamistuppa. Kvaliteetset laudparketti saab sõltuvalt kulumiskihi paksusest hiljem hooldada või lihvida. Seisvat vett ja suuri niiskuse kõikumisi tuleb vältida.": [
+    "The warm appearance of natural wood suits living rooms and bedrooms. Quality engineered wood flooring can be maintained or sanded later, depending on the thickness of its wear layer. Avoid standing water and large fluctuations in humidity.",
+    "Тёплый вид натурального дерева хорошо подходит для гостиной и спальни. Качественную паркетную доску можно впоследствии обновлять или шлифовать в зависимости от толщины рабочего слоя. Нужно избегать стоячей воды и сильных колебаний влажности."
+  ],
+  "Laudparketi näidis, mille serval on näha kihiline puitkonstruktsioon": [
+    "Engineered wood flooring sample with its layered wood structure visible at the edge",
+    "Образец паркетной доски с видимой на торце многослойной деревянной структурой"
+  ],
+  "Laminaat": [
+    "Laminate",
+    "Ламинат"
+  ],
+  "Kulumiskindel ja lihtsasti hooldatav valik eluruumidesse. Kööki või esikusse vali tootja poolt niiskuskindlaks märgitud laminaat ning järgi vuukide ja servade tihendamise juhiseid.": [
+    "A wear-resistant, easy-care option for living spaces. For a kitchen or hallway, choose laminate marked as moisture-resistant by the manufacturer and follow the instructions for sealing joints and edges.",
+    "Износостойкий и простой в уходе вариант для жилых помещений. Для кухни или прихожей выбирайте ламинат, отмеченный производителем как влагостойкий, и соблюдайте инструкции по герметизации стыков и краёв."
+  ],
+  "Laminaatpõranda näidis, mille serval on näha HDF-põhikiht": [
+    "Laminate flooring sample with the HDF core visible at the edge",
+    "Образец ламината с видимым на торце основным слоем HDF"
+  ],
+  "LVT- või vinüülpõrand": [
+    "LVT or vinyl flooring",
+    "LVT или виниловый пол"
+  ],
+  "Talub niiskust hästi ning sobib seetõttu sageli kööki, esikusse ja suurema koormusega ruumi. Kogu põrandalahenduse veekindlus sõltub konkreetsest tootest, ühendustest ja paigaldusest. Aluspind peab olema eriti sile.": [
+    "It tolerates moisture well and is therefore often suitable for kitchens, hallways and more heavily used rooms. The water resistance of the complete flooring system depends on the specific product, joints and installation. The substrate must be particularly smooth.",
+    "Хорошо переносит влагу и поэтому часто подходит для кухни, прихожей и помещений с повышенной нагрузкой. Водостойкость всей конструкции пола зависит от конкретного изделия, соединений и монтажа. Основание должно быть особенно гладким."
+  ],
+  "Niiskuskindla LVT-vinüülpõranda näidis köögi ja esiku jaoks": [
+    "Moisture-resistant LVT vinyl flooring sample for a kitchen or hallway",
+    "Образец влагостойкого винилового LVT-покрытия для кухни и прихожей"
+  ],
+  "Täispuit": [
+    "Solid wood",
+    "Массив дерева"
+  ],
+  "Pika elueaga ja korduvalt taastatav materjal kuiva ning stabiilse sisekliimaga ruumi. Täispuit reageerib õhuniiskuse muutustele rohkem kui kihiline laudparkett, mistõttu tuleb paigaldusviis ja põrandakütte sobivus alati üle kontrollida.": [
+    "A long-lasting material that can be restored repeatedly, for rooms with a dry, stable indoor climate. Solid wood reacts more to changes in humidity than engineered wood flooring, so the installation method and suitability for underfloor heating must always be checked.",
+    "Долговечный материал, допускающий многократное восстановление, для помещений с сухим и стабильным микроклиматом. Массив сильнее реагирует на изменения влажности воздуха, чем многослойная паркетная доска, поэтому всегда нужно проверять способ укладки и совместимость с тёплым полом."
+  ],
+  "Täispuitpõranda näidis, mille läbilõikes on näha täispuidu struktuur": [
+    "Solid wood flooring sample with the solid timber structure visible in cross-section",
+    "Образец пола из массива с видимой в разрезе структурой цельной древесины"
+  ],
+  "Põrandakütte puhul": [
+    "For underfloor heating",
+    "При наличии тёплого пола"
+  ],
+  "vaata alati tootja lubatud soojustakistust, maksimaalset pinnatemperatuuri ja paigaldusjuhendit. Kõik parketid, laminaadid ega LVT-tooted ei sobi automaatselt igale küttesüsteemile.": [
+    "always check the manufacturer's permitted thermal resistance, maximum surface temperature and installation instructions. Not all parquet, laminate or LVT products are automatically suitable for every heating system.",
+    "всегда проверяйте допустимое тепловое сопротивление, максимальную температуру поверхности и инструкцию по укладке производителя. Не каждый паркет, ламинат или LVT-покрытие автоматически подходит для любой системы отопления."
+  ],
+  "Mida kontrollida enne laminaadi paigaldamist?": [
+    "What should be checked before installing laminate?",
+    "Что нужно проверить перед укладкой ламината?"
+  ],
+  "Laminaadi vastupidavus sõltub sama palju ettevalmistusest kui materjalist. Enne paigaldust kontrollime tootja juhendit, ruumi tingimusi ja kogu põrandakonstruktsiooni.": [
+    "Laminate durability depends as much on preparation as on the material. Before installation, we check the manufacturer's instructions, room conditions and the complete floor construction.",
+    "Долговечность ламината зависит от подготовки не меньше, чем от материала. Перед укладкой проверяем инструкцию производителя, условия в помещении и всю конструкцию пола."
+  ],
+  "Materjali aklimatiseerimine": [
+    "Material acclimatisation",
+    "Акклиматизация материала"
+  ],
+  "Pakendid hoitakse enne paigaldust samas ruumis tootja määratud aja ja tingimuste järgi. Paljude laminaatide puhul on tavapärane vähemalt 48 tundi, kuid määrav on alati konkreetse toote juhend.": [
+    "Before installation, the packs are kept in the same room for the time and under the conditions specified by the manufacturer. At least 48 hours is common for many laminates, but the specific product instructions always take precedence.",
+    "Перед укладкой упаковки выдерживают в том же помещении в течение времени и при условиях, указанных производителем. Для многих ламинатов обычно требуется не менее 48 часов, но определяющей всегда остаётся инструкция конкретного изделия."
+  ],
+  "Aluspõranda seisukord": [
+    "Subfloor condition",
+    "Состояние основания пола"
+  ],
+  "Aluspind peab olema tasane, tugev, puhas ja kuiv. Mineraalse aluspinna niiskust tuleb vajadusel mõõta; tolm, lahtised osad ja liigne ebatasasus võivad põhjustada naginat, liikumist või ühenduste kahjustumist.": [
+    "The substrate must be flat, sound, clean and dry. Moisture in mineral substrates must be measured where necessary; dust, loose material and excessive unevenness can cause squeaking, movement or joint damage.",
+    "Основание должно быть ровным, прочным, чистым и сухим. При необходимости измеряется влажность минерального основания; пыль, непрочные участки и излишние неровности могут вызвать скрип, подвижность или повреждение соединений."
+  ],
+  "Alusmaterjal ja niiskustõke": [
+    "Underlay and moisture barrier",
+    "Подложка и влагозащита"
+  ],
+  "Alusmaterjal valitakse põrandakatte, aluspinna, heliisolatsiooni ja põrandakütte järgi. Betooni või muu mineraalse aluspinna puhul võib olla vajalik eraldi aurutõke või integreeritud niiskustõkkega aluskate.": [
+    "The underlay is selected according to the flooring, substrate, sound insulation and underfloor heating. Concrete or other mineral substrates may require a separate vapour barrier or underlay with an integrated moisture barrier.",
+    "Подложка выбирается с учётом напольного покрытия, основания, звукоизоляции и тёплого пола. Для бетона или другого минерального основания может потребоваться отдельная пароизоляция либо подложка со встроенным влагозащитным слоем."
+  ],
+  "Paisumisruum ja rasked esemed": [
+    "Expansion allowance and heavy objects",
+    "Компенсационные зазоры и тяжёлые предметы"
+  ],
+  "Ujuv põrand peab saama temperatuuri ja õhuniiskuse muutudes liikuda. Tootja nõutud vahe jäetakse seinte, torude, lävepakkude ja muude fikseeritud osade ümber; köögisaar või muu väga raske püsikonstruktsioon ei tohi põrandat kinni suruda.": [
+    "A floating floor must be able to move as temperature and humidity change. The gap required by the manufacturer is left around walls, pipes, thresholds and other fixed elements; a kitchen island or other very heavy permanent structure must not pin the floor down.",
+    "Плавающий пол должен иметь возможность двигаться при изменении температуры и влажности воздуха. Предусмотренный производителем зазор оставляют вокруг стен, труб, порогов и других неподвижных элементов; кухонный остров или другая очень тяжёлая стационарная конструкция не должны зажимать пол."
+  ],
+  "Paigaldussuund, materjalivaru ja viimistlus": [
+    "Installation direction, material allowance and finishing",
+    "Направление укладки, запас материала и отделка"
+  ],
+  "Paigaldussuund valitakse ruumi kuju, valguse, läbikäikude ja põrandamustri järgi. Materjalivaru sõltub ruumi nurkadest ning paigaldusmustrist, mistõttu ei ole üks protsent õige igale objektile. Enne alustamist kontrollime ka ukselehtede liikumist, viimistlusprofiile ja üleminekuid.": [
+    "The installation direction is chosen according to the room shape, light, walkways and flooring pattern. The material allowance depends on room corners and the installation pattern, so no single percentage is right for every project. Before starting, we also check door leaf movement, finishing profiles and transitions.",
+    "Направление укладки выбирается с учётом формы комнаты, света, проходов и рисунка пола. Запас материала зависит от углов помещения и схемы укладки, поэтому один процент не подходит для всех объектов. До начала работ также проверяем движение дверных полотен, отделочные профили и переходы."
+  ],
+  "Valmis laminaati ei lihvita, õlitata ega lakita. Töö lõpetatakse sobivate liistude ja profiilidega nii, et vajalikud paisumisvuugid jäävad toimima.": [
+    "Installed laminate is not sanded, oiled or varnished. The work is completed with suitable skirting boards and profiles while keeping the required expansion gaps functional.",
+    "Готовый ламинат не шлифуют, не покрывают маслом и не лакируют. Работу завершают подходящими плинтусами и профилями, сохраняя действие необходимых компенсационных зазоров."
+  ],
+  "Kas parandada või paigaldada uus põrand?": [
+    "Should the floor be repaired or replaced?",
+    "Отремонтировать пол или уложить новый?"
+  ],
+  "Kohalik parandus sobib, kui": [
+    "Local repair is suitable when",
+    "Локальный ремонт подходит, если"
+  ],
+  "kahjustatud on üksikud väikesed kohad;": [
+    "only a few small areas are damaged;",
+    "повреждены отдельные небольшие участки;"
+  ],
+  "põrand on stabiilne ja üldiselt heas seisukorras;": [
+    "the floor is stable and generally in good condition;",
+    "пол устойчивый и в целом в хорошем состоянии;"
+  ],
+  "probleem on täke, lohk, servakahjustus või sügav kriimustus.": [
+    "the problem is a dent, indentation, damaged edge or deep scratch.",
+    "проблема заключается в сколе, вмятине, повреждении края или глубокой царапине."
+  ],
+  "Uus põrand või suurem taastamine on mõistlikum, kui": [
+    "A new floor or more extensive restoration makes more sense when",
+    "Новый пол или более масштабное восстановление целесообразнее, если"
+  ],
+  "kahjustusi või kulunud viimistlust on kogu ruumis;": [
+    "damage or worn finish is present throughout the room;",
+    "повреждения или износ покрытия есть по всему помещению;"
+  ],
+  "lauad liiguvad, nagisevad või ühendused on katki;": [
+    "boards move or squeak, or the joints are broken;",
+    "доски двигаются, скрипят или соединения сломаны;"
+  ],
+  "põrand on niiskuse tõttu paisunud või deformeerunud.": [
+    "the floor has swollen or deformed due to moisture.",
+    "пол разбух или деформировался из-за влаги."
+  ],
+  "Kuidas töö käib?": [
+    "How does the work proceed?",
+    "Как проходят работы?"
+  ],
+  "1. Fotod ja lähteinfo": [
+    "1. Photos and initial information",
+    "1. Фотографии и исходная информация"
+  ],
+  "Saada ruumi üldvaated, lähivõtted aluspinnast või kahjustusest, põranda pindala, materjali tüüp, objekti asukoht ja soovitud aeg.": [
+    "Send overall room photos, close-ups of the substrate or damage, floor area, material type, site location and your preferred timing.",
+    "Пришлите общие фотографии помещения, крупные планы основания или повреждения, площадь пола, тип материала, адрес объекта и желаемые сроки."
+  ],
+  "2. Ülevaatus ja pakkumine": [
+    "2. Inspection and quote",
+    "2. Осмотр и предложение"
+  ],
+  "Kui fotodest ei piisa, vaatame objekti kohapeal üle. Pakkumises paneme kirja töö mahu, ettevalmistuse, hinna ja eeldatava ajakulu.": [
+    "If photos are not enough, we inspect the site in person. The quote sets out the scope of work, preparation, price and estimated duration.",
+    "Если фотографий недостаточно, осматриваем объект на месте. В предложении указываем объём работ, подготовку, цену и ожидаемую продолжительность."
+  ],
+  "3. Ettevalmistus ja paigaldus": [
+    "3. Preparation and installation",
+    "3. Подготовка и укладка"
+  ],
+  "Kaitseme kõrvalpinnad, valmistame aluspinna ette ning paigaldame põranda kokkulepitud suuna, vuukide ja detailidega.": [
+    "We protect adjacent surfaces, prepare the substrate and install the floor with the agreed direction, joints and details.",
+    "Защищаем соседние поверхности, готовим основание и укладываем пол с согласованным направлением, зазорами и деталями."
+  ],
+  "4. Viimistlus ja üleandmine": [
+    "4. Finishing and handover",
+    "4. Отделка и сдача"
+  ],
+  "Paigaldame liistud, kontrollime üleminekuid ja uksi, koristame tööala ning anname ülevaate uue põranda kasutamisest.": [
+    "We install skirting boards, check transitions and doors, clean the work area and explain how to use the new floor.",
+    "Устанавливаем плинтусы, проверяем переходы и двери, убираем рабочую зону и объясняем правила использования нового пола."
+  ],
+  "Parketitööde hinnad": [
+    "Parquet flooring prices",
+    "Цены на паркетные работы"
+  ],
+  "parketi paigaldus ujuvalt alates 13 €/m²;": [
+    "floating parquet installation from 13 €/m²;",
+    "укладка паркета плавающим способом от 13 €/m²;"
+  ],
+  "kalasabaparketi paigaldus liimimisega alates 25 €/m²;": [
+    "glued herringbone parquet installation from 25 €/m²;",
+    "укладка паркета ёлочкой на клей от 25 €/m²;"
+  ],
+  "laminaatparketi paigaldus alates 9 €/m²;": [
+    "laminate flooring installation from 9 €/m²;",
+    "укладка ламината от 9 €/m²;"
+  ],
+  "põrandaliistu paigaldus alates 5 €/jm.": [
+    "skirting board installation from 5 €/linear m.",
+    "монтаж напольного плинтуса от 5 €/пог. м."
+  ],
+  "Lõplik hind sõltub aluspinna seisukorrast, ruumi kujust, lõigete ja ukseavade arvust, liistudest, üleminekutest ning sellest, kas vana kate tuleb eemaldada. Kohtparanduse hind sõltub kahjustuste arvust, suurusest ja toonide sobitamise keerukusest.": [
+    "The final price depends on the substrate condition, room shape, number of cuts and doorways, skirting boards, transitions and whether the old covering needs removal. Local repair prices depend on the number and size of damaged areas and the difficulty of colour matching.",
+    "Окончательная цена зависит от состояния основания, формы помещения, количества вырезов и дверных проёмов, плинтусов, переходов и необходимости снять старое покрытие. Цена локального ремонта зависит от количества и размера повреждений и сложности подбора оттенков."
+  ],
+  "Vaata põrandatööde hinnakirja": [
+    "View the flooring price list",
+    "Посмотреть прайс-лист на работы по полу"
+  ],
+  "või saada fotod, mõõdud ja töö kirjeldus, et saaksime teha täpsema pakkumise.": [
+    "or send photos, dimensions and a description of the work so we can prepare a more accurate quote.",
+    "или пришлите фотографии, размеры и описание работ, чтобы мы могли подготовить более точное предложение."
+  ],
+  "Mida enne töö algust arvestada?": [
+    "What should be considered before work starts?",
+    "Что учесть до начала работ?"
+  ],
+  "Põrandamaterjal peab enne paigaldust ruumi tingimustega kohanema. Märjad ja tolmused remonditööd peaksid olema lõpetatud ning ruumi temperatuur ja niiskus stabiilsed. Materjali tellimisel tuleb arvestada lõigete ja praagivaruga, mille suurus sõltub ruumi kujust ja paigaldusmustrist.": [
+    "The flooring material must acclimatise to room conditions before installation. Wet and dusty renovation work should be complete, and room temperature and humidity should be stable. When ordering material, allow for cutting waste and unusable pieces; the amount depends on the room shape and installation pattern.",
+    "Материал пола должен адаптироваться к условиям помещения до укладки. Мокрые и пыльные ремонтные работы должны быть завершены, а температура и влажность — стабильны. При заказе материала нужно предусмотреть запас на подрезку и брак, размер которого зависит от формы помещения и рисунка укладки."
+  ],
+  "Anna päringus teada, kas mööbel jääb ruumi, kas vana põrand tuleb eemaldada ja ära vedada ning millal peab ruum uuesti kasutatav olema. Need detailid mõjutavad tööjärjekorda ja ajakulu.": [
+    "In your enquiry, mention whether furniture will remain in the room, whether the old floor needs removal and disposal, and when the room must be usable again. These details affect the work sequence and duration.",
+    "В заявке укажите, останется ли мебель в комнате, нужно ли снять и вывезти старый пол и когда помещение должно быть снова готово к использованию. Эти детали влияют на порядок и продолжительность работ."
+  ],
+  "Parketipaigalduse tööprotsess": [
+    "Parquet installation process",
+    "Процесс укладки паркета"
+  ],
+  "Aluspinna kontrollist valmis põrandani: allolevad pildid illustreerivad paigalduse nelja etappi.": [
+    "From substrate inspection to a finished floor: the images below illustrate the four installation stages.",
+    "От проверки основания до готового пола: изображения ниже иллюстрируют четыре этапа укладки."
+  ],
+  "1. Aluspinna kontroll": [
+    "1. Substrate inspection",
+    "1. Проверка основания"
+  ],
+  "Kaks proovipaigutust: parketilauad aknast tuleva valgusega samas suunas ja risti": [
+    "Two trial layouts: parquet boards aligned with and perpendicular to the light from the window",
+    "Два пробных варианта раскладки: паркетные доски вдоль и поперёк света из окна"
+  ],
+  "2. Paigaldussuuna valik": [
+    "2. Choosing the installation direction",
+    "2. Выбор направления укладки"
+  ],
+  "3. Parketi paigaldamine": [
+    "3. Installing the parquet",
+    "3. Укладка паркета"
+  ],
+  "4. Servade ja üleminekute viimistlus": [
+    "4. Finishing edges and transitions",
+    "4. Отделка краёв и переходов"
+  ],
+  "Genereeritud tööprotsessi illustratsioonid.": [
+    "Generated illustrations of the work process.",
+    "Сгенерированные иллюстрации процесса работ."
+  ],
+  "Põrandakütte ja paigaldusmaterjalide sobivus": [
+    "Compatibility of underfloor heating and installation materials",
+    "Совместимость тёплого пола и материалов для укладки"
+  ],
+  "Alusmaterjal ei tasanda kõiki vigu": [
+    "Underlay does not correct every defect",
+    "Подложка не устраняет все неровности"
+  ],
+  "Alusvaip valitakse põrandakatte lukusüsteemi, koormuse ja põrandakütte järgi. Liiga pehme või paks alus võib lukke koormata. Betooni niiskuskaitse vajadus lahendatakse tootja juhendi järgi; alusmaterjal ei asenda põranda tasandamist.": [
+    "Underlay is chosen according to the flooring's locking system, load and underfloor heating. Underlay that is too soft or thick can stress the joints. The need for moisture protection over concrete is determined by the manufacturer's instructions; underlay does not replace floor levelling.",
+    "Подложка выбирается с учётом замковой системы покрытия, нагрузки и тёплого пола. Слишком мягкая или толстая подложка может перегружать замки. Необходимость влагозащиты бетона определяется инструкцией производителя; подложка не заменяет выравнивание пола."
+  ],
+  "Põrandaküte ja niiskus": [
+    "Underfloor heating and moisture",
+    "Тёплый пол и влажность"
+  ],
+  "Kontrollime katte ning alusmaterjali lubatud soojustakistust ja kütterežiimi. Näiteks Quick-Stepi mitme tootesarja juhendis on kontaktpinna piir 27 °C; seda ei saa automaatselt laiendada kõikidele parkettidele. Mõõdame aluspinna niiskust ning järgime konkreetse katte piirväärtusi.": [
+    "We check the permitted thermal resistance and heating regime for the covering and underlay. For example, the instructions for several Quick-Step product ranges specify a contact surface limit of 27 °C; this cannot automatically be applied to all parquet flooring. We measure substrate moisture and follow the limits for the specific covering.",
+    "Проверяем допустимое тепловое сопротивление и режим нагрева покрытия и подложки. Например, в инструкциях нескольких серий Quick-Step указан предел температуры контактной поверхности 27 °C; его нельзя автоматически распространять на все виды паркета. Измеряем влажность основания и соблюдаем предельные значения конкретного покрытия."
+  ],
+  "Liimpaigaldus ja hooldus": [
+    "Glued installation and maintenance",
+    "Укладка на клей и уход"
+  ],
+  "Liimitud parketi jaoks valitakse aluspinna, krundi ja puiduga sobiv põrandaliim. Ujuvpaigalduseks mõeldud laminaati ei liimita omal algatusel aluspinnale. Õlitatud ja lakitud puit vajavad erinevaid hooldusvahendeid; hoidume märjast pesust ning kasutame mööbli all kaitsevildid.": [
+    "For glued parquet, we choose a flooring adhesive compatible with the substrate, primer and wood. Laminate designed for floating installation must not be glued to the substrate on your own initiative. Oiled and varnished wood require different care products; we avoid wet washing and use felt pads under furniture.",
+    "Для паркета на клей выбираем напольный клей, совместимый с основанием, грунтовкой и древесиной. Ламинат, предназначенный для плавающей укладки, нельзя по собственной инициативе приклеивать к основанию. Дерево под маслом и лаком требует разных средств ухода; избегаем мокрой уборки и используем войлочные накладки под мебелью."
+  ],
+  "Enne paigaldust:": [
+    "Before installation:",
+    "Перед укладкой:"
+  ],
+  "Saada põrandakatte täpne tootenimi, ruumi mõõdud, olemasoleva aluse kirjeldus ja info põrandakütte kohta. Nii saame hinnata tasandust, lävepakke ning uste vaba liikumist enne materjali tellimist.": [
+    "Send the exact flooring product name, room dimensions, a description of the existing substrate and information about underfloor heating. This lets us assess levelling, thresholds and door clearance before the material is ordered.",
+    "Пришлите точное название напольного покрытия, размеры помещения, описание существующего основания и информацию о тёплом поле. Это позволит оценить выравнивание, пороги и свободное движение дверей до заказа материала."
+  ],
+  "Kas liistud paigaldatakse kohe pärast parketti?": [
+    "Are skirting boards installed immediately after the parquet?",
+    "Устанавливаются ли плинтусы сразу после паркета?"
+  ],
+  "Tavaliselt jah, kui seinad on valmis ja värv kuivanud. Kui seinaviimistlus jätkub, võib liistud paigaldada hiljem, et neid mitte kahjustada.": [
+    "Usually, yes, if the walls are finished and the paint is dry. If wall finishing continues, skirting boards can be installed later to avoid damaging them.",
+    "Обычно да, если стены готовы и краска высохла. Если отделка стен продолжается, плинтусы можно установить позже, чтобы не повредить их."
+  ],
+  "Kui põrandatöö on osa suuremast remondist": [
+    "When flooring is part of a larger renovation",
+    "Если работы по полу — часть большого ремонта"
+  ],
+  "Uus põrand paigaldatakse pärast tolmuseid ja märgi töid. Enne seda võib olla vaja": [
+    "A new floor is installed after dusty and wet work. Before that, you may need",
+    "Новый пол укладывается после пыльных и мокрых работ. До этого может потребоваться"
+  ],
+  "vana põrandakatte eemaldamist": [
+    "removal of the old floor covering",
+    "снятие старого напольного покрытия"
+  ],
+  "; seinte lõppviimistlus ja liistude paigaldus tuleb tööjärjekorras omavahel kokku sobitada. Suurema töö puhul aitab": [
+    "; final wall finishing and skirting board installation must be coordinated in the work sequence. For a larger project,",
+    "; окончательную отделку стен и монтаж плинтусов нужно согласовать в порядке работ. При большом объёме"
+  ],
+  "korteri remondi ühine tööplaan": [
+    "a shared apartment renovation plan",
+    "единый план ремонта квартиры"
+  ],
+  "vältida värskelt valminud pindade kahjustamist.": [
+    "helps prevent damage to newly finished surfaces.",
+    "помогает избежать повреждения только что готовых поверхностей."
+  ],
+  "Seotud lehed": [
+    "Related pages",
+    "Связанные страницы"
+  ],
+  "Parketi täkete parandus kuumvahaga": [
+    "Hot-wax parquet dent repairs",
+    "Ремонт сколов паркета горячим воском"
+  ],
+  "Põrandatööde hinnad": [
+    "Flooring prices",
+    "Цены на работы по полу"
+  ],
+  "Põrandatööde päring": [
+    "Flooring enquiry",
+    "Заявка на работы по полу"
+  ]
+}

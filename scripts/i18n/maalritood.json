@@ -1,0 +1,482 @@
+{
+  "Maalritööd Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "Painting services in Tallinn and Harju County | Renoveeri Kodu",
+    "Малярные работы в Таллинне и Харьюмаа | Renoveeri Kodu"
+  ],
+  "Maalritööd Tallinnas ja Harjumaal. Seinte ja lagede värvimine, pahteldamine ning siseviimistlus korterites, majades ja äripindadel.": [
+    "Painting services in Tallinn and Harju County. Wall and ceiling painting, filling and interior finishing in apartments, houses and commercial premises.",
+    "Малярные работы в Таллинне и Харьюмаа. Покраска и шпаклёвка стен и потолков, внутренняя отделка квартир, домов и коммерческих помещений."
+  ],
+  "Maalritööd Tallinnas ja Harjumaal": [
+    "Painting services in Tallinn and Harju County",
+    "Малярные работы в Таллинне и Харьюмаа"
+  ],
+  "Maalritööd, pahteldus, kruntimine ja siseviimistlus Tallinnas ja Harjumaal.": [
+    "Painting, filling, priming and interior finishing in Tallinn and Harju County.",
+    "Малярные работы, шпаклёвка, грунтование и внутренняя отделка в Таллинне и Харьюмаа."
+  ],
+  "Kas teete ainult värvimist või ka pahteldust?": [
+    "Do you only paint, or do you also fill surfaces?",
+    "Вы только красите или также шпаклюете?"
+  ],
+  "Teeme mõlemat. Vajadusel teeme kohtparandused, lauspahtelduse, lihvimise, kruntimise ja lõppvärvimise.": [
+    "We do both. Where needed, we carry out local repairs, full-surface filling, sanding, priming and finish painting.",
+    "Мы выполняем и то и другое. При необходимости делаем локальные исправления, сплошную шпаклёвку, шлифовку, грунтование и финишную покраску."
+  ],
+  "Kui kaua maalritööd kestavad?": [
+    "How long does painting take?",
+    "Сколько времени занимают малярные работы?"
+  ],
+  "Kestus sõltub ruumide arvust, kuivamisaegadest ja pinna seisukorrast. Väiksemad tööd võtavad tihti mõne päeva, suuremad objektid vajavad täpsemat graafikut.": [
+    "The duration depends on the number of rooms, drying times and surface condition. Smaller jobs often take a few days; larger properties need a more detailed schedule.",
+    "Срок зависит от количества помещений, времени высыхания и состояния поверхности. Небольшие работы часто занимают несколько дней, более крупные объекты требуют подробного графика."
+  ],
+  "Kas klient peab materjalid ise ostma?": [
+    "Does the customer need to buy the materials?",
+    "Должен ли клиент сам покупать материалы?"
+  ],
+  "Soovi korral aitame materjalide valikul või lepime kokku, et vajalikud krundid, pahtlid ja värvid hangime meie.": [
+    "If you wish, we can help select materials or agree to supply the necessary primers, fillers and paints ourselves.",
+    "При желании мы поможем выбрать материалы или договоримся, что необходимые грунтовки, шпаклёвки и краски закупим мы."
+  ],
+  "Kas töötate möbleeritud korteris?": [
+    "Do you work in furnished apartments?",
+    "Вы работаете в меблированных квартирах?"
+  ],
+  "Jah, kuid töö kiirus ja hind sõltuvad sellest, kui palju on vaja mööblit kaitsta või liigutada.": [
+    "Yes, but the speed and price depend on how much furniture needs to be protected or moved.",
+    "Да, но скорость работы и цена зависят от того, сколько мебели нужно защитить или передвинуть."
+  ],
+  "Kas mööbel peab enne maalritöid ruumist väljas olema?": [
+    "Does furniture need to be removed from the room before painting?",
+    "Нужно ли вынести мебель из помещения до малярных работ?"
+  ],
+  "Ideaalis võiks ruum olla võimalikult tühi. Kui mööblit ei saa eemaldada, tuleb see koondada, katta ja jätta tööks piisav ligipääs seintele ning lagedele.": [
+    "Ideally, the room should be as empty as possible. If furniture cannot be removed, it needs to be grouped together and covered, with enough access left to walls and ceilings.",
+    "В идеале помещение должно быть максимально пустым. Если мебель нельзя вынести, её нужно собрать вместе, укрыть и оставить достаточный доступ к стенам и потолкам."
+  ],
+  "Kas värvitooni saab valida töö käigus?": [
+    "Can I choose the colour while the work is underway?",
+    "Можно ли выбрать цвет в процессе работы?"
+  ],
+  "Parem on toon enne töö algust kinnitada, sest värvi tellimine, prooviala ja kuivamisjärgne toon võivad ajagraafikut mõjutada. Vajadusel teeme proovipinna enne kogu seina värvimist.": [
+    "It is better to confirm the colour before work starts, because ordering the paint, making a sample area and the colour after drying can affect the schedule. Where needed, we paint a sample area before painting the entire wall.",
+    "Лучше утвердить цвет до начала работ, поскольку заказ краски, пробный участок и оттенок после высыхания могут повлиять на график. При необходимости мы делаем пробный участок до покраски всей стены."
+  ],
+  "Miks on kruntimine vajalik?": [
+    "Why is priming necessary?",
+    "Зачем нужно грунтование?"
+  ],
+  "Krunt ühtlustab pinna imavust ja parandab värvi naket. Ilma krundita võib lõpptulemus jääda laiguline või vajada rohkem värvikihte.": [
+    "Primer evens out surface absorbency and improves paint adhesion. Without primer, the finish can be patchy or require more coats of paint.",
+    "Грунтовка выравнивает впитывающую способность поверхности и улучшает сцепление краски. Без грунтовки результат может быть пятнистым или потребовать больше слоёв краски."
+  ],
+  "Kas parandate ka seinapraod?": [
+    "Do you also repair cracks in walls?",
+    "Вы также заделываете трещины в стенах?"
+  ],
+  "Jah, kuid oluline on aru saada, kas pragu on ainult viimistluskihis või liigub konstruktsioon. Liikuv pragu võib vajada teistsugust lahendust kui tavaline pahtliparandus.": [
+    "Yes, but it is important to understand whether the crack is only in the finish or the structure is moving. A moving crack may need a different solution from a normal filler repair.",
+    "Да, но важно понять, находится ли трещина только в отделочном слое или конструкция движется. Подвижной трещине может потребоваться другое решение, чем обычное исправление шпаклёвкой."
+  ],
+  "Seinte värvimine ja maalritööd Tallinnas": [
+    "Wall painting and painting services in Tallinn",
+    "Покраска стен и малярные работы в Таллинне"
+  ],
+  "Seinte ja lagede ettevalmistus, värvimine ning puhas lõppviimistlus.": [
+    "Wall and ceiling preparation, painting and a clean final finish.",
+    "Подготовка и покраска стен и потолков, аккуратная финишная отделка."
+  ],
+  "Siledaks viimistletud heledad seinad ja täpsed laejooned päevavalgusega elutoas": [
+    "Smoothly finished light walls and precise ceiling lines in a daylight-filled living room",
+    "Гладко отделанные светлые стены и ровные линии потолка в гостиной с дневным светом"
+  ],
+  "Maalritööde tulemuse määrab eelkõige aluspinna seisukord. Enne pakkumist vaatame üle paranduste, pahtelduse, lihvimise ja kruntimise vajaduse ning lepime kokku soovitud viimistlustaseme.": [
+    "The painting result is determined above all by the condition of the substrate. Before quoting, we review the need for repairs, filling, sanding and priming, and agree the desired finish level.",
+    "Результат малярных работ прежде всего определяется состоянием основания. Перед составлением предложения мы оцениваем необходимость исправлений, шпаклёвки, шлифовки и грунтования и согласуем желаемый уровень отделки."
+  ],
+  "Maalritöö ei ole ainult värvi seinale kandmine. Kvaliteetne tulemus algab pragude, vuukide, kruvipeade, vana värvi ja aluspinna seisukorra hindamisest. Teeme maalritöid korterites, eramutes, büroodes ja äripindadel Tallinnas ning Harjumaal.": [
+    "Painting is more than applying paint to a wall. A quality result starts with assessing cracks, joints, screw heads, old paint and the substrate. We provide painting services in apartments, private houses, offices and commercial premises in Tallinn and Harju County.",
+    "Малярные работы — это не только нанесение краски на стену. Качественный результат начинается с оценки трещин, швов, головок шурупов, старой краски и состояния основания. Мы выполняем малярные работы в квартирах, частных домах, офисах и коммерческих помещениях в Таллинне и Харьюмаа."
+  ],
+  "Meie eesmärk on saavutada ühtlane pind, sirged üleminekud ja puhas tööala. Vajadusel aitame valida värvitüübi, läikeastme ja toonilahenduse, mis sobib ruumi valguse, kasutuse ja hooldusvajadusega.": [
+    "Our aim is an even surface, straight transitions and a clean work area. Where needed, we help choose a paint type, sheen and colour scheme suited to the room's lighting, use and maintenance needs.",
+    "Наша цель — ровная поверхность, аккуратные переходы и чистая рабочая зона. При необходимости мы помогаем выбрать тип краски, степень блеска и цветовое решение, подходящие освещению, использованию помещения и требованиям по уходу."
+  ],
+  "seinte ja lagede pahteldamine ning lihvimine": [
+    "filling and sanding walls and ceilings",
+    "шпаклёвка и шлифовка стен и потолков"
+  ],
+  "kruntimine, värvimine ja toonivahetus": [
+    "priming, painting and colour changes",
+    "грунтование, покраска и смена цвета"
+  ],
+  "pragude, nurkade ja üleminekute parandamine": [
+    "repairing cracks, corners and transitions",
+    "исправление трещин, углов и переходов"
+  ],
+  "korterite, eramute ja äripindade siseviimistlus": [
+    "interior finishing of apartments, private houses and commercial premises",
+    "внутренняя отделка квартир, частных домов и коммерческих помещений"
+  ],
+  "Maalritöid tellitakse kõige sagedamini enne sissekolimist, üürikorteri värskendamist, vannitoa või köögi remondi järel ning äripinna uuendamisel. Korralik eeltöö hoiab ära hilisema koorumise ja nähtavad pahtlijooned.": [
+    "Painting is most often ordered before moving in, to refresh a rental apartment, after bathroom or kitchen renovation or when updating commercial premises. Proper preparation prevents later peeling and visible filler lines.",
+    "Малярные работы чаще всего заказывают перед заселением, для обновления арендной квартиры, после ремонта ванной комнаты или кухни и при обновлении коммерческого помещения. Правильная подготовка предотвращает последующее отслаивание и заметные следы шпаклёвки."
+  ],
+  "Pinna ettevalmistus": [
+    "Surface preparation",
+    "Подготовка поверхности"
+  ],
+  "Katame tööala, eemaldame lahtise värvi, täidame praod ja hindame, kas pind vajab lauspahteldust või kohtparandusi.": [
+    "We cover the work area, remove loose paint, fill cracks and assess whether the surface needs full-surface filling or local repairs.",
+    "Мы защищаем рабочую зону, удаляем отслаивающуюся краску, заделываем трещины и оцениваем, нужна ли сплошная шпаклёвка или локальные исправления."
+  ],
+  "Krunt ja värvimine": [
+    "Priming and painting",
+    "Грунтование и покраска"
+  ],
+  "Valime aluspinnale sobiva krundi ning värvime pindasid ühtlase kihina, jälgides kuivamisaegu ja valguse langemist.": [
+    "We choose a primer suited to the substrate and apply even coats, observing drying times and the direction of light.",
+    "Мы выбираем грунтовку для основания и окрашиваем поверхности равномерными слоями, соблюдая время высыхания и учитывая направление света."
+  ],
+  "Lõppkontroll": [
+    "Final inspection",
+    "Итоговая проверка"
+  ],
+  "Kontrollime pinnad päevavalguse ja külgvalgusega, korrigeerime detailid ning jätame ruumi võimalikult puhtaks.": [
+    "We check surfaces in daylight and side lighting, correct details and leave the room as clean as possible.",
+    "Мы проверяем поверхности при дневном и боковом освещении, исправляем детали и оставляем помещение максимально чистым."
+  ],
+  "Meister kinnitab põrandakaitset enne maalritöid": [
+    "Craftsman secures floor protection before painting",
+    "Мастер закрепляет защиту пола перед малярными работами"
+  ],
+  "1. Tööala kaitsmine": [
+    "1. Protecting the work area",
+    "1. Защита рабочей зоны"
+  ],
+  "Enne eeltöid kaitseme põrandad, mööbli ja viimistletud detailid. Servad teibime vastavalt pinnale, et tööala püsiks puhas.": [
+    "Before preparation, we protect floors, furniture and finished details. We tape edges as appropriate for the surface to keep the work area clean.",
+    "Перед подготовительными работами мы защищаем полы, мебель и готовые детали отделки. Края оклеиваем лентой с учётом поверхности, чтобы рабочая зона оставалась чистой."
+  ],
+  "Meister silub seina pahtlit laia pahtlilabidaga": [
+    "Craftsman smooths wall filler with a wide filling knife",
+    "Мастер разглаживает шпаклёвку на стене широким шпателем"
+  ],
+  "2. Parandused ja pahteldus": [
+    "2. Repairs and filling",
+    "2. Исправления и шпаклёвка"
+  ],
+  "Kontrollime aluspinda ning parandame augud, vuugid ja viimistluspraod. Kohtparanduse või lauspahtelduse vajadus sõltub pinna seisukorrast ja soovitud tulemusest.": [
+    "We check the substrate and repair holes, joints and cracks in the finish. Whether local repairs or full-surface filling are needed depends on the surface condition and desired result.",
+    "Мы проверяем основание и исправляем отверстия, швы и трещины в отделке. Необходимость локальных исправлений или сплошной шпаклёвки зависит от состояния поверхности и желаемого результата."
+  ],
+  "Meister lihvib pahteldatud seina tolmueemaldusega lihvijaga": [
+    "Craftsman sands a filled wall with a dust-extraction sander",
+    "Мастер шлифует зашпаклёванную стену шлифмашиной с пылеудалением"
+  ],
+  "3. Lihvimine ja tolmu eemaldamine": [
+    "3. Sanding and dust removal",
+    "3. Шлифовка и удаление пыли"
+  ],
+  "Kuivanud pahtli lihvime ning eemaldame tolmu. Tolmueemaldusega lihvija aitab tööala puhtamana hoida; enne kruntimist kontrollime pinna siledust ja tugevust.": [
+    "We sand the dried filler and remove dust. A dust-extraction sander helps keep the work area cleaner; before priming, we check surface smoothness and strength.",
+    "Высохшую шпаклёвку мы шлифуем и удаляем пыль. Шлифмашина с пылеудалением помогает сохранять рабочую зону чище; до грунтования проверяем гладкость и прочность поверхности."
+  ],
+  "Meister kannab ettevalmistatud seinale krunti": [
+    "Craftsman applies primer to a prepared wall",
+    "Мастер наносит грунтовку на подготовленную стену"
+  ],
+  "4. Aluspinnale sobiv krunt": [
+    "4. Primer suited to the substrate",
+    "4. Грунтовка, подходящая основанию"
+  ],
+  "Krundi valime aluspinna ja viimistlusvärvi järgi. Krunt aitab ühtlustada imavust ja parandada naket; järgmise etapiga alustame tootja juhendi järgi.": [
+    "We choose primer according to the substrate and finish paint. Primer helps even out absorbency and improve adhesion; we start the next stage according to the manufacturer's instructions.",
+    "Грунтовку выбираем по основанию и финишной краске. Она помогает выровнять впитываемость и улучшить сцепление; к следующему этапу переходим по инструкции производителя."
+  ],
+  "Meister värvib ettevalmistatud seina heleda viimistlusvärviga": [
+    "Craftsman paints a prepared wall with light-coloured finish paint",
+    "Мастер окрашивает подготовленную стену светлой финишной краской"
+  ],
+  "5. Viimistlusvärvimine": [
+    "5. Finish painting",
+    "5. Финишная покраска"
+  ],
+  "Värvime seinad ja laed kokkulepitud värvisüsteemiga, järgides kihtidevahelisi kuivamisaegu. Lõpus kontrollime katvust, servasid ja pindade ühtlust ning koristame tööala.": [
+    "We paint walls and ceilings using the agreed paint system, observing drying times between coats. Finally, we check coverage, edges and surface consistency, and clean the work area.",
+    "Мы окрашиваем стены и потолки согласованной системой красок, соблюдая время высыхания между слоями. В конце проверяем укрывистость, края и равномерность поверхностей и убираем рабочую зону."
+  ],
+  "Maalritööde hinnapakkumine": [
+    "Painting quote",
+    "Предложение на малярные работы"
+  ],
+  "Maalritöö hind sõltub sellest, kas pind vajab ainult värskendust või tuleb teha põhjalik eeltöö. Lauspahteldus, pragude parandamine, vana värvi eemaldamine, kruntimine ja mitme tooniga lahendus muudavad töömahtu. Pakkumiseks on kasulik saata fotod seintest, lagedest, nurkadest ja kohtadest, kus pind on pragunenud või laineline.": [
+    "The price of painting depends on whether the surface only needs refreshing or requires extensive preparation. Full-surface filling, crack repairs, old paint removal, priming and a multi-colour scheme change the scope of work. For a quote, it helps to send photos of walls, ceilings, corners and areas that are cracked or uneven.",
+    "Цена малярных работ зависит от того, нужно ли только освежить поверхность или требуется тщательная подготовка. Сплошная шпаклёвка, заделка трещин, удаление старой краски, грунтование и решение с несколькими цветами меняют объём работ. Для предложения полезно отправить фотографии стен, потолков, углов и участков с трещинами или неровностями."
+  ],
+  "Lõppviimistluse juures kontrollime pindu nii otsevalguses kui ka külgvalguses. See aitab märgata pahtlijälgi, rullitriipe ja ebatasaseid üleminekuid enne töö üleandmist. Kui maalritöö on seotud tapeetimise, paneelide paigalduse või parketi paigaldusega, planeerime kaitsmise ja tööjärjekorra eraldi.": [
+    "At the final finishing stage, we check surfaces in both direct and side lighting. This helps reveal filler marks, roller lines and uneven transitions before handover. If painting is connected with wallpapering, panel installation or parquet installation, we plan protection and the sequence of work separately.",
+    "При финишной отделке мы проверяем поверхности как при прямом, так и при боковом освещении. Это помогает заметить следы шпаклёвки, полосы от валика и неровные переходы до сдачи работ. Если малярные работы связаны с поклейкой обоев, установкой панелей или укладкой паркета, защиту и последовательность работ планируем отдельно."
+  ],
+  "Maalritöödel on oluline arvestada korteri või äripinna kasutust, sest üüripind, kodu ja büroo vajavad erinevat kulumiskindlust ning pesuklassi. Päringu hindamisel vaatame alati, milline on objekti ligipääs, kas töö toimub elatud ruumis, millised pinnad vajavad kaitsmist ja milline on mõistlik tööjärjekord. See aitab vältida olukorda, kus üks etapp tuleb hiljem uuesti avada või parandada.": [
+    "For painting, it is important to consider how the apartment or commercial premises are used, as rental properties, homes and offices require different wear resistance and washability classes. When assessing an enquiry, we always consider access, whether the room is occupied, which surfaces need protection and a sensible sequence of work. This helps avoid having to reopen or repair a completed stage later.",
+    "При малярных работах важно учитывать использование квартиры или коммерческого помещения, поскольку арендному жилью, дому и офису нужны разные износостойкость и класс стойкости к мытью. При оценке запроса мы всегда учитываем доступ к объекту, используется ли помещение, какие поверхности нужно защитить и в каком порядке разумно работать. Это помогает избежать повторного вскрытия или исправления уже выполненного этапа."
+  ],
+  "Maalritööde hinnad": [
+    "Painting prices",
+    "Цены на малярные работы"
+  ],
+  "Maalritööde hind sõltub pinna seisukorrast. Lihtne värskendus on kiirem, kuid pragude parandamine, lauspahteldus, lihvimine, kruntimine ja mitme värvikihi tegemine muudavad töömahtu. Täpsemaks hinnaks saada fotod seintest ja lagedest.": [
+    "Painting prices depend on surface condition. A simple refresh is quicker, but crack repairs, full-surface filling, sanding, priming and several coats of paint change the scope of work. Send photos of walls and ceilings for a more accurate price.",
+    "Цена малярных работ зависит от состояния поверхности. Простое обновление выполняется быстрее, но заделка трещин, сплошная шпаклёвка, шлифовка, грунтование и несколько слоёв краски меняют объём работ. Для более точной цены отправьте фотографии стен и потолков."
+  ],
+  "Milline värv, pahtel ja aluskrunt valida?": [
+    "Which paint, filler and primer should I choose?",
+    "Какую краску, шпаклёвку и грунтовку выбрать?"
+  ],
+  "Hea maalritöö algab omavahel sobivast materjalisüsteemist. Valikul arvestame aluspinna, ruumi niiskuse, puhastamisvajaduse ja soovitud läikega. Värvi tootjanimi üksi ei määra sobivust: sama tootja valikus on eri otstarbega tooted.": [
+    "Good painting starts with a compatible material system. We consider the substrate, room humidity, cleaning needs and desired sheen. A paint manufacturer's name alone does not determine suitability: the same manufacturer offers products for different purposes.",
+    "Хорошие малярные работы начинаются с совместимой системы материалов. При выборе мы учитываем основание, влажность помещения, необходимость очистки и желаемую степень блеска. Одно лишь название производителя краски не определяет пригодность: у одного производителя есть продукты разного назначения."
+  ],
+  "Seinavärvid: matt pind ja pesukindlus": [
+    "Wall paints: a matt finish and washability",
+    "Краски для стен: матовая поверхность и стойкость к мытью"
+  ],
+  "Täismatt värv annab rahuliku pinna ja muudab väiksemad ebatasasused vähem märgatavaks. Läikivam pind toob külgvalguses aluspinna vead rohkem esile. Pesukindlust tuleb vaadata tootelehelt eraldi: ka täismatt värv võib olla hästi puhastatav. Esikus ja köögis on oluline kulumiskindlus, elutoas ja magamistoas ka valgus ning tooni üldmulje.": [
+    "A fully matt paint creates a calm surface and makes minor imperfections less noticeable. A glossier finish highlights substrate defects more in side lighting. Washability must be checked separately in the product data sheet: even fully matt paint can be easy to clean. Wear resistance matters in hallways and kitchens, while light and the overall colour impression also matter in living rooms and bedrooms.",
+    "Глубокоматовая краска создаёт спокойную поверхность и делает небольшие неровности менее заметными. Более глянцевая поверхность сильнее выявляет дефекты основания при боковом освещении. Стойкость к мытью нужно отдельно проверять в техническом описании: даже глубокоматовая краска может хорошо очищаться. В прихожей и кухне важна износостойкость, а в гостиной и спальне — также свет и общее впечатление от цвета."
+  ],
+  "Vivacolor Wall 4 pakend": [
+    "Vivacolor Wall 4 packaging",
+    "Упаковка Vivacolor Wall 4"
+  ],
+  "Vivacolor Wall 4": [
+    "Vivacolor Wall 4",
+    "Vivacolor Wall 4"
+  ],
+  "on täismatt seinavärv, mille märghõõrdekindlus on tootja järgi klass 1 standardi EN 13300 alusel. Sobiv valik, kui soovid matti, kuid puhastatavat pinda. Tootja annab ülevärvimisajaks 2 tundi temperatuuril +23 °C ja 50% suhtelise õhuniiskuse juures.": [
+    "is a fully matt wall paint with wet-scrub resistance class 1 under EN 13300, according to the manufacturer. It is a suitable choice if you want a matt yet cleanable surface. The manufacturer gives a recoat time of 2 hours at +23 °C and 50% relative humidity.",
+    "— глубокоматовая краска для стен, которая, по данным производителя, имеет класс 1 стойкости к мокрому истиранию по стандарту EN 13300. Подходящий выбор, если нужна матовая, но очищаемая поверхность. Производитель указывает время до повторного окрашивания 2 часа при +23 °C и относительной влажности 50%."
+  ],
+  "Wall 4 tooteinfo": [
+    "Wall 4 product information",
+    "Информация о продукте Wall 4"
+  ],
+  "Tikkurila Joker pakend": [
+    "Tikkurila Joker packaging",
+    "Упаковка Tikkurila Joker"
+  ],
+  "Tikkurila Joker": [
+    "Tikkurila Joker",
+    "Tikkurila Joker"
+  ],
+  "on pesemiskindel matt sisevärv kuivade ruumide seintele ja lagedele. Selle eelis on puhastatav pind ning M1-emissiooniklass ja ökomärgised. Tootja järgi on pind ülevärvitav ligikaudu 1–2 tunni pärast tavatingimustes; töö planeerimisel lähtume konkreetsest tootelehe versioonist ja objekti oludest.": [
+    "is a washable matt interior paint for walls and ceilings in dry rooms. Its advantages are an easy-to-clean surface, M1 emissions classification and ecolabels. According to the manufacturer, it can be recoated after approximately 1–2 hours under normal conditions; when planning work, we follow the specific product data sheet version and site conditions.",
+    "— стойкая к мытью матовая интерьерная краска для стен и потолков сухих помещений. Её преимущества — очищаемая поверхность, класс эмиссии M1 и экологические маркировки. По данным производителя, при обычных условиях поверхность можно перекрашивать примерно через 1–2 часа; при планировании работ мы руководствуемся конкретной версией технического описания и условиями объекта."
+  ],
+  "Jokeri tooteinfo": [
+    "Joker product information",
+    "Информация о продукте Joker"
+  ],
+  "Tikkurila Luja 7 pakend": [
+    "Tikkurila Luja 7 packaging",
+    "Упаковка Tikkurila Luja 7"
+  ],
+  "Tikkurila Luja 7": [
+    "Tikkurila Luja 7",
+    "Tikkurila Luja 7"
+  ],
+  "on matt sisevärv suurema puhastus- ja niiskuskoormusega ruumidesse. Sisaldab hallitusvastast ainet ja sobib tootja järgi näiteks vannitoa värvitavatele pindadele. Ülevärvimisaeg on ligikaudu 4 tundi tavatingimustes. Niiskuskindel värv ei asenda märgruumi nõutavat veetõkkesüsteemi ega kõrvalda niiskuse põhjust.": [
+    "is a matt interior paint for rooms subject to more frequent cleaning and moisture. It contains an anti-mould agent and, according to the manufacturer, is suitable for paintable bathroom surfaces, for example. Recoat time is approximately 4 hours under normal conditions. Moisture-resistant paint does not replace the waterproofing system required in wet rooms or eliminate the cause of dampness.",
+    "— матовая интерьерная краска для помещений с повышенной нагрузкой от уборки и влаги. Она содержит противогрибковый компонент и, по данным производителя, подходит, например, для окрашиваемых поверхностей ванной комнаты. Время до повторного окрашивания — примерно 4 часа при обычных условиях. Влагостойкая краска не заменяет требуемую в мокром помещении систему гидроизоляции и не устраняет причину влажности."
+  ],
+  "Luja 7 tooteinfo": [
+    "Luja 7 product information",
+    "Информация о продукте Luja 7"
+  ],
+  "Need on sobivad tootenäited, mitte kohustuslik ostunimekiri. Laele valime vajadusel eraldi laevärvi; ustele, liistudele ja mööblile nendele pindadele mõeldud värvi. Tooni vaatame proovipinnal nii päeva- kui tehisvalguses. Lõplikud tooted ja toonid lepime kokku enne töö alustamist.": [
+    "These are examples of suitable products, not a mandatory shopping list. Where needed, we choose a separate ceiling paint, and paints intended specifically for doors, trim and furniture. We assess colour on a sample area in both daylight and artificial lighting. Final products and colours are agreed before work begins.",
+    "Это примеры подходящих продуктов, а не обязательный список покупок. При необходимости для потолка мы выбираем отдельную потолочную краску, а для дверей, наличников и мебели — краску, предназначенную для этих поверхностей. Цвет проверяем на пробном участке при дневном и искусственном освещении. Окончательные продукты и оттенки согласуем до начала работ."
+  ],
+  "Pahtlid: vuugi täitmine ja peenviimistlus on eri tööd": [
+    "Fillers: joint filling and fine finishing are different tasks",
+    "Шпаклёвки: заполнение швов и финишное выравнивание — разные работы"
+  ],
+  "Knauf Uniflott pakend": [
+    "Knauf Uniflott packaging",
+    "Упаковка Knauf Uniflott"
+  ],
+  "Vuugi- ja täitepahtel": [
+    "Joint and repair filler",
+    "Шпаклёвка для швов и заполнения"
+  ],
+  "on vajalik kipsplaadivuukidele, kruvipeadele ja sügavamatele parandustele. Näiteks Knauf Uniflott kuulub kipsplaadisüsteemi vuugipahtlite hulka. Vuugilindi vajadus sõltub plaadiservast ja tootja süsteemist. Segu tardumine ei tähenda veel, et pind on värvimiseks kuiv.": [
+    "is needed for plasterboard joints, screw heads and deeper repairs. For example, Knauf Uniflott is a joint filler within the plasterboard system. The need for joint tape depends on the board edge and the manufacturer's system. Setting does not mean the surface is already dry enough to paint.",
+    "нужна для швов гипсокартона, головок шурупов и более глубоких исправлений. Например, Knauf Uniflott относится к шпаклёвкам для швов гипсокартонной системы. Необходимость армирующей ленты зависит от кромки листа и системы производителя. Схватывание смеси ещё не означает, что поверхность высохла для покраски."
+  ],
+  "Knauf Fill & Finish Light pakend": [
+    "Knauf Fill & Finish Light packaging",
+    "Упаковка Knauf Fill & Finish Light"
+  ],
+  "Kasutusvalmis kergpahtel": [
+    "Ready-to-use lightweight filler",
+    "Готовая лёгкая шпаклёвка"
+  ],
+  ", näiteks Knauf Fill & Finish Light, sobib kuivades ruumides pinna silumiseks ja süsteemi järgi ka vuugitöödeks. Seda ei pea pulbrist segama; õhu käes kuivava pahtli kuivamisaega mõjutavad kihipaksus, temperatuur ja niiskus. Sügavat lohku ei täideta peenviimistluspahtliga üle lubatud kihipaksuse.": [
+    ", such as Knauf Fill & Finish Light, is suitable for smoothing surfaces in dry rooms and, depending on the system, for joint work too. It does not need to be mixed from powder; the drying time of air-drying filler depends on layer thickness, temperature and humidity. Deep hollows must not be filled with fine finishing filler beyond the permitted layer thickness.",
+    ", например Knauf Fill & Finish Light, подходит для выравнивания поверхностей в сухих помещениях и, в зависимости от системы, также для обработки швов. Её не нужно замешивать из порошка; время высыхания шпаклёвки воздушного высыхания зависит от толщины слоя, температуры и влажности. Глубокие впадины нельзя заполнять финишной шпаклёвкой сверх допустимой толщины слоя."
+  ],
+  "Knaufi kergpahtli tooteinfo": [
+    "Knauf lightweight filler product information",
+    "Информация о лёгкой шпаклёвке Knauf"
+  ],
+  "Kiilto LH pakend": [
+    "Kiilto LH packaging",
+    "Упаковка Kiilto LH"
+  ],
+  "Kuiva ruumi peenpahtel Kiilto LH": [
+    "Kiilto LH fine filler for dry rooms",
+    "Финишная шпаклёвка Kiilto LH для сухих помещений"
+  ],
+  "sobib seinte ja lagede lõppviimistluseks 1–2 mm kihina. Tootja järgi kuivab see umbes ühe ööpäevaga +18 °C juures, sõltuvalt tingimustest. See ei ole märgruumi ega plaadialune pahtel.": [
+    "is suitable for finishing walls and ceilings in a 1–2 mm layer. According to the manufacturer, it dries in approximately one day at +18 °C, depending on conditions. It is not a filler for wet rooms or beneath tiles.",
+    "подходит для финишной отделки стен и потолков слоем 1–2 mm. По данным производителя, она высыхает примерно за сутки при +18 °C в зависимости от условий. Это не шпаклёвка для мокрых помещений или под плитку."
+  ],
+  "Kiilto LH tooteinfo": [
+    "Kiilto LH product information",
+    "Информация о продукте Kiilto LH"
+  ],
+  "Kiilto Pro LW pakend": [
+    "Kiilto Pro LW packaging",
+    "Упаковка Kiilto Pro LW"
+  ],
+  "Niiskuskindel pahtel": [
+    "Moisture-resistant filler",
+    "Влагостойкая шпаклёвка"
+  ],
+  "valitakse niiskema ruumi ja järgneva viimistlussüsteemi järgi. Näiteks Kiilto Pro LW on kasutusvalmis pahtel kuivadesse ja märgadesse siseruumidesse, lubatud kihipaksusega kuni 4 mm. Selle tehniline info annab kuivamisajaks ligikaudu 2–3 tundi millimeetri kohta +18 °C juures; niiskes või jahedas ruumis võib see pikeneda. Pahtel ise ei asenda hüdroisolatsiooni.": [
+    "is chosen according to the damp room and subsequent finishing system. For example, Kiilto Pro LW is a ready-to-use filler for dry and wet indoor spaces, with a permitted layer thickness of up to 4 mm. Its technical information gives an approximate drying time of 2–3 hours per millimetre at +18 °C; this may be longer in damp or cool rooms. Filler itself does not replace waterproofing.",
+    "выбирается с учётом влажного помещения и последующей системы отделки. Например, Kiilto Pro LW — готовая шпаклёвка для сухих и мокрых внутренних помещений с допустимой толщиной слоя до 4 mm. В технической информации указано время высыхания примерно 2–3 часа на миллиметр при +18 °C; во влажном или прохладном помещении оно может увеличиться. Сама шпаклёвка не заменяет гидроизоляцию."
+  ],
+  "Kiilto Pro LW tooteinfo": [
+    "Kiilto Pro LW product information",
+    "Информация о продукте Kiilto Pro LW"
+  ],
+  "Knaufi pahtlite ja viimistlustasemete juhend": [
+    "Knauf guide to fillers and finish levels",
+    "Руководство Knauf по шпаклёвкам и уровням отделки"
+  ],
+  "aitab eristada vuugitööd ja lauspahteldust. Nõudliku külgvalguse või sileda värvipinna puhul lepime vajaliku viimistlustaseme enne tööd kokku. Konstruktsiooni liikumisest tekkinud pragu vajab põhjuse hindamist, mitte ainult uut pahtlikihti.": [
+    "helps distinguish joint work from full-surface filling. Where side lighting is demanding or a smooth painted surface is needed, we agree the required finish level before work begins. A crack caused by structural movement requires assessing the cause, rather than just applying another layer of filler.",
+    "помогает отличить обработку швов от сплошной шпаклёвки. При требовательном боковом освещении или гладкой окрашенной поверхности необходимый уровень отделки согласуем до начала работ. Трещина от движения конструкции требует оценки причины, а не только нового слоя шпаклёвки."
+  ],
+  "Korralik aluskrunt: millal ja miks seda vaja on?": [
+    "Proper primer: when and why is it needed?",
+    "Правильная грунтовка: когда и зачем она нужна?"
+  ],
+  "Uus, pahteldatud, poorne või ebaühtlaselt imav pind vajab värvisüsteemile sobivat aluskrunti. See aitab ühtlustada imavust ja parandada naket, et lõppvärv ei jääks laiguline. Krunt ei asenda tolmu eemaldamist ega kinnita lahtist värvikihti: alus peab olema puhas, kuiv ja piisavalt tugev.": [
+    "A new, filled, porous or unevenly absorbent surface needs a primer compatible with the paint system. It helps even out absorbency and improve adhesion so the finish paint is not patchy. Primer does not replace dust removal or secure a loose paint layer: the substrate must be clean, dry and strong enough.",
+    "Новая, зашпаклёванная, пористая или неравномерно впитывающая поверхность требует грунтовки, подходящей системе красок. Она помогает выровнять впитываемость и улучшить сцепление, чтобы финишная краска не ложилась пятнами. Грунтовка не заменяет удаление пыли и не закрепляет отслаивающийся слой краски: основание должно быть чистым, сухим и достаточно прочным."
+  ],
+  "Vivacolor Primer 1 pakend": [
+    "Vivacolor Primer 1 packaging",
+    "Упаковка Vivacolor Primer 1"
+  ],
+  "Kruntvärv värvi alla": [
+    "Primer paint beneath the finish coat",
+    "Грунтовочная краска под финишную краску"
+  ],
+  "aitab luua ühtlase aluspinna. Näiteks Vivacolor Primer 1 sobib tootja juhendi järgi sisevärvimise aluskrundiks ning on +23 °C ja 50% suhtelise õhuniiskuse juures ülevärvitav umbes 2 tunni pärast.": [
+    "helps create a uniform substrate. For example, according to the manufacturer's instructions, Vivacolor Primer 1 is suitable as an interior painting primer and can be recoated after approximately 2 hours at +23 °C and 50% relative humidity.",
+    "помогает создать равномерное основание. Например, согласно инструкции производителя, Vivacolor Primer 1 подходит как грунтовочная краска для внутренних работ, и при +23 °C и относительной влажности 50% её можно перекрашивать примерно через 2 часа."
+  ],
+  "Primer 1 tooteinfo": [
+    "Primer 1 product information",
+    "Информация о продукте Primer 1"
+  ],
+  "Imavust reguleeriv krunt enne pahteldust": [
+    "Absorbency-regulating primer before filling",
+    "Грунтовка для регулирования впитываемости перед шпаклёвкой"
+  ],
+  "valitakse pahtli ja aluspinna juhendi järgi. See ei ole automaatselt sama toode mis viimistlusvärvi aluskrunt.": [
+    "is chosen according to the filler and substrate instructions. It is not automatically the same product as the primer used beneath finish paint.",
+    "выбирается по инструкциям шпаклёвки и основания. Это не обязательно тот же продукт, что и грунтовка под финишную краску."
+  ],
+  "Nakke- või isoleerkrunt": [
+    "Adhesion or isolating primer",
+    "Адгезионная или изолирующая грунтовка"
+  ],
+  "võib olla vajalik kõval läikival pinnal või läbikumavate plekkide puhul. Vee-, tahma- ja roosteplekkide korral hindame kõigepealt põhjuse ning valime sobiva eritoote.": [
+    "may be needed on hard glossy surfaces or for stains that show through. For water, soot and rust stains, we assess the cause first and choose a suitable specialist product.",
+    "может понадобиться на твёрдой глянцевой поверхности или при проступающих пятнах. При пятнах от воды, сажи и ржавчины мы сначала оцениваем причину и выбираем подходящий специальный продукт."
+  ],
+  "Kuivamisaeg ja täielik kõvenemine": [
+    "Drying time and full curing",
+    "Время высыхания и полное отверждение"
+  ],
+  "Puutekuiv pind, ülevärvitav pind ja täielikult kõvenenud pind on erinevad etapid. Tootelehe aeg eeldab seal kirjeldatud temperatuuri, õhuniiskust ja kihipaksust. Jahe ruum, niiske õhk või paks pahtlikiht pikendavad ooteaega. Järgmise kihiga alustame alles sobival ajal; värskelt värvitud seina tugevamat pesemist väldime kuni toote juhendis lubatud kõvenemiseni.": [
+    "Touch-dry, ready to recoat and fully cured are different stages. Times in the product data sheet assume the temperature, humidity and layer thickness stated there. A cool room, humid air or thick filler layer extends waiting time. We start the next coat only at the appropriate time; we avoid vigorous washing of a freshly painted wall until the curing period specified in the product instructions has elapsed.",
+    "Сухая на ощупь, готовая к повторному окрашиванию и полностью отвердевшая поверхность — разные этапы. Время в техническом описании предполагает указанные там температуру, влажность воздуха и толщину слоя. Прохладное помещение, влажный воздух или толстый слой шпаклёвки увеличивают ожидание. Следующий слой наносим только в подходящее время; интенсивного мытья свежевыкрашенной стены избегаем до отверждения, разрешённого инструкцией продукта."
+  ],
+  "Praktiline tööinfo maalritööde kohta": [
+    "Practical information about painting",
+    "Практическая информация о малярных работах"
+  ],
+  "Maalritööde puhul on oluline valida õige pahtel, krunt ja värv vastavalt ruumi kasutusele. Köögis, esikus ja lastetoas on pestav värv praktilisem kui väga matt toon; niiskemates ruumides tuleb jälgida, et värvisüsteem sobiks koormusega.": [
+    "For painting, it is important to choose the right filler, primer and paint for the room's use. In kitchens, hallways and children's rooms, washable paint is more practical than a very matt finish; in damp rooms, the paint system must suit the exposure.",
+    "Для малярных работ важно выбирать правильные шпаклёвку, грунтовку и краску по назначению помещения. В кухне, прихожей и детской моющаяся краска практичнее очень матовой отделки; в более влажных помещениях нужно следить, чтобы система красок подходила нагрузке."
+  ],
+  "Ajakulu sõltub kihtide arvust ja kuivamisest. Pahteldus, lihvimine, kruntimine ja kaks värvikihti ei ole üks tööpäev, kui pind vajab korralikku parandust. Kiirustamine jätab nähtavad lihvimisjäljed, varjud ja ebaühtlase läike.": [
+    "The time required depends on the number of layers and drying. Filling, sanding, priming and two coats of paint do not fit into one working day if the surface needs proper repairs. Rushing leaves visible sanding marks, shadows and uneven sheen.",
+    "Время работы зависит от количества слоёв и высыхания. Шпаклёвка, шлифовка, грунтование и два слоя краски — это не один рабочий день, если поверхности нужны полноценные исправления. Спешка оставляет заметные следы шлифовки, тени и неравномерный блеск."
+  ],
+  "Hinda mõjutavad seina kõrgus, pinna seisukord, pragude parandused, nurkade ja lagede arv, värvitoonide vahetus ning see, kas mööbel ja põrandad vajavad kaitsmist.": [
+    "The price is affected by wall height, surface condition, crack repairs, the number of corners and ceilings, colour changes and whether furniture and floors need protection.",
+    "На цену влияют высота стены, состояние поверхности, заделка трещин, количество углов и потолков, смена цветов и необходимость защиты мебели и полов."
+  ],
+  "Levinud vead on krundi vahele jätmine, liiga väike kuivamisaeg, vale valguse all kontrollimata pind ja odava värvi kasutamine ruumis, kus pind peab taluma pesemist.": [
+    "Common mistakes include skipping primer, allowing too little drying time, failing to inspect the surface under suitable lighting and using cheap paint in a room where surfaces must withstand washing.",
+    "Распространённые ошибки — пропуск грунтования, слишком короткое время высыхания, отсутствие проверки поверхности при подходящем освещении и использование дешёвой краски в помещении, где поверхность должна выдерживать мытьё."
+  ],
+  "Hea tulemuse jaoks vali toon näidisega samas valguses, kus ruumi päriselt kasutatakse. Kui seintele tulevad riiulid, liistud või paneelid, tasub nende asukohad enne lõppvärvi kokku leppida.": [
+    "For a good result, choose the colour using a sample in the same lighting in which the room will actually be used. If shelves, trim or panels will be fitted to the walls, agree their positions before the finish coat.",
+    "Для хорошего результата выбирайте цвет по образцу при том освещении, в котором помещение действительно используется. Если на стенах будут полки, планки или панели, стоит согласовать их расположение до финишной покраски."
+  ],
+  "Milliste töödega maalritööd tavaliselt seostuvad?": [
+    "What other work is painting usually connected with?",
+    "С какими работами обычно связаны малярные работы?"
+  ],
+  "Maalritööd jõuavad tavaliselt lõppviimistluse etappi pärast seda, kui seinad, laed ja avad on ette valmistatud. Kui pind vajab ehituslikku parandust, algab töö tihti": [
+    "Painting usually reaches the final finishing stage after walls, ceilings and openings have been prepared. If the surface needs structural repairs, work often starts with",
+    "Малярные работы обычно переходят к финишной отделке после подготовки стен, потолков и проёмов. Если поверхности требуется строительный ремонт, работа часто начинается с"
+  ],
+  "kipsplaadi ja karkassi korrigeerimisest": [
+    "adjustments to plasterboard and framing",
+    "исправления гипсокартона и каркаса"
+  ],
+  "; dekoratiivsema tulemuse puhul võib maalritööle järgneda": [
+    "; for a more decorative result, painting may be followed by",
+    "; для более декоративного результата после малярных работ могут последовать"
+  ],
+  "tapeedi paigaldus või aktsentsein": [
+    "wallpaper installation or an accent wall",
+    "поклейка обоев или устройство акцентной стены"
+  ],
+  ". Eelarve võrdlemiseks aitab": [
+    ". To compare budgets, consult",
+    ". Для сравнения бюджета поможет"
+  ],
+  "siseviimistluse hinnakirja vaade": [
+    "the interior finishing price list",
+    "прайс-лист внутренней отделки"
+  ],
+  "Kui värvimise kõrval vajavad uuendamist ka vannituba, põrandad või vaheseinad, vaata": [
+    "If the bathroom, floors or partitions also need updating alongside painting, see",
+    "Если вместе с покраской нужно обновить ванную комнату, полы или перегородки, посмотрите"
+  ],
+  "tervikliku korteriremondi korraldust": [
+    "how a complete apartment renovation is organised",
+    "организацию комплексного ремонта квартиры"
+  ]
+}

@@ -2,7 +2,7 @@
 <html lang="et">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script defer src="assets/js/analytics-loader.js?v=20260913"></script>
+  <script defer src="/assets/js/analytics-loader.js?v=20260913"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -27,8 +27,8 @@
   <meta name="twitter:description" content="Vaata orienteeruvaid alghindu ja küsi täpset pakkumist oma objektile." />
   <meta name="twitter:image" content="https://www.renoveerikodu.ee/images/RKMeistrid_logo.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/main.min.css?v=20260913" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260913" />
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -234,7 +234,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="assets/css/performance.min.css?v=20260913">
+<link rel="stylesheet" href="/assets/css/performance.min.css?v=20260913">
 <style>
   @media screen and (max-width: 736px) {
     .price-page table {
@@ -261,13 +261,22 @@
   }
 </style>
 
+<link rel="alternate" hreflang="et" href="https://www.renoveerikodu.ee/hinnakiri">
+<link rel="alternate" hreflang="en" href="https://www.renoveerikodu.ee/en/prices">
+<link rel="alternate" hreflang="ru" href="https://www.renoveerikodu.ee/ru/tseny">
+<link rel="alternate" hreflang="x-default" href="https://www.renoveerikodu.ee/hinnakiri">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
+<link rel="stylesheet" href="/assets/css/languages.css?v=20261012">
+<script src="/assets/js/i18n.js?v=20261012"></script>
 </head>
 <body class="page-ready price-page">
 <a class="skip-link" href="#main-content">Liigu põhisisuni</a>
 <div id="page-wrapper">
 <header id="header" class="alt">
   <div class="site-title"><a href="https://www.renoveerikodu.ee/">Renoveeri Kodu</a></div>
-  <nav id="nav">
+  <nav class="language-switcher" data-language-switcher aria-label="Vali keel"><a href="https://www.renoveerikodu.ee/hinnakiri" hreflang="et" lang="et" title="Eesti" aria-label="Eesti" aria-current="page">ET</a><a href="https://www.renoveerikodu.ee/en/prices" hreflang="en" lang="en" title="English" aria-label="English">EN</a><a href="https://www.renoveerikodu.ee/ru/tseny" hreflang="ru" lang="ru" title="Русский" aria-label="Русский">RU</a></nav>
+<nav id="nav">
     <ul>
       <li class="special">
         <a href="#menu" class="menuToggle" aria-label="Ava menüü" aria-controls="menu" aria-expanded="false"><span>Menüü</span></a>
@@ -416,13 +425,13 @@
 </main>
 <footer id="footer"><ul class="copyright"><li>&copy; Renoveeri Kodu</li><li><a href="https://www.renoveerikodu.ee/privaatsuspoliitika">Privaatsuspoliitika</a></li></ul></footer>
 </div>
-<script fetchpriority="low" src="assets/js/jquery.min.js"></script>
-<script fetchpriority="low" src="assets/js/jquery.scrollex.min.js"></script>
-<script fetchpriority="low" src="assets/js/jquery.scrolly.min.js"></script>
-<script fetchpriority="low" src="assets/js/browser.min.js"></script>
-<script fetchpriority="low" src="assets/js/breakpoints.min.js"></script>
-<script fetchpriority="low" src="assets/js/util.js"></script>
-<script fetchpriority="low" src="assets/js/main.js?v=20260913"></script>
+<script fetchpriority="low" src="/assets/js/jquery.min.js"></script>
+<script fetchpriority="low" src="/assets/js/jquery.scrollex.min.js"></script>
+<script fetchpriority="low" src="/assets/js/jquery.scrolly.min.js"></script>
+<script fetchpriority="low" src="/assets/js/browser.min.js"></script>
+<script fetchpriority="low" src="/assets/js/breakpoints.min.js"></script>
+<script fetchpriority="low" src="/assets/js/util.js"></script>
+<script fetchpriority="low" src="/assets/js/main.js?v=20261012"></script>
 <script>
 (function () {
   function showFlooringPrices() {

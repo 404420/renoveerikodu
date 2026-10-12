@@ -1,0 +1,514 @@
+{
+  "Betoonitööd Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "Concrete work in Tallinn and Harju County | Renoveeri Kodu",
+    "Бетонные работы в Таллине и Харьюмаа | Renoveeri Kodu"
+  ],
+  "Betoonitööd Tallinnas ja Harjumaal. Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide paigaldus.": [
+    "Concrete work in Tallinn and Harju County. Concrete pouring, concrete floors, foundations and installation of concrete structures.",
+    "Бетонные работы в Таллине и Харьюмаа. Заливка бетона, бетонные полы, фундаменты и монтаж бетонных конструкций."
+  ],
+  "Betoonitööd Tallinnas ja Harjumaal": [
+    "Concrete work in Tallinn and Harju County",
+    "Бетонные работы в Таллине и Харьюмаа"
+  ],
+  "Betoonivalu, betoonpõrandad, vundamendid ja betoonkonstruktsioonide ettevalmistus Tallinnas ning Harjumaal.": [
+    "Concrete pouring, concrete floors, foundations and preparation of concrete structures in Tallinn and Harju County.",
+    "Заливка бетона, бетонные полы, фундаменты и подготовка бетонных конструкций в Таллине и Харьюмаа."
+  ],
+  "Kuidas hindate suurema betoonitöö mahtu?": [
+    "How do you assess the scope of a larger concrete job?",
+    "Как вы оцениваете объём крупных бетонных работ?"
+  ],
+  "Töömahu hindame projekti, betoonikoguse, pumba ulatuse, ligipääsu, raketise, armeerimise ja valupäeva logistika järgi. Suurema valu tarne- ja tööjärjekord planeeritakse enne pakkumist.": [
+    "We assess the scope using the design, concrete volume, pump reach, access, formwork, reinforcement and pour-day logistics. Deliveries and the work sequence for larger pours are planned before quoting.",
+    "Оцениваем объём по проекту, количеству бетона, вылету насоса, доступу, опалубке, армированию и логистике в день заливки. Поставки и последовательность работ при большой заливке планируются до подготовки предложения."
+  ],
+  "Kas teraskiudbetoon asendab armatuurvõrku?": [
+    "Does steel-fibre concrete replace reinforcing mesh?",
+    "Заменяет ли сталефибробетон арматурную сетку?"
+  ],
+  "Mõnes põrandas või plaadis võib asendada, kuid ainult arvutatud ja projekteeritud lahenduses. Teraskiu tüüp, annus, plaadi paksus, aluse jäikus, koormus ning vuugijaotus peavad moodustama ühe terviku.": [
+    "It can in some floors or slabs, but only in a calculated and designed solution. Steel fibre type, dosage, slab thickness, base stiffness, loads and joint layout must work together as a complete system.",
+    "В некоторых полах или плитах может заменять, но только в рассчитанном и спроектированном решении. Тип и дозировка стальной фибры, толщина плиты, жёсткость основания, нагрузка и расположение швов должны образовывать единую систему."
+  ],
+  "Mis vahe on mikrokiul ja makrokiul?": [
+    "What is the difference between microfibres and macrofibres?",
+    "Чем микрофибра отличается от макрофибры?"
+  ],
+  "Mikrokiud vähendab eelkõige värske betooni plastilise kahanemise pragusid ega ole kandev armatuur. Makrokiud annab betoonile pärast pragunemist jääktugevust ja võib projekteeritud lahenduses täita konstruktsioonilist ülesannet.": [
+    "Microfibres mainly reduce plastic shrinkage cracks in fresh concrete and are not structural reinforcement. Macrofibres provide residual strength after cracking and can serve a structural function in a designed solution.",
+    "Микрофибра прежде всего уменьшает трещины от пластической усадки свежего бетона и не является несущей арматурой. Макрофибра обеспечивает остаточную прочность после образования трещин и в проектном решении может выполнять конструктивную функцию."
+  ],
+  "Kas betooni saab valada talvel?": [
+    "Can concrete be poured in winter?",
+    "Можно ли заливать бетон зимой?"
+  ],
+  "Võimalik, kuid külm ilm nõuab erimeetmeid. Hindame tingimused enne töö kokkuleppimist.": [
+    "Yes, but cold weather requires special measures. We assess conditions before agreeing on the work.",
+    "Это возможно, но холодная погода требует специальных мер. Оцениваем условия до согласования работ."
+  ],
+  "Millal võib betoonile koormust anda?": [
+    "When can loads be applied to concrete?",
+    "Когда можно нагружать бетон?"
+  ],
+  "See sõltub betoonist, kihipaksusest ja temperatuurist. Anname objekti järgi soovituse.": [
+    "This depends on the concrete, layer thickness and temperature. We provide recommendations for the specific site.",
+    "Это зависит от бетона, толщины слоя и температуры. Даём рекомендации с учётом конкретного объекта."
+  ],
+  "Kas teete ka vormitööd?": [
+    "Do you also provide formwork?",
+    "Вы также выполняете опалубочные работы?"
+  ],
+  "Jah. Raketise, toestuse ja muu ettevalmistuse maht lepitakse kokku konstruktsiooni ning projekti järgi.": [
+    "Yes. The scope of formwork, propping and other preparation is agreed according to the structure and design.",
+    "Да. Объём опалубки, подпорок и другой подготовки согласуется с учётом конструкции и проекта."
+  ],
+  "Kas lokaalset betooniparandust saab teha ilma aluspinda ette valmistamata?": [
+    "Can a local concrete repair be made without preparing the substrate?",
+    "Можно ли выполнить локальный ремонт бетона без подготовки основания?"
+  ],
+  "Mõnikord on töömaht piiratud, kuid vana pinna nakkuvus, niiskus ja pragude põhjus tuleb alati enne üle vaadata. Kehv ettevalmistus lühendab paranduse eluiga.": [
+    "The scope may sometimes be limited, but the old surface's adhesion, moisture and the cause of cracks must always be checked first. Poor preparation shortens the repair's service life.",
+    "Иногда объём работ ограничен, но сцепление старой поверхности, влажность и причину трещин всегда нужно проверить заранее. Плохая подготовка сокращает срок службы ремонта."
+  ],
+  "Millal võib betoonpinnale järgmise töö teha?": [
+    "When can the next stage be carried out on a concrete surface?",
+    "Когда можно выполнять следующий этап на бетонной поверхности?"
+  ],
+  "See sõltub betooni paksusest, niiskusest, temperatuurist ja järgmisest viimistlusest. Plaatimine, hüdroisolatsioon või põrandakate vajavad erinevat kuivustaset.": [
+    "This depends on concrete thickness, moisture, temperature and the next finish. Tiling, waterproofing and floor coverings require different moisture levels.",
+    "Это зависит от толщины бетона, влажности, температуры и последующей отделки. Плитка, гидроизоляция и напольное покрытие требуют разной степени сухости."
+  ],
+  "Kas betoonitöödel on vaja armeerimist?": [
+    "Is reinforcement needed for concrete work?",
+    "Нужно ли армирование при бетонных работах?"
+  ],
+  "Paljudel juhtudel jah, eriti koormust kandvate või pragunemisohuga pindade puhul. Armeerimise vajadus sõltub konstruktsioonist ja kasutusest.": [
+    "In many cases yes, especially for load-bearing surfaces or those at risk of cracking. Reinforcement requirements depend on the structure and its use.",
+    "Во многих случаях да, особенно для несущих поверхностей или участков с риском трещин. Необходимость армирования зависит от конструкции и использования."
+  ],
+  "Kas betoonpõrand peab olema kaldega?": [
+    "Does a concrete floor need a fall?",
+    "Должен ли бетонный пол иметь уклон?"
+  ],
+  "Märgades või välitingimustes jah, kui vesi peab liikuma äravoolu suunas. Kuivas siseruumis sõltub kalle ruumi kasutusest ja viimistlusest.": [
+    "In wet or outdoor conditions, yes, where water needs to flow towards a drain. In dry indoor spaces, the fall depends on the room's use and finish.",
+    "В мокрых помещениях или на улице — да, если вода должна уходить к сливу. В сухом помещении уклон зависит от назначения и отделки."
+  ],
+  "Betooniauto ja betoonipumbaga tehtav suuremahuline betoonivalu": [
+    "Large-scale concrete pour using a concrete mixer truck and pump",
+    "Масштабная заливка бетона с использованием автобетоносмесителя и бетононасоса"
+  ],
+  "Betoonterrassi aluse raketise ja armatuurvõrgu paigaldamine": [
+    "Installing formwork and reinforcing mesh for a concrete terrace base",
+    "Монтаж опалубки и арматурной сетки основания бетонной террасы"
+  ],
+  "Betoonplaadi valu ja värske betoonpinna silumine": [
+    "Pouring a concrete slab and smoothing the fresh surface",
+    "Заливка бетонной плиты и заглаживание свежей поверхности"
+  ],
+  "Valmis betoonplaat varjualuse all Tallinnas ja Harjumaal": [
+    "Completed concrete slab beneath a canopy in Tallinn and Harju County",
+    "Готовая бетонная плита под навесом в Таллине и Харьюмаа"
+  ],
+  "Betoonivalu, põrandad, vundamendid ja konstruktsioonid — ettevalmistusest järelhoolduseni.": [
+    "Concrete pouring, floors, foundations and structures — from preparation to curing.",
+    "Заливка бетона, полы, фундаменты и конструкции — от подготовки до ухода за бетоном."
+  ],
+  "Betoonitöö ei alga valupäevast. Enne segu tellimist peavad olema paigas aluspind, kõrgused, raketis, armeerimine, ligipääs ja tööjärjekord. Teeme betoonivalusid ning betoonkonstruktsioonide ettevalmistust Tallinnas ja Harjumaal, lähtudes objekti kasutusest, projektist ja tegelikust koormusest.": [
+    "Concrete work starts well before pour day. Before ordering the mix, the substrate, levels, formwork, reinforcement, access and work sequence must be ready. We carry out concrete pours and prepare concrete structures in Tallinn and Harju County, according to the site's use, design and actual loads.",
+    "Бетонные работы начинаются задолго до дня заливки. До заказа смеси должны быть подготовлены основание, высотные отметки, опалубка, армирование, доступ и последовательность работ. Выполняем заливку бетона и подготовку бетонных конструкций в Таллине и Харьюмаа с учётом назначения объекта, проекта и реальных нагрузок."
+  ],
+  "Töömahu hindamisel vaatame üle betoonikoguse, pumba ulatuse, autode ligipääsu, paigalduskiiruse ja järelhoolduse. Nii saab enne valupäeva realistliku hinna, ajakava ja tehnilise lahenduse.": [
+    "When assessing the scope, we review concrete volume, pump reach, vehicle access, placement speed and curing. This provides a realistic price, schedule and technical solution before pour day.",
+    "При оценке объёма проверяем количество бетона, вылет насоса, доступ автомобилей, скорость укладки и уход за бетоном. Это позволяет до дня заливки получить реалистичные цену, график и техническое решение."
+  ],
+  "Milliseid betoonitöid planeerime?": [
+    "What concrete work do we plan?",
+    "Какие бетонные работы мы планируем?"
+  ],
+  "Betoonpõrandad ja -plaadid": [
+    "Concrete floors and slabs",
+    "Бетонные полы и плиты"
+  ],
+  "Alates kandvast alusest ja armeerimisest kuni valamise, loodimise, silumise ning järelhoolduseni.": [
+    "From a load-bearing base and reinforcement through to pouring, levelling, smoothing and curing.",
+    "От несущего основания и армирования до заливки, выравнивания, заглаживания и ухода за бетоном."
+  ],
+  "Vundamendid ja taldmikud": [
+    "Foundations and footings",
+    "Фундаменты и подошвы"
+  ],
+  "Raketis, armatuur ja betoonivalu tehakse konstruktsiooni mõõtude ning koormuste järgi.": [
+    "Formwork, reinforcement and concrete pouring follow the structure's dimensions and loads.",
+    "Опалубка, арматура и заливка бетона выполняются с учётом размеров конструкции и нагрузок."
+  ],
+  "Terrassid, trepid ja välispinnad": [
+    "Terraces, steps and outdoor surfaces",
+    "Террасы, лестницы и наружные поверхности"
+  ],
+  "Välitingimustes arvestame kallete, vee ärajuhtimise, külmumise ja sobiva keskkonnaklassiga.": [
+    "Outdoors, we account for falls, drainage, freezing and the appropriate exposure class.",
+    "На улице учитываем уклоны, отвод воды, замерзание и соответствующий класс воздействия среды."
+  ],
+  "Betooni parandamine": [
+    "Concrete repairs",
+    "Ремонт бетона"
+  ],
+  "Enne parandust selgitame pragunemise või kahjustuse põhjuse ning valmistame vana pinna nakkeks ette.": [
+    "Before repairs, we establish the cause of cracking or damage and prepare the old surface for adhesion.",
+    "Перед ремонтом выясняем причину трещин или повреждений и готовим старую поверхность для сцепления."
+  ],
+  "Betooniliigid ja nende omadused": [
+    "Concrete types and their properties",
+    "Виды бетона и их свойства"
+  ],
+  "Betooni ei valita ainult tugevusklassi või kuupmeetri hinna järgi. Arvesse tuleb võtta konstruktsiooni, keskkonda, paigaldusviisi, soovitud pinda ja seda, kuidas pragunemist kontrollitakse.": [
+    "Concrete is selected on more than strength class or price per cubic metre. The structure, environment, installation method, desired surface and crack control must all be considered.",
+    "Бетон выбирают не только по классу прочности или цене за кубометр. Нужно учитывать конструкцию, среду, способ укладки, желаемую поверхность и контроль трещинообразования."
+  ],
+  "Põhilahendus": [
+    "Standard solution",
+    "Основное решение"
+  ],
+  "Konstruktsioonibetoon ehk tavabetoon": [
+    "Structural concrete, or conventional concrete",
+    "Конструкционный, или обычный бетон"
+  ],
+  "Tehases valmistatud betoon, mille tugevusklass — näiteks C25/30 või C30/37 — valitakse projekti järgi. Betoon talub hästi survet, kuid tõmbepingete ja pragude kontrollimiseks vajab konstruktsioon sageli armatuuri, vuuke või kiude.": [
+    "Factory-produced concrete whose strength class — for example C25/30 or C30/37 — is selected by the design. Concrete resists compression well, but structures often need reinforcement, joints or fibres to control tensile stresses and cracks.",
+    "Бетон заводского изготовления, класс прочности которого — например, C25/30 или C30/37 — выбирается по проекту. Бетон хорошо выдерживает сжатие, но для контроля растягивающих напряжений и трещин конструкции часто нужны арматура, швы или фибра."
+  ],
+  "Betoon + terasarmatuur": [
+    "Concrete + steel reinforcement",
+    "Бетон + стальная арматура"
+  ],
+  "Raudbetoon": [
+    "Reinforced concrete",
+    "Железобетон"
+  ],
+  "Raudbetoon ei ole eraldi segu, vaid betooni ja projekteeritud varras- või võrkarmeeringu koostöö. Betoon kannab peamiselt survet ning teras tõmmet. Armatuuri asukoht, ankurdamine ja kaitsekiht mõjutavad otseselt konstruktsiooni kandevõimet ja kestvust.": [
+    "Reinforced concrete is not a separate mix, but concrete working together with designed bar or mesh reinforcement. Concrete mainly carries compression and steel carries tension. Reinforcement position, anchorage and cover directly affect the structure's load-bearing capacity and durability.",
+    "Железобетон — не отдельная смесь, а совместная работа бетона и предусмотренного проектом армирования стержнями или сеткой. Бетон в основном воспринимает сжатие, а сталь — растяжение. Положение арматуры, анкеровка и защитный слой напрямую влияют на несущую способность и долговечность конструкции."
+  ],
+  "Kandev kiudlahendus": [
+    "Structural fibre solution",
+    "Несущая система с фиброй"
+  ],
+  "Teraskiudbetoon ehk metallkiudbetoon": [
+    "Steel-fibre concrete, or metal-fibre concrete",
+    "Сталефибробетон, или бетон с металлической фиброй"
+  ],
+  "Segusse jaotatud teraskiud parandavad löögikindlust, pragude kontrolli ja betooni jääktõmbetugevust pärast prao tekkimist. Seda kasutatakse näiteks põrandates ja plaatides. Armatuurvõrgu võib teraskiud asendada ainult arvutatud ning projekteeritud lahenduses.": [
+    "Steel fibres distributed through the mix improve impact resistance, crack control and residual tensile strength after cracking. They are used in floors and slabs, for example. Steel fibres can replace reinforcing mesh only in a calculated and designed solution.",
+    "Распределённая в смеси стальная фибра повышает ударостойкость, улучшает контроль трещин и остаточную прочность бетона при растяжении после появления трещины. Её используют, например, в полах и плитах. Стальная фибра может заменить арматурную сетку только в рассчитанном и спроектированном решении."
+  ],
+  "Varajase prao kontroll": [
+    "Early crack control",
+    "Контроль ранних трещин"
+  ],
+  "Mikrokiudbetoon": [
+    "Microfibre concrete",
+    "Бетон с микрофиброй"
+  ],
+  "Peened sünteetilised mikrokiud vähendavad värske betooni plastilisest kahanemisest tekkivate pindmiste pragude riski ja parandavad segu sidusust. Mikrokiud ei ole kandev armatuur ega asenda armatuurvardaid või -võrku.": [
+    "Fine synthetic microfibres reduce the risk of surface cracks caused by plastic shrinkage in fresh concrete and improve mix cohesion. Microfibres are not structural reinforcement and do not replace reinforcing bars or mesh.",
+    "Тонкая синтетическая микрофибра снижает риск поверхностных трещин от пластической усадки свежего бетона и повышает связность смеси. Микрофибра не является несущей арматурой и не заменяет арматурные стержни или сетку."
+  ],
+  "Sünteetiline konstruktsioonikiud": [
+    "Synthetic structural fibre",
+    "Синтетическая конструкционная фибра"
+  ],
+  "Makrokiudbetoon": [
+    "Macrofibre concrete",
+    "Бетон с макрофиброй"
+  ],
+  "Pikemad ja jäigemad polümeerkiud annavad betoonile pärast pragunemist jääktugevust ning aitavad põrandates ja plaatides pragusid kontrollida. Neid kasutatakse ka kohtades, kus metallkiud ei sobi, kuid vajalik kiutüüp ja annus määratakse arvutusega.": [
+    "Longer, stiffer polymer fibres give concrete residual strength after cracking and help control cracks in floors and slabs. They are also used where metal fibres are unsuitable, but the required fibre type and dosage are determined by calculation.",
+    "Более длинная и жёсткая полимерная фибра обеспечивает остаточную прочность бетона после трещинообразования и помогает контролировать трещины в полах и плитах. Она применяется и там, где металлическая фибра не подходит, но необходимый тип и дозировка определяются расчётом."
+  ],
+  "Keerukas raketis": [
+    "Complex formwork",
+    "Сложная опалубка"
+  ],
+  "Isetihenev betoon": [
+    "Self-compacting concrete",
+    "Самоуплотняющийся бетон"
+  ],
+  "Väga voolav, kuid stabiilne segu täidab raketise ja liigub tiheda armatuuri ümber oma raskuse mõjul. Tavalist vibrotihendamist pole vaja, kuid raketis peab olema tihe ja arvestama suurema survega.": [
+    "A highly flowable but stable mix fills the formwork and flows around dense reinforcement under its own weight. Conventional vibration is not required, but formwork must be tight and designed for higher pressure.",
+    "Очень текучая, но стабильная смесь заполняет опалубку и обтекает густую арматуру под собственным весом. Обычное виброуплотнение не требуется, но опалубка должна быть герметичной и рассчитанной на повышенное давление."
+  ],
+  "Oluline:": [
+    "Important:",
+    "Важно:"
+  ],
+  "„kiudbetoon” on üldnimetus. Teraskiud, sünteetiline makrokiud ja mikrokiud täidavad erinevaid ülesandeid. Sobiv kiutüüp, kiudude doseering ja võimalus asendada tavapärast armatuuri määratakse konstruktsiooni arvutuse, projekti ning betoonisegu tehnilise koostise järgi.": [
+    "“Fibre concrete” is a general term. Steel fibres, synthetic macrofibres and microfibres serve different purposes. The appropriate fibre type, dosage and possibility of replacing conventional reinforcement are determined by structural calculations, the design and the mix's technical composition.",
+    "«Фибробетон» — общее название. Стальная фибра, синтетическая макрофибра и микрофибра выполняют разные задачи. Подходящий тип, дозировка и возможность замены обычной арматуры определяются расчётом конструкции, проектом и техническим составом бетонной смеси."
+  ],
+  "Betooni eriliigid": [
+    "Special concrete types",
+    "Специальные виды бетона"
+  ],
+  "Põrandabetoon": [
+    "Floor concrete",
+    "Бетон для полов"
+  ],
+  "Segu valitakse põranda paksuse, kulumiskoormuse, viimistlusviisi, tasasuse ja pragude kontrolli järgi.": [
+    "The mix is selected according to floor thickness, wear loads, finishing method, flatness and crack control.",
+    "Смесь выбирают с учётом толщины пола, нагрузки на износ, способа отделки, ровности и контроля трещинообразования."
+  ],
+  "Ilmastiku- ja külmakindel betoon": [
+    "Weather- and frost-resistant concrete",
+    "Атмосферостойкий и морозостойкий бетон"
+  ],
+  "Väliskonstruktsioonis määrab sobiva lahenduse kokkupuude vee, külmumise, sulamise ja vajadusel jäätõrjesooladega.": [
+    "For outdoor structures, the appropriate solution depends on exposure to water, freezing, thawing and, where applicable, de-icing salts.",
+    "Для наружной конструкции подходящее решение определяется воздействием воды, замерзания, оттаивания и при необходимости противогололёдных солей."
+  ],
+  "Veetihe betoon": [
+    "Watertight concrete",
+    "Водонепроницаемый бетон"
+  ],
+  "Väikese vee läbilaskvusega segu on vaid üks osa lahendusest; vuugid, läbiviigud, pragude kontroll ja järelhooldus peavad samuti vett pidama.": [
+    "A low-permeability mix is only one part of the solution; joints, penetrations, crack control and curing must also ensure watertightness.",
+    "Смесь с низкой водопроницаемостью — лишь часть решения; швы, проходки, контроль трещин и уход за бетоном также должны обеспечивать водонепроницаемость."
+  ],
+  "Puhasvalu- ja arhitektuurne betoon": [
+    "Fair-faced and architectural concrete",
+    "Бетон с открытой поверхностью и архитектурный бетон"
+  ],
+  "Nähtava pinna tulemuse määravad raketise materjal, vuugijaotus, paigaldus, tihendamine ja kogu valu ühtlane teostus.": [
+    "The appearance of an exposed surface depends on formwork material, joint layout, placement, compaction and consistent execution of the whole pour.",
+    "Результат видимой поверхности определяется материалом опалубки, расположением швов, укладкой, уплотнением и равномерным выполнением всей заливки."
+  ],
+  "Valu tulemus sõltub ettevalmistusest": [
+    "The pouring result depends on preparation",
+    "Результат заливки зависит от подготовки"
+  ],
+  "Senised objektifotod on paigutatud nende tööetappide juurde, mida need tegelikult näitavad.": [
+    "Existing site photos are placed beside the stages of work they actually show.",
+    "Имеющиеся фотографии объектов размещены рядом с теми этапами работ, которые они действительно показывают."
+  ],
+  "Betoonterrassi raketis ja armatuurvõrk enne valu": [
+    "Concrete terrace formwork and reinforcing mesh before pouring",
+    "Опалубка и арматурная сетка бетонной террасы перед заливкой"
+  ],
+  "1. Aluspind, raketis ja armeerimine": [
+    "1. Substrate, formwork and reinforcement",
+    "1. Основание, опалубка и армирование"
+  ],
+  "Alus tihendatakse, kõrgused ja kalded märgitakse ning raketis toestatakse. Armatuur paigaldatakse õigesse kõrgusesse distantsklotsidele, mitte otse alusele.": [
+    "The base is compacted, levels and falls are marked and formwork is braced. Reinforcement is placed at the correct height on spacers, not directly on the base.",
+    "Основание уплотняют, отмечают высоты и уклоны, укрепляют опалубку. Арматуру устанавливают на фиксаторах на правильной высоте, а не прямо на основание."
+  ],
+  "Värske betoonplaadi tasandamine ja pinna silumine": [
+    "Levelling a fresh concrete slab and smoothing the surface",
+    "Выравнивание свежей бетонной плиты и заглаживание поверхности"
+  ],
+  "2. Valamine ja pinna viimistlus": [
+    "2. Pouring and surface finishing",
+    "2. Заливка и отделка поверхности"
+  ],
+  "Betoon paigaldatakse kavandatud järjekorras, tihendatakse valitud segu järgi ja tasandatakse soovitud kõrgusele. Viimistlus sõltub sellest, kas pind jääb nähtavaks või kaetakse.": [
+    "Concrete is placed in the planned sequence, compacted according to the selected mix and levelled to the desired height. Finishing depends on whether the surface will remain exposed or be covered.",
+    "Бетон укладывают в запланированном порядке, уплотняют с учётом выбранной смеси и выравнивают до нужной высоты. Отделка зависит от того, останется ли поверхность открытой или будет покрыта."
+  ],
+  "Valmis betoonplaat pärast valu ja järelhooldust": [
+    "Completed concrete slab after pouring and curing",
+    "Готовая бетонная плита после заливки и ухода"
+  ],
+  "3. Järelhooldus ja koormamine": [
+    "3. Curing and loading",
+    "3. Уход за бетоном и нагружение"
+  ],
+  "Värsket pinda kaitstakse liiga kiire kuivamise, vihma, külma ja enneaegse koormuse eest. Järgmise töö etapp määratakse betooni tugevuse ja jääkniiskuse järgi.": [
+    "The fresh surface is protected from rapid drying, rain, cold and premature loading. The next work stage is scheduled according to concrete strength and residual moisture.",
+    "Свежую поверхность защищают от быстрого высыхания, дождя, холода и преждевременной нагрузки. Следующий этап определяют по прочности бетона и остаточной влажности."
+  ],
+  "Mida betooni valikul arvestada?": [
+    "What should be considered when choosing concrete?",
+    "Что учитывать при выборе бетона?"
+  ],
+  "Õige segu selgub konstruktsiooni kasutusest ja valutingimustest. Enne betooni tellimist paneme paika viis põhilist lähteandmet.": [
+    "The right mix depends on the structure's use and pouring conditions. Before ordering concrete, we establish five key inputs.",
+    "Правильная смесь определяется назначением конструкции и условиями заливки. Перед заказом бетона уточняем пять основных исходных данных."
+  ],
+  "Koormus ja tugevus": [
+    "Loads and strength",
+    "Нагрузка и прочность"
+  ],
+  "Tugevusklass määratakse projekti ning konstruktsioonile mõjuva koormuse järgi.": [
+    "The strength class is determined by the design and loads acting on the structure.",
+    "Класс прочности определяется проектом и нагрузкой на конструкцию."
+  ],
+  "Kasutuskeskkond": [
+    "Service environment",
+    "Среда эксплуатации"
+  ],
+  "Niiskus, külmumine, sulatussoolad ja muud mõjud määravad vajaliku keskkonnaklassi.": [
+    "Moisture, freezing, de-icing salts and other effects determine the required exposure class.",
+    "Влага, замерзание, противогололёдные соли и другие воздействия определяют необходимый класс воздействия среды."
+  ],
+  "Paigaldusviis": [
+    "Installation method",
+    "Способ укладки"
+  ],
+  "Pumba kasutus, armatuuri tihedus ja ristlõike paksus mõjutavad segu konsistentsi ning täitematerjali suurust.": [
+    "Pump use, reinforcement density and section thickness affect mix consistency and aggregate size.",
+    "Использование насоса, плотность армирования и толщина сечения влияют на консистенцию смеси и размер заполнителя."
+  ],
+  "Armeerimine": [
+    "Reinforcement",
+    "Армирование"
+  ],
+  "Varras-, võrk- või kiudarmatuur valitakse koormuse ja pragunemisriski järgi.": [
+    "Bar, mesh or fibre reinforcement is selected according to loads and cracking risk.",
+    "Армирование стержнями, сеткой или фиброй выбирают с учётом нагрузки и риска трещинообразования."
+  ],
+  "Pind ja järelhooldus": [
+    "Surface and curing",
+    "Поверхность и уход за бетоном"
+  ],
+  "Pinnaviimistlus ning kaitse kuivamise, vihma ja külma eest planeeritakse enne valamist.": [
+    "Surface finishing and protection from drying, rain and cold are planned before pouring.",
+    "Отделку поверхности и защиту от высыхания, дождя и холода планируют до заливки."
+  ],
+  "Betoonitööde pakkumine": [
+    "Concrete work quotation",
+    "Предложение на бетонные работы"
+  ],
+  "Hind sõltub kaevetest, killustikalusest, tihendamisest, raketisest, armeerimisest, betoonikogusest, pumba vajadusest ja pinna viimistlusest. Suurema valumahu korral arvestame ka autode saabumise rütmi, pumba tööaega ning meeskonda, kes jõuab betooni enne tardumist paigaldada ja viimistleda.": [
+    "The price depends on excavation, crushed stone base, compaction, formwork, reinforcement, concrete volume, pump requirements and surface finishing. For larger pours, we also consider vehicle arrival intervals, pump operating time and a team able to place and finish the concrete before it sets.",
+    "Цена зависит от земляных работ, щебёночного основания, уплотнения, опалубки, армирования, количества бетона, необходимости насоса и отделки поверхности. При большой заливке учитываем также интервалы прибытия автомобилей, время работы насоса и команду, которая успеет уложить и отделать бетон до схватывания."
+  ],
+  "Pakkumise jaoks saada võimalusel projekt või mõõdud, konstruktsiooni kasutusotstarve, objekti aadress, ligipääsu fotod ja soovitud tähtaeg. Kui lähteandmetest ei piisa, vaatame objekti üle enne segu ning tehnika tellimist.": [
+    "For a quotation, send the design or dimensions if available, the intended use of the structure, site address, access photos and desired deadline. If the information is insufficient, we inspect the site before ordering the mix and equipment.",
+    "Для предложения по возможности пришлите проект или размеры, назначение конструкции, адрес объекта, фотографии доступа и желаемый срок. Если исходных данных недостаточно, осматриваем объект до заказа смеси и техники."
+  ],
+  "Betoonitööde puhul mõjutavad tulemust aluspinna tihendamine, kõrguste märkimine ja kuivamistingimused, mitte ainult betooni kogus. Päringu hindamisel vaatame alati, milline on objekti ligipääs, kas töö toimub elatud ruumis, millised pinnad vajavad kaitsmist ja milline on mõistlik tööjärjekord. See aitab vältida olukorda, kus üks etapp tuleb hiljem uuesti avada või parandada.": [
+    "In concrete work, substrate compaction, level setting and drying conditions affect the result alongside concrete volume. When assessing an enquiry, we always check site access, whether the space is occupied, which surfaces need protection and the most practical sequence of work. This helps avoid having to reopen or repair a completed stage later.",
+    "При бетонных работах на результат влияют уплотнение основания, разметка высот и условия высыхания, а не только количество бетона. При оценке заявки мы всегда учитываем доступ к объекту, проживают ли люди в помещении, какие поверхности нужно защитить и какая последовательность работ будет разумной. Это помогает избежать необходимости впоследствии вскрывать или переделывать уже выполненный этап."
+  ],
+  "Betoonitööde puhul on oluline teada, mis tuleb valu peale hiljem: plaat, parkett, konstruktsioon või tehniline seade. Lõplik kasutus määrab kõrguse, tasasuse, tugevuse ja selle, kui kaua peaks pind enne järgmist etappi seisma.": [
+    "For concrete work, it is important to know what will later go on top: tiles, parquet, a structure or technical equipment. The final use determines height, flatness, strength and how long the surface should stand before the next stage.",
+    "При бетонных работах важно знать, что впоследствии будет поверх заливки: плитка, паркет, конструкция или техническое оборудование. Итоговое использование определяет высоту, ровность, прочность и время выдержки до следующего этапа."
+  ],
+  "Betoonitööde hinnad": [
+    "Concrete work prices",
+    "Цены на бетонные работы"
+  ],
+  "Betoonitööde hind sõltub aluspinna ettevalmistusest, vormidest, armeeringust, betooni kogusest ja kõrguste täpsusest. Oluline on teada, mis tuleb betooni peale hiljem, sest see määrab pinna nõuded.": [
+    "Concrete costs depend on substrate preparation, formwork, reinforcement, concrete volume and accuracy of levels. It is important to know what will go on top of the concrete later, because this determines surface requirements.",
+    "Стоимость бетонных работ зависит от подготовки основания, опалубки, армирования, количества бетона и точности высот. Важно знать, что будет поверх бетона впоследствии, поскольку это определяет требования к поверхности."
+  ],
+  "Praktiline tööinfo betoonitööde kohta": [
+    "Practical information about concrete work",
+    "Практическая информация о бетонных работах"
+  ],
+  "Betooni tugevusklass, keskkonnaklass, konsistents, täitematerjal ja kiudlahendus valitakse konstruktsiooni järgi. Lokaalne parandus ning uus kandev valupind vajavad erinevat materjali ja ettevalmistust.": [
+    "Concrete strength class, exposure class, consistency, aggregate and fibre solution are selected for the structure. A local repair and a new load-bearing poured surface require different materials and preparation.",
+    "Класс прочности бетона, класс воздействия среды, консистенцию, заполнитель и решение с фиброй выбирают по конструкции. Локальный ремонт и новая несущая заливка требуют разных материалов и подготовки."
+  ],
+  "Ajakulu ei piirdu valamisega. Arvestada tuleb ettevalmistuse, vormide, armeerimise, valamise, tasandamise ja kivinemisega enne järgmisi töid.": [
+    "The time required extends beyond pouring. Preparation, formwork, reinforcement, pouring, levelling and hardening before subsequent work must all be included.",
+    "Затраты времени не ограничиваются заливкой. Нужно учитывать подготовку, опалубку, армирование, заливку, выравнивание и твердение до следующих работ."
+  ],
+  "Hinda mõjutavad betooni kogus, ligipääs, pumba või käsitsi töö vajadus, armeerimine, pinna viimistlus ja see, kas vana betoon tuleb eemaldada.": [
+    "Costs are affected by concrete volume, access, the need for a pump or manual work, reinforcement, surface finishing and whether old concrete must be removed.",
+    "На стоимость влияют количество бетона, доступ, необходимость насоса или ручной работы, армирование, отделка поверхности и необходимость удаления старого бетона."
+  ],
+  "Levinud vead on nõrk või vajuv aluspind, valesti planeeritud kalle, puudulik armeerimine ja liiga kiire järgmise tööetapi alustamine enne piisavat kivinemist.": [
+    "Common mistakes include a weak or settling base, incorrectly planned falls, inadequate reinforcement and starting the next stage too soon, before sufficient hardening.",
+    "Распространённые ошибки — слабое или проседающее основание, неправильно спланированный уклон, недостаточное армирование и слишком раннее начало следующего этапа до достаточного твердения."
+  ],
+  "Enne töö tellimist tasub täpsustada, millist koormust pind kandma hakkab ja kas sellele tuleb plaat, parkett, hüdroisolatsioon või välitingimustes viimistlus.": [
+    "Before commissioning the work, clarify the loads the surface will carry and whether it will receive tiles, parquet, waterproofing or an outdoor finish.",
+    "Перед заказом работ стоит уточнить, какую нагрузку будет нести поверхность и будет ли на ней плитка, паркет, гидроизоляция или наружная отделка."
+  ],
+  "Tehnilise ülevaate lähteallikad:": [
+    "Sources for the technical overview:",
+    "Источники технического обзора:"
+  ],
+  "Ruduse betooniliigid": [
+    "Rudus concrete types",
+    "Виды бетона Rudus"
+  ],
+  "Heidelberg Materials Eesti betooni põhiomadused": [
+    "Heidelberg Materials Eesti: basic concrete properties",
+    "Основные свойства бетона Heidelberg Materials Eesti"
+  ],
+  "Eesti Betooniühingu juhendid": [
+    "Estonian Concrete Association guidelines",
+    "Руководства Эстонской ассоциации бетона"
+  ],
+  ". Konkreetse konstruktsiooni betoonisegu koostis ja armeerimine määratakse projekti ning tootja tehniliste andmete järgi.": [
+    ". The concrete mix composition and reinforcement for a specific structure are determined by the design and manufacturer's technical data.",
+    ". Состав бетонной смеси и армирование конкретной конструкции определяются проектом и техническими данными производителя."
+  ],
+  "Betooni valik, järelhooldus ja katmise aeg": [
+    "Choosing concrete, curing and when to cover it",
+    "Выбор бетона, уход и сроки устройства покрытия"
+  ],
+  "Betoon ei ole ainult tugevusklass": [
+    "Concrete involves more than strength class",
+    "Бетон — это не только класс прочности"
+  ],
+  "Lisaks tugevusele määravad segu valiku keskkonnaklass, külmumis- ja niiskuskoormus, konstruktsiooni mõõdud ning valuviis. Armeeringu, paksuse ja kandvuse määrab projekt. Tellitavale segule ei lisata objektil omal algatusel vett: see võib muuta tugevust ja pinna kvaliteeti.": [
+    "In addition to strength, mix selection depends on exposure class, freezing and moisture loads, structural dimensions and pouring method. Reinforcement, thickness and load-bearing capacity are determined by the design. Water is not added to the ordered mix on site without authorisation: this may change strength and surface quality.",
+    "Помимо прочности, выбор смеси определяется классом воздействия среды, морозной и влажностной нагрузкой, размерами конструкции и способом заливки. Армирование, толщина и несущая способность определяются проектом. В заказанную смесь нельзя самовольно добавлять воду на объекте: это может изменить прочность и качество поверхности."
+  ],
+  "Järelhooldus algab pärast valu": [
+    "Curing begins after pouring",
+    "Уход за бетоном начинается после заливки"
+  ],
+  "Värsket betooni kaitstakse liiga kiire kuivamise, päikese, tuule ja külmumise eest sobiva katmise või järelhooldusvahendiga. Meetod ja kestus sõltuvad segust ning ilmast. Kahanemisvuugid ja konstruktsiooni liikumisvuugid planeeritakse enne valu, mitte pärast pragude ilmumist.": [
+    "Fresh concrete is protected from rapid drying, sun, wind and freezing using suitable coverings or curing products. The method and duration depend on the mix and weather. Contraction joints and structural movement joints are planned before pouring, not after cracks appear.",
+    "Свежий бетон защищают от быстрого высыхания, солнца, ветра и замерзания подходящим укрытием или средством для ухода. Метод и продолжительность зависят от смеси и погоды. Усадочные и деформационные швы конструкции планируют до заливки, а не после появления трещин."
+  ],
+  "Kõvenemine ei tähenda kuivamist": [
+    "Hardening does not mean drying",
+    "Твердение не означает высыхание"
+  ],
+  "Betooni tavapärane 28 päeva tugevuse hindamise vanus ei ole universaalne põrandakatte paigalduse kuupäev. Katmise sobivust kontrollime niiskusmõõtmisega ning valitud liimi või katte nõuetest lähtudes. Koormamise aeg lepitakse kokku konstruktsiooni ja kasutusotstarbe järgi.": [
+    "The usual 28-day age for assessing concrete strength is not a universal date for installing flooring. We check suitability for covering by measuring moisture and following the chosen adhesive or covering requirements. Loading times are agreed according to the structure and intended use.",
+    "Обычный возраст бетона в 28 дней для оценки прочности не является универсальной датой укладки напольного покрытия. Пригодность к покрытию проверяем измерением влажности и с учётом требований выбранного клея или покрытия. Срок нагружения согласуется по конструкции и назначению."
+  ],
+  "Lisa mõõdud, soovitud kasutus, ligipääs betooniautole või pumbale ning olemasolev projekt. Märgi tulevane pinnakate ja koormus, et valu kõrgus ning järgmiste tööde ajastus saaksid õiged.": [
+    "Provide dimensions, intended use, concrete truck or pump access and any existing design. Indicate the future covering and loads so pour height and the timing of subsequent work can be set correctly.",
+    "Укажите размеры, желаемое использование, доступ для автобетоносмесителя или насоса и имеющийся проект. Отметьте будущее покрытие и нагрузку, чтобы правильно определить высоту заливки и сроки следующих работ."
+  ],
+  "Milliste töödega betoonitööd tavaliselt seostuvad?": [
+    "Which other jobs are concrete works usually linked to?",
+    "С какими работами обычно связаны бетонные работы?"
+  ],
+  "Betoonitööd mõjutavad järgmiste kihtide vastupidavust, mistõttu tasub need siduda kogu tööjärjekorraga. Vundamendi ja sokli juures on seotud tööks sageli": [
+    "Concrete work affects the durability of subsequent layers, so it should be coordinated with the entire work sequence. Around foundations and plinths, related work often includes",
+    "Бетонные работы влияют на долговечность последующих слоёв, поэтому их стоит согласовать со всей последовательностью работ. У фундамента и цоколя сопутствующими работами часто являются"
+  ],
+  "vundamendi parandamine või hüdroisolatsioon": [
+    "foundation repairs or waterproofing",
+    "ремонт фундамента или гидроизоляция"
+  ],
+  ", siseruumides võib betoonpinna ettevalmistus liikuda edasi": [
+    ", while indoors, concrete surface preparation may lead on to",
+    ", а внутри помещения подготовка бетонной поверхности может продолжаться"
+  ],
+  "plaaditava põranda või seina lahenduseni": [
+    "a tiled floor or wall solution",
+    "устройством пола или стены под плитку"
+  ],
+  ". Kui vana konstruktsioon vajab eemaldamist, tuleb enne hinnata": [
+    ". If an old structure needs removal, first assess",
+    ". Если старую конструкцию нужно удалить, сначала следует оценить"
+  ],
+  "lammutuse mahtu ja äravedu": [
+    "the demolition scope and waste removal",
+    "объём демонтажа и вывоз мусора"
+  ],
+  "Betoonitööde päring": [
+    "Concrete work enquiry",
+    "Заявка на бетонные работы"
+  ]
+}

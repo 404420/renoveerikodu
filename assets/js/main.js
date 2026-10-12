@@ -4,6 +4,19 @@
 */
 
 (function($) {
+	var i18n = window.RenoveeriI18n;
+	var language = i18n ? i18n.language : 'et';
+	var fallbackMessages = {
+		apartment: 'Korteri remont', menuClose: 'Sulge menüü', sending: 'Saadan…',
+		inquirySending: 'Saadan päringut…', file: 'fail',
+		captchaMissing: 'Turvakontrolli ei õnnestunud laadida. Palun värskenda lehte või võta meiega ühendust.',
+		captchaRequired: 'Palun kinnita, et sa ei ole robot.',
+		sendFailed: 'Päringu saatmine ebaõnnestus. Palun proovi hiljem uuesti.',
+		sendSuccess: 'Päring saadetud. Võtame sinuga ühendust.',
+		serverError: 'Ühendus serveriga ebaõnnestus. Palun proovi hiljem uuesti.'
+	};
+	function t(key) { return i18n ? i18n.t(key) : (fallbackMessages[key] || key); }
+	function route(key) { return i18n ? i18n.route(key) : (key === 'apartment' ? '/korteri-remont/' : '/kontakt.html'); }
 
 	var $window = $(window),
 		$body = $('body'),
@@ -56,18 +69,18 @@
 		// Share the apartment service link across the existing desktop/mobile menu.
 		var serviceMenu = $menu[0].querySelector('.submenu-items');
 		if (serviceMenu && !Array.from(serviceMenu.querySelectorAll('a')).some(function(link) {
-			return new URL(link.href).pathname.replace(/index\.html$/, '') === '/korteri-remont/';
+			return new URL(link.href).pathname.replace(/index\.html$/, '') === route('apartment');
 		})) {
 			var apartmentItem = document.createElement('li');
 			var apartmentLink = document.createElement('a');
-			apartmentLink.href = '/korteri-remont/';
-			apartmentLink.textContent = 'Korteri remont';
+			apartmentLink.href = route('apartment');
+			apartmentLink.textContent = t('apartment');
 			apartmentItem.appendChild(apartmentLink);
 			serviceMenu.prepend(apartmentItem);
 		}
 
 		$menu
-			.append('<a href="#menu" class="close" aria-label="Sulge menüü"></a>')
+			.append($('<a href="#menu" class="close"></a>').attr('aria-label', t('menuClose')))
 			.appendTo($body)
 			.panel({
 				delay: 300,
@@ -169,7 +182,7 @@
 	$('form').on('submit', function(){
 		var $btn = $(this).find('input[type=submit]');
 		if($btn.data('submitted')) return false;
-		$btn.data('submitted', true).val('Saadan...');
+		$btn.data('submitted', true).val(t('sending'));
 	});
 
 	// =============================
@@ -216,7 +229,7 @@
 
 		function getExtension(fileName) {
 			var parts = fileName.split('.');
-			return parts.length > 1 ? parts.pop().slice(0, 5) : 'fail';
+			return parts.length > 1 ? parts.pop().slice(0, 5) : t('file');
 		}
 
 		function getFileKey(file) {
@@ -269,7 +282,7 @@
 				size.className = 'file-preview-size';
 				remove.className = 'file-preview-remove';
 				remove.type = 'button';
-				remove.setAttribute('aria-label', 'Eemalda fail ' + file.name);
+				remove.setAttribute('aria-label', i18n ? i18n.t('removeFile', {name: file.name}) : 'Eemalda fail ' + file.name);
 				remove.textContent = '×';
 				name.textContent = file.name;
 				size.textContent = formatSize(file.size);
@@ -391,7 +404,7 @@
 		}
 
 		var script = document.createElement('script');
-		script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+		script.src = 'https://www.google.com/recaptcha/api.js?render=explicit&hl=' + language;
 		script.async = true;
 		script.defer = true;
 		script.setAttribute('data-recaptcha-script', 'true');
@@ -426,13 +439,13 @@
 		})
 			.then(function(response) {
 				if (!response.ok)
-					throw new Error('reCAPTCHA seadistus puudub.');
+					throw new Error(t('captchaMissing'));
 
 				return response.json();
 			})
 			.then(function(result) {
 				if (!result || !result.success || !result.siteKey)
-					throw new Error('reCAPTCHA seadistus puudub.');
+					throw new Error(t('captchaMissing'));
 
 				loadRecaptchaScript(function() {
 					widgets.forEach(function(widget) {
@@ -461,7 +474,7 @@
 			})
 			.catch(function() {
 				widgets.forEach(function(widget) {
-					widget.textContent = 'reCAPTCHA seadistus puudub.';
+					widget.textContent = t('captchaMissing');
 				});
 			});
 	}
@@ -531,10 +544,10 @@
 // =============================
 // ACTIVE MENU AUTO DETECT (FIXED)
 // =============================
-var path = window.location.pathname.split("/").pop();
-
-// eemalda .html / .php / trailing slash
-path = path.replace('.html','').replace('.php','').replace('/','');
+function normalizedPath(value) {
+	return new URL(value, window.location.href).pathname.replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+}
+var path = normalizedPath(window.location.href);
 
 $('#menu a, #nav a').each(function(){
 
@@ -542,7 +555,8 @@ $('#menu a, #nav a').each(function(){
 
 	if(!href) return;
 
-	href = href.replace('.html','').replace('.php','').replace('/','');
+	if (href.charAt(0) === '#') return;
+	href = normalizedPath(href);
 
 	if(href === path){
 		$(this).addClass('active');
@@ -577,12 +591,14 @@ $('#menu a, #nav a').each(function(){
 			messageBox.className = 'form-message';
 			form.parentNode.insertBefore(messageBox, form);
 		}
+		messageBox.setAttribute('role', 'status');
+		messageBox.setAttribute('aria-live', 'polite');
 
 		var captchaResponse = form.querySelector('[name="g-recaptcha-response"]');
 
 		if (!captchaResponse || !captchaResponse.value.trim()) {
 			messageBox.hidden = false;
-			messageBox.textContent = 'Palun kinnita, et sa ei ole robot.';
+			messageBox.textContent = t('captchaRequired');
 
 			if (submitButton) {
 				submitButton.disabled = true;
@@ -594,17 +610,18 @@ $('#menu a, #nav a').each(function(){
 		var originalText = submitButton ? (submitButton.value || submitButton.textContent) : '';
 		var formData = new FormData(form);
 		formData.set('source', window.location.href);
+		formData.set('language', language);
 
 		if (submitButton) {
 			submitButton.disabled = true;
 			if (submitButton.tagName === 'INPUT')
-				submitButton.value = 'Saadan...';
+				submitButton.value = t('sending');
 			else
-				submitButton.textContent = 'Saadan...';
+				submitButton.textContent = t('sending');
 		}
 
 		messageBox.hidden = false;
-		messageBox.textContent = 'Saadan paringut...';
+		messageBox.textContent = t('inquirySending');
 
 		try {
 			var response = await fetch('/api/contact.php', {
@@ -625,12 +642,12 @@ $('#menu a, #nav a').each(function(){
 			}
 
 			if (!response.ok || !result.success)
-				throw new Error(result.message || 'Paringu saatmine ebaonnestus. Palun proovi hiljem uuesti.');
+				throw new Error(result.message || t('sendFailed'));
 
-			messageBox.textContent = result.message || 'Paring saadetud. Votame sinuga uhendust.';
+			messageBox.textContent = result.message || t('sendSuccess');
 			form.reset();
 		} catch (error) {
-			messageBox.textContent = error.message || 'Serveri viga. Palun proovi hiljem uuesti.';
+			messageBox.textContent = error instanceof TypeError ? t('serverError') : (error.message || t('serverError'));
 		} finally {
 			form.querySelectorAll('[data-recaptcha-widget][data-widget-id]').forEach(function(widget) {
 				if (window.grecaptcha && typeof window.grecaptcha.reset === 'function')

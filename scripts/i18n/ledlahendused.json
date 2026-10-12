@@ -1,0 +1,518 @@
+{
+  "LED lahendused Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "LED lighting solutions in Tallinn and Harju County | Renoveeri Kodu",
+    "Светодиодное освещение в Таллинне и Харьюмаа | Renoveeri Kodu"
+  ],
+  "LED lahendused Tallinnas ja Harjumaal. LED valgustuse, LED ribade ja dekoratiivvalgustuse paigaldus kodudesse ning äripindadele.": [
+    "LED lighting solutions in Tallinn and Harju County. Installation of LED lights, LED strips and decorative lighting in homes and commercial premises.",
+    "Светодиодное освещение в Таллинне и Харьюмаа. Установка LED-светильников, светодиодных лент и декоративного освещения в жилых и коммерческих помещениях."
+  ],
+  "Valgus, mis loob ruumi.": [
+    "Light that shapes a space.",
+    "Свет, который создаёт пространство."
+  ],
+  "LED lahendused Tallinnas ja Harjumaal": [
+    "LED lighting solutions in Tallinn and Harju County",
+    "Светодиодное освещение в Таллинне и Харьюмаа"
+  ],
+  "LED valgustuse ja dekoratiivsete valguslahenduste paigaldus Tallinnas ja Harjumaal.": [
+    "Installation of LED lighting and decorative lighting solutions in Tallinn and Harju County.",
+    "Установка светодиодного и декоративного освещения в Таллинне и Харьюмаа."
+  ],
+  "Kas LED riba võib panna vannituppa?": [
+    "Can LED strips be installed in a bathroom?",
+    "Можно ли установить светодиодную ленту в ванной?"
+  ],
+  "Jah, kui kasutada sobiva niiskuskindlusega komponente ja paigaldada ühendused ohutult.": [
+    "Yes, provided the components have suitable moisture protection and the connections are installed safely.",
+    "Да, если использовать компоненты с подходящей влагозащитой и безопасно выполнить подключения."
+  ],
+  "Kas toiteplokk peab jääma ligipääsetavaks?": [
+    "Does the power supply need to remain accessible?",
+    "Должен ли блок питания оставаться доступным?"
+  ],
+  "Jah, hoolduse ja võimaliku vahetuse jaoks peab toiteplokile hiljem ligi pääsema.": [
+    "Yes, the power supply must remain accessible for maintenance and possible replacement.",
+    "Да, к блоку питания должен сохраняться доступ для обслуживания и возможной замены."
+  ],
+  "Kas teete ka peidetud kaablid?": [
+    "Do you also conceal the cables?",
+    "Вы также скрываете кабели?"
+  ],
+  "Võimalusel jah. Parim tulemus tuleb siis, kui kaabeldus planeeritakse enne viimistlustöid.": [
+    "Where possible, yes. The best result is achieved when the wiring is planned before finishing work.",
+    "По возможности да. Лучший результат получается, если спланировать проводку до отделочных работ."
+  ],
+  "Millist LED tooni valida?": [
+    "Which LED colour temperature should I choose?",
+    "Какую цветовую температуру LED выбрать?"
+  ],
+  "Kodu üldvalguseks sobib sageli soe või neutraalne toon. Tööpindadel võib sobida neutraalsem valgus, mis ei moonuta värve.": [
+    "Warm or neutral light often suits general lighting at home. Work surfaces may benefit from a more neutral light that does not distort colours.",
+    "Для общего освещения дома часто подходит тёплый или нейтральный свет. Для рабочих поверхностей может подойти более нейтральный свет, который не искажает цвета."
+  ],
+  "Kas LED valgustust saab lisada juba valmis remonditud ruumi?": [
+    "Can LED lighting be added to an already renovated room?",
+    "Можно ли добавить LED-освещение в уже отремонтированную комнату?"
+  ],
+  "Saab, kuid lahendus sõltub kaablite ligipääsust ja sellest, kuhu saab peita toiteploki. Kõige puhtam tulemus sünnib siis, kui valgustus on planeeritud enne kipsi- ja maalritööde lõppu.": [
+    "Yes, but the solution depends on access to the cables and where the power supply can be concealed. The neatest result is achieved when lighting is planned before plasterboard and painting work is completed.",
+    "Да, но решение зависит от доступа к кабелям и возможности скрыть блок питания. Самый аккуратный результат получается, если спланировать освещение до завершения гипсокартонных и малярных работ."
+  ],
+  "Kas LED-riba sobib põhivalgustuseks?": [
+    "Can an LED strip provide the main lighting?",
+    "Подходит ли светодиодная лента для основного освещения?"
+  ],
+  "Mõnikord sobib, kuid sageli toimib LED-riba paremini meeleolu- või kaudvalgusena. Põhivalgustuse jaoks tuleb arvestada ruumi suurust, valgusvoogu ja hajuti kvaliteeti.": [
+    "Sometimes, but an LED strip often works better as mood or indirect lighting. For main lighting, the room size, luminous flux and diffuser quality must be considered.",
+    "Иногда подходит, но чаще светодиодная лента лучше работает как атмосферная или отражённая подсветка. Для основного освещения нужно учитывать размер помещения, световой поток и качество рассеивателя."
+  ],
+  "Kuhu paigutatakse LED toiteplokk?": [
+    "Where is the LED power supply installed?",
+    "Где размещается блок питания LED?"
+  ],
+  "Toiteplokk peab jääma ligipääsetavasse ja õhutatavasse kohta. Seda ei tohiks täielikult kinni ehitada nii, et hooldus või vahetus muutub hiljem võimatuks.": [
+    "The power supply must be in an accessible, ventilated location. It should not be completely enclosed in a way that makes later maintenance or replacement impossible.",
+    "Блок питания должен находиться в доступном и проветриваемом месте. Его нельзя полностью зашивать так, чтобы последующее обслуживание или замена стали невозможными."
+  ],
+  "Kas LED valgustust saab ühendada dimmeriga?": [
+    "Can LED lighting be connected to a dimmer?",
+    "Можно ли подключить LED-освещение к диммеру?"
+  ],
+  "Jah, kui LED-riba, toiteplokk ja juhtimine on omavahel sobivad. Dimmer tuleb valida süsteemi järgi, mitte ainult lüliti välimuse järgi.": [
+    "Yes, if the LED strip, power supply and controls are compatible. Choose the dimmer to suit the system, rather than just the appearance of the switch.",
+    "Да, если светодиодная лента, блок питания и управление совместимы. Диммер нужно выбирать по параметрам системы, а не только по внешнему виду выключателя."
+  ],
+  "Puidust trepi astmete alla paigaldatud soe LED-valgustus ja klaaspiire": [
+    "Warm LED lighting installed beneath wooden stair treads, with a glass balustrade",
+    "Тёплая LED-подсветка под ступенями деревянной лестницы со стеклянным ограждением"
+  ],
+  "Sooja LED-kaudvalgusega tume elutuba ja kõrval asuv magamistuba": [
+    "Dark living room with warm indirect LED lighting and an adjoining bedroom",
+    "Тёмная гостиная с тёплой отражённой LED-подсветкой и соседняя спальня"
+  ],
+  "Tume köök, mille kivist tööpinda valgustab kappide alla peidetud LED-riba": [
+    "Dark kitchen with a stone worktop illuminated by an LED strip concealed beneath the cabinets",
+    "Тёмная кухня с каменной столешницей, освещённой скрытой под шкафами светодиодной лентой"
+  ],
+  "Sooja LED-valgustusega puittrepi astmed, seinanišid ja eritellimusmööbel": [
+    "Wooden stair treads, wall niches and bespoke furniture with warm LED lighting",
+    "Ступени деревянной лестницы, стенные ниши и мебель на заказ с тёплой LED-подсветкой"
+  ],
+  "LED-valgusjooned puidust trepiastmete all paigaldustööde ajal": [
+    "LED light lines beneath wooden stair treads during installation",
+    "Светодиодные линии под деревянными ступенями во время монтажа"
+  ],
+  "LED LAHENDUSED · TALLINN & HARJUMAA": [
+    "LED LIGHTING SOLUTIONS · TALLINN & HARJU COUNTY",
+    "LED-ОСВЕЩЕНИЕ · ТАЛЛИНН И ХАРЬЮМАА"
+  ],
+  "Valgus, mis": [
+    "Light that",
+    "Свет, который"
+  ],
+  "loob": [
+    "shapes",
+    "создаёт"
+  ],
+  "ruumi.": [
+    "a space.",
+    "пространство."
+  ],
+  "Peidetud valgusjooned. Läbimõeldud detailid.": [
+    "Concealed lines of light. Thoughtful details.",
+    "Скрытые световые линии. Продуманные детали."
+  ],
+  "Sinu kodu, täiesti uues valguses.": [
+    "Your home, in a completely new light.",
+    "Ваш дом в совершенно новом свете."
+  ],
+  "Räägime sinu ideest": [
+    "Let's discuss your idea",
+    "Обсудим вашу идею"
+  ],
+  "Avasta võimalused": [
+    "Explore the possibilities",
+    "Откройте возможности"
+  ],
+  "Ideest viimistletud valguslahenduseni.": [
+    "From an idea to a beautifully finished lighting solution.",
+    "От идеи до завершённого светового решения."
+  ],
+  "Planeerimine · paigaldus · seadistamine": [
+    "Planning · installation · setup",
+    "Планирование · монтаж · настройка"
+  ],
+  "VALGUS PEITUB DETAILIDES": [
+    "LIGHT IS IN THE DETAILS",
+    "СВЕТ КРОЕТСЯ В ДЕТАЛЯХ"
+  ],
+  "Trepivalgustus": [
+    "Stair lighting",
+    "Подсветка лестницы"
+  ],
+  "01 / RK": [
+    "01 / RK",
+    "01 / RK"
+  ],
+  "Meie valguslahendused": [
+    "Our lighting solutions",
+    "Наши световые решения"
+  ],
+  "Kaudvalgus": [
+    "Indirect lighting",
+    "Отражённое освещение"
+  ],
+  "Töövalgus": [
+    "Task lighting",
+    "Рабочее освещение"
+  ],
+  "Aktsentvalgus": [
+    "Accent lighting",
+    "Акцентное освещение"
+  ],
+  "Läbimõeldud tervik": [
+    "A thoughtfully designed whole",
+    "Продуманное целостное решение"
+  ],
+  "01 — VÕIMALUSED": [
+    "01 — POSSIBILITIES",
+    "01 — ВОЗМОЖНОСТИ"
+  ],
+  "Igal ruumil on": [
+    "Every room has",
+    "У каждой комнаты"
+  ],
+  "oma": [
+    "its own",
+    "свой"
+  ],
+  "valgus.": [
+    "light.",
+    "свет."
+  ],
+  "Hea valgustus teeb rohkem kui lihtsalt valgustab. See toob esile materjalid, loob meeleolu ja muudab igapäevased tegevused mugavamaks.": [
+    "Good lighting does more than illuminate. It highlights materials, creates atmosphere and makes everyday activities more comfortable.",
+    "Хорошее освещение не только даёт свет. Оно подчёркивает материалы, создаёт настроение и делает повседневные занятия удобнее."
+  ],
+  "ELUTUBA & MAGAMISTUBA": [
+    "LIVING ROOM & BEDROOM",
+    "ГОСТИНАЯ И СПАЛЬНЯ"
+  ],
+  "Pehme valgus.": [
+    "Soft light.",
+    "Мягкий свет."
+  ],
+  "Rahulik ruum.": [
+    "A peaceful space.",
+    "Спокойное пространство."
+  ],
+  "Lagede, karniiside ja seinaniššide kaudvalgus loob hubase tausta, jättes valgusallika elegantselt peitu.": [
+    "Indirect lighting in ceilings, cornices and wall niches creates a cosy backdrop while elegantly concealing the light source.",
+    "Отражённая подсветка потолков, карнизов и стенных ниш создаёт уютный фон, элегантно скрывая источник света."
+  ],
+  "Planeerime kaudvalguse": [
+    "Let's plan your indirect lighting",
+    "Спланируем отражённую подсветку"
+  ],
+  "KÖÖK & TÖÖPINNAD": [
+    "KITCHEN & WORK SURFACES",
+    "КУХНЯ И РАБОЧИЕ ПОВЕРХНОСТИ"
+  ],
+  "Valgus seal,": [
+    "Light where",
+    "Свет там,"
+  ],
+  "kus seda vajad.": [
+    "you need it.",
+    "где он нужен."
+  ],
+  "Köögimööbli alla paigaldatud ühtlane valgus aitab mugavalt toimetada. Profiil ja hajuti annavad puhta viimistluse.": [
+    "Even lighting installed beneath kitchen cabinets makes everyday tasks easier. A profile and diffuser provide a clean finish.",
+    "Равномерный свет под кухонными шкафами помогает удобно заниматься повседневными делами. Профиль и рассеиватель обеспечивают аккуратный вид."
+  ],
+  "Leiame sobiva töövalguse": [
+    "Let's find the right task lighting",
+    "Подберём рабочее освещение"
+  ],
+  "TREPID, NIŠID & MÖÖBEL": [
+    "STAIRS, NICHES & FURNITURE",
+    "ЛЕСТНИЦЫ, НИШИ И МЕБЕЛЬ"
+  ],
+  "Väike detail.": [
+    "A small detail.",
+    "Небольшая деталь."
+  ],
+  "Suur erinevus.": [
+    "A big difference.",
+    "Большая разница."
+  ],
+  "Astmete, riiulite ja seinapaneelide valgusjooned toovad esile arhitektuuri ning aitavad ruumis orienteeruda.": [
+    "Lines of light along steps, shelves and wall panels highlight the architecture and help you find your way around the room.",
+    "Световые линии на ступенях, полках и стеновых панелях подчёркивают архитектуру и помогают ориентироваться в помещении."
+  ],
+  "Toome detailid esile": [
+    "Let's highlight the details",
+    "Подчеркнём детали"
+  ],
+  "02 — VALGUSE ISELOOM": [
+    "02 — THE CHARACTER OF LIGHT",
+    "02 — ХАРАКТЕР СВЕТА"
+  ],
+  "Sama ruum.": [
+    "The same room.",
+    "Та же комната."
+  ],
+  "Teine tunne.": [
+    "A different feeling.",
+    "Другое ощущение."
+  ],
+  "Valguse toon muudab ruumi tajumist. Proovi erinevaid värvustemperatuure ja leia oma ideele sobiv lähtekoht.": [
+    "The colour temperature of light changes how a space feels. Try different colour temperatures and find a starting point for your idea.",
+    "Оттенок света меняет восприятие пространства. Попробуйте разные цветовые температуры и найдите отправную точку для своей идеи."
+  ],
+  "Valguse värvustemperatuur": [
+    "Light colour temperature",
+    "Цветовая температура света"
+  ],
+  "2700 K": [
+    "2700 K",
+    "2700 K"
+  ],
+  "Hubane": [
+    "Cosy",
+    "Уютный"
+  ],
+  "3000 K": [
+    "3000 K",
+    "3000 K"
+  ],
+  "Soe": [
+    "Warm",
+    "Тёплый"
+  ],
+  "4000 K": [
+    "4000 K",
+    "4000 K"
+  ],
+  "Neutraalne": [
+    "Neutral",
+    "Нейтральный"
+  ],
+  "3000 K — soe ja tasakaalukas valgus elutuppa, magamistuppa või trepile.": [
+    "3000 K — warm, balanced light for a living room, bedroom or staircase.",
+    "3000 K — тёплый, сбалансированный свет для гостиной, спальни или лестницы."
+  ],
+  "Illustratiivne tooninäide. Tegelik tulemus sõltub valgustist, materjalidest ja ruumist.": [
+    "Illustrative colour temperature example. The actual result depends on the light fixture, materials and room.",
+    "Иллюстративный пример оттенка света. Реальный результат зависит от светильника, материалов и помещения."
+  ],
+  "Illustratsioon soojast 3000 K kaudvalgusest ruumis": [
+    "Illustration of warm 3000 K indirect lighting in a room",
+    "Иллюстрация тёплой отражённой подсветки 3000 K в комнате"
+  ],
+  "VALGUSE TOON": [
+    "LIGHT COLOUR TEMPERATURE",
+    "ОТТЕНОК СВЕТА"
+  ],
+  "03 — MEIE TÖÖVIIS": [
+    "03 — HOW WE WORK",
+    "03 — КАК МЫ РАБОТАЕМ"
+  ],
+  "Hea valgus algab": [
+    "Good lighting starts",
+    "Хорошее освещение начинается"
+  ],
+  "heast plaanist.": [
+    "with a good plan.",
+    "с хорошего плана."
+  ],
+  "Paigaldame LED-ribad, profiilid, toiteplokid ja juhtimislahendused ühe läbimõeldud tervikuna. Nähtavale jääb valgus, mitte tehnika.": [
+    "We install LED strips, profiles, power supplies and controls as one thoughtfully designed system. You see the light, not the equipment.",
+    "Мы устанавливаем светодиодные ленты, профили, блоки питания и управление как единую продуманную систему. На виду остаётся свет, а не техника."
+  ],
+  "Kuulame ja planeerime": [
+    "We listen and plan",
+    "Слушаем и планируем"
+  ],
+  "Täpsustame ruumi, soovitud meeleolu ja valguse otstarbe. Vaatame üle paigalduskohad, elektriühendused ning kaablite peitmise võimalused.": [
+    "We clarify the room, desired atmosphere and purpose of the lighting. We review installation locations, electrical connections and ways to conceal the cables.",
+    "Уточняем особенности помещения, желаемое настроение и назначение света. Проверяем места монтажа, электрические подключения и возможности скрыть кабели."
+  ],
+  "SINUST ALGAB IDEE": [
+    "THE IDEA STARTS WITH YOU",
+    "ИДЕЯ НАЧИНАЕТСЯ С ВАС"
+  ],
+  "Paigaldame läbimõeldult": [
+    "We install with care",
+    "Монтируем продуманно"
+  ],
+  "Sobitame LED-riba, profiili, hajuti ja toiteploki. Toiteplokid jäävad hoolduseks ligipääsetavaks; niisketes ruumides arvestame sobiva kaitseklassiga.": [
+    "We match the LED strip, profile, diffuser and power supply. Power supplies remain accessible for maintenance; in damp rooms, we allow for the appropriate protection rating.",
+    "Подбираем совместимые светодиодную ленту, профиль, рассеиватель и блок питания. Блоки питания остаются доступными для обслуживания; во влажных помещениях учитываем подходящий класс защиты."
+  ],
+  "DETAILID LOEVAD": [
+    "DETAILS MATTER",
+    "ДЕТАЛИ ИМЕЮТ ЗНАЧЕНИЕ"
+  ],
+  "Testime ja seadistame": [
+    "We test and set up",
+    "Проверяем и настраиваем"
+  ],
+  "Kontrollime valguse ühtlust, dimmerdamist ja ühenduste töökindlust. Nii saad lahenduse, mida on mugav kasutada ja hiljem hooldada.": [
+    "We check light uniformity, dimming and connection reliability. This gives you a solution that is convenient to use and maintain later.",
+    "Проверяем равномерность света, диммирование и надёжность соединений. Так вы получаете решение, которым удобно пользоваться и которое можно обслуживать в дальнейшем."
+  ],
+  "VALMIS IGAPÄEVAKS": [
+    "READY FOR EVERYDAY USE",
+    "ГОТОВО К ПОВСЕДНЕВНОМУ ИСПОЛЬЗОВАНИЮ"
+  ],
+  "MEIE TÖÖ · PAIGALDUSETAPP": [
+    "OUR WORK · INSTALLATION STAGE",
+    "НАША РАБОТА · ЭТАП МОНТАЖА"
+  ],
+  "04 — PÄRIS DETAIL": [
+    "04 — A REAL DETAIL",
+    "04 — РЕАЛЬНАЯ ДЕТАЛЬ"
+  ],
+  "Trepp, mis": [
+    "A staircase that",
+    "Лестница, которая"
+  ],
+  "juhatab koju.": [
+    "guides you home.",
+    "ведёт домой."
+  ],
+  "Puit, klaas ja astme alla peidetud valgus. LED-riba rõhutab trepi rütmi ning annab igale astmele oma valgusjoone.": [
+    "Wood, glass and light concealed beneath the steps. The LED strip highlights the rhythm of the staircase and gives each tread its own line of light.",
+    "Дерево, стекло и скрытый под ступенями свет. Светодиодная лента подчёркивает ритм лестницы и создаёт отдельную световую линию для каждой ступени."
+  ],
+  "Sellise tulemuse juures loevad profiili asukoht, kaabelduse planeerimine ja valguse ühtlus. Kõige sujuvamalt sünnib lahendus koos trepi või siseviimistluse kavandamisega.": [
+    "Achieving this result depends on the profile location, wiring plan and light uniformity. The solution comes together most smoothly when planned alongside the staircase or interior finishes.",
+    "Для такого результата важны расположение профиля, планирование проводки и равномерность света. Проще всего продумать решение вместе с проектом лестницы или внутренней отделки."
+  ],
+  "Vaata töö kirjeldust": [
+    "View the project description",
+    "Посмотреть описание работы"
+  ],
+  "05 — SINU PROJEKT": [
+    "05 — YOUR PROJECT",
+    "05 — ВАШ ПРОЕКТ"
+  ],
+  "Lahendus sinu ruumile.": [
+    "A solution for your space.",
+    "Решение для вашего пространства."
+  ],
+  "Hind sinu plaanile.": [
+    "A price for your plan.",
+    "Цена для вашего проекта."
+  ],
+  "Maksumus sõltub valgusjoone pikkusest, profiilidest, juhtimisest ja kaablite ligipääsust. Esmase hinnangu jaoks saada fotod, ligikaudsed mõõdud ja oma idee.": [
+    "The cost depends on the length of the light line, profiles, controls and access to cables. For an initial estimate, send photos, approximate dimensions and your idea.",
+    "Стоимость зависит от длины световой линии, профилей, управления и доступа к кабелям. Для предварительной оценки пришлите фотографии, примерные размеры и свою идею."
+  ],
+  "Tutvu hinnakirjaga": [
+    "View the price list",
+    "Посмотреть прайс-лист"
+  ],
+  "Planeeri valgus enne viimistlust.": [
+    "Plan the lighting before finishing work.",
+    "Спланируйте свет до отделочных работ."
+  ],
+  "Kaabeldust on lihtsam peita enne kipsi-, paneeli- ja maalritööde lõppu. Juba valmis ruumi puhul vaatame koos üle sobivad võimalused.": [
+    "Wiring is easier to conceal before plasterboard, panelling and painting work is completed. For a finished room, we will review the suitable options together.",
+    "Проводку легче скрыть до завершения гипсокартонных, панельных и малярных работ. В уже готовом помещении вместе рассмотрим подходящие варианты."
+  ],
+  "Kipsitööd ↗": [
+    "Plasterboard work ↗",
+    "Гипсокартонные работы ↗"
+  ],
+  "Seinapaneelid ↗": [
+    "Wall panels ↗",
+    "Стеновые панели ↗"
+  ],
+  "Maalritööd ↗": [
+    "Painting work ↗",
+    "Малярные работы ↗"
+  ],
+  "LED-riba, toiteploki ja valguse kvaliteedi valik": [
+    "Choosing an LED strip, power supply and light quality",
+    "Выбор светодиодной ленты, блока питания и качества света"
+  ],
+  "Värvustemperatuur ja värviedastus": [
+    "Colour temperature and colour rendering",
+    "Цветовая температура и цветопередача"
+  ],
+  "Soe valgus sobib sageli puhkealasse, neutraalsem valgus tööpinnale. Valik tehakse koos ruumi muu valgusega, et toonid ei läheks vastuollu. Hea värviedastusega, näiteks CRI 90 või kõrgem LED aitab materjalide toone loomulikumalt näidata; proovime lahendust enne lõplikku paigaldust.": [
+    "Warm light often suits relaxation areas, while more neutral light suits work surfaces. The choice is made alongside the room's other lighting so that colour temperatures do not clash. LEDs with good colour rendering, for example CRI 90 or higher, help show material colours more naturally; we test the solution before final installation.",
+    "Тёплый свет часто подходит для зоны отдыха, а более нейтральный — для рабочей поверхности. Выбор согласуется с остальным освещением помещения, чтобы оттенки не конфликтовали. LED с хорошей цветопередачей, например CRI 90 или выше, помогают естественнее передать цвета материалов; перед окончательным монтажом мы проверяем решение."
+  ],
+  "Profiil, hajuti ja võimsus": [
+    "Profile, diffuser and power",
+    "Профиль, рассеиватель и мощность"
+  ],
+  "Alumiiniumprofiil aitab soojust ära juhtida ja hajuti valguspunkte pehmendada. Punktivaba joon sõltub LED-ide tihedusest, profiili sügavusest ning hajutist. Toiteplokk dimensioneeritakse riba koguvõimsuse ja tootja varu järgi; pikad lõigud võivad vajada mitmest kohast toidet.": [
+    "An aluminium profile helps dissipate heat, and a diffuser softens the individual light points. A continuous, dot-free line depends on LED density, profile depth and the diffuser. The power supply is sized according to the strip's total power and the reserve specified by the manufacturer; long runs may need power feeds at several points.",
+    "Алюминиевый профиль помогает отводить тепло, а рассеиватель смягчает отдельные световые точки. Сплошная линия без видимых точек зависит от плотности светодиодов, глубины профиля и рассеивателя. Блок питания подбирается по общей мощности ленты и запасу, указанному производителем; длинным участкам может потребоваться питание из нескольких точек."
+  ],
+  "Niiskus ja hooldatavus": [
+    "Moisture and serviceability",
+    "Влажность и доступность для обслуживания"
+  ],
+  "IP-klass valitakse asukoha ja niiskuskoormuse järgi. Vannitoa elektripaigaldise tsoonid ning ühendused vajavad elektriku hinnangut; veekindlam riba ei muuda suvalist toiteploki asukohta sobivaks. Toiteplokk, juhtseade ja ühendused peavad jääma hooldatavaks ning hämardi olema süsteemiga ühilduv.": [
+    "The IP rating is chosen according to the location and moisture exposure. Bathroom electrical zones and connections require an electrician's assessment; a more waterproof strip does not make any power supply location suitable. The power supply, controller and connections must remain serviceable, and the dimmer must be compatible with the system.",
+    "Класс IP выбирается по месту установки и воздействию влаги. Зоны электромонтажа в ванной и подключения требуют оценки электрика; более влагозащищённая лента не делает любое место для блока питания подходящим. Блок питания, контроллер и соединения должны оставаться доступными для обслуживания, а диммер — совместимым с системой."
+  ],
+  "Planeerimiseks:": [
+    "For planning:",
+    "Для планирования:"
+  ],
+  "Saada valgustatava lõigu pikkus, ruumi fotod ning soovitud juhtimisviis. Täpsusta, kas vaja on töövalgust, kaudvalgust või dekoratiivset joont ja kas olemasolev elektritoide sobib.": [
+    "Send the length of the area to be illuminated, photos of the room and your preferred control method. Specify whether you need task lighting, indirect lighting or a decorative line, and whether the existing power supply is suitable.",
+    "Пришлите длину освещаемого участка, фотографии помещения и желаемый способ управления. Уточните, нужно ли рабочее освещение, отражённая подсветка или декоративная линия и подходит ли существующее электропитание."
+  ],
+  "06 — HEA TEADA": [
+    "06 — GOOD TO KNOW",
+    "06 — ПОЛЕЗНО ЗНАТЬ"
+  ],
+  "Enne kui": [
+    "Before the",
+    "Прежде чем"
+  ],
+  "valgus süttib.": [
+    "lights come on.",
+    "зажжётся свет."
+  ],
+  "Vastused küsimustele, mis aitavad sul oma valguslahendust planeerida.": [
+    "Answers to questions that help you plan your lighting solution.",
+    "Ответы на вопросы, которые помогут спланировать ваше освещение."
+  ],
+  "SINU IDEE. MEIE TEOSTUS.": [
+    "YOUR IDEA. OUR CRAFT.",
+    "ВАША ИДЕЯ. НАШЕ ИСПОЛНЕНИЕ."
+  ],
+  "Toome sinu kodu": [
+    "Let's show your home",
+    "Покажем ваш дом"
+  ],
+  "heasse valgusesse.": [
+    "in its best light.",
+    "в лучшем свете."
+  ],
+  "Kirjelda oma mõtet. Leiame koos sobiva lahenduse.": [
+    "Describe your idea. Together, we will find the right solution.",
+    "Опишите свою идею. Вместе найдём подходящее решение."
+  ],
+  "Küsi personaalset pakkumist": [
+    "Request a personalised quote",
+    "Запросить индивидуальное предложение"
+  ],
+  "RK Meistrid OÜ · Tallinn ja Harjumaa": [
+    "RK Meistrid OÜ · Tallinn and Harju County",
+    "RK Meistrid OÜ · Таллинн и Харьюмаа"
+  ],
+  "Ava hinnakalkulaator": [
+    "Open the price calculator",
+    "Открыть калькулятор стоимости"
+  ]
+}

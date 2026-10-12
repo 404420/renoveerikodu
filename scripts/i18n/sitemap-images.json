@@ -1,0 +1,50 @@
+{
+  "/vannitoa-plaatimine-tallinn": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/tallinn-vannitoa-plaatimine.jpeg",
+      "caption": "Vannitoa plaatimine Tallinnas märgruumis - Renoveeri Kodu tehtud töö."
+    }
+  ],
+  "/parketi-takete-parandus-kuumvahaga": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/parketi-kuumvaha-hero-jootekolviga.optimized.webp",
+      "caption": "Parketi täkke täitmine sulatatud kuumvahaga."
+    },
+    {
+      "loc": "https://www.renoveerikodu.ee/images/parketi-kuumvaha-paranduse-naidispilt.optimized.webp",
+      "caption": "Parketi täkke parandamine kuumvahaga neljas etapis."
+    },
+    {
+      "loc": "https://www.renoveerikodu.ee/images/parketi-lihvimine-lintmasinaga.optimized.webp",
+      "caption": "Parketi lihvimine lintlihvmasina ja tolmueemaldusega."
+    },
+    {
+      "loc": "https://www.renoveerikodu.ee/images/parketi-servade-lihvimine.optimized.webp",
+      "caption": "Kalasabaparketi servade lihvimine seina ääres."
+    }
+  ],
+  "/fassaadi-varvimine-tallinn-eramu": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/puitfassaadi-varvimine-tallinn.png",
+      "caption": "Puitfassaadi värvimine Tallinnas eramul - Renoveeri Kodu tehtud töö."
+    }
+  ],
+  "/katuse-pesu-ja-hooldus-tallinn": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/katuse-pesu-tallinn-renoveerikodu.jpeg",
+      "caption": "Katuse pesu ja hooldus Tallinnas - Renoveeri Kodu tehtud töö."
+    }
+  ],
+  "/led-valgustuse-paigaldus-tallinn": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/LED-Lahendused-Tallinn-Renoveeri-kodu.jpg",
+      "caption": "LED valgustuse paigaldus Tallinnas - Renoveeri Kodu tehtud töö."
+    }
+  ],
+  "/kvaliteedikontroll": [
+    {
+      "loc": "https://www.renoveerikodu.ee/images/kvaliteedikontroll-pais.webp",
+      "caption": "Ehitus- ja viimistlustööde kvaliteedikontroll"
+    }
+  ]
+}

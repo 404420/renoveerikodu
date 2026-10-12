@@ -3,10 +3,23 @@ declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');
 
+require_once __DIR__ . '/contact-i18n.php';
 require_once __DIR__ . '/../admin/_bootstrap.php';
 
 function newsletter_response(bool $success, string $message, int $status = 200, array $extra = []): void
 {
+    $translations = [
+        'Lubatud on ainult POST paring.' => ['Only POST requests are allowed.', 'Разрешены только POST-запросы.'],
+        'Palun sisesta korrektne email.' => ['Please enter a valid email address.', 'Введите корректный адрес электронной почты.'],
+        'Uudiskirjaga liitumiseks on vaja noustuda uudiskirjade saamisega.' => ['Please consent to receiving the newsletter before subscribing.', 'Для подписки нужно согласиться на получение рассылки.'],
+        'Tundmatu tegevus.' => ['Unknown action.', 'Неизвестное действие.'],
+        'Liitusite Renoveeri Kodu uudispakkumistega!' => ['You have subscribed to Renoveeri Kodu updates!', 'Вы подписались на новости и предложения Renoveeri Kodu!'],
+        'Oled uudiskirjast loobunud.' => ['You have unsubscribed from the newsletter.', 'Вы отписались от рассылки.'],
+    ];
+    $language = rk_contact_language($_POST['language'] ?? 'et');
+    if ($language !== 'et' && isset($translations[$message])) {
+        $message = $translations[$message][$language === 'en' ? 0 : 1];
+    }
     http_response_code($status);
     echo json_encode(array_merge([
         'success' => $success,

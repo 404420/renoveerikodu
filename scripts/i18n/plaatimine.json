@@ -1,0 +1,554 @@
+{
+  "Plaatimine Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "Tiling in Tallinn and Harju County | Renoveeri Kodu",
+    "Укладка плитки в Таллинне и Харьюмаа | Renoveeri Kodu"
+  ],
+  "Plaatimine Tallinnas ja Harjumaal. Pakume kvaliteetset põranda- ja seinaplaatimist vannitubades, köökides ja muudel pindadel. Küsi hinnapakkumist.": [
+    "Tiling in Tallinn and Harju County. We provide quality floor and wall tiling in bathrooms, kitchens and other areas. Request a quote.",
+    "Укладка плитки в Таллинне и Харьюмаа. Качественно облицовываем стены и полы в ванных комнатах, кухнях и других помещениях. Запросите предложение."
+  ],
+  "Plaatimine Tallinnas ja Harjumaal": [
+    "Tiling in Tallinn and Harju County",
+    "Укладка плитки в Таллинне и Харьюмаа"
+  ],
+  "Plaatimistööd vannitubades, köökides ja teistes ruumides Tallinnas ja Harjumaal.": [
+    "Tiling in bathrooms, kitchens and other rooms in Tallinn and Harju County.",
+    "Укладка плитки в ванных комнатах, кухнях и других помещениях в Таллинне и Харьюмаа."
+  ],
+  "Kui palju maksab plaatimine?": [
+    "How much does tiling cost?",
+    "Сколько стоит укладка плитки?"
+  ],
+  "Hind sõltub aluspinna seisukorrast, plaatide suurusest, lõigete arvust, hüdroisolatsioonist ja töömahust. Täpse hinna saame anda pärast objekti või fotode ülevaatust.": [
+    "The price depends on the condition of the substrate, tile size, number of cuts, waterproofing and scope of work. We can give an exact price after reviewing the property or photos.",
+    "Цена зависит от состояния основания, размера плитки, количества подрезок, гидроизоляции и объёма работ. Точную стоимость мы сможем назвать после осмотра объекта или фотографий."
+  ],
+  "Kas teete ka hüdroisolatsiooni?": [
+    "Do you also provide waterproofing?",
+    "Вы также выполняете гидроизоляцию?"
+  ],
+  "Jah, märgades ruumides teeme vajadusel hüdroisolatsiooni ja kontrollime läbiviigud enne plaatimist.": [
+    "Yes. In wet rooms, we install waterproofing where needed and check penetrations before tiling.",
+    "Да, в мокрых помещениях мы при необходимости выполняем гидроизоляцию и проверяем проходы коммуникаций перед укладкой плитки."
+  ],
+  "Kas paigaldate suuri plaate?": [
+    "Do you install large tiles?",
+    "Вы укладываете крупноформатную плитку?"
+  ],
+  "Jah, suureformaadiliste plaatide puhul arvestame aluspinna tasasust, tõstmist, lõikeid ja sobivat paigaldussegu.": [
+    "Yes. For large-format tiles, we consider substrate flatness, lifting, cuts and the appropriate tile adhesive.",
+    "Да, при работе с крупноформатной плиткой мы учитываем ровность основания, подъём плит, подрезки и подходящий плиточный клей."
+  ],
+  "Millistes piirkondades töötate?": [
+    "Which areas do you work in?",
+    "В каких регионах вы работаете?"
+  ],
+  "Peamine tööpiirkond on Tallinn ja Harjumaa, kuid suuremate tööde puhul vaatame objektid üle ka teistes piirkondades.": [
+    "Our main service area is Tallinn and Harju County, but we also inspect properties in other areas for larger projects.",
+    "Наш основной регион работы — Таллинн и Харьюмаа, но для крупных работ мы также рассматриваем объекты в других регионах."
+  ],
+  "Kas vana plaadi peale võib uue plaadi panna?": [
+    "Can new tiles be laid over old tiles?",
+    "Можно ли укладывать новую плитку поверх старой?"
+  ],
+  "Mõnikord on see tehniliselt võimalik, kuid ainult siis, kui vana plaat on tugevalt kinni, pind on sirge ja niiskuskaitse lahendus on kontrollitud. Märgruumis eelistame enamasti vana pinna avamist, sest peidetud kahjustused tuleb enne uut viimistlust välistada.": [
+    "Sometimes this is technically possible, but only if the old tiles are firmly attached, the surface is level and the moisture protection has been checked. In wet rooms, we generally prefer to remove the old finish, since hidden damage must be ruled out before applying a new finish.",
+    "Иногда это технически возможно, но только если старая плитка прочно держится, поверхность ровная, а защита от влаги проверена. В мокрых помещениях мы обычно предпочитаем вскрыть старую поверхность, чтобы исключить скрытые повреждения до новой отделки."
+  ],
+  "Kas plaatimistöö sisaldab vuukimist ja silikoonimist?": [
+    "Does tiling include grouting and silicone sealing?",
+    "Включает ли укладка плитки затирку и герметизацию силиконом?"
+  ],
+  "Tavaliselt jah. Pakkumises täpsustame, kas hind sisaldab plaatimist, vuukimist, silikoonühendusi, hüdroisolatsiooni ja aluspinna ettevalmistust või ainult ühte tööetappi.": [
+    "Usually yes. The quote specifies whether the price includes tiling, grouting, silicone joints, waterproofing and substrate preparation, or only one stage of work.",
+    "Обычно да. В предложении мы уточняем, включает ли цена укладку плитки, затирку швов, силиконовые соединения, гидроизоляцию и подготовку основания или только один этап работ."
+  ],
+  "Millal saab plaaditud pinda kasutama hakata?": [
+    "When can I start using the tiled surface?",
+    "Когда можно начать пользоваться облицованной поверхностью?"
+  ],
+  "See sõltub segust, vuugist, ruumi niiskusest ja tootja kuivamisajast. Põrandale astumise ja duši kasutamise aeg ei ole alati sama, seetõttu anname üleandmisel konkreetse juhise.": [
+    "This depends on the adhesive, grout, room humidity and the manufacturer's drying times. The time before walking on the floor and using the shower is not always the same, so we provide specific instructions at handover.",
+    "Это зависит от клея, затирки, влажности помещения и времени высыхания, указанного производителем. Срок, когда можно ходить по полу, и срок, когда можно пользоваться душем, не всегда совпадают, поэтому при сдаче работ мы даём конкретные указания."
+  ],
+  "Kas klient peab plaadid ise ostma?": [
+    "Does the customer need to buy the tiles?",
+    "Должен ли клиент сам покупать плитку?"
+  ],
+  "Klient võib plaadid ise valida ja osta, kuid saame aidata koguse, varu ja tehnilise sobivuse hindamisel. Suureformaadilise või reljeefse plaadi puhul tasub sobivus enne ostu üle vaadata.": [
+    "Customers can choose and buy the tiles themselves, but we can help assess the quantity, allowance and technical suitability. For large-format or textured tiles, suitability should be checked before purchase.",
+    "Клиент может самостоятельно выбрать и купить плитку, но мы можем помочь оценить необходимое количество, запас и техническую пригодность. Для крупноформатной или рельефной плитки стоит проверить пригодность до покупки."
+  ],
+  "Kas renntrapp sobib igasse vannituppa?": [
+    "Is a linear drain suitable for every bathroom?",
+    "Подходит ли линейный трап для любой ванной комнаты?"
+  ],
+  "Mitte alati. Kontrollida tuleb põranda ehituskõrgust, kanalisatsiooni asukohta, äravooluvõimet ning hüdroisolatsiooniga ühendamise võimalust. Trapi mudel ja asukoht valitakse enne kallete tegemist.": [
+    "Not always. We need to check the floor build-up height, sewer position, drainage capacity and connection to the waterproofing. The drain model and position are chosen before forming the falls.",
+    "Не всегда. Нужно проверить высоту конструкции пола, расположение канализации, пропускную способность и возможность соединения с гидроизоляцией. Модель и расположение трапа выбирают до формирования уклонов."
+  ],
+  "Kas krunt või niiskustõke asendab hüdroisolatsiooni?": [
+    "Does primer or a moisture barrier replace waterproofing?",
+    "Заменяет ли грунтовка или влагозащитный состав гидроизоляцию?"
+  ],
+  "Krunt ei asenda hüdroisolatsiooni. Märgruumis on vaja plaatide alla sobivat veetõkkesüsteemi koos nurkade, toruläbiviikude ja trapi tihendustega. Üldnimetusega niiskustõkke sobivus kontrollitakse tootejuhendist.": [
+    "Primer does not replace waterproofing. Wet rooms require a suitable waterproofing system beneath the tiles, including seals at corners, pipe penetrations and drains. The suitability of a product described simply as a moisture barrier must be checked in its instructions.",
+    "Грунтовка не заменяет гидроизоляцию. В мокром помещении под плиткой нужна подходящая гидроизоляционная система с герметизацией углов, проходов труб и трапа. Пригодность состава с общим названием «влагозащита» проверяется по инструкции продукта."
+  ],
+  "Millal tuleb valida seinasisene dušisegisti?": [
+    "When should a concealed shower mixer be chosen?",
+    "Когда нужно выбирать скрытый душевой смеситель?"
+  ],
+  "Seinasisene segisti tuleb valida enne seina sulgemist ja plaatimist, sest paigalduskorpus vajab kindlat sügavust, sobivaid toruühendusi ning tihenduslahendust. Nähtav viimistluskomplekt peab sobima valitud korpusega.": [
+    "A concealed mixer must be chosen before closing and tiling the wall, as its installation body requires a specific depth, suitable pipe connections and a sealing solution. The visible trim kit must fit the selected body.",
+    "Скрытый смеситель нужно выбрать до зашивки стены и укладки плитки, поскольку монтажный корпус требует определённой глубины, подходящих трубных соединений и решения для герметизации. Видимый комплект отделки должен подходить к выбранному корпусу."
+  ],
+  "Kas suure plaadiga saab teha dušipõranda kalded?": [
+    "Can shower floor falls be formed with large tiles?",
+    "Можно ли выполнить уклоны душевого пола с крупной плиткой?"
+  ],
+  "Jah, kui plaadijaotus ja kaldepinnad seda võimaldavad. Punkttrapi ümber võivad suured plaadid vajada kaldepindade piiril lõikeid. Seinaäärse renntrapi korral võib sobida ühe suunaga kalle. Lahendus otsustatakse enne plaatide ostmist.": [
+    "Yes, if the tile layout and sloping planes allow it. Around a point drain, large tiles may need cuts at the boundaries between slopes. A linear drain beside the wall may allow a single-direction fall. The solution is decided before buying the tiles.",
+    "Да, если это позволяют раскладка плитки и плоскости уклонов. Вокруг точечного трапа крупной плитке могут понадобиться подрезки по границам плоскостей уклона. Для линейного трапа у стены может подойти уклон в одном направлении. Решение принимается до покупки плитки."
+  ],
+  "Mida hinnapäringule lisada?": [
+    "What should I include in a quote request?",
+    "Что добавить в запрос стоимости?"
+  ],
+  "Lisa fotod, seina- ja põrandapindade mõõdud, plaadi mõõt ja materjal, objekti asukoht ning soovitud tähtaeg. Märgi, kas vaja on vana viimistluse eemaldamist, torutöid, trapi vahetust, kallete valamist, hüdroisolatsiooni või seinasisest segistit.": [
+    "Include photos, wall and floor dimensions, tile size and material, the property location and your preferred deadline. State whether you need removal of the old finish, plumbing, drain replacement, screeding to falls, waterproofing or a concealed mixer.",
+    "Добавьте фотографии, размеры стен и пола, размер и материал плитки, местоположение объекта и желаемый срок. Укажите, нужны ли удаление старой отделки, сантехнические работы, замена трапа, формирование уклонов, гидроизоляция или скрытый смеситель."
+  ],
+  "Vannitubade, köökide, esikute ja teiste pindade täpne plaatimistöö.": [
+    "Precise tiling in bathrooms, kitchens, hallways and other areas.",
+    "Аккуратная укладка плитки в ванных комнатах, кухнях, прихожих и на других поверхностях."
+  ],
+  "Heledate beežide plaatidega dušinurk, klaassein ja seinaäärne renntrapp": [
+    "Shower area with light beige tiles, a glass screen and a linear drain beside the wall",
+    "Душевая зона со светло-бежевой плиткой, стеклянной перегородкой и линейным трапом у стены"
+  ],
+  "Plaatimistööde planeerimisel kontrollime aluspinna tasasust, märgruumis kaldeid ja hüdroisolatsiooni ning arvestame plaadi mõõdu ja vuugijaotusega. Nii saab töömahu ja materjalikulu enne alustamist täpsemalt hinnata.": [
+    "When planning tiling, we check substrate flatness, falls and waterproofing in wet rooms, and consider tile size and grout joint layout. This helps us estimate the scope of work and material consumption more accurately before starting.",
+    "При планировании укладки плитки мы проверяем ровность основания, уклоны и гидроизоляцию в мокрых помещениях, учитываем размер плитки и расположение швов. Это позволяет точнее оценить объём работ и расход материалов до начала."
+  ],
+  "Plaatimistööd algavad aluspinna kontrollist, sest ilus tulemus sõltub sirgest, tugevast ja niiskuse eest kaitstud pinnast. Plaadime Tallinnas ja Harjumaal vannitube, kööke, esikuid, tehnoruume ning teisi pindu, kus on oluline vastupidav ja korrektne viimistlus.": [
+    "Tiling begins with checking the substrate, because an attractive result depends on a flat, strong surface protected from moisture. We tile bathrooms, kitchens, hallways, utility rooms and other areas in Tallinn and Harju County where a durable, well-executed finish matters.",
+    "Укладка плитки начинается с проверки основания, поскольку красивый результат зависит от ровной, прочной и защищённой от влаги поверхности. Мы облицовываем ванные комнаты, кухни, прихожие, технические помещения и другие поверхности в Таллинне и Харьюмаа, где важна долговечная и аккуратная отделка."
+  ],
+  "Aitame valida sobiva tööjärjekorra, arvestame plaatide mõõtu, vuugi laiust, kaldeid, äravoolukohti ja ruumi kasutuskoormust. Eesmärk on, et pind näeks hea välja ka aastate pärast, mitte ainult töö üleandmise hetkel.": [
+    "We help choose the right sequence of work, taking tile size, grout width, falls, drainage points and the room's usage into account. Our aim is for the surface to look good years later, as well as at handover.",
+    "Мы помогаем выбрать правильную последовательность работ, учитывая размер плитки, ширину шва, уклоны, расположение сливов и нагрузку при использовании помещения. Наша цель — чтобы поверхность выглядела хорошо и спустя годы, а не только в момент сдачи работ."
+  ],
+  "vannitubade, dušinurkade ja WC-ruumide plaatimine": [
+    "tiling bathrooms, shower areas and toilets",
+    "укладка плитки в ванных комнатах, душевых зонах и санузлах"
+  ],
+  "köögi tagaseinte, esikute ja põrandapindade plaatimine": [
+    "tiling kitchen splashbacks, hallways and floors",
+    "облицовка кухонных фартуков, прихожих и полов"
+  ],
+  "hüdroisolatsiooni, tasanduse ja plaatimissegu valik": [
+    "selection of waterproofing, levelling materials and tile adhesive",
+    "выбор гидроизоляции, выравнивающих материалов и плиточного клея"
+  ],
+  "vuukimine, silikoonimine ja servade viimistlus": [
+    "grouting, silicone sealing and edge finishing",
+    "затирка швов, герметизация силиконом и отделка краёв"
+  ],
+  "Tellija otsib tavaliselt plaatijat siis, kui vannituba või köök vajab terviklikku renoveerimist, vana plaat on lahti tulnud või uus projekt vajab korrektset märgruumi lahendust. Hea plaatimistöö vähendab hilisemaid niiskus- ja pragunemisriske.": [
+    "Customers usually look for a tiler when a bathroom or kitchen needs complete renovation, old tiles have come loose or a new project needs a properly executed wet room. Good tiling reduces the risk of moisture damage and cracking later on.",
+    "Обычно заказчик ищет плиточника, когда ванной комнате или кухне нужен комплексный ремонт, старая плитка отслоилась или новый проект требует правильного устройства мокрой зоны. Качественная укладка плитки снижает риски последующего воздействия влаги и растрескивания."
+  ],
+  "Aluspinna kontroll": [
+    "Substrate inspection",
+    "Проверка основания"
+  ],
+  "Kontrollime niiskust, tugevust ja tasasust, eemaldame lahtised kihid ning parandame ebatasasused. Märgades ruumides planeerime hüdroisolatsiooni ja läbiviigud enne plaatide paigaldust.": [
+    "We check moisture, strength and flatness, remove loose layers and correct uneven areas. In wet rooms, we plan waterproofing and penetrations before installing the tiles.",
+    "Мы проверяем влажность, прочность и ровность, удаляем непрочные слои и исправляем неровности. В мокрых помещениях планируем гидроизоляцию и проходы коммуникаций до укладки плитки."
+  ],
+  "Paigutuse planeerimine": [
+    "Layout planning",
+    "Планирование раскладки"
+  ],
+  "Märgime välja lõiked, nähtavad servad ja sümmeetria, et lõpptulemus ei jääks juhuslik. Suureformaadiliste plaatide puhul pöörame erilist tähelepanu tasapinnale ja liimkammi valikule.": [
+    "We mark cuts, visible edges and symmetry so the result is deliberate. For large-format tiles, we pay particular attention to surface flatness and the choice of notched trowel.",
+    "Мы размечаем подрезки, видимые края и симметрию, чтобы результат не был случайным. Для крупноформатной плитки уделяем особое внимание ровности плоскости и выбору зубчатого шпателя."
+  ],
+  "Viimistlus ja kontroll": [
+    "Finishing and inspection",
+    "Отделка и проверка"
+  ],
+  "Pärast plaatimist vuugime, puhastame pinnad ja viime üle servad, nurgad ning silikoonühendused. Töö antakse üle koos praktiliste hooldussoovitustega.": [
+    "After tiling, we grout, clean the surfaces and check edges, corners and silicone joints. We hand over the work with practical care recommendations.",
+    "После укладки плитки мы затираем швы, очищаем поверхности и проверяем края, углы и силиконовые соединения. Работы сдаём с практическими рекомендациями по уходу."
+  ],
+  "Plaatimistööde hinnapakkumine": [
+    "Tiling quote",
+    "Предложение на укладку плитки"
+  ],
+  "Plaatimistöö pakkumise koostamisel vaatame lisaks ruutmeetritele ka lõigete arvu, aluspinna seisukorda, hüdroisolatsiooni vajadust, plaatide mõõtu ja ruumi kuju. Vannitoa puhul mõjutavad töömahtu äravoolud, kallete tegemine, dušinurga lahendus ja läbiviigud. Köögi tagaseina puhul on tähtsad pistikupesad, töötasapinna kõrgus ja nähtavate servade viimistlus.": [
+    "When preparing a tiling quote, we consider not only square metres but also the number of cuts, substrate condition, waterproofing needs, tile size and room shape. In bathrooms, drains, forming falls, the shower layout and penetrations affect the scope of work. For kitchen splashbacks, sockets, worktop height and visible edge finishes matter.",
+    "При составлении предложения на укладку плитки мы учитываем не только квадратные метры, но и количество подрезок, состояние основания, необходимость гидроизоляции, размер плитки и форму помещения. В ванной комнате на объём работ влияют сливы, формирование уклонов, устройство душевой зоны и проходы коммуникаций. Для кухонного фартука важны розетки, высота столешницы и отделка видимых краёв."
+  ],
+  "Kvaliteedikontrollis vaatame üle vuukide ühtluse, plaatide tasapinna, nurgad, silikoonühendused ja pinnapuhastuse. Kui plaatimistöö on osa suuremast remondist, seome selle kipsitööde, maalritööde ja sanitaartehniliste tööde järjekorraga, et värskelt tehtud pindu ei peaks hiljem ümber tegema.": [
+    "Our quality inspection covers consistent grout joints, tile flatness, corners, silicone joints and surface cleaning. If tiling is part of a larger renovation, we coordinate it with drywall, painting and plumbing so that newly finished surfaces do not need to be reworked later.",
+    "При контроле качества мы проверяем равномерность швов, плоскость плитки, углы, силиконовые соединения и чистоту поверхности. Если укладка плитки входит в более крупный ремонт, мы согласуем её с монтажом гипсокартона, малярными и сантехническими работами, чтобы впоследствии не пришлось переделывать новые поверхности."
+  ],
+  "Plaatimise puhul on Tallinnas ja Harjumaal sagedased kortermajade vannitoad, kus ruum on väike, läbiviike on palju ja tööjärjekord peab olema täpne. Päringu hindamisel vaatame alati, milline on objekti ligipääs, kas töö toimub elatud ruumis, millised pinnad vajavad kaitsmist ja milline on mõistlik tööjärjekord. See aitab vältida olukorda, kus üks etapp tuleb hiljem uuesti avada või parandada.": [
+    "In Tallinn and Harju County, tiling often involves apartment-building bathrooms, where space is limited, there are many penetrations and the sequence of work must be precise. When assessing an enquiry, we always consider access, whether the room is occupied, which surfaces need protection and a sensible sequence of work. This helps avoid having to reopen or repair a completed stage later.",
+    "В Таллинне и Харьюмаа плиточные работы часто выполняются в ванных комнатах многоквартирных домов, где мало места, много проходов коммуникаций и необходима точная последовательность работ. При оценке запроса мы всегда учитываем доступ к объекту, используется ли помещение, какие поверхности нужно защитить и в каком порядке разумно работать. Это помогает избежать повторного вскрытия или исправления уже выполненного этапа."
+  ],
+  "Plaatimistööde hinnad": [
+    "Tiling prices",
+    "Цены на укладку плитки"
+  ],
+  "Seinte ja põranda plaatimise töö hind algab hinnakirja järgi 49 €/m²; koos materjaliga algab hind 59 €/m². Materjalide täpne koosseis ja plaatide maksumuse arvestus lepitakse pakkumises eraldi kokku. Aluspinna tasandus, kallete valamine, hüdroisolatsioon, lammutus ja sanitaartehnika täpsustatakse eraldi tööetappidena. Lõplik hind sõltub aluspinna seisukorrast, töömahust ja objekti eripärast. Vaata": [
+    "According to our price list, labour for wall and floor tiling starts at 49 €/m²; including materials, prices start at 59 €/m². The exact materials included and how tile costs are accounted for are agreed separately in the quote. Substrate levelling, screeding to falls, waterproofing, demolition and plumbing are specified as separate stages of work. The final price depends on the substrate condition, scope of work and property requirements. See",
+    "Согласно прайс-листу стоимость работ по облицовке стен и пола начинается от 49 €/m²; с материалами — от 59 €/m². Точный состав материалов и порядок учёта стоимости плитки отдельно согласуются в предложении. Выравнивание основания, формирование уклонов, гидроизоляция, демонтаж и сантехнические работы уточняются как отдельные этапы. Итоговая цена зависит от состояния основания, объёма работ и особенностей объекта. Посмотрите"
+  ],
+  "kehtivat hinnakirja": [
+    "our current price list",
+    "актуальный прайс-лист"
+  ],
+  "Praktiline tööinfo plaatimise kohta": [
+    "Practical information about tiling",
+    "Практическая информация об укладке плитки"
+  ],
+  "Plaatimise kvaliteet sõltub aluspinnast, niiskuskaitsest, plaadi tüübist, segust ja vuugimaterjalist. Märgruumis kasutame lahendust, kus hüdroisolatsioon, nurgalindid, läbiviikude tihendused ja sobiv plaatimissegu töötavad koos. Suureformaadilise plaadi puhul peab aluspind olema eriti tasane, sest väike kõverus jääb lõpptulemuses kiiresti näha.": [
+    "Tiling quality depends on the substrate, moisture protection, tile type, adhesive and grout. In wet rooms, we use a system in which waterproofing, corner tapes, penetration seals and a suitable tile adhesive work together. Large-format tiles require an especially flat substrate, as even a slight curve quickly becomes visible in the finished surface.",
+    "Качество укладки зависит от основания, защиты от влаги, типа плитки, клея и затирки. В мокрых помещениях мы используем решение, в котором гидроизоляция, угловые ленты, уплотнения проходов коммуникаций и подходящий плиточный клей работают вместе. Для крупноформатной плитки основание должно быть особенно ровным, поскольку даже небольшая кривизна быстро становится заметной в готовой отделке."
+  ],
+  "Enne plaatimist: torutööd ja dušilahenduse planeerimine": [
+    "Before tiling: plumbing and shower layout planning",
+    "До укладки плитки: сантехнические работы и планирование душевой зоны"
+  ],
+  "Enne pindade sulgemist lepime kokku duši, valamu, WC ja pesumasina asukohad ning vee- ja kanalisatsiooniühendused. Torustiku ühendused kontrollitakse ja vajalikud katsed tehakse enne nende katmist. Trapi kõrgus peab arvestama kogu põrandakihti: aluspinda, tasandust, hüdroisolatsiooni, plaatimissegu ja plaati. Elektrilise põrandakütte ning muu elektritöö korraldus täpsustatakse koos vastava spetsialistiga.": [
+    "Before closing surfaces, we agree the locations of the shower, basin, toilet and washing machine, along with water and sewer connections. Pipe connections are checked and the necessary tests carried out before covering them. The drain height must account for the entire floor build-up: substrate, levelling layer, waterproofing, tile adhesive and tile. Electric underfloor heating and other electrical work are coordinated with the appropriate specialist.",
+    "До закрытия поверхностей мы согласуем расположение душа, раковины, унитаза и стиральной машины, а также подключения водоснабжения и канализации. Соединения труб проверяются, а необходимые испытания выполняются до их закрытия. Высота трапа должна учитывать всю конструкцию пола: основание, выравнивающий слой, гидроизоляцию, плиточный клей и плитку. Устройство электрического тёплого пола и другие электромонтажные работы уточняются с соответствующим специалистом."
+  ],
+  "Pinnapealne dušisegisti": [
+    "An exposed shower mixer",
+    "Наружный душевой смеситель"
+  ],
+  "jääb seina ette ning selle ühendused on lihtsamini ligipääsetavad.": [
+    "sits in front of the wall, making its connections easier to access.",
+    "располагается перед стеной, поэтому доступ к его соединениям проще."
+  ],
+  "Seinasisene ehk süvistatav dušisegisti": [
+    "A concealed or recessed shower mixer",
+    "Скрытый, или встраиваемый, душевой смеситель"
+  ],
+  "annab puhta ja kaasaegse ilme, kuid paigalduskorpus, torustik ja tihendussõlm tuleb valida enne seina ehitamist. Planeerime tootja nõutud paigaldussügavuse ja hooldusvõimaluse. Termostaatsegisti, käsiduši ja vihmaduši valik mõjutab veevajadust ning äravool peab suutma selle koguse vastu võtta.": [
+    "creates a clean, modern look, but the installation body, pipework and sealing detail must be selected before building the wall. We plan the installation depth and maintenance access required by the manufacturer. The choice of thermostatic mixer, hand shower and rain shower affects water demand, and the drain must be able to handle that volume.",
+    "создаёт аккуратный современный вид, но монтажный корпус, трубопровод и узел герметизации нужно выбрать до устройства стены. Мы предусматриваем требуемую производителем глубину монтажа и возможность обслуживания. Выбор термостатического смесителя, ручного и тропического душа влияет на расход воды, а слив должен справляться с этим объёмом."
+  ],
+  "Punkttrapp, renntrapp või seinaäravool?": [
+    "Point drain, linear drain or wall drain?",
+    "Точечный, линейный или пристенный слив?"
+  ],
+  "Trappi ei tasu valida ainult välimuse järgi. Olulised on põranda ehituskõrgus, kanalisatsioonitoru asukoht, äravooluvõime, puhastatavus ning sobivus hüdroisolatsioonisüsteemiga. Trapi korpus kinnitatakse stabiilselt ja ühendus veetõkkega tehakse tootja ettenähtud ääriku, manseti või muu tihenduslahendusega.": [
+    "A drain should not be chosen on appearance alone. Important factors include floor build-up height, sewer pipe position, drainage capacity, ease of cleaning and compatibility with the waterproofing system. The drain body is securely fixed, and its connection to the waterproofing uses the flange, collar or other seal specified by the manufacturer.",
+    "Не стоит выбирать трап только по внешнему виду. Важны высота конструкции пола, расположение канализационной трубы, пропускная способность, удобство очистки и совместимость с системой гидроизоляции. Корпус трапа прочно закрепляется, а соединение с гидроизоляцией выполняется с помощью предусмотренного производителем фланца, манжеты или другого уплотнения."
+  ],
+  "Ava punkttrapp illustratsioon suuremalt": [
+    "Enlarge the point drain illustration",
+    "Увеличить иллюстрацию точечного трапа"
+  ],
+  "Ruudukujuline punkttrapp dušipõranda keskel, kaldepindade piiril diagonaalsed plaadilõiked": [
+    "Square point drain in the centre of a shower floor, with diagonal tile cuts along the boundaries between slopes",
+    "Квадратный точечный трап в центре душевого пола с диагональными подрезками плитки по границам уклонов"
+  ],
+  "Punkttrapp": [
+    "Point drain",
+    "Точечный трап"
+  ],
+  "Punkttrapp – üks äravoolukoht põrandas": [
+    "Point drain – a single drainage point in the floor",
+    "Точечный трап — одна точка слива в полу"
+  ],
+  "Punkttrapp on väike ruudukujuline või ümmargune põrandaäravool. Selle kaudu liigub dušivesi põranda all olevasse kanalisatsioonitorusse. Pildil on dušiala keskel paiknev ruudukujuline trapp.": [
+    "A point drain is a small square or round floor drain. It carries shower water into the sewer pipe below the floor. The picture shows a square drain in the centre of the shower area.",
+    "Точечный трап — это небольшой квадратный или круглый слив в полу. Через него вода из душа поступает в канализационную трубу под полом. На изображении показан квадратный трап в центре душевой зоны."
+  ],
+  "Kui trapp asub keskel, juhitakse vesi sellesse mitmelt kaldepinnalt. Väike põrandaplaat või mosaiik järgib neid lihtsamini; suure plaadi korral planeerime kaldepindade piiril lõiked. Trapi asukoht lepitakse kokku enne põranda valamist.": [
+    "When the drain is in the centre, water flows into it from several sloping planes. Small floor tiles or mosaics follow these more easily; with large tiles, we plan cuts at the boundaries between slopes. The drain position is agreed before casting the floor.",
+    "Если трап находится в центре, вода направляется к нему с нескольких наклонных плоскостей. Мелкая напольная плитка или мозаика легче повторяет эти уклоны; для крупной плитки мы планируем подрезки на границах плоскостей. Расположение трапа согласуется до заливки пола."
+  ],
+  "Ava renntrapp illustratsioon suuremalt": [
+    "Enlarge the linear drain illustration",
+    "Увеличить иллюстрацию линейного трапа"
+  ],
+  "Plaaditava kattega renntrapp dušipõrandas seina ääres": [
+    "Linear drain with a tileable cover in a shower floor beside the wall",
+    "Линейный трап с крышкой под плитку в душевом полу у стены"
+  ],
+  "Renntrapp": [
+    "Linear drain",
+    "Линейный трап"
+  ],
+  "Renntrapp – pikk äravool põrandas": [
+    "Linear drain – a long drain in the floor",
+    "Линейный трап — длинный слив в полу"
+  ],
+  "Renntrapp ehk duširenn kogub vee pikliku ava kaudu. See paikneb põrandas, sageli dušiseina ääres. Pildil on plaaditava kattega renn: pealmine kate viimistletakse põrandaga sarnase plaadiga ja vesi pääseb sisse katte servadest.": [
+    "A linear drain, or shower channel, collects water through an elongated opening. It is installed in the floor, often beside the shower wall. The picture shows a channel with a tileable cover: its top is finished with a tile matching the floor, and water enters around the cover's edges.",
+    "Линейный трап, или душевой лоток, собирает воду через продолговатое отверстие. Он располагается в полу, часто у стены душевой зоны. На изображении показан лоток с крышкой под плитку: верхнюю крышку облицовывают плиткой, похожей на напольную, а вода поступает по краям крышки."
+  ],
+  "Seinaäärne renn võimaldab sageli ühe suunaga kaldepinda ja suuremat põrandaplaati. Renn võib paikneda ka mujal, kuid siis muutub kallete lahendus. Valikul kontrollime paigalduskõrgust, äravooluvõimet ning seda, kuidas rest ja sifoon puhastamiseks eemaldada.": [
+    "A channel beside the wall often allows a single-direction fall and larger floor tiles. The channel can also be placed elsewhere, but this changes the falls. When choosing it, we check installation height, drainage capacity and how the grate and trap can be removed for cleaning.",
+    "Лоток у стены часто позволяет сделать уклон в одном направлении и использовать более крупную напольную плитку. Лоток можно установить и в другом месте, но тогда решение уклонов изменится. При выборе мы проверяем высоту монтажа, пропускную способность и возможность снятия решётки и сифона для очистки."
+  ],
+  "Ava seinaäravool illustratsioon suuremalt": [
+    "Enlarge the wall drain illustration",
+    "Увеличить иллюстрацию пристенного слива"
+  ],
+  "Seina alumisse serva paigaldatud kitsas duši äravooluava": [
+    "Narrow shower drainage opening installed at the bottom of the wall",
+    "Узкое сливное отверстие душа, установленное в нижней части стены"
+  ],
+  "Seinaäravool": [
+    "Wall drain",
+    "Пристенный слив"
+  ],
+  "Seinaäravool – ava seina alumises servas": [
+    "Wall drain – an opening at the bottom of the wall",
+    "Пристенный слив — отверстие в нижней части стены"
+  ],
+  "Seinaäravoolu puhul jääb vee sissevooluava seina alumisse serva, mitte eraldi restina põranda keskele. Põrand on kaldu selle ava poole ning äravoolu korpus ja ühendus paiknevad vastava paigalduslahenduse sees. See ei ole renntrapi paigaldamine seinale.": [
+    "With a wall drain, the water inlet is at the bottom of the wall rather than a separate grate in the middle of the floor. The floor slopes towards this opening, and the drain body and connection sit within the corresponding installation system. This is not a linear floor drain mounted on a wall.",
+    "При пристенном сливе входное отверстие для воды находится в нижней части стены, а не в виде отдельной решётки в середине пола. Пол имеет уклон к этому отверстию, а корпус слива и соединение находятся внутри соответствующего монтажного решения. Это не установка напольного линейного трапа на стену."
+  ],
+  "Lahendus sobib juhul, kui seinakonstruktsioonis ja põranda kõrguses on vajalik paigaldusruum. Seina ja põranda liite hüdroisolatsioon ning hooldusvõimalus planeeritakse enne viimistlust. Olemasolevasse vannituppa sobivust tuleb hinnata objektil.": [
+    "This solution is suitable when there is sufficient installation space in the wall structure and floor build-up. Waterproofing at the wall-to-floor junction and maintenance access are planned before finishing. Suitability for an existing bathroom must be assessed on site.",
+    "Это решение подходит, если в конструкции стены и по высоте пола достаточно места для монтажа. Гидроизоляцию стыка стены и пола и возможность обслуживания планируют до отделки. Пригодность для существующей ванной комнаты нужно оценить на объекте."
+  ],
+  "Trappide pildid näitavad põhimõttelist lahendust. Tegelikud kalded, lõiked ja tihendused sõltuvad ruumist ning valitud tootest.": [
+    "The drain images illustrate the basic approach. Actual falls, cuts and seals depend on the room and the selected product.",
+    "Изображения сливов показывают принцип решения. Фактические уклоны, подрезки и уплотнения зависят от помещения и выбранного изделия."
+  ],
+  "Näiteks hansgrohe": [
+    "For example, hansgrohe",
+    "Например, hansgrohe"
+  ],
+  "RainDrain": [
+    "RainDrain",
+    "RainDrain"
+  ],
+  "on äravoolutoodete sari, mitte kõigi renntrappide üldnimetus. Sarjas on erinevaid lahendusi ning konkreetse mudeli sobivust kontrollime põranda kõrguse, ühenduste ja tootja paigaldusjuhendi järgi.": [
+    "is a range of drainage products, not a generic name for all linear drains. The range includes different solutions, and we check each model's suitability against the floor height, connections and manufacturer's installation instructions.",
+    "— это серия сливных изделий, а не общее название всех линейных трапов. Серия включает разные решения, и пригодность конкретной модели мы проверяем по высоте пола, соединениям и инструкции производителя по монтажу."
+  ],
+  "Aluspinna ettevalmistus ja põranda kallete valamine": [
+    "Substrate preparation and screeding the floor to falls",
+    "Подготовка основания и формирование уклонов пола"
+  ],
+  "Ava illustratsioon suuremalt": [
+    "Enlarge the illustration",
+    "Увеличить иллюстрацию"
+  ],
+  "Renoveerikodu.ee tööriietuses meister kujundab dušipõranda tasandussegust kallet trapi suunas": [
+    "Craftsman in Renoveerikodu.ee workwear forms a shower floor fall towards the drain using screed",
+    "Мастер в рабочей одежде Renoveerikodu.ee формирует уклон душевого пола к трапу выравнивающей смесью"
+  ],
+  "Põranda kalded rajatakse enne hüdroisolatsiooni, arvestades trapi kõrgust ja tulevast plaadikihti.": [
+    "Floor falls are formed before waterproofing, taking drain height and the future tile layer into account.",
+    "Уклоны пола формируют до гидроизоляции, учитывая высоту трапа и будущий слой плитки."
+  ],
+  "Vana viimistluse eemaldamise järel hindame seina ja põranda tugevust, niiskust, pragusid ning tasasust. Lahtised kihid ja nakkumist takistav tolm eemaldatakse. Seinad tasandame märgruumi sobiva materjaliga; plaatseina puhul kontrollime konstruktsiooni jäikust, kinnitusi ja liiteid. Plaatimissegu ei asenda vajalikku aluspinna tasandamist.": [
+    "After removing the old finish, we assess wall and floor strength, moisture, cracks and flatness. Loose layers and dust that prevents adhesion are removed. We level walls with a material suitable for wet rooms; for board-lined walls, we check structural stiffness, fixings and joints. Tile adhesive does not replace the necessary substrate levelling.",
+    "После удаления старой отделки мы оцениваем прочность стен и пола, влажность, трещины и ровность. Непрочные слои и пыль, мешающая сцеплению, удаляются. Стены выравниваем материалом, подходящим для мокрых помещений; у стен из листовых материалов проверяем жёсткость конструкции, крепления и стыки. Плиточный клей не заменяет необходимое выравнивание основания."
+  ],
+  "Dušiala kalded kujundame sobiva kaldevalu- või tasandusseguga enne hüdroisolatsiooni. Isetasanduv segu üksi ei tekita vajalikku kallet. Lahendus võib olla eraldi kaldus dušiala, mitme kaldepinnaga põrand või seinaäärse renni poole langev pind. Läbimõeldud ukseava, dušiklaas ja põrandatasemed aitavad hoida vett märjas tsoonis. Kalde suurus ja ulatus määratakse projekti ning trapi juhendi järgi; kontrollime, et ei jääks vastukaldeid ega vett koguvate lohkudega kohti.": [
+    "We form shower falls using a suitable screed or levelling compound before waterproofing. A self-levelling compound alone does not create the required fall. The solution may be a separate sloping shower area, a floor with several sloping planes or a surface falling towards a channel beside the wall. A well-planned doorway, shower screen and floor levels help keep water in the wet zone. The gradient and extent of the falls are determined by the design and drain instructions; we check for reverse falls and hollows that could collect water.",
+    "Уклоны душевой зоны мы формируем подходящей смесью для уклонов или выравнивания до гидроизоляции. Самовыравнивающаяся смесь сама по себе не создаёт нужного уклона. Решением может быть отдельная наклонная душевая зона, пол с несколькими плоскостями уклона или поверхность с уклоном к лотку у стены. Продуманные дверной проём, душевое стекло и уровни пола помогают удерживать воду в мокрой зоне. Величина и протяжённость уклона определяются проектом и инструкцией трапа; мы проверяем отсутствие обратных уклонов и углублений, в которых скапливается вода."
+  ],
+  "Krunt, niiskustõke, hüdromastiks ja tihenduslint": [
+    "Primer, moisture barrier, waterproofing compound and sealing tape",
+    "Грунтовка, влагозащита, гидроизоляционная мастика и уплотнительная лента"
+  ],
+  "Renoveerikodu.ee tööriietuses meister kannab dušipõrandale sinist hüdroisolatsioonimastiksit": [
+    "Craftsman in Renoveerikodu.ee workwear applies blue waterproofing compound to a shower floor",
+    "Мастер в рабочей одежде Renoveerikodu.ee наносит синюю гидроизоляционную мастику на душевой пол"
+  ],
+  "Veetõke hõlmab ka nurki, toruläbiviike ja trapi ühendust; nähtav sinine kiht ei asenda sõlmede kontrolli.": [
+    "Waterproofing also covers corners, pipe penetrations and the drain connection; the visible blue layer does not replace checking these details.",
+    "Гидроизоляция также охватывает углы, проходы труб и соединение с трапом; видимый синий слой не заменяет проверку этих узлов."
+  ],
+  "Krunt": [
+    "Primer",
+    "Грунтовка"
+  ],
+  "aitab ette valmistada nakkuvat aluspinda, kuid ei tee seda iseenesest veetihedaks. Ka üldnimetus „niiskustõke” ei tähenda automaatselt plaatide alla sobivat hüdroisolatsiooni. Märgruumis valime tervikliku süsteemi, mille komponendid sobivad omavahel ja aluspinnaga.": [
+    "helps prepare a substrate for adhesion, but does not make it waterproof by itself. The general term ‘moisture barrier’ does not automatically mean suitable waterproofing beneath tiles either. In wet rooms, we select a complete system whose components are compatible with each other and with the substrate.",
+    "помогает подготовить основание для сцепления, но сама по себе не делает его водонепроницаемым. Общее название «влагозащита» тоже не означает автоматически подходящую гидроизоляцию под плитку. В мокрых помещениях мы выбираем целостную систему, компоненты которой совместимы друг с другом и с основанием."
+  ],
+  "Hüdroisolatsioonimastiks ehk hüdromastiks": [
+    "Waterproofing compound, or waterproofing mastic",
+    "Гидроизоляционная мастика"
+  ],
+  "moodustab plaatide alla veetõkkekihi. Nurkades ja liidetes kasutame süsteemi nõutud tihenduslinte või nurgatükke, torude ümber mansette ning trapi juures sellele sobivat ühendusdetaili. Ka nišid, lävepiirkond ja segisti läbiviigud vajavad läbimõeldud sõlmi. Kihi paksus, kulu, kihtide arv ja kuivamisaeg lähtuvad tootja juhendist; pelgalt ühtlane värvus ei tõenda piisavat veetõket. Alternatiivina võib sobida süsteemne hüdroisolatsioonikangas.": [
+    "forms a waterproof layer beneath the tiles. At corners and junctions, we use the sealing tapes or corner pieces required by the system, collars around pipes and a suitable connecting component at the drain. Niches, thresholds and mixer penetrations also need carefully planned details. Layer thickness, consumption, number of coats and drying time follow the manufacturer's instructions; a uniform colour alone does not prove adequate waterproofing. A compatible waterproofing membrane system may be a suitable alternative.",
+    "образует водонепроницаемый слой под плиткой. В углах и стыках мы используем требуемые системой уплотнительные ленты или угловые элементы, вокруг труб — манжеты, а у трапа — подходящую соединительную деталь. Ниши, область порога и проходы смесителя тоже требуют продуманных узлов. Толщина слоя, расход, количество слоёв и время высыхания определяются инструкцией производителя; один лишь равномерный цвет не подтверждает достаточную гидроизоляцию. Альтернативой может стать системная гидроизоляционная мембрана."
+  ],
+  "Milline plaatimissegu valida?": [
+    "Which tile adhesive should I choose?",
+    "Какой плиточный клей выбрать?"
+  ],
+  "Valik sõltub plaadi materjalist ja mõõdust, aluspinnast, põrandaküttest ning kasutuskohast. Keraamiline seinaplaat, tihe portselanplaat, klaasmosaiik ja niiskustundlik looduskivi võivad vajada erinevat toodet. Kontrollime ka segu sobivust valitud hüdroisolatsiooniga.": [
+    "The choice depends on tile material and size, the substrate, underfloor heating and where the tiles will be used. Ceramic wall tiles, dense porcelain tiles, glass mosaics and moisture-sensitive natural stone may require different products. We also check compatibility with the selected waterproofing.",
+    "Выбор зависит от материала и размера плитки, основания, наличия тёплого пола и места применения. Керамическая настенная плитка, плотный керамогранит, стеклянная мозаика и чувствительный к влаге натуральный камень могут требовать разных продуктов. Мы также проверяем совместимость клея с выбранной гидроизоляцией."
+  ],
+  "Tsemendipõhine segu:": [
+    "Cement-based adhesive:",
+    "Цементный клей:"
+  ],
+  "levinud valik seintele ja põrandatele. C2 tähistab parandatud nakkega segu; S1 ja S2 kirjeldavad deformatsioonivõimet. Põrandakütte ning suure plaadi puhul on deformatsioonivõime oluline, kuid täpse toote määrab kogu lahendus.": [
+    "a common choice for walls and floors. C2 denotes improved adhesion; S1 and S2 describe deformability. Deformability matters for underfloor heating and large tiles, but the overall system determines the exact product.",
+    "распространённый выбор для стен и полов. C2 обозначает клей с улучшенной адгезией; S1 и S2 описывают деформативность. Для тёплого пола и крупной плитки деформативность важна, но конкретный продукт определяется всем решением в целом."
+  ],
+  "T ja E tähised:": [
+    "T and E markings:",
+    "Обозначения T и E:"
+  ],
+  "T tähendab vähendatud libisemist seinal, E pikemat avatud aega. F tähistab kiiret kivistumist, millega kaasneb vajadus töötempot hoolikalt planeerida.": [
+    "T means reduced slip on walls, and E means extended open time. F denotes fast setting, which requires careful planning of the work pace.",
+    "T означает уменьшенное сползание на стене, E — увеличенное открытое время. F обозначает быстрое схватывание, при котором нужно тщательно планировать темп работы."
+  ],
+  "Valmis pastaliim:": [
+    "Ready-mixed paste adhesive:",
+    "Готовый пастообразный клей:"
+  ],
+  "ei ole universaalne märgruumi- või põrandalahendus. Kasutusala kontrollitakse tootelehelt.": [
+    "is not a universal solution for wet rooms or floors. Its application must be checked in the product data sheet.",
+    "не является универсальным решением для мокрых помещений или полов. Область применения проверяется по техническому описанию продукта."
+  ],
+  "Valge või erisegu:": [
+    "White or specialist adhesive:",
+    "Белый или специальный клей:"
+  ],
+  "läbikumava mosaiigi ja looduskivi korral arvestame värvuse ning niiskustundlikkusega. Reaktiivliime kasutatakse erilahendustes tootejuhendi alusel.": [
+    "for translucent mosaics and natural stone, we take colour and moisture sensitivity into account. Reactive adhesives are used for specialist applications according to the product instructions.",
+    "для полупрозрачной мозаики и натурального камня мы учитываем цвет и чувствительность к влаге. Реактивные клеи применяются в специальных решениях по инструкции продукта."
+  ],
+  "Plaatide jaotus, lõiked ja paigaldus": [
+    "Tile layout, cuts and installation",
+    "Раскладка плитки, подрезки и укладка"
+  ],
+  "Renoveerikodu.ee tööriietuses plaatija paigaldab hüdroisoleeritud seinale suuri plaate": [
+    "Tiler in Renoveerikodu.ee workwear installs large tiles on a waterproofed wall",
+    "Плиточник в рабочей одежде Renoveerikodu.ee укладывает крупную плитку на гидроизолированную стену"
+  ],
+  "Plaadijaotus ja vuukide joonduvus planeeritakse enne liimimist; paigalduse ajal kontrollitakse kontaktpinda ja tasapinda.": [
+    "The tile layout and grout alignment are planned before bonding; coverage and flatness are checked during installation.",
+    "Раскладку плитки и совмещение швов планируют до приклеивания; при укладке проверяют площадь контакта и ровность плоскости."
+  ],
+  "Enne liimimist koostame plaadijaotuse: kust algavad read, kuhu jäävad lõiked ja kuidas joonduvad vuugid ukseava, niši, segisti ning trapiga. Vaatame tervikuna nähtavaid seinu ja põrandat, et kitsad ribad ei jääks juhuslikult kõige silmatorkavamasse kohta. Täisplaadiga alustamine ühest nurgast ei anna alati parimat tulemust.": [
+    "Before bonding, we plan the tile layout: where rows start, where cuts fall and how grout joints align with the doorway, niche, mixer and drain. We consider the visible walls and floor together to avoid narrow strips accidentally ending up in the most prominent place. Starting with a full tile in one corner does not always give the best result.",
+    "До приклеивания мы составляем раскладку: откуда начинаются ряды, где будут подрезки и как швы совмещаются с дверным проёмом, нишей, смесителем и трапом. Видимые стены и пол рассматриваем как единое целое, чтобы узкие полоски случайно не оказались на самом заметном месте. Начало с целой плитки от одного угла не всегда даёт лучший результат."
+  ],
+  "Sirge ladumine, nihkega read, kalasaba ja mosaiik mõjutavad lõigete hulka ning materjalivaru. Suure plaadi ja nihkega mustri juures arvestame ka plaadi enda kõverust ja tootja soovitatud nihket. Vuugi laius valitakse plaadi mõõdutäpsuse ja kasutuskoha järgi; ka rektifitseeritud plaati ei paigaldata täiesti vuugita.": [
+    "Straight laying, staggered rows, herringbone and mosaics affect the number of cuts and the material allowance. For large tiles and staggered patterns, we also consider the tile's own curvature and the manufacturer's recommended offset. Grout width is chosen according to dimensional accuracy and application; even rectified tiles are not installed completely without joints.",
+    "Прямая укладка, ряды со смещением, «ёлочка» и мозаика влияют на количество подрезок и запас материала. Для крупной плитки и рисунка со смещением мы также учитываем собственную кривизну плитки и рекомендованное производителем смещение. Ширина шва выбирается по точности размеров плитки и месту применения; даже ректифицированную плитку не укладывают совсем без швов."
+  ],
+  "Segu kantakse sobiva hammastusega kammiga ja vajadusel ka plaadi tagaküljele. Paigalduse ajal kontrollime nakkuvat kontaktpinda, tasapinda ning servade erinevust. Tasandussüsteem aitab joondada plaate, kuid ei paranda kõverat aluspinda. Konstruktsiooni liikumisvuuke ei kaeta jäigalt üle.": [
+    "Adhesive is applied with a suitably notched trowel and, where needed, to the tile's back as well. During installation, we check bonded coverage, flatness and differences between edges. A levelling system helps align tiles but does not fix an uneven substrate. Structural movement joints are not rigidly tiled over.",
+    "Клей наносят шпателем с подходящими зубцами и при необходимости также на обратную сторону плитки. При укладке мы проверяем площадь сцепления, плоскость и перепады между краями. Система выравнивания помогает совместить плитку, но не исправляет кривое основание. Конструкционные деформационные швы не перекрывают жёстко."
+  ],
+  "Vuukimine ja silikoonimine": [
+    "Grouting and silicone sealing",
+    "Затирка швов и герметизация силиконом"
+  ],
+  "Renoveerikodu.ee tööriietuses meister tihendab plaaditud dušiseina sisenurka silikooniga": [
+    "Craftsman in Renoveerikodu.ee workwear seals the inside corner of a tiled shower wall with silicone",
+    "Мастер в рабочей одежде Renoveerikodu.ee герметизирует силиконом внутренний угол облицованной душевой стены"
+  ],
+  "Plaatide vuugid täidetakse sobiva vuugiseguga, liikumist vajavad ühendused saavad elastse tihenduse.": [
+    "Tile joints are filled with suitable grout, while connections that need to accommodate movement receive an elastic seal.",
+    "Швы плитки заполняют подходящей затиркой, а соединения, которым нужна подвижность, получают эластичное уплотнение."
+  ],
+  "Vuukimine algab pärast plaatimissegu nõutud kivistumist ja vuukide puhastamist. Tsemendipõhine vuugisegu on tavapärane valik; epoksiidvuuk sobib olukordadesse, kus vajatakse suuremat plekikindlust või keemilist vastupidavust. Epoksiid nõuab täpset tööaega ja puhastust ning selle sobivust hinnatakse ka plaadi pinnaga.": [
+    "Grouting begins after the tile adhesive has cured as required and the joints have been cleaned. Cement-based grout is the usual choice; epoxy grout is suitable where greater stain or chemical resistance is needed. Epoxy requires precise timing and cleaning, and its suitability for the tile surface is also assessed.",
+    "Затирку начинают после необходимого отверждения плиточного клея и очистки швов. Цементная затирка — обычный выбор; эпоксидная подходит там, где нужна повышенная стойкость к пятнам или химическим воздействиям. Эпоксидная затирка требует точного соблюдения времени работы и очистки, а её пригодность также оценивают с учётом поверхности плитки."
+  ],
+  "Nurgad, eri tasapindade ühendused ning projektis ette nähtud liikumisvuugid saavad sobiva elastse tihenduse. Sanitaarsilikoon valitakse pinna ja kasutuskoha järgi; looduskivile on oluline mittemääriv sobiv toode. Silikoon ega plaadivuuk ei asenda plaatide all olevat hüdroisolatsiooni. Kasutamisel hoitakse elastsed vuugid puhtad ja vajadusel uuendatakse neid.": [
+    "Corners, junctions between different planes and movement joints specified in the design receive a suitable elastic seal. Sanitary silicone is selected for the surface and application; natural stone requires a suitable non-staining product. Neither silicone nor tile grout replaces the waterproofing beneath the tiles. During use, elastic joints should be kept clean and renewed when needed.",
+    "Углы, соединения разных плоскостей и предусмотренные проектом деформационные швы получают подходящее эластичное уплотнение. Санитарный силикон выбирают по поверхности и месту применения; для натурального камня важен подходящий состав, не оставляющий пятен. Ни силикон, ни плиточная затирка не заменяют гидроизоляцию под плиткой. При эксплуатации эластичные швы содержат в чистоте и при необходимости обновляют."
+  ],
+  "Segistid, dušiklaas ja lõppkontroll": [
+    "Mixers, shower screen and final inspection",
+    "Смесители, душевое стекло и итоговая проверка"
+  ],
+  "Pärast viimistlusmaterjalide vajalikku kivistumist paigaldatakse kokkulepitud sanitaartehnika ja nähtavad segistiosad. Dušiklaasi kinnitused planeeritakse nii, et veetõket kahjustavaid läbiviike oleks võimalikult vähe; vajalikud kinnitussõlmed tihendatakse juhendi järgi. Kontrollime äravoolu, vuuke, ühendusi ja üldist viimistlust ning anname juhise, millal võib põrandale astuda ja dušši kasutada. Põrandaküte taastatakse valitud süsteemi juhendi järgi järk-järgult.": [
+    "Once finishing materials have cured as required, we install the agreed sanitary fittings and visible mixer components. Shower screen fixings are planned to minimise penetrations that could damage the waterproofing; necessary fixing details are sealed according to the instructions. We check drainage, joints, connections and the overall finish, and explain when it is safe to walk on the floor and use the shower. Underfloor heating is restarted gradually according to the selected system's instructions.",
+    "После необходимого отверждения отделочных материалов устанавливают согласованную сантехнику и видимые детали смесителей. Крепления душевого стекла планируют так, чтобы проходов, повреждающих гидроизоляцию, было как можно меньше; необходимые узлы крепления герметизируют по инструкции. Мы проверяем слив, швы, соединения и общую отделку и объясняем, когда можно ходить по полу и пользоваться душем. Тёплый пол включают постепенно по инструкции выбранной системы."
+  ],
+  "Väike köögi tagasein võib valmida lühikese ajaga, kuid vannituba vajab tavaliselt mitut etappi: vana pinna eemaldus, tasandus, hüdroisolatsiooni kuivamine, plaatimine, vuukimine ja silikoonimine. Kuivamisajad on osa kvaliteedist, mitte paus töökorralduses.": [
+    "A small kitchen splashback can be completed quickly, but a bathroom usually needs several stages: removing the old surface, levelling, drying the waterproofing, tiling, grouting and silicone sealing. Drying times are part of quality, not a break in the work schedule.",
+    "Небольшой кухонный фартук можно выполнить за короткое время, но ванной комнате обычно нужны несколько этапов: удаление старой поверхности, выравнивание, высыхание гидроизоляции, укладка плитки, затирка и герметизация силиконом. Время высыхания — часть качества, а не пауза в организации работ."
+  ],
+  "Hinda mõjutavad aluspinna seisukord, plaatide mõõt, lõigete arv, kallete tegemine, nišid, dušinurga lahendus, hüdroisolatsiooni ulatus ja see, kas objekt asub elatud korteris või tühjal pinnal.": [
+    "The price is affected by substrate condition, tile size, number of cuts, forming falls, niches, shower layout, extent of waterproofing and whether the property is an occupied apartment or an empty space.",
+    "На цену влияют состояние основания, размер плитки, количество подрезок, формирование уклонов, ниши, устройство душевой зоны, объём гидроизоляции и то, выполняется ли работа в жилой квартире или пустом помещении."
+  ],
+  "Kõige sagedasemad vead on liiga kiire alustamine niiskel või ebatasasel pinnal, läbiviikude nõrk tihendamine, vale segu valik ning vuukide või silikooni tegemine enne pinna piisavat kuivamist.": [
+    "The most common mistakes are starting too soon on damp or uneven surfaces, poorly sealed penetrations, choosing the wrong adhesive and grouting or applying silicone before the surface has dried sufficiently.",
+    "Самые частые ошибки — слишком раннее начало работ на влажной или неровной поверхности, слабая герметизация проходов коммуникаций, неправильный выбор клея, а также затирка или нанесение силикона до достаточного высыхания поверхности."
+  ],
+  "Enne hinnapäringut tasub saata ruumi mõõdud, fotod, plaadi suurus ja info selle kohta, kas vana plaat jääb eemaldada või on pind juba ette valmistatud. Nii saab pakkumine olla täpsem ja tööjärjekord realistlikum.": [
+    "Before requesting a quote, send the room dimensions, photos, tile size and information about whether the old tiles need removing or the surface is already prepared. This makes the quote more accurate and the sequence of work more realistic.",
+    "Перед запросом стоимости стоит отправить размеры помещения, фотографии, размер плитки и информацию о том, нужно ли удалять старую плитку или поверхность уже подготовлена. Так предложение будет точнее, а последовательность работ — реалистичнее."
+  ],
+  "Milliste töödega plaatimine tavaliselt seostub?": [
+    "What other work is tiling usually connected with?",
+    "С какими работами обычно связана укладка плитки?"
+  ],
+  "Vannitoa ja köögi plaatimine on sageli osa suuremast tööjärjekorrast. Enne plaati tuleb aluspind sirgeks ja niiskuskindlaks saada, mistõttu on paljudel objektidel vaja ka": [
+    "Bathroom and kitchen tiling is often part of a larger sequence of work. The substrate must be level and moisture resistant before tiling, so many properties also need",
+    "Укладка плитки в ванной комнате и кухне часто входит в более широкую последовательность работ. До укладки основание нужно сделать ровным и влагостойким, поэтому на многих объектах также требуются"
+  ],
+  "märgruumi seinte ja lagede ettevalmistust": [
+    "preparation of wet room walls and ceilings",
+    "подготовка стен и потолков мокрых помещений"
+  ],
+  "vana viimistluse eemaldamist": [
+    "removal of old finishes",
+    "удаление старой отделки"
+  ],
+  ". Kui plaatimistöö on osa korteri tervikremondist, tasub hinnata ka": [
+    ". If tiling is part of a complete apartment renovation, it is also worth assessing",
+    ". Если укладка плитки входит в комплексный ремонт квартиры, стоит также оценить"
+  ],
+  "järgnevaid siseviimistluse töid": [
+    "the subsequent interior finishing work",
+    "последующие работы по внутренней отделке"
+  ],
+  "ning vaadata": [
+    "and reviewing",
+    "и посмотреть"
+  ],
+  "plaatimistööde orienteeruvaid hindu": [
+    "indicative tiling prices",
+    "ориентировочные цены на укладку плитки"
+  ],
+  "Vannitoa plaatimise saab siduda ülejäänud ruumide viimistlusega": [
+    "Bathroom tiling can be coordinated with finishing the other rooms",
+    "Укладку плитки в ванной комнате можно связать с отделкой остальных помещений"
+  ],
+  "tervikliku korteri remondi": [
+    "as part of a complete apartment renovation",
+    "в рамках комплексного ремонта квартиры"
+  ],
+  "raames.": [
+    ".",
+    "."
+  ],
+  "Hinnapäring": [
+    "Quote request",
+    "Запрос стоимости"
+  ],
+  "Tiina:": [
+    "Tiina:",
+    "Tiina:"
+  ]
+}

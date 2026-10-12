@@ -13,3 +13,5 @@ adminvana/
 **/object-data.json
 *.log
 node_modules/
+__pycache__/
+scripts/i18n/*.source.json

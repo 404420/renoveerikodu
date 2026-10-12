@@ -1,0 +1,370 @@
+{
+  "Vundamenditööd Tallinnas ja Harjumaal | Renoveeri Kodu": [
+    "Foundation work in Tallinn and Harju County | Renoveeri Kodu",
+    "Фундаментные работы в Таллине и Харьюмаа | Renoveeri Kodu"
+  ],
+  "Vundamenditööd Tallinnas ja Harjumaal. Vundamendi ehitus, betoonivalu, lintvundament, plaatvundament ja hüdroisolatsioon.": [
+    "Foundation work in Tallinn and Harju County. Foundation construction, concrete pouring, strip foundations, slab foundations and waterproofing.",
+    "Фундаментные работы в Таллине и Харьюмаа. Строительство фундаментов, заливка бетона, ленточные и плитные фундаменты, гидроизоляция."
+  ],
+  "Vundamenditööd ja vundamendi parandused": [
+    "Foundation work and foundation repairs",
+    "Фундаментные работы и ремонт фундаментов"
+  ],
+  "Vundamenditööd Tallinnas ja Harjumaal": [
+    "Foundation work in Tallinn and Harju County",
+    "Фундаментные работы в Таллине и Харьюмаа"
+  ],
+  "Vundamendi ehituse, paranduse ja hüdroisolatsiooniga seotud tööd Tallinnas ja Harjumaal.": [
+    "Foundation construction, repair and waterproofing work in Tallinn and Harju County.",
+    "Строительство, ремонт и гидроизоляция фундаментов в Таллине и Харьюмаа."
+  ],
+  "Kas parandate vana vundamenti?": [
+    "Do you repair old foundations?",
+    "Вы ремонтируете старые фундаменты?"
+  ],
+  "Jah, vundamendi paranduste ja sokliga seotud tööde puhul saame aidata pärast seisukorra hindamist.": [
+    "Yes, we can help with foundation repairs and plinth work after assessing their condition.",
+    "Да, можем помочь с ремонтом фундамента и работами по цоколю после оценки состояния."
+  ],
+  "Kas vundamenditöö vajab projekti?": [
+    "Does foundation work require a design?",
+    "Нужен ли проект для фундаментных работ?"
+  ],
+  "Mõned tööd võivad vajada projekti või ekspertiisi. Konstruktsiooni muutmisel lähtume vajalikest nõuetest.": [
+    "Some work may require a design or expert assessment. When altering a structure, we follow the applicable requirements.",
+    "Некоторые работы могут требовать проекта или экспертизы. При изменении конструкции руководствуемся необходимыми требованиями."
+  ],
+  "Kas teete hüdroisolatsiooni?": [
+    "Do you provide waterproofing?",
+    "Вы выполняете гидроизоляцию?"
+  ],
+  "Saame teha vundamendi ja sokliga seotud niiskuskaitse ettevalmistust ning kokkulepitud mahus hüdroisolatsiooni.": [
+    "We can prepare moisture protection for foundations and plinths and carry out waterproofing to the agreed extent.",
+    "Можем выполнить подготовку к защите фундамента и цоколя от влаги и гидроизоляцию в согласованном объёме."
+  ],
+  "Kuidas erineb see betoonitöödest?": [
+    "How does this differ from concrete work?",
+    "Чем это отличается от бетонных работ?"
+  ],
+  "Betoonitööde leht keskendub valule ja aluspindadele, vundamenditööde leht hoone aluse, sokli ja niiskuskaitse probleemidele.": [
+    "The concrete work page focuses on pouring and substrates, while the foundation work page covers problems with the building base, plinth and moisture protection.",
+    "Страница бетонных работ посвящена заливке и основаниям, а страница фундаментных работ — проблемам основания здания, цоколя и защиты от влаги."
+  ],
+  "Kuidas aru saada, kas vundament vajab parandust?": [
+    "How can I tell if a foundation needs repair?",
+    "Как понять, что фундамент требует ремонта?"
+  ],
+  "Märgiks võivad olla praod, niiskus, soolajäljed, sokli lagunemine või põranda ja seina liite niiskus. Täpne põhjus selgub ülevaatusel.": [
+    "Signs can include cracks, moisture, salt marks, deteriorating plinths or dampness at floor-to-wall junctions. An inspection establishes the exact cause.",
+    "Признаками могут быть трещины, влага, солевые следы, разрушение цоколя или сырость в стыке пола и стены. Точная причина выясняется при осмотре."
+  ],
+  "Kas ainult sokli värvimisest piisab?": [
+    "Is painting the plinth enough?",
+    "Достаточно ли просто покрасить цоколь?"
+  ],
+  "Kui probleem on ainult visuaalne, võib piisata. Kui sokkel laguneb niiskuse tõttu, tuleb enne viimistlust lahendada niiskuse põhjus.": [
+    "If the problem is purely visual, it may be enough. If the plinth is deteriorating due to moisture, the moisture source must be resolved before finishing.",
+    "Если проблема только во внешнем виде, этого может быть достаточно. Если цоколь разрушается из-за влаги, перед отделкой нужно устранить её причину."
+  ],
+  "Kas vundamenditööd vajavad kaevamist?": [
+    "Does foundation work require excavation?",
+    "Требуют ли фундаментные работы земляных работ?"
+  ],
+  "Mitte alati. Mõni parandus on lokaalne ja nähtaval pinnal, kuid hüdroisolatsiooni või drenaaži puhul võib kaevamine olla vältimatu.": [
+    "Not always. Some repairs are local and on exposed surfaces, but waterproofing or drainage may make excavation unavoidable.",
+    "Не всегда. Некоторые исправления локальны и выполняются на открытой поверхности, однако при гидроизоляции или дренаже раскопка может быть неизбежной."
+  ],
+  "Millal on vaja drenaaži?": [
+    "When is drainage needed?",
+    "Когда нужен дренаж?"
+  ],
+  "Drenaaži vajadus sõltub pinnasest, vee liikumisest ja hoone niiskusprobleemist. Seda ei tasu lisada automaatselt ilma põhjuse hindamiseta.": [
+    "The need for drainage depends on soil, water movement and the building's moisture problem. It should not be added automatically without assessing the cause.",
+    "Необходимость дренажа зависит от грунта, движения воды и проблемы с влагой в здании. Его не стоит добавлять автоматически без оценки причины."
+  ],
+  "Vundamendi raketise ja armatuuri ettevalmistus": [
+    "Preparation of foundation formwork and reinforcement",
+    "Подготовка опалубки и арматуры фундамента"
+  ],
+  "Teeme vundamenditöid, parandusi ja niiskuskaitset Tallinnas ning Harjumaal.": [
+    "We carry out foundation work, repairs and moisture protection in Tallinn and Harju County.",
+    "Выполняем фундаментные работы, ремонт и защиту от влаги в Таллине и Харьюмаа."
+  ],
+  "Vundamendi juures ei ole üht lahendust, mis sobiks igale majale. Taldmiku mõõt, armeerimine, soojustus ja niiskuskaitse peavad lähtuma pinnasest, hoone koormusest ning projektist. Meie töö on teha kokkulepitud etapid korralikult ja õiges järjekorras.": [
+    "There is no single foundation solution that suits every house. Footing dimensions, reinforcement, insulation and moisture protection must follow the soil conditions, building loads and design. Our job is to carry out the agreed stages properly and in the right order.",
+    "Для фундамента нет одного решения, подходящего каждому дому. Размеры подошвы, армирование, утепление и защита от влаги должны определяться грунтом, нагрузкой здания и проектом. Наша задача — правильно выполнить согласованные этапы в нужной последовательности."
+  ],
+  "Vundamenditööde ulatus": [
+    "Scope of foundation work",
+    "Объём фундаментных работ"
+  ],
+  "Mida teeme": [
+    "What we do",
+    "Что мы делаем"
+  ],
+  "Vundamenditööd uuele ja olemasolevale hoonele": [
+    "Foundation work for new and existing buildings",
+    "Фундаментные работы для новых и существующих зданий"
+  ],
+  "Võtame ette vundamenditöid aluspinna ettevalmistusest, raketisest ja armeerimisest kuni betoonivalu ning olemasoleva vundamendi või sokli parandamiseni. Vajaduse järgi teeme ka hüdroisolatsiooni, soojustuse ja tööks vajaliku avamise.": [
+    "We undertake foundation work from substrate preparation, formwork and reinforcement through to concrete pouring and repairs to existing foundations or plinths. As needed, we also provide waterproofing, insulation and excavation or opening-up required for the work.",
+    "Берёмся за фундаментные работы от подготовки основания, опалубки и армирования до заливки бетона и ремонта существующего фундамента или цоколя. При необходимости выполняем также гидроизоляцию, утепление и нужное для работ вскрытие."
+  ],
+  "Kandekonstruktsiooni mõõdud ja lahendus peavad tulema projektist. Kui konstruktsioonis on vajumine või suured praod, soovitame enne ehitamist kaasata pädeva projekteerija või eksperdi.": [
+    "The supporting structure's dimensions and solution must come from the design. If there is settlement or major cracking, we recommend involving a qualified designer or expert before construction.",
+    "Размеры и решение несущей конструкции должны быть предусмотрены проектом. Если есть просадка или крупные трещины, перед строительством рекомендуем привлечь компетентного проектировщика или эксперта."
+  ],
+  "Millal ühendust võtta": [
+    "When to contact us",
+    "Когда стоит обратиться"
+  ],
+  "rajad eramut, juurdeehitust, garaaži või abihoonet;": [
+    "you are building a house, extension, garage or outbuilding;",
+    "вы строите частный дом, пристройку, гараж или хозяйственную постройку;"
+  ],
+  "sokkel mureneb või vundamendis on praod;": [
+    "the plinth is crumbling or there are cracks in the foundation;",
+    "цоколь крошится или в фундаменте есть трещины;"
+  ],
+  "keldrisse või seina alumisse ossa jõuab niiskus;": [
+    "moisture is entering the basement or the lower part of the wall;",
+    "влага поступает в подвал или нижнюю часть стены;"
+  ],
+  "enne fassaaditöid tuleb sokkel ja vee äravool korda teha.": [
+    "the plinth and water drainage need attention before facade work.",
+    "перед фасадными работами нужно привести в порядок цоколь и отвод воды."
+  ],
+  "Tööjärjekord": [
+    "Sequence of work",
+    "Последовательность работ"
+  ],
+  "Kuidas vundamenti tehakse?": [
+    "How is a foundation built?",
+    "Как строят фундамент?"
+  ],
+  "Uue vundamendi täpne lahendus tuleb projektist, kuid töö loogika on enamasti sama: tugev aluspind, õigesti paigutatud armatuur ja läbiviigud, kontrollitud valu ning alles seejärel niiskuskaitse ja tagasitäide.": [
+    "The precise solution for a new foundation comes from the design, but the work generally follows the same principles: a strong base, correctly positioned reinforcement and penetrations, a controlled pour, and only then moisture protection and backfilling.",
+    "Точное решение нового фундамента определяется проектом, но логика работ обычно одинакова: прочное основание, правильно размещённые арматура и проходки, контролируемая заливка и только затем защита от влаги и обратная засыпка."
+  ],
+  "Vundamendi väliskülje hüdroisolatsiooni ja soojustuse paigaldamine": [
+    "Installation of waterproofing and insulation on the outside of the foundation",
+    "Монтаж гидроизоляции и утепления с наружной стороны фундамента"
+  ],
+  "Enne tagasitäidet kaitstakse vundament niiskuse eest ning paigaldatakse projektis ette nähtud soojustus ja kaitsekiht.": [
+    "Before backfilling, the foundation is protected against moisture and the insulation and protective layer specified in the design are installed.",
+    "До обратной засыпки фундамент защищают от влаги и устанавливают предусмотренные проектом утепление и защитный слой."
+  ],
+  "Projekt ja mahamärkimine": [
+    "Design and setting out",
+    "Проект и разметка"
+  ],
+  "Kontrollime mõõdud, kõrgusmärgid, teljed ja ligipääsu. Kandva osa mõõte ei otsustata ehitusplatsil silma järgi.": [
+    "We check dimensions, level marks, axes and access. Dimensions of load-bearing elements are determined by the design, not by eye on site.",
+    "Проверяем размеры, высотные отметки, оси и доступ. Размеры несущих элементов определяются проектом, а не на глаз на стройплощадке."
+  ],
+  "Kaevetöö ja kandev aluspind": [
+    "Excavation and a load-bearing base",
+    "Земляные работы и несущее основание"
+  ],
+  "Eemaldatakse nõrk pinnas, rajatakse projektijärgne kaeve ning tihendatakse killustik- või muu ettenähtud alus kihtide kaupa.": [
+    "Weak soil is removed, excavation is carried out to the design and the crushed stone or other specified base is compacted layer by layer.",
+    "Удаляют слабый грунт, выполняют выемку по проекту и послойно уплотняют щебёночное или другое предусмотренное основание."
+  ],
+  "Raketis, armatuur ja läbiviigud": [
+    "Formwork, reinforcement and penetrations",
+    "Опалубка, арматура и проходки"
+  ],
+  "Enne valu kontrollitakse raketise mõõte, armatuuri kaitsekihti ning kanalisatsiooni, vee ja elektri läbiviikude asukohti.": [
+    "Before pouring, formwork dimensions, reinforcement cover and the positions of drainage, water and electrical penetrations are checked.",
+    "Перед заливкой проверяют размеры опалубки, защитный слой арматуры и расположение проходок канализации, воды и электричества."
+  ],
+  "Betoonivalu": [
+    "Concrete pouring",
+    "Заливка бетона"
+  ],
+  "Betoon paigaldatakse ühtlaselt, tihendatakse ja tasandatakse. Valu ajal ei tohi armatuur ega läbiviigud oma kohalt liikuda.": [
+    "Concrete is placed evenly, compacted and levelled. Reinforcement and penetrations must not move during the pour.",
+    "Бетон укладывают равномерно, уплотняют и выравнивают. Во время заливки арматура и проходки не должны смещаться."
+  ],
+  "Järelhooldus ja kontroll": [
+    "Curing and checks",
+    "Уход за бетоном и контроль"
+  ],
+  "Värsket betooni kaitstakse liiga kiire kuivamise, külma ja sademete eest. Raketis eemaldatakse alles siis, kui betoon on piisavalt tugev.": [
+    "Fresh concrete is protected from excessively rapid drying, cold and precipitation. Formwork is removed only when the concrete is strong enough.",
+    "Свежий бетон защищают от слишком быстрого высыхания, холода и осадков. Опалубку снимают только после набора достаточной прочности."
+  ],
+  "Hüdroisolatsioon, soojustus ja tagasitäide": [
+    "Waterproofing, insulation and backfilling",
+    "Гидроизоляция, утепление и обратная засыпка"
+  ],
+  "Pind valmistatakse ette kasutatava hüdroisolatsioonisüsteemi juhendi järgi. Kaitse- ja soojustusplaadid paigaldatakse enne ettevaatlikku tagasitäidet.": [
+    "The surface is prepared according to the waterproofing system's instructions. Protection and insulation boards are installed before careful backfilling.",
+    "Поверхность готовят по инструкции используемой системы гидроизоляции. Защитные и теплоизоляционные плиты устанавливают перед осторожной обратной засыпкой."
+  ],
+  "Lahenduste võrdlus": [
+    "Comparing solutions",
+    "Сравнение решений"
+  ],
+  "Levinumad vundamendi- ja taldmikutüübid": [
+    "Common foundation and footing types",
+    "Распространённые типы фундаментов и подошв"
+  ],
+  "Taldmik": [
+    "The footing",
+    "Подошва"
+  ],
+  "on vundamendi alumine, laiem osa, mis annab hoone koormuse edasi pinnasele. Sobiva tüübi ja mõõdud määrab projekteerija pinnase, koormuse ja hoone ehituse järgi.": [
+    "is the wider lower part of the foundation that transfers the building's load to the soil. The designer determines the appropriate type and dimensions according to soil, loads and the building's construction.",
+    "— нижняя, более широкая часть фундамента, передающая нагрузку здания на грунт. Подходящий тип и размеры определяет проектировщик с учётом грунта, нагрузки и конструкции здания."
+  ],
+  "Lintvundamendi, plaatvundamendi ja üksiktaldmiku võrdlev läbilõige": [
+    "Comparative section of a strip foundation, slab foundation and isolated footing",
+    "Сравнительный разрез ленточного, плитного фундамента и отдельной подошвы"
+  ],
+  "Illustratiivne võrdlus: vasakul lintvundament kandva seina all, keskel soojustatud plaatvundament ja paremal üksiktaldmik posti all. Täpne sõlm tuleb projektist.": [
+    "Illustrative comparison: a strip foundation beneath a load-bearing wall on the left, an insulated slab foundation in the middle and an isolated footing beneath a column on the right. The precise detail comes from the design.",
+    "Иллюстративное сравнение: слева ленточный фундамент под несущей стеной, в центре утеплённый плитный фундамент, справа отдельная подошва под колонной. Точный узел определяется проектом."
+  ],
+  "Lintvundament": [
+    "Strip foundation",
+    "Ленточный фундамент"
+  ],
+  "Pidev taldmik jookseb kandvate seinte all. See on eramute puhul levinud lahendus. Olulised on ühtlane kandev alus, nurkade ja liitekohtade armeerimine ning niiskustõke taldmiku ja vundamendiseina vahel.": [
+    "A continuous footing runs beneath load-bearing walls. This is a common solution for detached houses. An even load-bearing base, reinforcement of corners and junctions, and a moisture barrier between the footing and foundation wall are important.",
+    "Непрерывная подошва проходит под несущими стенами. Это распространённое решение для частных домов. Важны равномерное несущее основание, армирование углов и стыков, а также влагозащитный барьер между подошвой и стеной фундамента."
+  ],
+  "Plaatvundament": [
+    "Slab foundation",
+    "Плитный фундамент"
+  ],
+  "Armeeritud plaat kannab koormuse üle suurema pinna. Soojustus, põrandaküte, kanalisatsioon ja muud läbiviigud tuleb enne valu täpselt paika panna, sest hilisem muutmine on keeruline.": [
+    "A reinforced slab transfers the load over a larger area. Insulation, underfloor heating, drainage and other penetrations must be accurately positioned before pouring, because later alterations are difficult.",
+    "Армированная плита передаёт нагрузку на большую площадь. Утепление, тёплый пол, канализацию и другие проходки нужно точно разместить до заливки, поскольку последующие изменения сложны."
+  ],
+  "Üksiktaldmik": [
+    "Isolated footing",
+    "Отдельная подошва"
+  ],
+  "Eraldi betoontaldmik kannab posti või samba koormust. Seda kohtab varikatuste, terrasside ja karkasslahenduste juures. Taldmiku suurus, sügavus ja ühendus konstruktsiooniga sõltuvad koormusest ja pinnasest.": [
+    "A separate concrete footing carries the load from a post or column. It is used for canopies, terraces and framed structures. The footing's size, depth and connection to the structure depend on the loads and soil.",
+    "Отдельная бетонная подошва несёт нагрузку стойки или колонны. Она применяется для навесов, террас и каркасных конструкций. Размер, глубина и соединение подошвы с конструкцией зависят от нагрузки и грунта."
+  ],
+  "Aga vaiad?": [
+    "What about piles?",
+    "А сваи?"
+  ],
+  "Kui kandev pinnas asub sügaval või vajumisrisk on suur, võib projekt ette näha vaivundamendi. See on erilahendus, mis vajab geoloogilist infot, projekteerimist ja vastavat tehnikat.": [
+    "If load-bearing soil lies deep or settlement risk is high, the design may specify a piled foundation. This is a specialist solution requiring geological information, design and suitable equipment.",
+    "Если несущий грунт находится глубоко или риск просадки велик, проект может предусматривать свайный фундамент. Это специальное решение, требующее геологических данных, проектирования и соответствующей техники."
+  ],
+  "Olemasolev hoone": [
+    "Existing building",
+    "Существующее здание"
+  ],
+  "Vundamendi parandamine algab põhjuse leidmisest": [
+    "Foundation repairs begin with finding the cause",
+    "Ремонт фундамента начинается с поиска причины"
+  ],
+  "Pragu, niiske keldrisein või murenev sokkel on sümptom. Enne parandamist tuleb aru saada, kas põhjuseks on sadevesi, puudulik hüdroisolatsioon, külmakerge, pinnase vajumine või lihtsalt kulunud viimistlus.": [
+    "A crack, damp basement wall or crumbling plinth is a symptom. Before repairs, it is necessary to establish whether the cause is rainwater, inadequate waterproofing, frost heave, soil settlement or simply worn finishes.",
+    "Трещина, сырая стена подвала или крошащийся цоколь — это симптом. Перед ремонтом нужно понять, вызван ли он дождевой водой, недостаточной гидроизоляцией, морозным пучением, просадкой грунта или просто изношенной отделкой."
+  ],
+  "Kui probleem on niiskus": [
+    "If moisture is the problem",
+    "Если проблема во влаге"
+  ],
+  "Vaatame üle maapinna kalde, vihmaveetorude väljaviigu, sokli ühendused ja vundamendi väliskülje. Vajadusel avatakse konstruktsioon lõikude kaupa, puhastatakse pind ning taastatakse hüdroisolatsioon ja kaitsekiht. Drenaaž ei ole automaatne vastus igale niiskusprobleemile.": [
+    "We inspect ground falls, downpipe discharge, plinth junctions and the outside of the foundation. Where needed, the structure is exposed in sections, the surface is cleaned, and waterproofing and protective layers are restored. Drainage is not an automatic answer to every moisture problem.",
+    "Проверяем уклон земли, отвод воды из водосточных труб, стыки цоколя и наружную сторону фундамента. При необходимости конструкцию открывают участками, очищают поверхность и восстанавливают гидроизоляцию и защитный слой. Дренаж не является автоматическим ответом на любую проблему с влагой."
+  ],
+  "Kui probleem on pragu või vajumine": [
+    "If cracking or settlement is the problem",
+    "Если проблема в трещине или просадке"
+  ],
+  "Üksik pindmine pragu ja konstruktsiooni liikumine vajavad erinevat lahendust. Kui pragu kasvab, põrand on vajunud või uksed-aknad kiiluvad, tuleb enne kosmeetilist parandust kontrollida konstruktsiooni ja pinnast.": [
+    "An isolated surface crack and structural movement need different solutions. If a crack is growing, the floor has settled or doors and windows jam, the structure and soil must be checked before cosmetic repairs.",
+    "Отдельная поверхностная трещина и подвижка конструкции требуют разных решений. Если трещина растёт, пол просел или двери и окна заклинивают, перед косметическим ремонтом нужно проверить конструкцию и грунт."
+  ],
+  "Millest vundamenditöö hind sõltub?": [
+    "What determines foundation work costs?",
+    "От чего зависит стоимость фундаментных работ?"
+  ],
+  "Hinda mõjutavad kaeve sügavus ja ligipääs, väljaveetava pinnase kogus, raketise ja armatuuri maht, betooni kogus, läbiviigud, niiskuskaitse ning tagasitäide. Olemasoleva vundamendi puhul lisandub avamise ja kahjustuse põhjuse hindamine.": [
+    "Costs are affected by excavation depth and access, the amount of soil to be removed, formwork and reinforcement quantities, concrete volume, penetrations, moisture protection and backfilling. Existing foundations also require opening-up and assessment of the damage cause.",
+    "На стоимость влияют глубина выемки и доступ, количество вывозимого грунта, объём опалубки и арматуры, количество бетона, проходки, защита от влаги и обратная засыпка. Для существующего фундамента добавляются вскрытие и оценка причины повреждения."
+  ],
+  "Saada päringuga objekti asukoht, projekt või mõõdud ning fotod nii üldvaatest kui probleemkohast. Kui nende põhjal ei saa töömahtu ausalt hinnata, lepime kokku objekti ülevaatuse.": [
+    "Include the site location, design or dimensions, and photos of both the overall site and problem area with your enquiry. If these do not allow an honest scope assessment, we arrange a site inspection.",
+    "Приложите к заявке расположение объекта, проект или размеры, а также фотографии общего вида и проблемного места. Если по ним нельзя обоснованно оценить объём работ, согласуем осмотр объекта."
+  ],
+  "Hüdroisolatsioon, soojustus ja drenaaž töötavad koos": [
+    "Waterproofing, insulation and drainage work together",
+    "Гидроизоляция, утепление и дренаж работают вместе"
+  ],
+  "Vee koormus määrab lahenduse": [
+    "Water exposure determines the solution",
+    "Воздействие воды определяет решение"
+  ],
+  "Pinnaseniiskus ja survevesi vajavad erinevat lahendust. Valime aluspinnale ning koormusele sobiva hüdroisolatsioonisüsteemi ja tihendame läbiviigud. Nuppkile võib olla kaitse- või drenaažikiht, kuid ei asenda iseenesest vundamendi hüdroisolatsiooni.": [
+    "Ground moisture and water under pressure require different solutions. We select a waterproofing system suitable for the substrate and exposure and seal penetrations. A dimpled membrane may serve as a protective or drainage layer, but does not itself replace foundation waterproofing.",
+    "Грунтовая влага и напорная вода требуют разных решений. Выбираем систему гидроизоляции, подходящую основанию и воздействию воды, и герметизируем проходки. Профилированная мембрана может быть защитным или дренажным слоем, но сама по себе не заменяет гидроизоляцию фундамента."
+  ],
+  "Soojustus ja drenaaž": [
+    "Insulation and drainage",
+    "Утепление и дренаж"
+  ],
+  "Pinnasega kontaktis kasutame selleks ettenähtud koormus- ja niiskuskindlat soojustust. Drenaaži puhul peab olema lahendatud vee ärajuhtimine, toru kalle, filter ja kontrollitavus. Ilma toimiva väljavooluta toru paigaldamine ei taga vundamendi kuivust.": [
+    "In contact with soil, we use insulation designed to resist loads and moisture. Drainage requires a resolved discharge route, pipe fall, filtration and access for inspection. Installing a pipe without an effective outlet does not ensure a dry foundation.",
+    "В контакте с грунтом используем предназначенный для этого утеплитель, стойкий к нагрузке и влаге. Для дренажа должны быть решены отвод воды, уклон трубы, фильтрация и возможность контроля. Установка трубы без работающего выхода воды не обеспечивает сухость фундамента."
+  ],
+  "Vana vundamendi avamine": [
+    "Exposing an old foundation",
+    "Вскрытие старого фундамента"
+  ],
+  "Hoone kõrval kaevamise ulatus ja tööjärjekord vajavad kandvuse hindamist. Taldmiku alt pinnast ei eemaldata kontrollimata ning pikka lõiku ei avata korraga pelgalt töö kiirendamiseks. Vajumispragude või tugevdustööde korral on vajalik konstruktsioonispetsialisti lahendus.": [
+    "The extent and sequence of excavation beside a building require a load-bearing assessment. Soil is not removed from beneath the footing without checks, and long sections are not exposed at once merely to speed up work. Settlement cracks or strengthening work require a structural specialist's solution.",
+    "Объём и последовательность раскопки рядом со зданием требуют оценки несущей способности. Грунт под подошвой не удаляют без проверки, а длинный участок не открывают сразу лишь ради ускорения работ. При трещинах от просадки или усилении требуется решение специалиста по конструкциям."
+  ],
+  "Ülevaatuseks:": [
+    "For the inspection:",
+    "Для осмотра:"
+  ],
+  "Lisa hoone vanus, vundamendi teadaolev tüüp, fotod pragudest või niiskusest ning olemasolevad joonised. Täpsusta keldri kasutus ja vihmavee praegune ärajuhtimine.": [
+    "Provide the building's age, known foundation type, photos of cracks or moisture and existing drawings. Clarify basement use and the current rainwater discharge arrangement.",
+    "Укажите возраст здания, известный тип фундамента, приложите фотографии трещин или влаги и имеющиеся чертежи. Уточните использование подвала и существующий отвод дождевой воды."
+  ],
+  "Milliste töödega vundamenditööd tavaliselt seostuvad?": [
+    "Which other jobs are foundation works usually linked to?",
+    "С какими работами обычно связаны фундаментные работы?"
+  ],
+  "Vundamenditööd seostuvad tihti hoone alumise osa niiskuskaitse, betooni ja fassaadi üleminekuga. Kui töö hõlmab konstruktsiooni parandust, on oluline siduda see": [
+    "Foundation work is often linked to moisture protection of the lower building, concrete and the transition to the facade. If structural repairs are involved, it is important to coordinate them with",
+    "Фундаментные работы часто связаны с защитой нижней части здания от влаги, бетоном и переходом к фасаду. Если работа включает ремонт конструкции, важно согласовать его с"
+  ],
+  "betoonitööde ja aluspinna taastamisega": [
+    "concrete work and substrate restoration",
+    "бетонными работами и восстановлением основания"
+  ],
+  "; hoone välisilme ja sokli kaitse puhul jätkub töö sageli": [
+    "; for the building exterior and plinth protection, work often continues with",
+    "; при обновлении внешнего вида здания и защите цоколя работы часто продолжаются"
+  ],
+  "fassaadipinna paranduse või viimistlusega": [
+    "facade surface repairs or finishing",
+    "ремонтом или отделкой фасадной поверхности"
+  ],
+  ". Enne uut lahendust võib vaja minna ka": [
+    ". A new solution may first require",
+    ". Перед новым решением может также потребоваться"
+  ],
+  "vana kahjustunud osa eemaldamist": [
+    "removal of the old damaged section",
+    "удаление старой повреждённой части"
+  ],
+  "Vundamendi päring": [
+    "Foundation enquiry",
+    "Заявка на фундаментные работы"
+  ]
+}

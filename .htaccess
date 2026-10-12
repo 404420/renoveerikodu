@@ -21,7 +21,7 @@ Options -Indexes
 </IfModule>
 # Kaitse vanu admini koopiaid, varukoopiaid ja arendusfaile.
 RewriteEngine On
-RewriteRule ^(?:adminvana|backup|private-google|\.git|\.github)(?:/|$) - [F,END,NC]
+RewriteRule ^(?:adminvana|backup|private-google|scripts|tests|\.git|\.github)(?:/|$) - [F,END,NC]
 RewriteCond %{REQUEST_URI} !^/api/uploads/contact/ [NC]
 RewriteRule \.zip$ - [F,END,NC]
 <FilesMatch "(?i)(^error_log$|^\.env|\.(sql|bak|old|log|md)$)">
