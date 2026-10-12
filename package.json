@@ -1,6 +1,11 @@
 {
   "name": "renoveerikodu-website",
   "private": true,
-  "scripts": { "build:css": "node scripts/build-css.cjs" },
-  "devDependencies": { "clean-css": "5.3.3" }
+  "scripts": {
+    "build:css": "node scripts/build-css.cjs",
+    "check:seo": "node scripts/check-seo.mjs"
+  },
+  "devDependencies": {
+    "clean-css": "5.3.3"
+  }
 }

@@ -27,7 +27,6 @@ RewriteRule \.zip$ - [F,END,NC]
 <FilesMatch "(?i)(^error_log$|^\.env|\.(sql|bak|old|log|md)$)">
   Require all denied
 </FilesMatch>
-RewriteRule ^paneel(?:\.html|\.php)?/?$ paneel.php [END]
 
 DirectoryIndex index.html index.php
 
@@ -35,38 +34,45 @@ DirectoryIndex index.html index.php
   Require all denied
 </FilesMatch>
 
-RewriteEngine On
 RewriteBase /
 
 # Retired parquet case study now points to the service page.
-RewriteRule ^parketi-paigaldus-tallinn-korter(?:\.html)?/?$ /parketipaigaldus [R=301,L,NE]
+RewriteRule ^parketi-paigaldus-tallinn-korter(?:\.html)?/?$ https://www.renoveerikodu.ee/parketipaigaldus [R=301,L,NE]
 
 # Force homepage variants to the clean root URL.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
-RewriteRule ^index\.(html|php)$ / [R=301,L]
+RewriteRule ^index\.(html|php)$ https://www.renoveerikodu.ee/ [R=301,L,NE]
 
 # Force folder index files to the clean folder URL, e.g. /admin/index.php -> /admin/.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.(html|php)[\s?] [NC]
-RewriteRule ^(.+/)?index\.(html|php)$ /$1 [R=301,L]
+RewriteRule ^(.+/)?index\.(html|php)$ https://www.renoveerikodu.ee/$1 [R=301,L,NE]
 
 # Force public .html URLs to extensionless URLs, e.g. /kontakt.html -> /kontakt.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+RewriteRule ^(.+)\.html$ https://www.renoveerikodu.ee/$1 [R=301,L,NE]
 
 # Force public .php URLs to extensionless URLs on normal page visits.
 # POST requests are not redirected, so forms and API endpoints keep working.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
 RewriteCond %{REQUEST_URI} !^/api/ [NC]
-RewriteRule ^(.+)\.php$ /$1 [R=301,L,NE]
+RewriteRule ^(.+)\.php$ https://www.renoveerikodu.ee/$1 [R=301,L,NE]
 
 # Force clean page URLs without a trailing slash, e.g. /kontakt/ -> /kontakt.
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.+)/$ https://www.renoveerikodu.ee/$1 [R=301,L,NE]
+
+# Force every remaining public URL to the preferred HTTPS + WWW host in one hop.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.renoveerikodu\.ee$ [NC]
+RewriteRule ^ https://www.renoveerikodu.ee%{REQUEST_URI} [R=301,L,NE]
+
+# Keep the worker panel on its PHP implementation after canonical redirects.
+RewriteRule ^paneel(?:\.html|\.php)?/?$ paneel.php [END]
 
 # Serve existing files and folders directly after canonical redirects.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
