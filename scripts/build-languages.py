@@ -99,7 +99,7 @@ def runtime_scripts(source, language):
         body = body.replace("a[href^='images/']", "a[href^='/images/']")
         body = re.sub(r'((?:src|href)=["\'])(?:\.\./)*images/', r'\1/images/', body)
         if 'function calculatePrice' in body:
-            return '<script src="/assets/js/renoveeri-ai-chat.js?v=20261012"></script>'
+            return '<script src="/assets/js/renoveeri-ai-chat.js?v=20261013"></script>'
         if language != 'et':
             for key, translations in INLINE_MESSAGES.items():
                 body = body.replace(key, translations[LANGUAGES.index(language) - 1])
@@ -152,7 +152,7 @@ def build_page(source, route, language, translations):
         source = re.sub(pattern, r'\g<1>' + BASE + route[language], source)
     additions = '\n' + '\n'.join('<link rel="alternate" hreflang="' + lang + '" href="' + BASE + route[lang if lang != 'x-default' else 'et'] + '">' for lang in LANGUAGES + ['x-default'])
     additions += '\n' + '\n'.join('<meta property="og:locale:alternate" content="' + LOCALES[lang] + '">' for lang in LANGUAGES if lang != language)
-    additions += '\n<link rel="stylesheet" href="/assets/css/languages.css?v=20261012">\n<script src="/assets/js/i18n.js?v=20261012"></script>\n'
+    additions += '\n<link rel="stylesheet" href="/assets/css/languages.css?v=20261012">\n<script src="/assets/js/i18n.js?v=20261013"></script>\n'
     source = source.replace('</head>', additions + '</head>', 1)
     label = {'et': 'Vali keel', 'en': 'Choose language', 'ru': 'Выбрать язык'}[language]
     links = []
@@ -167,7 +167,7 @@ def build_page(source, route, language, translations):
     source = re.sub(r'(<form\b[^>]*(?:action="/api/(?:contact|newsletter).php")[^>]*>)',
                     r'\1\n<input type="hidden" name="language" value="' + language + '">', source)
     # Ensure modified shared JavaScript is fetched after an upload.
-    source = re.sub(r'(src="/assets/js/(?:main|led-design|renoveeri-ai-chat).js)\?v=\d+', r'\1?v=20261012', source)
+    source = re.sub(r'(src="/assets/js/(?:main|led-design).js)\?v=\d+', r'\1?v=20261012', source)
     return source
 
 def main():

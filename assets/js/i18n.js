@@ -44,9 +44,9 @@
     }
   };
   var routes = {
-    et: { apartment: '/korteri-remont/', contact: '/kontakt' },
-    en: { apartment: '/en/apartment-renovation/', contact: '/en/contact' },
-    ru: { apartment: '/ru/remont-kvartir/', contact: '/ru/kontakty' }
+    et: { apartment: '/korteri-remont/', contact: '/kontakt', prices: '/hinnakiri' },
+    en: { apartment: '/en/apartment-renovation/', contact: '/en/contact', prices: '/en/prices' },
+    ru: { apartment: '/ru/remont-kvartir/', contact: '/ru/kontakty', prices: '/ru/tseny' }
   };
   window.RenoveeriI18n = {
     language: language,

@@ -2,39 +2,39 @@
 	'use strict';
 
 	var priceList = [
-		{ name: 'kipsplaadi paigaldus', unit: 'm2', price: 16, keywords: ['kips', 'kipsplaat', 'kipsitood', 'karkass', 'vahesein'], note: 'Hind soltub karkassist, kihist, lae/seina keerukusest ja viimistluse tasemest.' },
-		{ name: 'pahteldus ja lihvimine', unit: 'm2', price: 9, keywords: ['pahtel', 'pahteldus', 'lihvimine'], note: 'Tapsustamiseks on vaja teada, kas pind on uus kips, vana sein voi parandustega pind.' },
-		{ name: 'kruntimine', unit: 'm2', price: 3.5, keywords: ['krunt', 'kruntimine'], note: 'Kruntimine kaib tavaliselt enne varvimist voi plaatimist.' },
-		{ name: 'varvimine 2 kihti', unit: 'm2', price: 7.5, keywords: ['varv', 'varvimine', 'maalri', 'maalritoo', 'maalritood', 'seinavärv', 'seina varv'], note: 'Hind soltub ettevalmistusest, toonivahetusest, lagede olemasolust ja pindade seisukorrast.' },
+		{ name: 'kipsplaadi paigaldus', unit: 'm2', price: 16, keywords: ['kips', 'kipsplaat', 'kipsitood', 'karkass', 'vahesein'], note: 'Hind sõltub karkassist, kihist, lae/seina keerukusest ja viimistluse tasemest.' },
+		{ name: 'pahteldus ja lihvimine', unit: 'm2', price: 9, keywords: ['pahtel', 'pahteldus', 'lihvimine'], note: 'Täpsustamiseks on vaja teada, kas pind on uus kips, vana sein või parandustega pind.' },
+		{ name: 'kruntimine', unit: 'm2', price: 4, keywords: ['krunt', 'kruntimine'], note: 'Kruntimine käib tavaliselt enne värvimist või plaatimist.' },
+		{ name: 'värvimine 2 kihti', unit: 'm2', price: 8, keywords: ['varv', 'värvimine', 'maalri', 'maalritoo', 'maalritood', 'seinavärv', 'seina varv'], note: 'Hind sõltub ettevalmistusest, toonivahetusest, lagede olemasolust ja pindade seisukorrast.' },
 		{ name: 'seinapinna tasandus kuni 10 mm', unit: 'm2', price: 19, materialPrice: 29, keywords: ['tasandus', 'tasandamine', 'seinapinna tasandus'], note: 'Tasanduse vajadus selgub aluspinna ebatasasusest.' },
-		{ name: 'poranda tasandus ja kallete valamine', unit: 'm2', price: 19, materialPrice: 29, keywords: ['põranda tasandus', 'poranda tasandus', 'kalle', 'kallete valamine', 'valu'], note: 'Margades ruumides on kalle eriti oluline aravoolu suunas.' },
-		{ name: 'hudroisolatsiooni paigaldus', unit: 'm2', price: 14, materialPrice: 24, keywords: ['hudro', 'hüdro', 'hüdroisolatsioon', 'niiskuskaitse'], note: 'Vannitoas ja dushinurgas on hudroisolatsioon enne plaatimist kriitiline.' },
-		{ name: 'seinte ja poranda plaatimine', unit: 'm2', price: 49, materialPrice: 59, keywords: ['plaat', 'plaatimine', 'plaatimistood', 'vannitoa plaatimine', 'köögitaust', 'koogitaust'], note: 'Hinda mojutavad plaadi formaat, mustri keerukus, aluspind, nurgad ja silikoon/vuuk.' },
-		{ name: 'plaaditud porandaliist', unit: 'jm', price: 19, keywords: ['plaaditud liist', 'põrandaliist plaat', 'porandaliist plaat'], note: 'Jooksva meetri hind soltub loigete ja nurkade arvust.' },
-		{ name: 'koogitausta plaatimine', unit: 'komplekt', price: 349, keywords: ['köögitaust', 'koogitaust', 'köögi taust', 'koogi taust'], note: 'Tavaliselt saab esmase hinna fotode ja ligikaudsete mootude pohjal.' },
-		{ name: 'laudparketi paigaldus', unit: 'm2', price: 12, keywords: ['laudparkett', 'parkett', 'parketi paigaldus'], note: 'Oluline on aluspinna sirgus, vana poranda eemaldus ja liistude maht.' },
-		{ name: 'laminaatparketi paigaldus', unit: 'm2', price: 9, keywords: ['laminaat', 'laminaatparkett'], note: 'Tapsusta, kas vana kate tuleb eemaldada ja kas liistud kuuluvad too sisse.' },
-		{ name: 'porandaliistu paigaldus', unit: 'jm', price: 5, keywords: ['liist', 'liistud', 'põrandaliist', 'porandaliist'], note: 'Hinda mojutavad nurgad, seinte sirgus ja liistu tuup.' },
+		{ name: 'põranda tasandus ja kallete valamine', unit: 'm2', price: 19, materialPrice: 29, keywords: ['põranda tasandus', 'põranda tasandus', 'kalle', 'kallete valamine'], note: 'Märgades ruumides on kalle eriti oluline äravoolu suunas.' },
+		{ name: 'hüdroisolatsiooni paigaldus', unit: 'm2', price: 14, materialPrice: 24, keywords: ['hudro', 'hüdro', 'hüdroisolatsioon', 'niiskuskaitse'], note: 'Vannitoas ja dušinurgas on hüdroisolatsioon enne plaatimist oluline.' },
+		{ name: 'seinte ja põranda plaatimine', unit: 'm2', price: 49, materialPrice: 59, keywords: ['plaat', 'plaatimine', 'plaatimistood', 'vannitoa plaatimine', 'köögitaust', 'koogitaust'], note: 'Hinda mõjutavad plaadi formaat, mustri keerukus, aluspind, nurgad ja silikoon/vuuk.' },
+		{ name: 'plaaditud põrandaliist', unit: 'jm', price: 19, keywords: ['plaaditud liist', 'põrandaliist plaat', 'põrandaliist plaat'], note: 'Jooksva meetri hind sõltub lõigete ja nurkade arvust.' },
+		{ name: 'köögitausta plaatimine', unit: 'komplekt', price: 349, keywords: ['köögitaust', 'koogitaust', 'köögi taust', 'koogi taust'], note: 'Tavaliselt saab esmase hinna fotode ja ligikaudsete mõõtude põhjal.' },
+		{ name: 'laudparketi paigaldus', unit: 'm2', price: 12, keywords: ['laudparkett', 'parkett', 'parketi', 'parketi paigaldus'], note: 'Oluline on aluspinna sirgus, vana põranda eemaldus ja liistude maht.' },
+		{ name: 'laminaatparketi paigaldus', unit: 'm2', price: 13, keywords: ['laminaat', 'laminaatparkett', 'laminaadi'], note: 'Täpsusta, kas vana kate tuleb eemaldada ja kas liistud kuuluvad töö sisse.' },
+		{ name: 'porandaliistu paigaldus', unit: 'jm', price: 5, keywords: ['liist', 'liistud', 'põrandaliist', 'põrandaliist'], note: 'Hinda mõjutavad nurgad, seinte sirgus ja liistu tüüp.' },
 		{ name: 'mittekandva seina lammutus', unit: 'm2', price: 35, keywords: ['lammutus', 'lammutustood', 'seina lammutus', 'demonteerimine'], note: 'Enne lammutust tuleb tapsustada, kas sein on kandev ja kas vaja on prahi aravedu.' },
-		{ name: 'segisti paigaldus', unit: 'tk', price: 59, keywords: ['segisti'], note: 'Tapsusta, kas olemasolev torustik ja kinnitused sobivad.' },
-		{ name: 'dushisegisti paigaldus', unit: 'tk', price: 69, keywords: ['dushisegisti', 'dušisegisti', 'dussisegisti'], note: 'Hind soltub ligipaasust ja olemasolevast torustikust.' },
-		{ name: 'valamu paigaldus', unit: 'tk', price: 59, keywords: ['valamu', 'kraanikauss'], note: 'Vaja on teada, kas paigaldada tuleb ka sifoon, kapp voi segisti.' },
-		{ name: 'WC poti paigaldus', unit: 'tk', price: 79, keywords: ['wc', 'pott', 'wc pott', 'tualett'], note: 'Tapsusta, kas tegu on porandapotiga voi seinasisese raamiga.' },
-		{ name: 'dushinurga paigaldus', unit: 'tk', price: 139, keywords: ['dushinurk', 'dušinurk', 'dussinurk'], note: 'Hind soltub mudelist, seina sirgusest ja silikoonimise mahust.' },
-		{ name: 'fassaadi pesu voi puhastus', unit: 'm2', price: 6, keywords: ['fassaadi pesu', 'fassaadipesu', 'puhastus', 'fassaadi puhastus'], note: 'Hind soltub fassaadi korgusest, ligipaasust ja mustuse liigist.' },
-		{ name: 'fassaadi krunt ja varv', unit: 'm2', price: 14, keywords: ['fassaadi varvimine', 'fassaadivarvimine', 'fassaadi krunt', 'puitfassaadi varvimine'], note: 'Oluline on aluspinna seisukord, vana varv, parandused ja tellingu vajadus.' },
-		{ name: 'puitfassaadi paigaldus', unit: 'm2', price: 39, keywords: ['puitfassaad', 'fassaadi paigaldus'], note: 'Tapsustada tuleb roovitus, tuuletoke, liitekohad ja viimistlus.' },
-		{ name: 'krohvfassaadi susteem', unit: 'm2', price: 49, keywords: ['krohvfassaad', 'krohvimine fassaad', 'soojustus'], note: 'Hind soltub susteemist, soojustusest, aluspinnast ja hoone korgusest.' },
-		{ name: 'tapeetimine', unit: 'm2', price: 17, keywords: ['tapeet', 'tapeetimine'], note: 'Hind soltub tapeedi tuubist, mustri sobitamisest ja aluspinna ettevalmistusest.' },
-		{ name: 'tapeedi eemaldus', unit: 'm2', price: 3.5, keywords: ['tapeedi eemaldus', 'vana tapeet'], note: 'Vana tapeedi eemaldusel soltub hind kihtide arvust ja liimi tugevusest.' },
-		{ name: 'vuukimine ja silikoonimine', unit: 'm2', price: 8, keywords: ['vuuk', 'vuukimine', 'silikoon', 'silikoonimine'], note: 'Margades ruumides on korrektne silikoonimine oluline lekete valtimiseks.' },
-		{ name: 'akna poskede viimistlus', unit: 'jm', price: 20, keywords: ['aken', 'akna põsk', 'akna posk', 'aknapaled'], note: 'Hind soltub akende arvust, poskede laiusest ja viimistluse tasemest.' }
+		{ name: 'segisti paigaldus', unit: 'tk', price: 59, keywords: ['segisti'], note: 'Täpsusta, kas olemasolev torustik ja kinnitused sobivad.' },
+		{ name: 'dušisegisti paigaldus', unit: 'tk', price: 69, keywords: ['dušisegisti', 'dušisegisti', 'dussisegisti'], note: 'Hind sõltub ligipääsust ja olemasolevast torustikust.' },
+		{ name: 'valamu paigaldus', unit: 'tk', price: 59, keywords: ['valamu', 'kraanikauss'], note: 'Vaja on teada, kas paigaldada tuleb ka sifoon, kapp või segisti.' },
+		{ name: 'WC poti paigaldus', unit: 'tk', price: 79, keywords: ['wc poti', 'wc pott', 'tualett', 'wc paigaldus'], note: 'Täpsusta, kas tegu on porandapotiga või seinasisese raamiga.' },
+		{ name: 'dušinurga paigaldus', unit: 'tk', price: 139, keywords: ['dushinurk', 'dušinurk', 'dussinurk'], note: 'Hind sõltub mudelist, seina sirgusest ja silikoonimise mahust.' },
+		{ name: 'fassaadi pesu või puhastus', unit: 'm2', price: 6, keywords: ['fassaadi pesu', 'fassaadipesu', 'fassaadi puhastus'], note: 'Hind sõltub fassaadi kõrgusest, ligipääsust ja mustuse liigist.' },
+		{ name: 'fassaadi krunt ja varv', unit: 'm2', price: 14, keywords: ['fassaadi värvimine', 'fassaadivarvimine', 'fassaadi krunt', 'puitfassaadi värvimine'], note: 'Oluline on aluspinna seisukord, vana varv, parandused ja tellingu vajadus.' },
+		{ name: 'puitfassaadi paigaldus', unit: 'm2', price: 39, keywords: ['puitfassaad', 'fassaadi paigaldus'], note: 'Täpsustada tuleb roovitus, tuuletõke, liitekohad ja viimistlus.' },
+		{ name: 'krohvfassaadi süsteem', unit: 'm2', price: 49, keywords: ['krohvfassaad', 'krohvimine fassaad', 'fassaadi soojustus'], note: 'Hind sõltub susteemist, soojustusest, aluspinnast ja hoone kõrgusest.' },
+		{ name: 'tapeetimine', unit: 'm2', price: 17, keywords: ['tapeet', 'tapeetimine'], note: 'Hind sõltub tapeedi tüübist, mustri sobitamisest ja aluspinna ettevalmistusest.' },
+		{ name: 'tapeedi eemaldus', unit: 'm2', price: 3.5, keywords: ['tapeedi eemaldus', 'vana tapeet'], note: 'Vana tapeedi eemaldusel sõltub hind kihtide arvust ja liimi tugevusest.' },
+		{ name: 'vuukimine ja silikoonimine', unit: 'm2', price: 8, keywords: ['vuuk', 'vuukimine', 'silikoon', 'silikoonimine'], note: 'Märgades ruumides on korrektne silikoonimine oluline lekete vältimiseks.' },
+		{ name: 'akna põskede viimistlus', unit: 'jm', price: 20, keywords: ['aken', 'akna põsk', 'akna posk', 'aknapaled'], note: 'Hind sõltub akende arvust, põskede laiusest ja viimistluse tasemest.' }
 	];
 
 	var packages = [
-		{ keywords: ['1-toaline', '1 toalise', 'ühetoaline', 'uhetoaline', 'korteri värskendus', 'korteri varskendus'], title: '1-toalise korteri varskendus', price: 2900, text: 'pahteldus, varvimine, liistud ja vaiksemad parandused' },
-		{ keywords: ['vannitoa remont', 'vannituba', 'vannitoa tervikremont', 'duširuum', 'dushiruum'], title: 'vannitoa tervikremont', price: 4900, text: 'ettevalmistus, hudroisolatsioon, plaatimine ja loppviimistlus' },
-		{ keywords: ['kogu korter', 'korteri remont', 'tervikremont', 'siseviimistlus kogu'], title: 'kogu korteri siseviimistlus', price: 8900, text: 'kips, pahtel, varv voi tapeet, porandad ja detailid' }
+		{ keywords: ['1-toaline', '1 toalise', 'ühetoaline', 'uhetoaline', 'korteri värskendus', 'korteri värskendus'], title: '1-toalise korteri värskendus', price: 2900, text: 'pahteldus, värvimine, liistud ja väiksemad parandused' },
+		{ keywords: ['vannitoa remont', 'vannituba', 'vannitoa tervikremont', 'duširuum', 'dushiruum'], title: 'vannitoa tervikremont', price: 4900, text: 'ettevalmistus, hüdroisolatsioon, plaatimine ja lõppviimistlus' },
+		{ keywords: ['kogu korter', 'korteri remont', 'tervikremont', 'siseviimistlus kogu'], title: 'kogu korteri siseviimistlus', price: 8900, text: 'kips, pahtel, varv või tapeet, porandad ja detailid' }
 	];
 
 	var language = window.RenoveeriI18n ? window.RenoveeriI18n.language : (document.documentElement.lang || 'et').split('-')[0];
@@ -200,243 +200,32 @@
 			package: 'Пример пакета: от {price}. Обычно включает: {items}. Точная цена зависит от состояния, материалов и объёма работ.'
 		}
 	};
-	var messages = messagesByLanguage[language];
-	function t(key, values) {
-		return messages[key].replace(/\{(\w+)\}/g, function (match, name) {
-			return values && Object.prototype.hasOwnProperty.call(values, name) ? String(values[name]) : match;
-		});
-	}
-	function displayUnit(unit) {
-		var units = { et: {m2: 'm²', jm: 'jm', tk: 'tk', komplekt: 'komplekt'}, en: {m2: 'm²', jm: 'linear m', tk: 'item', komplekt: 'set'}, ru: {m2: 'м²', jm: 'пог. м', tk: 'шт.', komplekt: 'комплект'} };
-		return units[language][unit] || unit;
-	}
 
-	function normalize(text) {
-		return String(text || '')
-			.toLowerCase()
-			.replace(/[õö]/g, 'o')
-			.replace(/[ä]/g, 'a')
-			.replace(/[ü]/g, 'u')
-			.replace(/[š]/g, 's')
-			.replace(/[ž]/g, 'z')
-			.replace(/ё/g, 'е');
-	}
-
-	function escapeHtml(text) {
-		return String(text).replace(/[&<>"]/g, function(char) {
-			return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char];
-		});
-	}
-
-	function formatMoney(value) {
-		return new Intl.NumberFormat(language === 'et' ? 'et-EE' : language === 'ru' ? 'ru-RU' : 'en-GB', {maximumFractionDigits: 2}).format(value) + ' €';
-	}
-
-	function findAmount(text) {
-		var normalized = normalize(text);
-		var match = normalized.match(/(\d+(?:[.,]\d+)?)\s*(?:m2|m²|м2|м²|sqm|square metres?|square meters?|ruut|jm|jooks|linear m|running m|пог\.?\s*м|кв\.?\s*м|tk|tukk|items?|pcs?|шт|komplekt|sets?|комплект)/) || normalized.match(/(\d+(?:[.,]\d+)?)\s*$/);
-		var amount = match ? parseFloat(match[1].replace(',', '.')) : null;
-		return amount > 0 && Number.isFinite(amount) ? amount : null;
-	}
-
-	function findServices(text) {
-		var normalized = normalize(text);
-		var matches = priceList.filter(function(service) {
-			return service.keywords.some(function(keyword) {
-				return normalized.indexOf(normalize(keyword)) !== -1;
-			});
-		});
-		// Prefer a specific job over the general term contained in its name.
-		var specificPairs = [[8, 7], [9, 7], [8, 12], [15, 14], [20, 3], [20, 2], [24, 23]];
-		specificPairs.forEach(function(pair) {
-			if (matches.indexOf(priceList[pair[0]]) !== -1) matches = matches.filter(function(service) { return service !== priceList[pair[1]]; });
-		});
-		return matches;
-	}
-
-	function findPackage(text) {
-		var normalized = normalize(text);
-		return packages.find(function(item) {
-			return item.keywords.some(function(keyword) {
-				return normalized.indexOf(normalize(keyword)) !== -1;
-			});
-		});
-	}
-
-	function hasAny(text, words) {
-		var normalized = normalize(text);
-		return words.some(function(word) {
-			return normalized.indexOf(normalize(word)) !== -1;
-		});
-	}
-
-	function contactPrompt() {
-		var contact = window.RenoveeriI18n ? window.RenoveeriI18n.route('contact') : ({et: '/kontakt', en: '/en/contact', ru: '/ru/kontakty'})[language];
-		return t('contact') + ' <a href="' + escapeHtml(contact) + '#vorm">' + t('contactLink') + '</a>.';
-	}
-
-	function serviceResponse(service, amount) {
-		var unit = displayUnit(service.unit);
-		var html = '<strong>' + escapeHtml(service.name) + '</strong><br>';
-		html += t('price', {price: formatMoney(service.price), unit: unit});
-		if (service.materialPrice) {
-			html += '<br>' + t('materialPrice', {price: formatMoney(service.materialPrice), unit: unit});
-		}
-		if (amount) {
-			html += '<br>' + t('estimate', {amount: amount, unit: unit, price: formatMoney(amount * service.price)});
-			if (service.materialPrice) {
-				html += '<br>' + t('materialEstimate', {price: formatMoney(amount * service.materialPrice)});
-			}
-		} else {
-			html += '<br>' + t('amountPrompt');
-		}
-		html += '<br>' + escapeHtml(service.note);
-		html += '<br><br>' + contactPrompt();
-		return html;
-	}
-
-	function combinedResponse(services, amount) {
-		var total = 0;
-		var html = '<strong>' + t('multiple') + '</strong><br>';
-		services.slice(0, 5).forEach(function(service) {
-			html += '- ' + escapeHtml(service.name) + ': ' + t('from') + ' ' + formatMoney(service.price) + ' / ' + displayUnit(service.unit) + '<br>';
-			if (amount && service.unit === 'm2') total += amount * service.price;
-		});
-		if (amount && total) {
-			html += '<br>' + t('combined', {amount: amount, price: formatMoney(total)});
-		}
-		html += '<br><br>' + t('differentAmounts') + ' ' + contactPrompt();
-		return html;
-	}
-
-	function answer(text, state) {
-		var amount = findAmount(text);
-		var services = findServices(text);
-		var pack = findPackage(text);
-
-		if (services[0]) state.pendingService = services[0];
-		if (amount) state.pendingAmount = amount;
-
-		if (hasAny(text, ['tere', 'hei', 'jou', 'hello', 'hi!', 'привет', 'здравствуйте', 'добрый день'])) {
-			return t('greeting');
-		}
-
-		if (hasAny(text, ['aitah', 'aitäh', 'tänud', 'tanud', 'thank', 'спасибо', 'благодар'])) {
-			return t('thanks') + ' ' + contactPrompt();
-		}
-
-		if (hasAny(text, ['kontakt', 'telefon', 'email', 'meil', 'ühendus', 'uhendus', 'pakkumine', 'pakkumist', 'päring', 'paring', 'contact', 'phone', 'quote', 'enquiry', 'контакт', 'телефон', 'почта', 'связаться', 'предложение', 'смет', 'расчёт стоимости', 'расчет стоимости'])) {
-			return contactPrompt() + '<br>' + t('quote');
-		}
-
-		if (hasAny(text, ['mida vaja', 'mis vaja', 'mida saata', 'fotod', 'mõõdud', 'moodud', 'what do you need', 'what to send', 'photos', 'dimensions', 'что нужно', 'что отправить', 'фото', 'размер'])) {
-			return t('information') + ' ' + contactPrompt();
-		}
-
-		if (!services.length && hasAny(text, ['piirkond', 'kus teete', 'tallinn', 'harjumaa', 'where do you work', 'service area', 'location', 'где работаете', 'район', 'таллин', 'харью'])) {
-			return t('region');
-		}
-
-		if (!services.length && hasAny(text, ['materjal', 'materials', 'material', 'материал'])) {
-			return t('materials');
-		}
-
-		if (hasAny(text, ['garantii', 'garantee', 'vastutus', 'warranty', 'guarantee', 'гаранти', 'ответственност'])) {
-			return t('warranty');
-		}
-
-		if (hasAny(text, ['kaua', 'aeg', 'kestab', 'millal', 'how long', 'duration', 'when', 'срок', 'сколько времени', 'как долго', 'когда'])) {
-			return t('time');
-		}
-
-		if (pack && !services.length) {
-			return '<strong>' + escapeHtml(pack.title) + '</strong><br>' + t('package', {price: formatMoney(pack.price), items: escapeHtml(pack.text)}) + '<br><br>' + contactPrompt();
-		}
-
-		if (services.length > 1) return combinedResponse(services, amount || state.pendingAmount);
-		if (services.length === 1) return serviceResponse(services[0], amount || state.pendingAmount);
-		if (state.pendingService && amount) return serviceResponse(state.pendingService, amount);
-
-		if (hasAny(text, ['hind', 'maksab', 'palju', 'hinnakiri', 'euro', 'price', 'cost', 'how much', 'цен', 'стоит', 'стоимость', 'евро'])) {
-			return t('pricePrompt');
-		}
-
-		return t('fallback') + ' ' + contactPrompt();
-	}
-
-	function init() {
-		var bubble = document.getElementById('ai-bubble');
-		var chat = document.getElementById('ai-chat');
-		var close = document.getElementById('ai-close');
-		var input = document.getElementById('ai-input');
-		var sendBtn = document.getElementById('ai-send');
-		var messages = document.getElementById('ai-messages');
-		var state = { pendingService: null, pendingAmount: null };
-
-		if (!bubble || !chat || !close || !input || !sendBtn || !messages) return;
-		if (chat.dataset.renoveeriAiReady === '1') return;
-		chat.dataset.renoveeriAiReady = '1';
-		bubble.setAttribute('aria-label', t('open'));
-		bubble.setAttribute('title', t('open'));
-		close.setAttribute('aria-label', t('close'));
-		input.placeholder = t('placeholder');
-		input.setAttribute('aria-label', t('placeholder'));
-		sendBtn.textContent = t('send');
-		var header = document.getElementById('ai-header');
-		if (header) {
-			Array.from(header.childNodes).forEach(function(node) { if (node.nodeType === 3) node.remove(); });
-			header.insertBefore(document.createTextNode(t('title') + ' '), header.firstChild);
-		}
-		messages.innerHTML = '<p><b>AI:</b> ' + t('welcome') + '</p>';
-
-		function openChat(event) {
-			if (event) event.preventDefault();
-			chat.style.display = 'flex';
-			bubble.setAttribute('aria-expanded', 'true');
-			bubble.style.display = 'none';
-			input.focus();
-		}
-
-		function closeChat(event) {
-			if (event) event.preventDefault();
-			chat.style.display = 'none';
-			bubble.setAttribute('aria-expanded', 'false');
-			bubble.style.display = 'flex';
-			bubble.focus();
-		}
-
-		function addMessage(sender, html) {
-			var p = document.createElement('p');
-			p.innerHTML = '<b>' + sender + ':</b> ' + html;
-			messages.appendChild(p);
-			messages.scrollTop = messages.scrollHeight;
-		}
-
-		function sendMessage(event) {
-			if (event) event.preventDefault();
-			var text = input.value.trim();
-			if (!text) return;
-			addMessage(t('client'), escapeHtml(text));
-			input.value = '';
-			window.setTimeout(function() {
-				addMessage('AI', answer(text, state));
-			}, 180);
-		}
-
-		bubble.onclick = openChat;
-		close.onclick = closeChat;
-		chat.addEventListener('keydown', function(event) {
-			if (event.key === 'Escape') closeChat(event);
-		});
-		sendBtn.onclick = sendMessage;
-		input.addEventListener('keydown', function(event) {
-			if (event.key === 'Enter') sendMessage(event);
-		});
-	}
-
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', init);
-	} else {
-		init();
-	}
+  // Additional published flooring rows; existing row indices remain stable.
+  // No published unit prices exist for these four legacy entries. Do not invent an estimate.
+  [23,24,25,26].forEach(function(index) { priceList[index].price = null; });
+  if (language === 'et') {
+    priceList[12].name = 'põrandaliistu paigaldus';
+    priceList[20].name = 'fassaadi krunt ja värv';
+    priceList[20].note = 'Oluline on aluspinna seisukord, vana värv, parandused ja tellingu vajadus.';
+    priceList[22].note = 'Hind sõltub süsteemist, soojustusest, aluspinnast ja hoone kõrgusest.';
+    priceList[13].note = 'Enne lammutust tuleb täpsustada, kas sein on kandev ja kas vaja on prahi äravedu.';
+    priceList[17].note = 'Täpsusta, kas tegu on põrandapotiga või seinasisese raamiga.';
+    packages[2].text = 'kips, pahtel, värv või tapeet, põrandad ja detailid';
+  }
+  var flooring = {
+    et: [['Parketi paigaldus ujuvalt', ['ujuv', 'ujuvalt'], 'Aluspind, alusmaterjal ja tootja nõuded täpsustatakse enne paigaldust.'], ['Kalasabaparketi paigaldus liimimisega', ['kalasaba', 'kalasabaparkett'], 'Liim, aluspinna ettevalmistus, lõikevaru ja liistud täpsustatakse pakkumises.']],
+    en: [['Floating parquet installation', ['floating parquet', 'floating floor'], 'The substrate, underlay and manufacturer requirements must be checked.'], ['Glued herringbone parquet installation', ['herringbone'], 'Adhesive, substrate preparation, cutting allowance and skirting are specified in the quote.']],
+    ru: [['Укладка паркета плавающим способом', ['плавающим', 'плавающий'], 'Основание, подложку и требования производителя уточняем до монтажа.'], ['Укладка паркета ёлочкой на клей', ['ёлочк', 'елочк'], 'Клей, подготовка основания, запас на подрезку и плинтусы уточняем в предложении.']]
+  };
+  [13, 25].forEach(function(price, index) {
+    var row = flooring[language][index];
+    priceList.push({name:row[0],unit:'m2',price:price,note:row[2],keywords:[].concat(flooring.et[index][1],flooring.en[index][1],flooring.ru[index][1])});
+  });
+  function init() {
+    window.RenoveeriSupport.mount({language:language,priceList:priceList,packages:packages,messages:messagesByLanguage[language]});
+  }
+  if (typeof document === 'undefined') init();
+  else if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
 })();
