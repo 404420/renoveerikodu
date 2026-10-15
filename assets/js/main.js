@@ -3,6 +3,34 @@
 	Production Stable Version
 */
 
+// A failed responsive candidate does not make browsers retry the img's src.
+// Keep the original image available if a resized file is missing on the host.
+(function() {
+	var retried = new WeakSet();
+
+	function retryOriginal(image) {
+		if (!(image instanceof HTMLImageElement) || retried.has(image)) return;
+		var original = image.getAttribute('src');
+		var picture = image.parentElement && image.parentElement.tagName === 'PICTURE' ? image.parentElement : null;
+		var sources = picture ? picture.querySelectorAll('source[srcset]') : [];
+		if (!original || (!image.hasAttribute('srcset') && !sources.length)) return;
+		if (image.currentSrc && image.currentSrc === image.src) return;
+
+		retried.add(image);
+		sources.forEach(function(source) { source.removeAttribute('srcset'); });
+		image.removeAttribute('srcset');
+		image.removeAttribute('sizes');
+		image.src = original;
+	}
+
+	// Capture also handles images inserted later and native lazy loading errors.
+	document.addEventListener('error', function(event) { retryOriginal(event.target); }, true);
+	// Above-the-fold images may already have failed before this script loaded.
+	document.querySelectorAll('img').forEach(function(image) {
+		if (image.complete && image.naturalWidth === 0) retryOriginal(image);
+	});
+})();
+
 (function($) {
 	var i18n = window.RenoveeriI18n;
 	var language = i18n ? i18n.language : 'et';
