@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const ROOT = process.cwd();
 const BASE = "https://www.renoveerikodu.ee";
@@ -226,8 +227,16 @@ for (const required of [
   "RewriteRule ^ https://www.renoveerikodu.ee%{REQUEST_URI} [R=301,L,NE]"
 ]) if (!htaccess.includes(required)) errors.push(`.htaccess: missing rule: ${required}`);
 
-if (errors.length) {
-  console.error([...new Set(errors)].join("\n"));
+// The owner requested this uploaded page be published byte-for-byte. Keep the
+// exception bound to its exact bytes and exact known diagnostics; new issues fail.
+const exception = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/seo-upload-exceptions.json"), "utf8"));
+const uploadedHash = createHash("sha256").update(fs.readFileSync(path.join(ROOT, exception.file))).digest("hex");
+const accepted = uploadedHash === exception.sha256 ? new Set(exception.diagnostics) : new Set();
+const waived = [...new Set(errors)].filter((error) => accepted.has(error));
+const blocking = errors.filter((error) => !accepted.has(error));
+if (waived.length) console.warn(`Owner-supplied unchanged page: ${waived.length} known SEO warnings accepted for ${exception.file} (${uploadedHash}).\n${waived.join("\n")}`);
+if (blocking.length) {
+  console.error([...new Set(blocking)].join("\n"));
   process.exit(1);
 }
-console.log(`SEO check passed: ${pages.length} indexable pages (${indexedRoutes.length} per language), ${multilingualPages.length} multilingual pages, reciprocal hreflang, native selectors, valid assets/JSON-LD, ${pageLocs.length} sitemap URLs.`);
+console.log(`SEO check passed (${waived.length} explicit upload exceptions): ${pages.length} indexable pages (${indexedRoutes.length} per language), ${multilingualPages.length} multilingual pages, checked hreflang, selectors, assets/JSON-LD and ${pageLocs.length} sitemap URLs.`);
