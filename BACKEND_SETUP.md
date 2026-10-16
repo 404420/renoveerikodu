@@ -109,6 +109,24 @@ https://www.renoveerikodu.ee/admin/
 
 Kontaktivorm saadab lehe keele (`et`, `en` või `ru`); server lubab ainult need kolm väärtust. Vana vormi või tundmatu keele puhul kasutatakse `et`. Adminis on vormi keel nähtav ning kliendi kinnituskiri ja vormi vastused on valitud keeles.
 
+### Kirillitsa ja Unicode'i salvestamise parandus
+
+Olemasolevas majutuses tee `contacts` tabelist varukoopia ning käivita phpMyAdminis õiges andmebaasis **`admin/migrations/20261016_contact_utf8mb4.sql`**. See teisendab tabeli vaikimisi kodeeringu ja olemasolevad tekstiveerud `utf8mb4` kodeeringusse. Ainult `config.php` DSN-i või tabeli vaikimisi kodeeringu muutmisest ei piisa, kui veerud kasutavad endiselt `latin1` kodeeringut. Migratsiooni võib uuesti käivitada. Varem õigesti salvestatud päringud ja manused säilivad.
+
+Laadi üles ka uuendatud `api/_database.php`, `api/_contact-schema.php`, `api/contact.php`, `api/parketi-contact.php`, `admin/_bootstrap.php` ja `admin/_auth.php`. Need määravad ka vana privaatse `config.php` tagastatud PDO ühenduse kliendi-, ühenduse- ja vastusekodeeringuks `utf8mb4`, nii vormi salvestamisel kui adminis lugemisel või tõlkimisel. Päris `config.php` asendamine pole vajalik. Kui tabel vajab teisendamist ja kasutajal on `ALTER TABLE` õigus, teeb rakendus selle automaatselt; valmis tabeli korral tehakse ainult kontroll. Puuduva teisendusõiguse või muu vea korral ei kinnitata uut päringut salvestatuks ega salvestata sõnumit vaikselt küsimärkidena. Sel juhul käivita ülalnimetatud SQL migratsioon andmebaasi halduskontoga.
+
+Juba andmebaasis sõnasõnalisteks `?` märkideks asendatud tähti pole võimalik kodeeringu muutmisega taastada. Taasta sellise päringu tekst algsest teavituskirjast või kahjustamata varukoopiast.
+
+Kohalik integratsioonitest kasutab ainult eraldi testandmebaasi, ei laadi veebilehe privaatset `config.php` faili ega saada e-kirju. Kasuta ajutist MySQL/MariaDB serverit ja kontot, millel on seal andmebaasi loomise/kustutamise õigus:
+
+```bash
+RK_TEST_MYSQL_DSN='mysql:host=127.0.0.1;port=3306' \
+RK_TEST_MYSQL_USER='test_kasutaja' RK_TEST_MYSQL_PASSWORD='test_parool' \
+php tests/contact-unicode.php
+```
+
+Test loob juhusliku nimega andmebaasi ja eemaldab selle lõpuks. See kontrollib vana `latin1` skeemi parandamist, vene vormi tegelikku HTTP-vastuvõttu, kirillitsat ja emoji'sid, vene failinime, admini ühendust ja HTML-kuvamist, eesti/inglise vorme, uut paigaldust ning migratsioonide korduvkäivitamist. PHP vajab `pdo_mysql` laiendust ja `proc_open` funktsiooni.
+
 Olemasoleva andmebaasi puhul käivita enne PHP failide uuendamist phpMyAdminis `admin/migrations/20261012_contact_languages.sql`. Vali esmalt õige andmebaas. Migratsiooni võib uuesti käivitada ka osaliselt uuendatud andmebaasis: see lisab ainult puuduvad veerud. Uues andmebaasis on väljad juba `database.sql` failis. Kui andmebaasi kasutajal on `ALTER TABLE` õigus, lisavad PHP failid puuduva veeru automaatselt; käsitsi migratsiooni järel ei ole seda õigust vaja. `message`, `source`, vanad päringud ja nende manused jäävad alles.
 
 Automaatseks tõlkimiseks on vaja **DeepL API Free või DeepL API Pro** kontot ja selle API võtit. Tavalise DeepL Pro tõlkija tellimusest API jaoks ei piisa. Lisa serveri privaatsesse `config.php` faili:

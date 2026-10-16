@@ -1,8 +1,10 @@
-# Renoveeri Kodu virtuaalne abiline
+# Renoveeri Kodu teenindusrobot
 
-Avalikul lehel on nimi „Renoveeri Kodu abiline”, inglise ja vene lehel vastav tõlge. Abiline töötab kõigil 81 avalikul keeleversiooni lehel. Vestluse päis selgitab, et tegu on automaatse abilisega ning lõplikud hinnad ja tööajad kinnitab meeskond.
+Avalikul lehel on nimi „Teenindusrobot”, inglise ja vene lehel vastav tõlge. Saatjanimi on kõigis keeltes „RK”. Avamisnupul on ainult vestlusmulli ikoon, nupu ligipääsetav nimi jääb ekraanilugejale alles. Oranž teema kasutab sama põhivärvi `#a84400` nagu „Võta ühendust” nupp. Abiline töötab kõigil 81 avalikul keeleversiooni lehel. Vestluse päis selgitab, et tegu on automaatse abilisega ning lõplikud hinnad ja tööajad kinnitab meeskond.
 
 ## Käitumine
+
+- „Soovin hinnapakkumist” kuvab kõigi avalike põhiteenuste valiku ning vannitoa remondi, fassaadi värvimise ja katuse hoolduse. Loend on ühine kõigile lehtedele ja tõlgitud kolmes keeles; see ei sõltu konkreetse lehe lühendatud menüüst. Pikas loendis saab kerida.
 
 - Kinnitatud vastused käsitlevad teenuseid, materjale, hinnas sisalduvat, garantiid, ajakava, maksmist, ettevalmistust, tööjärjekorda, märgruume, põrandakütet, jäätmeid, remonti ja kontaktandmeid.
 - Arvutused kasutavad avaliku `hinnakiri.html` 25 ühikuhinnaga töö hinda. 3 näidispaketti on orientiirid, mitte põrandapinnaga korrutatavad ühikuhinnad. Avaliku hinnakirjata töö puhul küsitakse objekti andmeid.
@@ -31,6 +33,6 @@ Konkurentide hindu, maksetingimusi ega ajakavalubadusi ei kantud RK Meistrite va
 
 ## Kontrollimine
 
-`npm test` kontrollib 21 kliendistsenaariumi, hinnakirja vastavust ja kõigi keelelehtede skripte. `npm run check:seo` kontrollib lehtede linke, tõlkeid, varasid ja sitemap'i. Tõlked taastoodetakse käsuga `npm run build:languages` (Windowsis kasuta Python 3 UTF-8 režiimi).
+`npm test` kontrollib 24 kliendistsenaariumi, hinnakirja vastavust ja kõigi keelelehtede skripte. `npm run check:seo` kontrollib lehtede linke, tõlkeid, varasid ja sitemap'i. Tõlked taastoodetakse käsuga `npm run build:languages` (Windowsis kasuta Python 3 UTF-8 režiimi).
 
 Brauseris kontrolliti tööhinnangut, ühikuga jätkusõnumit, inglise ja vene vastuseid, vestluse kokkuvõtte lisamist olemasolevat teksti säilitades, Escape-klahvi ja mobiilipaigutust. Kohalik eelvaade ei käivita päris PHP/MySQL kontaktivormi: päringute edastamist tootmisandmebaasi ega meili ei katsetatud ja proovipäringuid ei saadetud.

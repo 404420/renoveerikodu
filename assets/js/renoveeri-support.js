@@ -4,7 +4,7 @@
   // Reviewed advice, not a live booking system. Prices are supplied by the shared catalogue.
   var copy = {
     et: {
-      title: 'Renoveeri Kodu abiline', agent: 'Abiline', subtitle: 'Tööde nõu ja esmane hinnang', open: 'Küsi tööde kohta', close: 'Sulge vestlus', send: 'Saada', reset: 'Alusta uut vestlust',
+      title: 'Teenindusrobot', agent: 'RK', open: 'Ava vestlus', close: 'Sulge vestlus', send: 'Saada', reset: 'Alusta uut vestlust',
       placeholder: 'Kirjelda tööd või küsi nõu…', welcome: 'Tere! Aitan sul töömahtu täpsustada, hinnakirja järgi eelarvet hinnata ja pakkumise jaoks vajalikku infot koguda. Millist tööd plaanid?',
       disclosure: 'Automaatne abiline. Lõpliku pakkumise ja tööaja kinnitab meie meeskond.', privacy: 'Vestlus püsib sellel lehel. Meeskonnale jõuab päring alles pärast kontaktivormi saatmist.',
       quote: 'Koosta hinnapäring', phone: 'Helista meistrile', pricing: 'Vaata hinnakirja', transfer: 'Lisa vestluse kokkuvõte päringusse', transferred: 'Vestluse kokkuvõte on lisatud. Vaata kirjeldus üle, lisa kontaktandmed ja fotod ning saada päring.',
@@ -47,7 +47,7 @@
       }
     },
     en: {
-      title: 'Renoveeri Kodu assistant', agent: 'Assistant', subtitle: 'Renovation advice and estimates', open: 'Ask about your project', close: 'Close conversation', send: 'Send', reset: 'Start a new conversation', placeholder: 'Describe your project or ask a question…',
+      title: 'Service robot', agent: 'RK', open: 'Open conversation', close: 'Close conversation', send: 'Send', reset: 'Start a new conversation', placeholder: 'Describe your project or ask a question…',
       welcome: 'Hello! I can help clarify the scope of work, estimate costs from our price list and prepare a quote request. What are you planning?', disclosure: 'Automated assistant. Our team confirms final quotes and availability.', privacy: 'This conversation stays on this page. Our team receives your enquiry only after you submit the contact form.',
       quote: 'Prepare a quote request', phone: 'Call our team', pricing: 'View prices', transfer: 'Include conversation in my enquiry', transferred: 'The conversation summary has been added. Review it, add your contact details and photos, then submit the enquiry.', chips: ['I need a quote', 'Parquet installation', 'Bathroom renovation', 'What is included?'],
       clarify: 'Which work do you mean? For example, “parquet installation 25 m²”.', unit: 'This work is priced per {unit}. Please give a quantity in that unit; I cannot automatically convert other units.', multiple: 'Each job needs its own quantity, for example “filling 40 m², painting 30 m², skirting 12 linear m”.', missing: 'What is the quantity for this work ({unit})? If you do not know yet, start with photos and a description.',
@@ -60,12 +60,21 @@
       }
     },
     ru: {
-      title: 'Помощник Renoveeri Kodu', agent: 'Помощник', subtitle: 'Советы по ремонту и оценка стоимости', open: 'Спросить о ремонте', close: 'Закрыть разговор', send: 'Отправить', reset: 'Начать новый разговор', placeholder: 'Опишите работу или задайте вопрос…', welcome: 'Здравствуйте! Помогу уточнить объём работ, оценить бюджет по прайс-листу и подготовить запрос предложения. Какую работу планируете?', disclosure: 'Автоматический помощник. Окончательную цену и сроки подтверждает наша команда.', privacy: 'Разговор остаётся на этой странице. Команда получит запрос только после отправки контактной формы.',
+      title: 'Сервисный робот', agent: 'RK', open: 'Открыть разговор', close: 'Закрыть разговор', send: 'Отправить', reset: 'Начать новый разговор', placeholder: 'Опишите работу или задайте вопрос…', welcome: 'Здравствуйте! Помогу уточнить объём работ, оценить бюджет по прайс-листу и подготовить запрос предложения. Какую работу планируете?', disclosure: 'Автоматический помощник. Окончательную цену и сроки подтверждает наша команда.', privacy: 'Разговор остаётся на этой странице. Команда получит запрос только после отправки контактной формы.',
       quote: 'Подготовить запрос', phone: 'Позвонить мастеру', pricing: 'Посмотреть цены', transfer: 'Добавить разговор к запросу', transferred: 'Краткое содержание разговора добавлено. Проверьте описание, добавьте контакты и фотографии, затем отправьте запрос.', chips: ['Нужно предложение', 'Укладка паркета', 'Ремонт ванной', 'Что входит в цену?'], clarify: 'Какую работу вы имеете в виду? Например: «укладка паркета 25 м²».', unit: 'Единица этой работы: {unit}. Укажите объём в этой единице; другие единицы автоматически не пересчитываются.', multiple: 'Для каждой работы нужен отдельный объём, например: «шпаклёвка 40 м², покраска 30 м², плинтус 12 пог. м».', missing: 'Каков объём этой работы ({unit})? Если размеров пока нет, можно начать с фотографий и описания.', disclaimer: 'Это начальная цена прайс-листа, а не окончательное предложение. Подготовку, демонтаж, материалы, транспорт и вывоз мусора согласовываем отдельно.', total: 'Ориентировочная стоимость описанных работ: <strong>от {price}</strong>.', partial: 'Не все объёмы известны; общую стоимость пока не суммирую.', noQuantity: 'Укажите положительный объём и единицу, например «25 м²» или «12 пог. м».', summary: 'Краткое содержание разговора (описание клиента, оценка не является предложением):', materialsFollow: 'Материалы включены?', locationFollow: 'Где вы работаете?', timelineFollow: 'Когда можно начать?', prepFollow: 'Как подготовиться?', locationAck: 'Добавил расположение в описание. Работаем преимущественно в Таллинне и Харьюмаа; другие районы подтверждает команда. Какие работы и объёмы нужны?', timingAck: 'Добавил желаемый срок в описание. Свободное время подтверждает команда. Уточним объём или подготовим запрос?', unknown: 'На этот вопрос у меня пока нет подтверждённого ответа. Опишите работу или передайте вопрос мастеру; цену и возможность выполнения нельзя подтверждать предположением.', estimateQuestion: 'Для точного предложения нужны описание работ, расположение, размеры и фото. Какую работу нужно выполнить?', areaWarning: 'Площадь пола квартиры или комнаты не равна площади стен и потолков для покраски. Нужны размеры отделываемой поверхности.',
       topics: {
         region: 'Работаем преимущественно в Таллинне и Харьюмаа. Возможность работ в других местах команда проверяет отдельно. В каком городе или волости объект?', materials: 'Материалы включены только там, где в прайс-листе есть отдельная цена с материалами. Состав уточняем в предложении; плитка и напольное покрытие не включаются автоматически в стоимость работ. Материалы уже есть или нужна помощь с выбором?', included: 'Начальная цена работы не равна полной стоимости ремонта. Работы, материалы, подготовку, демонтаж, транспорт и мусор уточняем отдельно. Какую работу хотите уточнить?', warranty: 'На сайте указана гарантия 3 года на выполненные строительные и отделочные работы. Объём, условия и сдача согласовываются для объекта. Если возникла проблема, опишите её и добавьте фото в контактную форму.', availability: 'Свободные даты и осмотр подтверждает команда. Укажите желаемое начало, расположение и объём для запроса.', duration: 'Срок зависит от объёма, основания, высыхания и материалов. Ремонт ванной состоит из нескольких этапов. График уточняем после осмотра. Какие работы и площадь планируются?', payment: 'График оплаты, предоплата, счета и возможный НДС фиксируются в конкретном предложении или договоре. Без согласования команды я их не подтверждаю.', preparation: 'Обсуждаем доступ, мебель, защиту поверхностей, воду, электричество и мусор. Не разбирайте конструкции до согласования решения. В какой комнате нужны работы?', sequence: 'Обычно: осмотр и замеры, демонтаж и технические работы, подготовка основания, отделка и проверка. В мокрых помещениях до плитки решают основание, уклоны и гидроизоляцию. Порядок зависит от объекта.', bathroom: 'Для ванной уточняем демонтаж, трубы и электрику, основание, уклоны, гидроизоляцию, плитку и сантехнику. Площадь пола не равна общей площади плитки. Каков размер ванной: нужен полный ремонт или только плитка?', flooring: 'Для паркета и ламината важны ровность и влажность основания, тёплый пол, способ монтажа и требования производителя. Демонтаж, выравнивание и плинтусы уточняем отдельно. Планируете паркетную доску, ламинат или ёлочку?', heating: 'Покрытие, подложка или клей должны подходить для системы отопления. Перед укладкой проверяют влажность основания и требования производителя. Какое покрытие и отопление используются?', waste: 'Демонтаж, сбор, транспорт и утилизация согласовываются отдельно. Важны доступ, этаж, лифт и вид мусора. Что нужно удалить?', damp: 'До отделки нужно найти причину сырости или плесени и оценить повреждение. Покраска причину не устранит. Отправьте фото и время появления; решение подтвердит специалист после осмотра.', structural: 'Снос несущей стены нельзя подтвердить в разговоре или по фото. Нужны проверка специалистом и при необходимости проект и согласования. Не начинайте демонтаж до проверки.', emergency: 'Этот разговор не является каналом аварийного вызова. При непосредственной опасности покиньте опасную зону и вызовите соответствующую аварийную службу. Не трогайте мокрые электроприборы и проводку под напряжением. Возможность помощи команды уточните по +372 5551 5783.', photos: 'Фотографии и файлы добавляются в контактную форму: общий вид, крупный план, размеры, расположение и желаемый результат. Этот разговор не анализирует и не отправляет фотографии.', human: 'Свяжитесь по +372 5551 5783 или info@renoveerikodu.ee. Подробности и фотографии отправьте через контактную форму. Разговор сам не бронирует время и не отправляет запрос.', services: 'Выполняем отделку, плитку, полы, гипсокартон, демонтаж, монтаж сантехники, фасады, кровлю, фундаменты, бетон, леса, стеновые панели и LED-решения. Особые работы и цены подтверждает команда. Что планируете?', repair: 'Возможность ремонта зависит от материала и повреждения. Пришлите общий вид и крупный план вмятины, царапины или дефекта отделки. После осмотра определим, достаточно ли местного ремонта.', unsupported: 'Для этой работы нет единичной цены в прайс-листе помощника. Отправьте описание, размеры и фотографии для проверки решения и предложения по объекту.', identity: 'Я автоматический виртуальный помощник Renoveeri Kodu. Помогаю с ценами и подготовкой; окончательные предложения, бронирование и технические решения подтверждает человек.'
       }
     }
+  };
+
+  // Public service categories from the localized homepages, including the
+  // separate facade-painting, bathroom and roof-maintenance services.
+  // Keep this independent of the current page's shortened navigation menu.
+  var publicServices = {
+    et: ['Korteri remont', 'Plaatimine', 'Maalritööd', 'LED lahendused', 'Seinapaneelide paigaldus', 'Parketi paigaldus', 'Parketi parandus ja taastamine', 'Tapeetimine', 'Kipsitööd', 'Lammutustööd', 'Tellingute paigaldus', 'Betoonitööd', 'Vundamenditööd', 'Fassaaditööd', 'Fassaadi värvimine', 'Katusetööd', 'Lumetööd', 'Vannitoa remont', 'Katuse pesu ja hooldus'],
+    en: ['Apartment renovation', 'Tiling', 'Painting', 'LED lighting', 'Wall panel installation', 'Parquet installation', 'Parquet repair and restoration', 'Wallpapering', 'Drywall work', 'Demolition', 'Scaffolding installation', 'Concrete work', 'Foundation work', 'Facade work', 'Facade painting', 'Roofing', 'Snow removal', 'Bathroom renovation', 'Roof cleaning and maintenance'],
+    ru: ['Ремонт квартиры', 'Укладка плитки', 'Малярные работы', 'LED-освещение', 'Монтаж стеновых панелей', 'Укладка паркета', 'Ремонт и восстановление паркета', 'Поклейка обоев', 'Гипсокартонные работы', 'Демонтажные работы', 'Монтаж строительных лесов', 'Бетонные работы', 'Фундаментные работы', 'Фасадные работы', 'Покраска фасадов', 'Кровельные работы', 'Уборка снега', 'Ремонт ванной', 'Мойка и обслуживание крыши']
   };
 
   var intents = [
@@ -167,6 +176,15 @@
         return intent[1].test(candidate);
       });
       if(urgent) {state.pending=[];state.last=[];state.rows=[];return response(urgent[0]);}
+      if(s===normalize(c.chips[0])) {state.pending=[];state.last=[];state.rows=[];return response('estimateQuestion',publicServices[lang]);}
+      var selectedService=publicServices[lang].map(normalize).indexOf(s);
+      if(selectedService!==-1) {
+        state.pending=[];state.last=[];state.rows=[];
+        // Repair is not installation, and facade painting is not interior painting.
+        // Route exact category labels consistently in every language.
+        if(selectedService===6) return response('repair');
+        if(selectedService===14) return renderRows([{id:20,quantity:null}],state);
+      }
       if (/^(?:tere|tervist|hei|hello|hi|привет|здравствуйте)[!.\s]*$/.test(s)) return response('welcome',c.chips);
       if (/^(?:aitah|tanud|thanks|thank you|спасибо)[!.\s]*$/.test(s)) return {html:messages.thanks,suggestions:[c.quote,c.phone]};
       var matched=intents.slice(4).filter(function (intent) {return intent[1].test(s);});
@@ -223,9 +241,10 @@
         return response(target.length>1 ? 'multiple' : 'clarify');
       }
       if(/(?:parket|lamina|porand|floor|parquet|паркет|ламинат)/.test(s)) return response('flooring');
-      if(/(?:pakkumi|paring|quote|enquiry|предложен|запрос|смет)/.test(s)) return response('estimateQuestion',c.chips.slice(1,3));
+      if(publicServices[lang].some(function(label){return normalize(label)===s;})) {state.pending=[];state.last=[];state.rows=[];return response('unsupported');}
+      if(/(?:pakkumi|paring|quote|enquiry|предложен|запрос|смет)/.test(s)) {state.pending=[];state.last=[];state.rows=[];return response('estimateQuestion',publicServices[lang]);}
       if(asksPrice && state.last.length===1) return renderRows(state.rows,state);
-      if(asksPrice) return {html:messages.pricePrompt,suggestions:c.chips.slice(1,3)};
+      if(asksPrice) return {html:messages.pricePrompt,suggestions:publicServices[lang]};
       return response('unknown',c.chips.slice(0,3));
     }
     return {answer:answer,createState:createState,copy:c,language:lang,catalog:prices};
@@ -238,11 +257,11 @@
     var currentScript=document.querySelector('script[src*="renoveeri-ai-chat.js"]');
     var assetRoot=currentScript ? new URL('../',currentScript.src) : new URL('/assets/',location.href);
     if(!document.getElementById('support-style')) {
-      var link=document.createElement('link');link.id='support-style';link.rel='stylesheet';link.href=new URL('css/renoveeri-support.css?v=20261013',assetRoot).href;document.head.appendChild(link);
+      var link=document.createElement('link');link.id='support-style';link.rel='stylesheet';link.href=new URL('css/renoveeri-support.css?v=20261016',assetRoot).href;document.head.appendChild(link);
     }
     var bubble=document.getElementById('ai-bubble');
     if(!bubble){bubble=document.createElement('button');bubble.id='ai-bubble';document.body.appendChild(bubble);}
-    bubble.type='button';bubble.className='rk-support-launcher';bubble.innerHTML='<span aria-hidden="true">💬</span> '+escape(c.open);
+    bubble.type='button';bubble.className='rk-support-launcher';bubble.innerHTML='<svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>';
     bubble.setAttribute('aria-label',c.open);bubble.setAttribute('aria-controls','ai-chat');bubble.setAttribute('aria-expanded','false');
     var chat=document.getElementById('ai-chat');
     if(!chat){chat=document.createElement('section');chat.id='ai-chat';document.body.appendChild(chat);}
@@ -255,7 +274,7 @@
       return prefix+({contact:{et:'kontakt',en:'en/contact',ru:'ru/kontakty'},prices:{et:'hinnakiri',en:'en/prices',ru:'ru/tseny'}}[key][config.language]);
     }
     var contact=route('contact')+'#vorm';
-    chat.innerHTML='<header id="ai-header"><div><strong id="support-title">'+escape(c.title)+'</strong><small>'+escape(c.subtitle)+'</small></div><button type="button" id="ai-close" aria-label="'+escape(c.close)+'">×</button></header>'+
+    chat.innerHTML='<header id="ai-header"><div><strong id="support-title">'+escape(c.title)+'</strong></div><button type="button" id="ai-close" aria-label="'+escape(c.close)+'">×</button></header>'+
       '<div class="rk-support-disclosure">'+escape(c.disclosure)+'</div><div id="ai-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="'+escape(c.title)+'"></div><div class="rk-support-suggestions"></div>'+
       '<form class="rk-support-composer"><label class="rk-support-sr" for="ai-input">'+escape(c.placeholder)+'</label><input id="ai-input" maxlength="1500" autocomplete="off" placeholder="'+escape(c.placeholder)+'"><button type="submit" id="ai-send">'+escape(c.send)+'</button></form>'+
       '<div class="rk-support-links"><a data-support-transfer href="'+escape(contact)+'">'+escape(c.quote)+'</a><a href="tel:+37255515783">'+escape(c.phone)+'</a><a href="'+escape(route('prices'))+'">'+escape(c.pricing)+'</a><button type="button" data-support-reset>'+escape(c.reset)+'</button></div><small class="rk-support-privacy">'+escape(c.privacy)+'</small>';

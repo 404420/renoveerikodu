@@ -55,12 +55,10 @@ function rk_session_start(): void
 
 function rk_db(): PDO
 {
-    // Kasuta index.php poolt juba hangitud ühendust või admin_db() tulemust.
-    // Funktsiooni admin_db() enda ühenduse loogika jääb muutmata.
+    // Ka autentimine ja tõlke endpoint peavad vana config.php ühenduse kodeeringu kinnitama.
     static $connection = null;
     if ($connection === null) {
-        $connection = isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof PDO
-            ? $GLOBALS['pdo'] : admin_db();
+        $connection = admin_db();
     }
     return $connection;
 }
