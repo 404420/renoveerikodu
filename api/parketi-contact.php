@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/_database.php';
+require_once __DIR__ . '/_contact-schema.php';
+
 /**
  * Parketipaigaldaja.ee avalik hinnapäringu vastuvõtt.
  * Ainult usaldatud brauseri päritolu; serveripoolne valideerimine, honeypot ja IP-põhine piirang.
@@ -124,6 +127,8 @@ try {
     } else {
         throw new RuntimeException('Andmebaasi ühendus puudub.');
     }
+    $pdo = rk_database_utf8mb4($pdo);
+    rk_ensure_contact_utf8mb4($pdo);
     try {
         $stmt = $pdo->prepare('INSERT INTO contacts (name, email, phone, address, message, file_path, source, created_at) VALUES (:name, :email, :phone, :address, :message, NULL, :source, NOW())');
         $stmt->execute([':name' => $name, ':email' => $email, ':phone' => $phone, ':address' => $location, ':message' => $summary, ':source' => 'parketipaigaldaja.ee']);

@@ -21,13 +21,31 @@ final class RKTestPDO extends PDO
         return new RKTestStatement($this, $query);
     }
 
+    public function setAttribute(int $attribute, mixed $value): bool
+    {
+        return true;
+    }
+
+    public function exec(string $statement): int|false
+    {
+        if ($statement !== 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci') {
+            throw new RuntimeException('Unexpected fixture command.');
+        }
+        return 0;
+    }
+
     public function query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false
     {
-        if ($query !== 'SHOW COLUMNS FROM contacts') {
+        if (str_starts_with($query, 'SELECT TABLE_COLLATION FROM information_schema.TABLES')) {
+            $statement = new RKTestStatement($this, $query);
+            $statement->rows = [['TABLE_COLLATION' => 'utf8mb4_unicode_ci']];
+            return $statement;
+        }
+        if ($query !== 'SHOW COLUMNS FROM contacts' && $query !== 'SHOW FULL COLUMNS FROM contacts') {
             throw new RuntimeException('Unexpected fixture query.');
         }
         $statement = new RKTestStatement($this, $query);
-        $statement->rows = array_map(static fn(string $column): array => ['Field' => $column],
+        $statement->rows = array_map(static fn(string $column): array => ['Field' => $column, 'Collation' => 'utf8mb4_unicode_ci'],
             ['id', 'language', 'message', 'message_et', 'translation_source_hash', 'translated_at', 'translation_provider']);
         return $statement;
     }
@@ -76,6 +94,12 @@ final class RKTestStatement extends PDOStatement
     public function fetchAll(int $mode = PDO::FETCH_DEFAULT, mixed ...$args): array
     {
         return $this->rows;
+    }
+
+    public function fetchColumn(int $column = 0): mixed
+    {
+        $row = array_shift($this->rows);
+        return $row === null ? false : array_values($row)[$column];
     }
 
     public function rowCount(): int

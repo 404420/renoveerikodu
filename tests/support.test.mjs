@@ -27,6 +27,42 @@ test('one ambiguous quantity is not applied to all jobs',()=>{const e=engine(),s
 test('wrong unit cannot produce a total',()=>{const e=engine();assert.match(ask(e,'liistud 20 m²'),/ühik on jm/);assert.doesNotMatch(ask(e,'liistud 20 m²'),/100 €/);});
 test('decimal commas, negative values and ranges',()=>{const e=engine();assert.match(ask(e,'laminaat 12,5 m²'),/162,5 €/);assert.match(ask(e,'parkett -20 m²'),/positiivne/);assert.doesNotMatch(ask(e,'parkett 20-30 m²'),/360 €/);});
 test('a quoted project does not bypass its price estimate',()=>{const e=engine();assert.match(ask(e,'Soovin pakkumist: parkett 30 m²'),/360 €/);});
+test('quote requests offer every public menu service in each language on every page',()=>{
+  for(const language of ['et','en','ru']){
+    const e=engine(language);
+    const html=fs.readFileSync(language==='et'?'index.html':`${language}/index.html`,'utf8');
+    const menu=html.match(/<ul class="submenu-items">([\s\S]*?)<\/ul>/)[1];
+    const labels=[...menu.matchAll(/<a\b[^>]*>([^<]+)<\/a>/g)].map(m=>m[1]);
+    assert.equal(labels.length,16);
+    const result=e.answer(e.copy.chips[0],e.createState());
+    for(const label of labels) assert.ok(result.suggestions.includes(label),`${language}: ${label}`);
+    assert.ok(result.suggestions.includes(e.copy.chips[2]),`${language}: bathroom`);
+    assert.equal(new Set(result.suggestions).size,result.suggestions.length);
+    for(const label of result.suggestions){
+      const reply=e.answer(label,e.createState());
+      assert.ok(reply.html,`${language}: ${label}`);
+      assert.notEqual(reply.html,e.copy.unknown,`${language}: ${label}`);
+    }
+  }
+});
+test('starting a fresh quote cannot reuse a previous job quantity',()=>{
+  const e=engine(),s=e.createState();
+  ask(e,'parkett 25 m²',s);
+  const quote=e.answer(e.copy.chips[0],s);
+  assert.match(quote.html,/Alustame töö liigist/);
+  assert.match(ask(e,'25 m²',s),/Millist tööd/);
+});
+test('localized service choices distinguish repair from installation and facade from interior painting',()=>{
+  for(const language of ['et','en','ru']){
+    const e=engine(language),s=e.createState();
+    const choices=e.answer(e.copy.chips[0],s).suggestions;
+    assert.equal(e.answer(choices[6],s).html,e.copy.topics.repair);
+    assert.equal(s.last.length,0);
+    const facade=e.answer(choices[14],s);
+    assert.match(facade.html,/14 €/);
+    assert.equal(s.last[0],20);
+  }
+});
 test('specific services do not include general services twice',()=>{const e=engine();assert.doesNotMatch(ask(e,'kalasabaparkett 20 m²'),/240 €/);assert.match(ask(e,'kalasabaparkett 20 m²'),/500 €/);assert.doesNotMatch(ask(e,'dušisegisti 1 tk'),/59 €/);assert.match(ask(e,'dušisegisti 1 tk'),/69 €/);assert.doesNotMatch(ask(e,'köögitausta plaatimine 1 komplekt'),/al 49 €/);});
 test('materials, warranty and bookings use confirmed information',()=>{const e=engine();assert.match(ask(e,'Kas hind sisaldab materjale?'),/eraldi/);assert.match(ask(e,'Kas on garantii?'),/3-aastane/);assert.match(ask(e,'Kas saaksite homme alustada?'),/kinnitab meeskond/);});
 test('bathroom and apartment packages are not multiplied by floor area',()=>{const e=engine();assert.match(ask(e,'vannitoa remont 6 m²'),/4 ?900 €/);assert.match(ask(e,'korteri remont 50 m²'),/8 ?900 €/);assert.match(ask(e,'50 m² korteri värvimine'),/põrandapind/);});

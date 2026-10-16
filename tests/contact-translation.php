@@ -89,6 +89,7 @@ foreach (['_auth.php', '_bootstrap.php', '_translation.php', 'translate-contact.
     copy(__DIR__ . '/../admin/' . $file, $temp . '/admin/' . $file);
 }
 copy(__DIR__ . '/../api/_contact-schema.php', $temp . '/api/_contact-schema.php');
+copy(__DIR__ . '/../api/_database.php', $temp . '/api/_database.php');
 copy(__DIR__ . '/fixtures/contact-db.php', $temp . '/fixture-db.php');
 file_put_contents($temp . '/config.php', "<?php require_once __DIR__ . '/fixture-db.php'; \$pdo = new RKTestPDO(); define('DEEPL_API_KEY', '');");
 file_put_contents($temp . '/router.php', <<<'PHP'

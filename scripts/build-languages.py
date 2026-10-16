@@ -99,7 +99,7 @@ def runtime_scripts(source, language):
         body = body.replace("a[href^='images/']", "a[href^='/images/']")
         body = re.sub(r'((?:src|href)=["\'])(?:\.\./)*images/', r'\1/images/', body)
         if 'function calculatePrice' in body:
-            return '<script src="/assets/js/renoveeri-ai-chat.js?v=20261013"></script>'
+            return '<script src="/assets/js/renoveeri-ai-chat.js?v=20261016"></script>'
         if language != 'et':
             for key, translations in INLINE_MESSAGES.items():
                 body = body.replace(key, translations[LANGUAGES.index(language) - 1])

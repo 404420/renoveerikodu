@@ -2,9 +2,10 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/_auth.php';
+require_once __DIR__ . '/../api/_database.php';
 rk_session_start();
 
-// OLEMASOLEVA ANDMEBAASIÜHENDUSE FAIL: ühenduse loogika on muutmata.
+// Privaatne config.php võib pärineda vanemast paigaldusest.
 $configPath = __DIR__ . '/../config.php';
 if (!is_file($configPath)) {
     http_response_code(500);
@@ -17,11 +18,11 @@ require_once $configPath;
 function admin_db(): PDO
 {
     if (isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof PDO) {
-        return $GLOBALS['pdo'];
+        return rk_database_utf8mb4($GLOBALS['pdo']);
     }
 
     if (defined('DB_HOST') && defined('DB_NAME') && defined('DB_USER') && defined('DB_PASS')) {
-        return new PDO(
+        return rk_database_utf8mb4(new PDO(
             'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
             DB_USER,
             DB_PASS,
@@ -29,7 +30,7 @@ function admin_db(): PDO
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             ]
-        );
+        ));
     }
 
     http_response_code(500);

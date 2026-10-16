@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/contact-i18n.php';
 require_once __DIR__ . '/_contact-schema.php';
+require_once __DIR__ . '/_database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -125,6 +126,8 @@ function send_contact_emails(
 
 function load_config(): void
 {
+    // Files included inside a function otherwise hide their $pdo/$conn locally.
+    global $pdo, $conn;
     $paths = [
         __DIR__ . '/../config.php',
         __DIR__ . '/config.php',
@@ -145,11 +148,11 @@ function db_pdo(): PDO
     load_config();
 
     if (isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof PDO) {
-        return $GLOBALS['pdo'];
+        return rk_database_utf8mb4($GLOBALS['pdo']);
     }
 
     if (defined('DB_HOST') && defined('DB_NAME') && defined('DB_USER') && defined('DB_PASS')) {
-        return new PDO(
+        return rk_database_utf8mb4(new PDO(
             'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
             DB_USER,
             DB_PASS,
@@ -157,7 +160,7 @@ function db_pdo(): PDO
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             ]
-        );
+        ));
     }
 
     if (isset($GLOBALS['conn']) && $GLOBALS['conn'] instanceof mysqli) {
@@ -167,7 +170,7 @@ function db_pdo(): PDO
         $pass = defined('DB_PASS') ? DB_PASS : null;
 
         if ($host && $db && $user !== null && $pass !== null) {
-            return new PDO(
+            return rk_database_utf8mb4(new PDO(
                 "mysql:host={$host};dbname={$db};charset=utf8mb4",
                 $user,
                 $pass,
@@ -175,7 +178,7 @@ function db_pdo(): PDO
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 ]
-            );
+            ));
         }
     }
 
