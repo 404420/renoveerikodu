@@ -673,6 +673,25 @@ $('#menu a, #nav a').each(function(){
 				throw new Error(result.message || t('sendFailed'));
 
 			messageBox.textContent = result.message || t('sendSuccess');
+
+			// Only a successful server response is a lead; clicks and failed requests are not.
+			// Do not send form fields or change the visitor's Google consent settings.
+			var submissionId = 'rk-' + (window.crypto && typeof window.crypto.randomUUID === 'function'
+				? window.crypto.randomUUID()
+				: Date.now().toString(36) + '-' + Math.random().toString(36).slice(2));
+			try {
+				if (typeof window.gtag === 'function') {
+					window.gtag('event', 'conversion', {
+						send_to: 'AW-18466210438/4yw4CKPHr7gdEIaFsOVE',
+						transaction_id: submissionId
+					});
+				}
+			} catch (trackingError) {
+				// A blocked analytics request must not turn a delivered lead into a form error.
+			}
+			document.dispatchEvent(new CustomEvent('rk:contact-success', {
+				detail: { form_id: form.id, submission_id: submissionId }
+			}));
 			form.reset();
 		} catch (error) {
 			messageBox.textContent = error instanceof TypeError ? t('serverError') : (error.message || t('serverError'));
