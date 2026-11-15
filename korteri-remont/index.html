@@ -61,6 +61,49 @@
  .apartment-page .wrapper { padding: 2.5em 0; }
  .apartment-page .button { max-width: 100%; }
 }
+
+/* Contact actions stay close to the service offer on this landing page. */
+.apartment-page #main > header .apartment-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem}
+.apartment-page #main > header .apartment-hero-actions .button{margin-top:0}
+.apartment-page #main > header .apartment-hero-note{font-size:.82rem;line-height:1.5;margin:1.2rem auto 0;max-width:42rem}
+.apartment-page .apartment-inquiry{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2rem;background:#f4f7f6;border:1px solid #d5e3df;border-radius:8px;padding:2rem;margin:0 0 2.5rem;scroll-margin-top:5rem}
+.apartment-page .apartment-inquiry > *{min-width:0}
+.apartment-page .apartment-inquiry h2{letter-spacing:.07em;line-height:1.5}
+.apartment-page .apartment-inquiry p{margin-bottom:1.2rem}
+.apartment-page .apartment-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.apartment-page .apartment-form-grid label{font-size:.9rem;letter-spacing:normal;text-transform:none;color:#273c36;margin:0}
+.apartment-page .apartment-form-grid label span{font-size:.8rem;font-weight:400}
+.apartment-page .apartment-form-grid input,.apartment-page .apartment-form-grid textarea{display:block;box-sizing:border-box;width:100%;margin-top:.4rem;background:#fff;border:1px solid #98afa7;border-radius:4px;color:#243a32;font:inherit;font-size:1rem;padding:.75rem;min-height:48px}
+.apartment-page .apartment-form-grid input:focus,.apartment-page .apartment-form-grid textarea:focus{outline:2px solid #187662;outline-offset:2px;border-color:#187662;box-shadow:none}
+.apartment-page .apartment-form-grid textarea{resize:vertical}
+.apartment-page .apartment-form-wide{grid-column:1/-1}
+.apartment-page .contact-recaptcha{min-height:78px;max-width:100%}
+.apartment-page .apartment-form-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-top:1rem}
+.apartment-page .apartment-file-label{position:relative;overflow:hidden;cursor:pointer;margin:0}
+.apartment-page .apartment-file-label input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.apartment-page .apartment-file-label:focus-within{outline:2px solid #187662;outline-offset:2px}
+.apartment-page .apartment-form-privacy,.apartment-page #inquiry-help{font-size:.83rem;line-height:1.6}
+.apartment-page .apartment-form-privacy{margin:1rem 0 0}
+.apartment-page #contactMessage:not([hidden]){padding:.9rem;background:#e6f3ec;border:1px solid #a8c7b7;border-radius:4px;color:#203e30;margin-bottom:1rem}
+.apartment-page #contactForm .file-preview-item{color:#273c36;background:#e7eeeb;border-color:#b7c8c1}
+.apartment-page #contactForm .file-preview-size{color:#4c635a}
+.apartment-page #contactForm .file-preview-icon,.apartment-page #contactForm .file-preview-remove{color:#273c36;background:#fff;border-color:#98afa7}
+.apartment-page .apartment-mobile-actions{display:none}
+@media(max-width:736px){
+ .apartment-page #main > header{padding-top:4.5em;padding-bottom:2em}
+ .apartment-page #main > header .apartment-hero-actions{display:grid;grid-template-columns:1fr;max-width:24rem;margin:0 auto}
+ .apartment-page .apartment-inquiry{grid-template-columns:1fr;gap:1rem;padding:1.25rem}
+ .apartment-page .apartment-inquiry h2{font-size:1.15rem}
+ .apartment-page .apartment-form-grid{grid-template-columns:1fr}
+ .apartment-page .apartment-form-actions{align-items:stretch}
+ .apartment-page .apartment-form-actions > *{width:100%;text-align:center}
+ .apartment-page{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+ .apartment-page .apartment-mobile-actions{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;inset:auto 0 0;z-index:1000;padding:.65rem .75rem calc(.65rem + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #cddbd5;box-shadow:0 -3px 15px #172d251a}
+ .apartment-page .apartment-mobile-actions a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:.5rem;border:1px solid #187662;border-radius:4px;text-decoration:none;color:#145744;font-size:.8rem;letter-spacing:.03em;font-weight:700;text-transform:uppercase;text-align:center}
+ .apartment-page .apartment-mobile-actions a:last-child{background:#187662;color:#fff}
+ .apartment-page #ai-bubble.rk-support-launcher{bottom:calc(90px + env(safe-area-inset-bottom,0px))!important}
+}
+@media(max-width:480px){.apartment-page .wrapper > .inner{width:calc(100% - 1rem)}.apartment-page .apartment-inquiry{padding:1rem 0;border:0;border-radius:0;background:transparent}.apartment-page .apartment-form-grid{padding:0}.apartment-page .contact-recaptcha{width:304px}}
 </style>
 <script type="application/ld+json">
 {
@@ -266,9 +309,10 @@
 <main id="main-content">
 <article id="main">
 <header>
-<h1>Korteri remont ja täisremont võtmed kätte</h1>
-<p>Korteri remont Tallinnas ja Harjumaal ettevalmistusest lõppviimistluseni. Meie korraldame tööd, sina saad keskenduda oma uuele kodule.</p>
-<a href="https://www.renoveerikodu.ee/kontakt#vorm" class="button primary">Küsi hinnapakkumist</a>
+<h1>Korteri remont Tallinnas ja Harjumaal</h1>
+<p>Värskendusremont või täisremont võtmed kätte. Korraldame kokkulepitud tööd lammutusest lõppviimistluseni.</p>
+<div class="apartment-hero-actions"><a href="#hinnaparing" class="button primary">Küsi tasuta pakkumist</a><a href="tel:+37255515783" class="button">Helista 5551 5783</a></div>
+<p class="apartment-hero-note">3-aastane garantii ettevõtte tehtud töödele vastavalt kokkulepitud tingimustele.</p>
 </header>
 <section class="wrapper style5">
 <div class="inner">
@@ -277,6 +321,27 @@
 <li>Tallinn ja Harjumaa</li>
 <li>Selge hinnapakkumine ja läbimõeldud töökorraldus</li>
 </ul>
+<section class="apartment-inquiry" id="hinnaparing" aria-labelledby="hinnaparing-title">
+<div class="apartment-inquiry-intro"><h2 id="hinnaparing-title">Küsi remondile hinnapakkumist</h2><p>Kirjelda vajalikud tööd ja lisa võimalusel fotod. Täpsustame töömahu ning lepime vajadusel kokku objekti ülevaatuse.</p><p>Soovid enne nõu pidada?<br><a href="tel:+37255515783">Helista 5551 5783</a></p></div>
+<div class="apartment-inquiry-form">
+<p id="inquiry-help">Nimi, e-post ja töö kirjeldus on vajalikud. Telefon, aadress ning fotod on valikulised.</p>
+<div id="contactMessage" class="form-message" role="status" aria-live="polite" hidden></div>
+<form id="contactForm" method="POST" action="/api/contact.php" enctype="multipart/form-data" accept-charset="UTF-8" aria-describedby="inquiry-help">
+<input type="hidden" name="language" value="et">
+<input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-label="Jäta see väli tühjaks">
+<div class="apartment-form-grid">
+<label for="inquiry-name">Nimi<input id="inquiry-name" type="text" name="name" autocomplete="name" required></label>
+<label for="inquiry-email">E-post<input id="inquiry-email" type="email" name="email" autocomplete="email" required></label>
+<label for="inquiry-phone">Telefon <span>(valikuline)</span><input id="inquiry-phone" type="tel" name="phone" autocomplete="tel"></label>
+<label for="inquiry-address">Töö asukoht <span>(valikuline)</span><input id="inquiry-address" type="text" name="address" autocomplete="street-address" placeholder="Linnaosa või asula"></label>
+<label for="inquiry-message" class="apartment-form-wide">Töö kirjeldus<textarea id="inquiry-message" name="message" rows="4" required placeholder="Korteri pindala, vajalikud tööd ja soovitud alustamise aeg"></textarea></label>
+<div class="contact-recaptcha apartment-form-wide" data-recaptcha-widget></div>
+</div>
+<div class="apartment-form-actions glass-actions"><label class="button apartment-file-label">Lisa fotod või plaan<input type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.zip,.jpg,.jpeg,.png,.webp,.heic,.dwg,.dxf" aria-label="Lisa fotod või plaan"></label><button type="submit" class="button primary" disabled aria-disabled="true">Saada hinnapäring</button></div>
+<p class="apartment-form-privacy">Kasutame sinu andmeid päringule vastamiseks. <a href="https://www.renoveerikodu.ee/privaatsuspoliitika">Privaatsuspoliitika</a></p>
+</form>
+</div>
+</section>
 <nav class="case-study-breadcrumb" aria-label="Leivapuru"><a href="https://www.renoveerikodu.ee/">Avaleht</a> / <span aria-current="page">Korteri remont</span></nav>
 <section aria-labelledby="sisaldab">
 <h2 id="sisaldab">Mida korteri täisremont sisaldab?</h2>
@@ -334,7 +399,7 @@
 </ul>
 <p><a href="https://www.renoveerikodu.ee/hinnakiri">Renoveerimistööde hinnakirjast</a> leiad üksikute tööde orienteeruvad alghinnad. Terve korteri pakkumises täpsustame töömahud ja materjalid eraldi; üksiku töö ühikuhind ei ole korteri täisremondi m² hind.</p>
 <p>Päringule lisa korteri pindala, asukoht, fotod, soovitud tööde loetelu ja ajavahemik. Märgi ka, kas korter on tühi või kasutuses.</p>
-<a href="https://www.renoveerikodu.ee/kontakt#vorm" class="button primary">Saada töö kirjeldus ja fotod</a>
+<a href="#hinnaparing" class="button primary">Saada töö kirjeldus ja fotod</a>
 </section>
 <section aria-labelledby="etapid">
 <h2 id="etapid">Üksikud tööetapid ja seotud teenused</h2>
@@ -399,8 +464,8 @@
 </section>
 <section class="service-cta" aria-labelledby="paring">
 <h2 id="paring">Planeerid korteri remonti? Küsi hinnapakkumist.</h2>
-<p>Kirjelda olemasolevas kontaktvormis korteri asukohta, ligikaudset pindala, soovitud töid ja eeldatavat alustamise aega. Lisa võimalusel fotod või plaan ning märgi, kas korter on tühi või kasutuses. Selle põhjal täpsustame töömahtu ja objekti ülevaatuse vajadust.</p>
-<a href="https://www.renoveerikodu.ee/kontakt#vorm" class="button primary">Küsi hinnapakkumist</a>
+<p>Kirjelda päringuvormis korteri asukohta, ligikaudset pindala, soovitud töid ja eeldatavat alustamise aega. Lisa võimalusel fotod või plaan ning märgi, kas korter on tühi või kasutuses. Selle põhjal täpsustame töömahtu ja objekti ülevaatuse vajadust.</p>
+<a href="#hinnaparing" class="button primary">Küsi hinnapakkumist</a>
 <p><a href="tel:+37255515783">+372 5551 5783</a> · <a href="mailto:info@renoveerikodu.ee">info@renoveerikodu.ee</a></p>
 </section>
 </div>
@@ -415,8 +480,9 @@
 <script src="/assets/js/browser.min.js"></script>
 <script src="/assets/js/breakpoints.min.js"></script>
 <script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js?v=20261015"></script>
+<script src="/assets/js/main.js?v=20261115"></script>
 <script src="/assets/js/renoveeri-support.js?v=20261016"></script>
 <script src="/assets/js/renoveeri-ai-chat.js?v=20261016"></script>
+<nav class="apartment-mobile-actions" aria-label="Kiire kontakt"><a href="tel:+37255515783">Helista</a><a href="#hinnaparing">Küsi pakkumist</a></nav>
 </body>
 </html>
